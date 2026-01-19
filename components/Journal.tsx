@@ -1,3 +1,4 @@
+
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -13,7 +14,8 @@ interface JournalProps {
 }
 
 const Journal: React.FC<JournalProps> = ({ onArticleClick, language }) => {
-  const t = TRANSLATIONS[language].journal;
+  // Safe translation access with fallback
+  const t = (TRANSLATIONS[language]?.journal) || TRANSLATIONS.en.journal;
   const articles = JOURNAL_ARTICLES[language] || JOURNAL_ARTICLES.en;
   
   if (articles.length === 0) return null;

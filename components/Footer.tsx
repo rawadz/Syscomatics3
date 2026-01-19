@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
 */
 
-import React, { useState } from 'react';
+import React from 'react';
 import { TRANSLATIONS } from '../constants';
 import { Language } from '../types';
 
@@ -14,21 +14,22 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ onLinkClick, language }) => {
-  const [subscribeStatus, setSubscribeStatus] = useState<'idle' | 'loading' | 'success'>('idle');
-  const [email, setEmail] = useState('');
-  const t = TRANSLATIONS[language].footer;
+  // Safe translation access with fallback
+  const t = (TRANSLATIONS[language]?.footer) || TRANSLATIONS.en.footer;
 
-  const handleSubscribe = () => {
-    if (!email) return;
-    setSubscribeStatus('loading');
-    setTimeout(() => {
-      setSubscribeStatus('success');
-      setEmail('');
-      setTimeout(() => setSubscribeStatus('idle'), 3000);
-    }, 1500);
-  };
+  const LOGO_WHITE = "https://images.unsplash.com/vector-1768853907602-d0fb4587ae8d?q=80&w=400&auto=format&fit=crop";
 
   const socialLinks = [
+    {
+      name: 'WhatsApp',
+      href: 'https://wa.me/963932255512',
+      isPrimary: true,
+      icon: (
+        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+        </svg>
+      ),
+    },
     {
       name: 'LinkedIn',
       href: 'https://linkedin.com',
@@ -47,115 +48,91 @@ const Footer: React.FC<FooterProps> = ({ onLinkClick, language }) => {
         </svg>
       ),
     },
-    {
-      name: 'Facebook',
-      href: 'https://facebook.com',
-      icon: (
-        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.312h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
-        </svg>
-      ),
-    },
   ];
 
   return (
-    <footer className="bg-[#0a0b0d] text-white pt-24 pb-12 overflow-hidden border-t border-white/5">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 mb-24 text-start">
+    <footer className="bg-[#0a0b0d] text-white pt-10 pb-8 relative overflow-hidden border-t border-white/5">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           
-          {/* Brand Identity Section */}
-          <div className="lg:col-span-5">
-            <div className="flex items-center gap-1 mb-10 group cursor-default">
-              <span className="font-heading text-4xl font-extrabold tracking-tighter">
-                Sy<span className="text-[#0037f3]">/</span>scomatics
-              </span>
+          {/* Logo Section - High-end vector */}
+          <div className="lg:col-span-3 flex items-start">
+             <div className="h-8 md:h-10">
+                <img 
+                  src={LOGO_WHITE} 
+                  alt="Syscomatics White Logo" 
+                  className="h-full w-auto object-contain opacity-90"
+                />
+             </div>
+          </div>
+
+          {/* Contact Details - Compact Grid */}
+          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="space-y-4">
+                <h4 className="text-[9px] font-black uppercase tracking-[0.4em] text-[#0037f3]">{t.contact}</h4>
+                <ul className="space-y-2">
+                    <li className="flex flex-col">
+                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20">Operational Hub</span>
+                        <span className="text-base font-heading font-extrabold text-white/90">{t.address}</span>
+                    </li>
+                    <li className="flex flex-col pt-2">
+                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20">Voice Link</span>
+                        <a href={`tel:${t.phone.replace(/\s/g, '')}`} className="text-base font-heading font-extrabold text-white/90 hover:text-[#0037f3] transition-colors">{t.phone}</a>
+                    </li>
+                </ul>
             </div>
-            <p className="text-white/50 text-xl font-medium leading-relaxed max-w-md mb-12">
-              {t.sub}
-            </p>
-            <div className="flex items-center gap-6">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-white/40 hover:text-[#0037f3] hover:bg-white/10 hover:scale-110 transition-all duration-300"
-                  aria-label={social.name}
-                >
-                  {social.icon}
-                </a>
-              ))}
+            <div className="space-y-4">
+                <h4 className="text-[9px] font-black uppercase tracking-[0.4em] text-[#0037f3] opacity-0 sm:block hidden">.</h4>
+                <ul className="space-y-2">
+                    <li className="flex flex-col">
+                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20">Correspondence</span>
+                        <a href={`mailto:${t.email}`} className="text-base font-heading font-extrabold text-white/90 hover:text-[#0037f3] transition-colors">{t.email}</a>
+                    </li>
+                    <li className="pt-4">
+                        <div className="flex items-center gap-3">
+                            {socialLinks.map((social) => (
+                                <a
+                                key={social.name}
+                                href={social.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`w-10 h-10 rounded-lg border flex items-center justify-center transition-all duration-300 ${
+                                    social.isPrimary 
+                                    ? 'bg-[#0037f3] border-[#0037f3] text-white hover:bg-white hover:text-[#0a0b0d]' 
+                                    : 'bg-white/5 border-white/5 text-white/30 hover:text-white hover:bg-[#0037f3]'
+                                }`}
+                                aria-label={social.name}
+                                >
+                                {social.icon}
+                                </a>
+                            ))}
+                        </div>
+                    </li>
+                </ul>
             </div>
           </div>
 
-          {/* Navigation Columns */}
-          <div className="lg:col-span-3 grid grid-cols-2 gap-8">
-            <div>
-              <h4 className="text-[11px] font-black uppercase tracking-[0.4em] text-[#0037f3] mb-8">{t.nav}</h4>
-              <ul className="space-y-5">
-                <li><a href="#services" onClick={(e) => onLinkClick(e, 'services')} className="text-sm font-bold text-white/60 hover:text-white transition-colors">Solutions</a></li>
-                <li><a href="#about" onClick={(e) => onLinkClick(e, 'about')} className="text-sm font-bold text-white/60 hover:text-white transition-colors">Strategy</a></li>
-                <li><a href="#journal" onClick={(e) => onLinkClick(e, 'journal')} className="text-sm font-bold text-white/60 hover:text-white transition-colors">Insights</a></li>
+          {/* Navigation - Compact */}
+          <div className="lg:col-span-3 lg:text-right">
+              <h4 className="text-[9px] font-black uppercase tracking-[0.4em] text-[#0037f3] mb-4">{t.nav}</h4>
+              <ul className="space-y-2">
+                <li><a href="#services" onClick={(e) => onLinkClick(e, 'services')} className="text-xs font-bold text-white/40 hover:text-white transition-all">Engineering Solutions</a></li>
+                <li><a href="#about" onClick={(e) => onLinkClick(e, 'about')} className="text-xs font-bold text-white/40 hover:text-white transition-all">Strategy Roadmap</a></li>
+                <li><a href="#journal" onClick={(e) => onLinkClick(e, 'journal')} className="text-xs font-bold text-white/40 hover:text-white transition-all">Transformation Stories</a></li>
               </ul>
-            </div>
-            <div>
-              <h4 className="text-[11px] font-black uppercase tracking-[0.4em] text-[#0037f3] mb-8">{t.exp}</h4>
-              <ul className="space-y-5">
-                <li><span className="text-sm font-bold text-white/60">ERP Ops</span></li>
-                <li><span className="text-sm font-bold text-white/60">Custom CRM</span></li>
-                <li><span className="text-sm font-bold text-white/60">Cyber Resilience</span></li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Newsletter Section */}
-          <div className="lg:col-span-4 bg-[#111215] p-10 rounded-[2.5rem] border border-white/5 relative overflow-hidden">
-            <div className="relative z-10">
-              <h4 className="text-xl font-heading font-extrabold mb-4 tracking-tight">{t.newsletter}</h4>
-              <p className="text-sm text-white/40 font-medium leading-relaxed mb-8">
-                {t.newsd}
-              </p>
-              
-              <div className="flex flex-col gap-3">
-                <div className="relative group">
-                  <input 
-                    type="email" 
-                    placeholder="corporate@email.com" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    disabled={subscribeStatus === 'loading' || subscribeStatus === 'success'}
-                    className="w-full bg-white/5 border border-white/10 px-6 py-4 rounded-2xl outline-none text-white font-medium focus:border-[#0037f3]/50 transition-all disabled:opacity-50" 
-                  />
-                </div>
-                
-                <button 
-                  onClick={handleSubscribe}
-                  disabled={subscribeStatus !== 'idle' || !email}
-                  className={`w-full py-4 rounded-2xl text-[11px] font-black uppercase tracking-[0.3em] transition-all duration-500 flex items-center justify-center gap-3 ${
-                    subscribeStatus === 'success' 
-                      ? 'bg-green-500 text-white' 
-                      : 'bg-[#0037f3] text-white hover:bg-white hover:text-[#0a0b0d]'
-                  }`}
-                >
-                  {subscribeStatus === 'idle' && t.reg}
-                  {subscribeStatus === 'loading' && '...'}
-                  {subscribeStatus === 'success' && 'OK'}
-                </button>
-              </div>
-            </div>
           </div>
         </div>
 
-        {/* Footer Bottom Bar */}
-        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-3">
-             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-             <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/30">{t.operational} // v2.4.0</span>
+        {/* Footer Bottom Bar - High Compression */}
+        <div className="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-start">
+          <div className="flex flex-wrap justify-center sm:justify-start gap-x-8 gap-y-2">
+            <p className="text-[8px] font-black uppercase tracking-[0.4em] text-white/10">&copy; 2025 Syscomatics Global Systems.</p>
+            <p className="text-[8px] font-black uppercase tracking-[0.4em] text-white/10">Founded by Rawad Zaitoun</p>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
-            <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/20">&copy; 2025 Syscomatics Global.</p>
+          <div className="flex items-center gap-3">
+            <div className="w-1 h-1 rounded-full bg-[#0037f3]/20"></div>
+            <span className="text-[8px] font-black uppercase tracking-[0.5em] text-white/5">Damascus Hub | V.2.5.0</span>
           </div>
         </div>
       </div>

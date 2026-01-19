@@ -16,7 +16,9 @@ interface CheckoutProps {
 
 const Checkout: React.FC<CheckoutProps> = ({ items, onBack, language }) => {
   const [submitted, setSubmitted] = useState(false);
-  const t = TRANSLATIONS[language].inquiry;
+  
+  // Safe translation access with fallback
+  const t = (TRANSLATIONS[language]?.inquiry) || TRANSLATIONS.en.inquiry;
 
   if (submitted) {
     return (
@@ -24,7 +26,7 @@ const Checkout: React.FC<CheckoutProps> = ({ items, onBack, language }) => {
         <div className="max-w-md animate-fade-in-up">
           <h1 className="text-4xl font-heading font-extrabold text-[#2C2A26] mb-6">{t.success}</h1>
           <p className="text-[#5D5A53] mb-12">{t.successSub}</p>
-          <button onClick={onBack} className="text-sm font-black uppercase tracking-widest underline underline-offset-8">{language === 'ar' ? 'العودة للرئيسية' : 'Return Home'}</button>
+          <button onClick={onBack} className="text-sm font-black uppercase tracking-widest underline underline-offset-8">{language === 'ar' ? 'العودة للرئيسية' : (language === 'ku' ? 'Vegere Malê' : 'Return Home')}</button>
         </div>
       </div>
     );
@@ -61,7 +63,7 @@ const Checkout: React.FC<CheckoutProps> = ({ items, onBack, language }) => {
               <div>
                 <h2 className="text-xl font-heading font-bold text-[#2C2A26] mb-6">{language === 'ar' ? 'سياق المشروع' : (language === 'ku' ? 'Çarçoveya Projeyê' : 'Project Context')}</h2>
                 <textarea 
-                  placeholder={t.contextSub} 
+                  placeholder={t.context} 
                   rows={4}
                   className="w-full bg-transparent border-b border-[#D6D1C7] py-3 text-[#2C2A26] outline-none focus:border-[#0037f3] resize-none"
                 />

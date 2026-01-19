@@ -1,3 +1,4 @@
+
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -26,13 +27,6 @@ export interface Benchmark {
 export interface ServiceDomain {
   name: string;
   description: string;
-  icon?: string;
-}
-
-export interface ServiceExample {
-  title: string;
-  description: string;
-  results: string;
 }
 
 export interface Service {
@@ -40,19 +34,19 @@ export interface Service {
   name: string;
   tagline: string;
   description: string;
-  longDescription?: string;
+  longDescription: string;
   category: 'Enterprise' | 'Development' | 'Security' | 'Blockchain' | 'Design' | 'Consulting' | 'Cloud';
   imageUrl: string;
   features: string[];
   domains: ServiceDomain[];
-  topics: string[];
-  examples: ServiceExample[];
   pillars: Pillar[];
   roadmap: RoadmapStep[];
   benchmarks: Benchmark[];
   techStack: string[];
+  businessValue: string;
 }
 
+// Added missing Product interface
 export interface Product {
   id: string;
   name: string;
@@ -60,8 +54,8 @@ export interface Product {
   price: number;
   imageUrl: string;
   description: string;
-  longDescription?: string;
   features: string[];
+  longDescription?: string;
 }
 
 export interface JournalArticle {

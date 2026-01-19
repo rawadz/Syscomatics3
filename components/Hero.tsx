@@ -13,7 +13,8 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ language }) => {
-  const t = TRANSLATIONS[language].hero;
+  // Safe translation access with fallback
+  const t = (TRANSLATIONS[language]?.hero) || TRANSLATIONS.en.hero;
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();

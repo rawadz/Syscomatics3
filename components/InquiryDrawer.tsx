@@ -18,7 +18,8 @@ interface InquiryDrawerProps {
 }
 
 const InquiryDrawer: React.FC<InquiryDrawerProps> = ({ isOpen, onClose, items, onRemoveItem, onStartConsultation, language }) => {
-  const t = TRANSLATIONS[language].inquiry;
+  // Safe translation access with fallback
+  const t = (TRANSLATIONS[language]?.inquiry) || TRANSLATIONS.en.inquiry;
 
   return (
     <>

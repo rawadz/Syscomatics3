@@ -5,16 +5,19 @@
 */
 
 import { GoogleGenAI } from "@google/genai";
-// Changed import from SERVICES to getServices to fix compilation error and handle localization
-import { getServices } from '../constants';
+import { getServices, KNOWLEDGE_BASE } from '../constants';
 import { Language } from '../types';
 
 const getSystemInstruction = (language: Language) => {
-  // Retrieve services based on language for better architectural context
   const services = getServices(language);
+  const kb = KNOWLEDGE_BASE[language] || KNOWLEDGE_BASE.en;
+  
   const serviceContext = services.map(s => 
-    `- ${s.name}: ${s.tagline}. Domains: ${s.domains.map(d => d.name).join(', ')}. Key Topics: ${s.topics.join(', ')}.`
+    `- ${s.name}: ${s.tagline}. Key Features: ${s.features.join(', ')}.`
   ).join('\n');
+
+  const faqContext = kb.faq?.map((f: any) => `Q: ${f.q}\nA: ${f.a}`).join('\n\n');
+  const guardrailContext = kb.guardrails?.join('\n');
 
   const languageNote = {
     en: 'Respond in English.',
@@ -22,16 +25,28 @@ const getSystemInstruction = (language: Language) => {
     ku: 'Bersivê bi Kurdiya Kurmancî (bi tîpên Latînî) bide. (LTR).'
   };
 
-  return `You are the Lead Solutions Architect for "Syscomatics", a high-end IT consulting firm headquartered in Damascus, Syria.
-  Your tone is expert, strategic, and reassuring. You specialize in Enterprise ERP, Cyber Resilience, Custom CRM, Blockchain, and Full-Stack Labs.
-  
-  Operational Context:
+  return `You are the Lead Solutions Architect for "Syscomatics", a high-end IT consulting firm in Damascus, Syria.
+  Your goal is to provide strategic architectural advice and guide potential clients through our digital solutions.
+
+  CORE PHILOSOPHY:
+  ${kb.company?.philosophy}
+
+  OUR SERVICES & DOMAINS:
   ${serviceContext}
   
-  Language Preference: ${languageNote[language]}
+  KNOWLEDGE & FAQ:
+  ${faqContext}
   
-  When users ask about their business problems, offer strategic architectural advice. Mention specific Syscomatics domains or implementation examples where relevant.
-  Keep answers under 4 sentences. Focus on "Architectural Integrity", "Operational Efficiency", and "Sovereign Infrastructure".`;
+  OPERATIONAL RULES:
+  ${guardrailContext}
+  
+  LANGUAGE PREFERENCE: ${languageNote[language]}
+  
+  GUIDELINES:
+  1. Be professional, direct, and reassuring.
+  2. If a user describes a business problem, link it to one of our core services.
+  3. When appropriate, tell them to add the service to their "Project Brief" for a formal assessment.
+  4. Keep responses under 3-4 sentences. Focus on high-level architecture.`;
 };
 
 export const sendMessageToGemini = async (history: {role: string, text: string}[], newMessage: string, language: Language = 'en'): Promise<string> => {
@@ -40,23 +55,23 @@ export const sendMessageToGemini = async (history: {role: string, text: string}[
       return "The Syscomatics portal is currently in maintenance.";
     }
 
-    // Initialize the Gemini API client correctly with process.env.API_KEY
     const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     
-    // Create a chat session with the appropriate system instructions and model
-    const chat = ai.chats.create({
+    const response = await ai.models.generateContent({
       model: 'gemini-3-flash-preview',
+      contents: [
+        ...history.map(h => ({
+          role: h.role,
+          parts: [{ text: h.text }]
+        })),
+        { role: 'user', parts: [{ text: newMessage }] }
+      ],
       config: {
         systemInstruction: getSystemInstruction(language),
+        temperature: 0.7, // Balances creativity with factual consistency
       },
-      history: history.map(h => ({
-        role: h.role,
-        parts: [{ text: h.text }]
-      }))
     });
 
-    // Send the message and access text property directly as per guidelines
-    const response = await chat.sendMessage({ message: newMessage });
     return response.text || "Connection interrupted.";
 
   } catch (error) {

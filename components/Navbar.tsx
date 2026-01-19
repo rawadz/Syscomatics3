@@ -21,7 +21,8 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick, inquiryCount, onOpenInquiry
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [langMenuOpen, setLangMenuOpen] = useState(false);
 
-  const t = TRANSLATIONS[language].nav;
+  // Safe translation access with fallback
+  const t = (TRANSLATIONS[language]?.nav) || TRANSLATIONS.en.nav;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,9 +37,17 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick, inquiryCount, onOpenInquiry
     onNavClick(e, targetId);
   };
 
-  const navThemeClass = (scrolled || mobileMenuOpen) 
+  const isLightMode = scrolled || mobileMenuOpen;
+  
+  const navThemeClass = isLightMode 
     ? 'bg-white/95 text-[#0a0b0d] shadow-lg py-3' 
     : 'bg-transparent text-white py-6';
+
+  // Specific logo URLs provided by the user
+  const LOGO_BLACK = "https://images.unsplash.com/vector-1768853907539-e980f0fde018?q=80&w=400&auto=format&fit=crop";
+  const LOGO_WHITE = "https://images.unsplash.com/vector-1768853907602-d0fb4587ae8d?q=80&w=400&auto=format&fit=crop";
+
+  const LOGO_SRC = isLightMode ? LOGO_BLACK : LOGO_WHITE;
 
   const languages = [
     { id: 'en', label: 'EN' },
@@ -59,10 +68,12 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick, inquiryCount, onOpenInquiry
             }}
             className="group flex items-center gap-1 z-50 relative"
           >
-            <div className="flex items-baseline font-heading text-2xl md:text-3xl font-extrabold tracking-tighter">
-                <span className="relative">
-                    Sy<span className="text-[#0037f3]">/</span>scomatics
-                </span>
+            <div className="flex items-center h-8 md:h-10">
+               <img 
+                 src={LOGO_SRC} 
+                 alt="Syscomatics Logo" 
+                 className="h-full w-auto object-contain transition-all duration-500"
+               />
             </div>
           </a>
           
@@ -73,7 +84,6 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick, inquiryCount, onOpenInquiry
           </div>
 
           <div className="flex items-center gap-4 md:gap-6 z-50 relative">
-            {/* Language Picker */}
             <div className="relative">
                 <button 
                   onClick={() => setLangMenuOpen(!langMenuOpen)}
