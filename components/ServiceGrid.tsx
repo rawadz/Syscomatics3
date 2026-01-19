@@ -16,7 +16,9 @@ interface ServiceGridProps {
 
 const ServiceGrid: React.FC<ServiceGridProps> = ({ onServiceClick, language }) => {
   const [activeCategory, setActiveCategory] = useState('All');
-  const t = TRANSLATIONS[language].services;
+  
+  // Safe translation access
+  const t = (TRANSLATIONS[language]?.services) || TRANSLATIONS.en.services;
   
   const categories = ['All', 'Enterprise', 'Development', 'Security', 'Design', 'Consulting', 'Cloud', 'Blockchain'];
   const localizedServices = getServices(language);

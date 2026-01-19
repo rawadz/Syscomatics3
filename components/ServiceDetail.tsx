@@ -28,27 +28,27 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onAddToB
   return (
     <div className="min-h-screen bg-white animate-fade-in-up selection:bg-[#0037f3] selection:text-white text-start">
       
-      {/* Cinematic Hero Section - COLORED IMAGE */}
+      {/* Cinematic Hero Section - COLORED IMAGE (NO GRAYSCALE) */}
       <div className="relative w-full h-[70vh] min-h-[550px] overflow-hidden bg-[#0a0b0d]">
         <img 
           src={service.imageUrl} 
           alt={service.name} 
-          className="w-full h-full object-cover opacity-80 transition-all duration-1000 scale-105 animate-[subtle-zoom_20s_infinite_alternate]"
+          className="w-full h-full object-cover transition-all duration-1000 scale-105 animate-[subtle-zoom_20s_infinite_alternate]"
         />
         {/* Adjusted gradient for color visibility while keeping text readable */}
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-black/20 to-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-black/10 to-black/60"></div>
         
         {/* Hero Content Overlay */}
         <div className="absolute inset-0 flex flex-col justify-end pb-24 px-6 md:px-12">
             <div className="max-w-[1440px] mx-auto w-full">
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/20 backdrop-blur-md border border-white/30 text-white text-[10px] font-bold uppercase tracking-widest mb-8 rounded-full">
-                    <span className="opacity-70">{t.spec}</span>
+                    <span className="opacity-90">{t.spec}</span>
                     <span className="font-black">{service.category}</span>
                 </div>
                 <h1 className="text-5xl md:text-8xl font-heading font-extrabold text-white mb-6 tracking-tighter leading-[0.85] drop-shadow-2xl">
                     {service.name}
                 </h1>
-                <p className="text-xl md:text-3xl font-medium text-white/90 max-w-3xl leading-tight drop-shadow-lg">
+                <p className="text-xl md:text-3xl font-medium text-white max-w-3xl leading-tight drop-shadow-lg">
                     {service.tagline}
                 </p>
             </div>
@@ -65,7 +65,6 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onAddToB
                {t.back}
             </button>
             
-            {/* "Strategic Review Active" status removed as per request */}
             <div className="hidden md:block"></div>
 
             <button 
@@ -112,8 +111,8 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onAddToB
 
         {/* SECTION 3: Business Value & Roadmap */}
         <section className="mb-48 p-12 md:p-24 bg-[#0a0b0d] rounded-[5rem] text-white relative overflow-hidden group shadow-3xl">
-            <div className="absolute top-0 right-0 w-full h-full opacity-30">
-                {/* Background image in color but dimmed */}
+            <div className="absolute top-0 right-0 w-full h-full opacity-40">
+                {/* Background image in full color but dimmed for text contrast */}
                 <img src={service.imageUrl} className="w-full h-full object-cover blur-sm" alt="Background" />
             </div>
             <div className="absolute inset-0 bg-[#0a0b0d]/90"></div>
@@ -121,10 +120,10 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onAddToB
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20">
                 <div>
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#0037f3]/20 border border-[#0037f3]/30 text-[#0037f3] text-[9px] font-black uppercase tracking-widest mb-10 rounded-full">
-                        ROI & Outcomes
+                        ROI & Strategic Outcomes
                     </div>
                     <h2 className="text-4xl md:text-7xl font-heading font-extrabold tracking-tighter mb-12">{t.value}</h2>
-                    <p className="text-xl md:text-2xl text-white/50 font-medium leading-relaxed">
+                    <p className="text-xl md:text-2xl text-white/70 font-medium leading-relaxed">
                         {service.businessValue}
                     </p>
                 </div>
@@ -139,9 +138,8 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onAddToB
                                 <div>
                                     <div className="flex items-center gap-3 mb-2">
                                         <h4 className="text-xl font-heading font-extrabold group-hover/step:text-[#0037f3] transition-colors">{step.label}</h4>
-                                        <span className="text-[9px] font-black text-white/20 uppercase tracking-widest">{step.duration}</span>
                                     </div>
-                                    <p className="text-sm text-white/40 font-medium leading-relaxed">{step.detail}</p>
+                                    <p className="text-sm text-white/50 font-medium leading-relaxed">{step.detail}</p>
                                 </div>
                             </div>
                         ))}
@@ -149,8 +147,6 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onAddToB
                 </div>
             </div>
         </section>
-
-        {/* SECTION 4: Performance Benchmarks REMOVED as per request */}
 
         {/* Final CTA */}
         <section className="flex flex-col md:flex-row justify-center items-center gap-12 pt-24 border-t border-gray-100">
