@@ -71,18 +71,6 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
           </div>
         </div>
       </div>
-
-      {/* Decorative Elements - Damascus, Syria */}
-      <div className="absolute bottom-12 right-12 left-12 md:left-auto flex flex-col items-end gap-2 text-white/40 font-mono text-[10px] uppercase tracking-widest">
-        <span>LAT: 33.5138 N</span>
-        <span>LNG: 36.2765 E</span>
-      </div>
-      
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-[#0037f3]">
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7" />
-        </svg>
-      </div>
     </section>
   );
 };

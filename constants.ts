@@ -57,7 +57,14 @@ export const KNOWLEDGE_BASE: Record<Language, any> = {
 export const TRANSLATIONS: Record<Language, any> = {
   en: {
     nav: { solutions: 'Solutions', strategy: 'Strategy', insights: 'Stories', brief: 'Project Brief' },
-    hero: { tagline: 'Systems Innovation 2025', title: 'Engineered for', accent: 'Performance.', sub: 'Precision-engineered systems for organizations that demand excellence.', cta1: 'Our Solutions', cta2: 'The Strategy' },
+    hero: { 
+      tagline: 'Architecting Digital Sovereignty', 
+      title: 'Engineered for', 
+      accent: 'Performance.', 
+      sub: 'Empowering global organizations with high-performance systems designed for absolute stability and limitless scale.', 
+      cta1: 'Our Solutions', 
+      cta2: 'The Strategy' 
+    },
     about: { 
       badge: 'The Journey', 
       title: 'Simple. Direct.', 
@@ -79,7 +86,14 @@ export const TRANSLATIONS: Record<Language, any> = {
   },
   ar: {
     nav: { solutions: 'الحلول', strategy: 'الاستراتيجية', insights: 'قصص النجاح', brief: 'ملخص المشروع' },
-    hero: { tagline: 'ابتكار الأنظمة ٢٠٢٥', title: 'هندسة من أجل', accent: 'الأداء.', sub: 'أنظمة هندسية دقيقة للمؤسسات التي تنشد التميز.', cta1: 'حلولنا', cta2: 'الاستراتيجية' },
+    hero: { 
+      tagline: 'معمارية السيادة الرقمية', 
+      title: 'هندسة من أجل', 
+      accent: 'الأداء.', 
+      sub: 'تمكين المؤسسات العالمية بأنظمة عالية الأداء مصممة للاستقرار المطلق والتوسع بلا حدود.', 
+      cta1: 'حلولنا', 
+      cta2: 'الاستراتيجية' 
+    },
     about: { 
       badge: 'الرحلة', 
       title: 'بساطة. وضوح.', 
@@ -101,7 +115,14 @@ export const TRANSLATIONS: Record<Language, any> = {
   },
   ku: {
     nav: { solutions: 'Çareserî', strategy: 'Stratejî', insights: 'Çîrok', brief: 'Kurteya Projeyê' },
-    hero: { tagline: 'Nûbûna Sîsteman 2025', title: 'Ji bo performansa', accent: 'Hatiye Endezyarkirin.', sub: 'Sîstemên endezyariya rast ji bo rêxistinên ku jêhatîbûnê dixwazin.', cta1: 'Çareseriyên Me', cta2: 'Stratejî' },
+    hero: { 
+      tagline: 'Mîmariya Serweriya Dîjîtal', 
+      title: 'Ji bo performansa', 
+      accent: 'Hatiye Endezyarkirin.', 
+      sub: 'Bihêzkirina rêxistinên global bi pergalên performansa bilind ên ku ji bo aramiya mutleq û pîvana bêsînor hatine sêwirandin.', 
+      cta1: 'Çareseriyên Me', 
+      cta2: 'Stratejî' 
+    },
     about: { 
       badge: 'Rêwîtî', 
       title: 'Hêsan. Rasterast.', 
@@ -198,7 +219,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Design focused on conversion, user retention, and brand integrity.',
       longDescription: 'We treat design as an engineering discipline. Our UI/UX process is rooted in cognitive psychology and conversion optimization.',
       category: 'Design',
-      imageUrl: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=1000&auto=format&fit=crop',
+      imageUrl: 'https://images.unsplash.com/photo-1576595580361-90a855b84b20?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       features: ['Behavioral Mapping', 'High-Fidelity Prototypes', 'Design Systems'],
       domains: [{ name: 'Identity', description: 'Premium digital presence.' }],
       pillars: [
@@ -220,7 +241,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Deep technical SEO to ensure your brand captures high-intent traffic.',
       longDescription: 'SEO is an architecture problem. We optimize from the server level up to ensure your platform dominates rankings.',
       category: 'Consulting',
-      imageUrl: 'https://images.unsplash.com/photo-1562577353-f71e93b5a63c?q=80&w=1000&auto=format&fit=crop',
+      imageUrl: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       features: ['Core Web Vitals', 'Semantic Indexing', 'Authority Building'],
       domains: [{ name: 'Growth', description: 'Increasing organic reach.' }],
       pillars: [
@@ -264,7 +285,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'High-performance middleware to bridge disparate systems.',
       longDescription: 'We build the connective tissue that allows your ERP, CRM, and web tools to share data instantly and accurately.',
       category: 'Development',
-      imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1000&auto=format&fit=crop',
+      imageUrl: 'https://images.unsplash.com/photo-1763568258208-a5af30d5a31b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       features: ['REST & GraphQL', 'Webhook Logic', 'OAuth Security'],
       domains: [{ name: 'Connectivity', description: 'Eliminating manual sync.' }],
       pillars: [
@@ -442,7 +463,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'تركيز على التحويل، الاحتفاظ بالعملاء، وسلامة العلامة التجارية.',
         longDescription: 'نتعامل مع التصميم كفرع هندسي يجمع بين علم النفس المعرفي وتحسين معدلات التحويل.',
         category: 'Design',
-        imageUrl: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=1000&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1576595580361-90a855b84b20?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         features: ['خرائط السلوك', 'نظم التصميم', 'واجهات سريعة'],
         domains: [{ name: 'الهوية', description: 'حضور رقمي متميز.' }],
         pillars: [
@@ -464,7 +485,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'ضمان التقاط العملاء المحتملين ذوي النوايا العالية.',
         longDescription: 'تحسين محركات البحث هو مشكلة معمارية. نحن نحسن من مستوى الخادم لضمان السيادة.',
         category: 'Consulting',
-        imageUrl: 'https://images.unsplash.com/photo-1562577353-f71e93b5a63c?q=80&w=1000&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         features: ['مؤشرات الويب الأساسية', 'الفهرسة الدلالية', 'بناء السلطة'],
         domains: [{ name: 'النمو', description: 'توسيع الوصول المجاني.' }],
         pillars: [
@@ -508,7 +529,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'برمجيات وسيطة لربط الأنظمة المختلفة.',
         longDescription: 'نبني النسيج الرابط الذي يسمح لأنظمتك بمشاركة البيانات فوراً وبدقة.',
         category: 'Development',
-        imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1000&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1763568258208-a5af30d5a31b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         features: ['REST/GraphQL', 'منطق الويب هوك', 'أمن OAuth'],
         domains: [{ name: 'الربط', description: 'إلغاء المزامنة اليدوية.' }],
         pillars: [
@@ -618,7 +639,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         name: 'Sîstemên Rêvebiriya Karsaziyê (ERP)',
         tagline: 'Tevahiya pargîdaniya xwe di platformek yekane ya performansa bilind de girêbidin.',
         description: 'Firotan, envanter û darayî bi rastbûna asta leşkerî navendî bikin.',
-        longDescription: 'Sîstemên me yên ERP tevahiya karên beşên pargîdaniyê di navendek fermandariyê de yek dikin.',
+        longDescription: 'Sîstemên me yên ERP tevahiya karên beşên pargîdaniyê di navendek fermandariyê de yek din.',
         category: 'Enterprise',
         imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000',
         features: ['Şopandina Envanterê', 'Faturakirina Otomatîk', 'Rêvebiriya Karmendan'],
@@ -686,7 +707,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'Sêwirana baldar li ser veguherîn û entegrasyona brandê.',
         longDescription: 'Em sêwirana wekî dîsîplînek endezyariyê dibînin ku psîkolojiya zanistî bikar tîne.',
         category: 'Design',
-        imageUrl: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=1000&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1576595580361-90a855b84b20?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         features: ['Nexşekirina Reftarî', 'Sîstemên Sêwirandinê', 'UI-ya Performansê'],
         domains: [{ name: 'Nasname', description: 'Hebûna dîjîtal a premium.' }],
         pillars: [
@@ -705,10 +726,10 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         id: 'seo',
         name: 'Endezyariya SEO û Dîtinê',
         tagline: 'Serweriya stratejîk a lêgerînê bi optimîzasyona teknîkî.',
-        description: 'Piştrast bikin ku branda we trafîka organîk a giran digire.',
+        description: 'Piştrast bikin ku branda we trafîka organîک a giran digire.',
         longDescription: 'Optimîzasyona lêgerînê pirsgirêkek mîmarî ye. Em ji asta serverê ve optimîze dikin.',
         category: 'Consulting',
-        imageUrl: 'https://images.unsplash.com/photo-1562577353-f71e93b5a63c?q=80&w=1000&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         features: ['Core Web Vitals', 'Indeksirina Semantîk', 'Avakirina Otorîteyê'],
         domains: [{ name: 'Mezinbûn', description: 'Berfirehkirina gihîştina organîk.' }],
         pillars: [
@@ -727,7 +748,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         id: 'cyber',
         name: 'Ewlehiya Aqilmend (Cyber)',
         tagline: 'Parastina daneyên serwer ji bo cîhanek "zero-trust".',
-        description: 'Parastina gefan a pêşketî ji bo amûrên krîtîk.',
+        description: 'Parastina gefan a pêşketî ji bo amûrên krîtîک.',
         longDescription: 'Ewlehiya proaktîf ku daneyên we li her derê diparêze.',
         category: 'Security',
         imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
@@ -752,7 +773,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'Middleware ji bo girêdana sîstemên nermalavê yên cuda.',
         longDescription: 'Em tevna girêdanê ava dikin ku dihêle sîstemên we daneyan rast û bilez parve bikin.',
         category: 'Development',
-        imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1000&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1763568258208-a5af30d5a31b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         features: ['REST/GraphQL', 'Mantiqê Webhook', 'Ewlehiya OAuth'],
         domains: [{ name: 'Girêdan', description: 'Rakirina hevdengkirina manuwel.' }],
         pillars: [
@@ -853,7 +874,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         ],
         benchmarks: [],
         techStack: ['AWS', 'Terraform', 'K8s'],
-        businessValue: 'Lêçûnên hardware bi elastîkiyeta operasyonel diguherîne.'
+        businessValue: 'يستبدل النفقات الرأسمالية بمرونة تشغيلية.'
     }
   ]
 };
