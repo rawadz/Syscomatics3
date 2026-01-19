@@ -5,7 +5,8 @@
 */
 
 import React from 'react';
-import { Service } from '../types';
+import { Service, Language } from '../types';
+import { TRANSLATIONS } from '../constants';
 
 interface InquiryDrawerProps {
   isOpen: boolean;
@@ -13,9 +14,12 @@ interface InquiryDrawerProps {
   items: Service[];
   onRemoveItem: (index: number) => void;
   onStartConsultation: () => void;
+  language: Language;
 }
 
-const InquiryDrawer: React.FC<InquiryDrawerProps> = ({ isOpen, onClose, items, onRemoveItem, onStartConsultation }) => {
+const InquiryDrawer: React.FC<InquiryDrawerProps> = ({ isOpen, onClose, items, onRemoveItem, onStartConsultation, language }) => {
+  const t = TRANSLATIONS[language].inquiry;
+
   return (
     <>
       <div 
@@ -26,14 +30,14 @@ const InquiryDrawer: React.FC<InquiryDrawerProps> = ({ isOpen, onClose, items, o
       />
 
       <div 
-        className={`fixed inset-y-0 right-0 w-full md:w-[480px] bg-white z-[70] shadow-2xl transform transition-transform duration-500 ease-in-out flex flex-col ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed inset-y-0 ${language === 'ar' ? 'left-0' : 'right-0'} w-full md:w-[480px] bg-white z-[70] shadow-2xl transform transition-transform duration-500 ease-in-out flex flex-col ${
+          isOpen ? 'translate-x-0' : (language === 'ar' ? '-translate-x-full' : 'translate-x-full')
         }`}
       >
-        <div className="bg-[#0a0b0d] p-8 text-white flex items-center justify-between">
+        <div className="bg-[#0a0b0d] p-8 text-white flex items-center justify-between text-start">
             <div>
-                <h2 className="text-2xl font-heading font-extrabold tracking-tight">Project Brief</h2>
-                <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40 mt-1">Strategic Selection</p>
+                <h2 className="text-2xl font-heading font-extrabold tracking-tight">{t.title}</h2>
+                <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40 mt-1">{t.sub}</p>
             </div>
             <button onClick={onClose} className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#0037f3] transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
@@ -42,15 +46,10 @@ const InquiryDrawer: React.FC<InquiryDrawerProps> = ({ isOpen, onClose, items, o
             </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-8 space-y-8">
+        <div className="flex-1 overflow-y-auto p-8 space-y-8 text-start">
           {items.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center p-10">
-              <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mb-6">
-                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="w-8 h-8 text-gray-300">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                 </svg>
-              </div>
-              <p className="font-medium text-gray-400">Your brief is empty. Select solutions to initiate your architectural review.</p>
+              <p className="font-medium text-gray-400">{t.empty}</p>
             </div>
           ) : (
             items.map((item, idx) => (
@@ -67,7 +66,7 @@ const InquiryDrawer: React.FC<InquiryDrawerProps> = ({ isOpen, onClose, items, o
                     onClick={() => onRemoveItem(idx)}
                     className="text-[10px] font-black text-gray-300 hover:text-red-500 uppercase tracking-widest transition-colors self-start"
                   >
-                    Remove item
+                    {t.remove}
                   </button>
                 </div>
               </div>
@@ -79,11 +78,11 @@ const InquiryDrawer: React.FC<InquiryDrawerProps> = ({ isOpen, onClose, items, o
           <button 
             onClick={onStartConsultation}
             disabled={items.length === 0}
-            className="w-full py-5 bg-[#0037f3] text-white uppercase tracking-[0.2em] text-xs font-black hover:bg-[#0a0b0d] shadow-xl shadow-[#0037f3]/20 transition-all disabled:opacity-30 disabled:shadow-none"
+            className="w-full py-5 bg-[#0037f3] text-white uppercase tracking-[0.2em] text-xs font-black hover:bg-[#0a0b0d] transition-all disabled:opacity-30"
           >
-            Initiate Architecture Review
+            {t.initiate}
           </button>
-          <p className="text-[10px] text-center text-gray-400 mt-4 font-bold tracking-widest uppercase">Expert assessment in 24h</p>
+          <p className="text-[10px] text-center text-gray-400 mt-4 font-bold tracking-widest uppercase">{t.assessment}</p>
         </div>
       </div>
     </>

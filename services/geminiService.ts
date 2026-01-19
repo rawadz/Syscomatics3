@@ -5,39 +5,49 @@
 */
 
 import { GoogleGenAI } from "@google/genai";
-import { SERVICES } from '../constants';
+// Changed import from SERVICES to getServices to fix compilation error and handle localization
+import { getServices } from '../constants';
+import { Language } from '../types';
 
-const getSystemInstruction = () => {
-  const serviceContext = SERVICES.map(s => 
-    `- ${s.name}: ${s.description}. Features: ${s.features.join(', ')}`
+const getSystemInstruction = (language: Language) => {
+  // Retrieve services based on language for better architectural context
+  const services = getServices(language);
+  const serviceContext = services.map(s => 
+    `- ${s.name}: ${s.tagline}. Domains: ${s.domains.map(d => d.name).join(', ')}. Key Topics: ${s.topics.join(', ')}.`
   ).join('\n');
 
-  return `You are the Lead Solutions Architect for "Syscomatics", a high-end IT consulting and software development firm.
-  Your tone is expert, strategic, professional, and reassuring. You specialize in ERP, CRM, Blockchain, and Cybersecurity.
+  const languageNote = {
+    en: 'Respond in English.',
+    ar: 'أجب باللغة العربية بلهجة مهنية محترمة (RTL).',
+    ku: 'Bersivê bi Kurdiya Kurmancî (bi tîpên Latînî) bide. (LTR).'
+  };
+
+  return `You are the Lead Solutions Architect for "Syscomatics", a high-end IT consulting firm headquartered in Damascus, Syria.
+  Your tone is expert, strategic, and reassuring. You specialize in Enterprise ERP, Cyber Resilience, Custom CRM, Blockchain, and Full-Stack Labs.
   
-  Our expertise:
+  Operational Context:
   ${serviceContext}
   
-  When users ask about their business problems, offer strategic high-level advice and mention how Syscomatics can help.
-  Keep answers concise (under 4 sentences). If they ask about costs, suggest they add the service to their "Project Brief" or request a formal consultation.
-  Speak about "Scalability", "Infrastructure", "Security", and "Efficiency".`;
+  Language Preference: ${languageNote[language]}
+  
+  When users ask about their business problems, offer strategic architectural advice. Mention specific Syscomatics domains or implementation examples where relevant.
+  Keep answers under 4 sentences. Focus on "Architectural Integrity", "Operational Efficiency", and "Sovereign Infrastructure".`;
 };
 
-export const sendMessageToGemini = async (history: {role: string, text: string}[], newMessage: string): Promise<string> => {
+export const sendMessageToGemini = async (history: {role: string, text: string}[], newMessage: string, language: Language = 'en'): Promise<string> => {
   try {
-    // Check if API key is available in environment directly
     if (!process.env.API_KEY) {
-      return "The Syscomatics portal is currently in maintenance. Please contact support@syscomatics.com.";
+      return "The Syscomatics portal is currently in maintenance.";
     }
 
-    // Always use new GoogleGenAI({ apiKey: process.env.API_KEY })
+    // Initialize the Gemini API client correctly with process.env.API_KEY
     const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     
-    // Create chat session with specified model and instruction
+    // Create a chat session with the appropriate system instructions and model
     const chat = ai.chats.create({
       model: 'gemini-3-flash-preview',
       config: {
-        systemInstruction: getSystemInstruction(),
+        systemInstruction: getSystemInstruction(language),
       },
       history: history.map(h => ({
         role: h.role,
@@ -45,14 +55,12 @@ export const sendMessageToGemini = async (history: {role: string, text: string}[
       }))
     });
 
-    // Send message and await response
+    // Send the message and access text property directly as per guidelines
     const response = await chat.sendMessage({ message: newMessage });
-    
-    // Access .text property directly (not a method)
-    return response.text || "Our systems are experiencing a momentary lapse. Please restate your query.";
+    return response.text || "Connection interrupted.";
 
   } catch (error) {
     console.error("Gemini API Error:", error);
-    return "Our systems are experiencing high load. Please try again or reach out directly via email.";
+    return "The Damascus Hub is currently handling high request volumes.";
   }
 };

@@ -5,17 +5,29 @@
 */
 
 import React, { useState, useRef, useEffect } from 'react';
-import { ChatMessage } from '../types';
+import { ChatMessage, Language } from '../types';
 import { sendMessageToGemini } from '../services/geminiService';
 
-const Assistant: React.FC = () => {
+interface AssistantProps {
+  language: Language;
+}
+
+const Assistant: React.FC<AssistantProps> = ({ language }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([
-    { role: 'model', text: 'Strategic analysis initiated. I am the Syscomatics Solution Architect. How can I help you transform your digital infrastructure?', timestamp: Date.now() }
-  ]);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isThinking, setIsThinking] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Reset or initialize greeting based on language
+    const greetings: Record<Language, string> = {
+        en: 'Strategic analysis initiated. I am the Syscomatics Solution Architect. How can I help you transform your digital infrastructure?',
+        ar: 'بدأ التحليل الاستراتيجي. أنا مهندس الحلول في سيسكوماتيكس. كيف يمكنني مساعدتك في تحويل بنية تحتية رقمية الخاصة بك؟',
+        ku: 'Analîza stratejîk dest pê kir. Ez mîmarê çareseriyê yê Syscomatics im. Ez çawa dikarim ji we re bibim alîkar ku hûn binesaziya xweya dîjîtal veguherînin?'
+    };
+    setMessages([{ role: 'model', text: greetings[language], timestamp: Date.now() }]);
+  }, [language]);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -33,7 +45,7 @@ const Assistant: React.FC = () => {
 
     try {
       const history = messages.map(m => ({ role: m.role, text: m.text }));
-      const responseText = await sendMessageToGemini(history, userMsg.text);
+      const responseText = await sendMessageToGemini(history, userMsg.text, language);
       
       const aiMsg: ChatMessage = { role: 'model', text: responseText, timestamp: Date.now() };
       setMessages(prev => [...prev, aiMsg]);
@@ -51,9 +63,9 @@ const Assistant: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <div className={`fixed bottom-6 ${document.documentElement.dir === 'rtl' ? 'left-6' : 'right-6'} z-50 flex flex-col items-end`}>
       {isOpen && (
-        <div className="bg-white rounded-3xl shadow-2xl w-[90vw] sm:w-[400px] h-[600px] mb-6 flex flex-col overflow-hidden border border-gray-100 animate-slide-up-fade">
+        <div className="bg-white rounded-3xl shadow-2xl w-[90vw] sm:w-[400px] h-[600px] mb-6 flex flex-col overflow-hidden border border-gray-100 animate-slide-up-fade text-start">
           <div className="bg-[#0037f3] p-6 flex justify-between items-center text-white">
             <div className="flex items-center gap-4">
                 <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center font-heading font-black">Sc</div>
@@ -78,8 +90,8 @@ const Assistant: React.FC = () => {
                 <div 
                   className={`max-w-[85%] p-4 text-sm font-medium leading-relaxed ${
                     msg.role === 'user' 
-                      ? 'bg-[#0037f3] text-white rounded-2xl rounded-tr-none shadow-lg shadow-[#0037f3]/20' 
-                      : 'bg-white border border-gray-100 text-[#0a0b0d] rounded-2xl rounded-tl-none shadow-sm'
+                      ? 'bg-[#0037f3] text-white rounded-2xl shadow-lg shadow-[#0037f3]/20' 
+                      : 'bg-white border border-gray-100 text-[#0a0b0d] rounded-2xl shadow-sm'
                   }`}
                 >
                   {msg.text}
@@ -88,7 +100,7 @@ const Assistant: React.FC = () => {
             ))}
             {isThinking && (
                <div className="flex justify-start">
-                 <div className="bg-white border border-gray-100 p-4 rounded-2xl rounded-tl-none flex gap-1 items-center shadow-sm">
+                 <div className="bg-white border border-gray-100 p-4 rounded-2xl flex gap-1 items-center shadow-sm">
                    <div className="w-1.5 h-1.5 bg-[#0037f3] rounded-full animate-bounce"></div>
                    <div className="w-1.5 h-1.5 bg-[#0037f3] rounded-full animate-bounce delay-75"></div>
                    <div className="w-1.5 h-1.5 bg-[#0037f3] rounded-full animate-bounce delay-150"></div>
@@ -112,7 +124,7 @@ const Assistant: React.FC = () => {
                 disabled={!inputValue.trim() || isThinking}
                 className="bg-[#0037f3] text-white w-10 h-10 flex items-center justify-center rounded-xl hover:scale-105 transition-all disabled:opacity-50"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-4 h-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className={`w-4 h-4 ${document.documentElement.dir === 'rtl' ? 'rotate-180' : ''}`}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
               </button>
@@ -128,7 +140,6 @@ const Assistant: React.FC = () => {
         <div className="relative z-10 font-heading font-black text-lg tracking-tighter">
             {isOpen ? '×' : 'Sc'}
         </div>
-        <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
       </button>
     </div>
   );

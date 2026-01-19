@@ -1,4 +1,3 @@
-
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -6,18 +5,54 @@
 
 import React from 'react';
 
+export type Language = 'en' | 'ar' | 'ku';
+
+export interface Pillar {
+  title: string;
+  description: string;
+}
+
+export interface RoadmapStep {
+  label: string;
+  duration: string;
+  detail: string;
+}
+
+export interface Benchmark {
+  label: string;
+  value: string;
+}
+
+export interface ServiceDomain {
+  name: string;
+  description: string;
+  icon?: string;
+}
+
+export interface ServiceExample {
+  title: string;
+  description: string;
+  results: string;
+}
+
 export interface Service {
   id: string;
   name: string;
   tagline: string;
   description: string;
   longDescription?: string;
-  category: 'Enterprise' | 'Development' | 'Security' | 'Blockchain';
+  category: 'Enterprise' | 'Development' | 'Security' | 'Blockchain' | 'Design' | 'Consulting' | 'Cloud';
   imageUrl: string;
   features: string[];
+  domains: ServiceDomain[];
+  topics: string[];
+  examples: ServiceExample[];
+  pillars: Pillar[];
+  roadmap: RoadmapStep[];
+  benchmarks: Benchmark[];
+  techStack: string[];
 }
 
-// Fix: Added missing Product interface as referenced in components
 export interface Product {
   id: string;
   name: string;

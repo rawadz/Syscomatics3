@@ -5,17 +5,23 @@
 */
 
 import React, { useState, useEffect } from 'react';
-import { BRAND_NAME, PRIMARY_COLOR } from '../constants';
+import { TRANSLATIONS } from '../constants';
+import { Language } from '../types';
 
 interface NavbarProps {
   onNavClick: (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => void;
   inquiryCount: number;
   onOpenInquiry: () => void;
+  language: Language;
+  onLanguageChange: (lang: Language) => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ onNavClick, inquiryCount, onOpenInquiry }) => {
+const Navbar: React.FC<NavbarProps> = ({ onNavClick, inquiryCount, onOpenInquiry, language, onLanguageChange }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [langMenuOpen, setLangMenuOpen] = useState(false);
+
+  const t = TRANSLATIONS[language].nav;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +39,12 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick, inquiryCount, onOpenInquiry
   const navThemeClass = (scrolled || mobileMenuOpen) 
     ? 'bg-white/95 text-[#0a0b0d] shadow-lg py-3' 
     : 'bg-transparent text-white py-6';
+
+  const languages = [
+    { id: 'en', label: 'EN' },
+    { id: 'ar', label: 'AR' },
+    { id: 'ku', label: 'KU' }
+  ];
 
   return (
     <>
@@ -55,12 +67,42 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick, inquiryCount, onOpenInquiry
           </a>
           
           <div className="hidden lg:flex items-center gap-10 text-[13px] font-bold uppercase tracking-[0.15em]">
-            <a href="#services" onClick={(e) => handleLinkClick(e, 'services')} className="hover:text-[#0037f3] transition-colors">Solutions</a>
-            <a href="#about" onClick={(e) => handleLinkClick(e, 'about')} className="hover:text-[#0037f3] transition-colors">Strategy</a>
-            <a href="#journal" onClick={(e) => handleLinkClick(e, 'journal')} className="hover:text-[#0037f3] transition-colors">Insights</a>
+            <a href="#services" onClick={(e) => handleLinkClick(e, 'services')} className="hover:text-[#0037f3] transition-colors">{t.solutions}</a>
+            <a href="#about" onClick={(e) => handleLinkClick(e, 'about')} className="hover:text-[#0037f3] transition-colors">{t.strategy}</a>
+            <a href="#journal" onClick={(e) => handleLinkClick(e, 'journal')} className="hover:text-[#0037f3] transition-colors">{t.insights}</a>
           </div>
 
-          <div className="flex items-center gap-6 z-50 relative">
+          <div className="flex items-center gap-4 md:gap-6 z-50 relative">
+            {/* Language Picker */}
+            <div className="relative">
+                <button 
+                  onClick={() => setLangMenuOpen(!langMenuOpen)}
+                  className={`text-[11px] font-black tracking-widest px-3 py-1.5 rounded-lg border transition-all ${
+                    (scrolled || mobileMenuOpen) ? 'border-gray-200 text-gray-500 hover:border-[#0037f3]' : 'border-white/20 text-white/70 hover:border-white'
+                  }`}
+                >
+                  {language.toUpperCase()}
+                </button>
+                {langMenuOpen && (
+                  <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-white rounded-xl shadow-2xl border border-gray-100 p-2 min-w-[80px] animate-fade-in-up">
+                    {languages.map(lang => (
+                      <button
+                        key={lang.id}
+                        onClick={() => {
+                          onLanguageChange(lang.id as Language);
+                          setLangMenuOpen(false);
+                        }}
+                        className={`w-full text-left px-4 py-2 rounded-lg text-[10px] font-black tracking-widest transition-colors ${
+                          language === lang.id ? 'bg-[#0037f3] text-white' : 'text-gray-500 hover:bg-gray-50'
+                        }`}
+                      >
+                        {lang.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+            </div>
+
             <button 
               onClick={onOpenInquiry}
               className={`text-[12px] font-bold uppercase tracking-widest px-5 py-2.5 rounded-full border-2 transition-all duration-300 hidden sm:flex items-center gap-2 ${
@@ -69,7 +111,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick, inquiryCount, onOpenInquiry
                   : 'border-white/30 text-white hover:border-white hover:bg-white/10'
               }`}
             >
-              Project Brief 
+              {t.brief} 
               <span className={`flex items-center justify-center w-5 h-5 rounded-full text-[10px] ${
                 (scrolled || mobileMenuOpen) ? 'bg-[#0037f3] text-white' : 'bg-white text-[#0037f3]'
               }`}>
@@ -95,14 +137,14 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick, inquiryCount, onOpenInquiry
           mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
       }`}>
           <div className="flex flex-col items-center space-y-10 text-3xl font-heading font-bold text-white tracking-tight">
-            <a href="#services" onClick={(e) => handleLinkClick(e, 'services')} className="hover:text-[#0037f3] transition-colors">Solutions</a>
-            <a href="#about" onClick={(e) => handleLinkClick(e, 'about')} className="hover:text-[#0037f3] transition-colors">Strategy</a>
-            <a href="#journal" onClick={(e) => handleLinkClick(e, 'journal')} className="hover:text-[#0037f3] transition-colors">Insights</a>
+            <a href="#services" onClick={(e) => handleLinkClick(e, 'services')} className="hover:text-[#0037f3] transition-colors">{t.solutions}</a>
+            <a href="#about" onClick={(e) => handleLinkClick(e, 'about')} className="hover:text-[#0037f3] transition-colors">{t.strategy}</a>
+            <a href="#journal" onClick={(e) => handleLinkClick(e, 'journal')} className="hover:text-[#0037f3] transition-colors">{t.insights}</a>
             <button 
                 onClick={onOpenInquiry} 
                 className="text-lg uppercase tracking-[0.2em] font-sans px-8 py-4 bg-[#0037f3] rounded-none hover:bg-white hover:text-[#0037f3] transition-all"
             >
-                Inquiry Brief ({inquiryCount})
+                {t.brief} ({inquiryCount})
             </button>
           </div>
       </div>

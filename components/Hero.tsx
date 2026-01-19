@@ -5,8 +5,16 @@
 */
 
 import React from 'react';
+import { TRANSLATIONS } from '../constants';
+import { Language } from '../types';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  language: Language;
+}
+
+const Hero: React.FC<HeroProps> = ({ language }) => {
+  const t = TRANSLATIONS[language].hero;
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     const element = document.getElementById(targetId);
@@ -31,17 +39,17 @@ const Hero: React.FC = () => {
           <div className="flex items-center gap-4 mb-8">
             <span className="h-0.5 w-12 bg-[#0037f3]"></span>
             <span className="text-xs md:text-sm font-bold uppercase tracking-[0.4em] text-[#0037f3]">
-              Systems Innovation 2025
+              {t.tagline}
             </span>
           </div>
           
           <h1 className="text-5xl md:text-8xl lg:text-9xl font-heading font-extrabold text-white leading-[0.9] tracking-tighter mb-10">
-            Engineered for <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0037f3] to-[#4e79ff]">Performance.</span>
+            {t.title} <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0037f3] to-[#4e79ff]">{t.accent}</span>
           </h1>
           
           <p className="max-w-xl text-lg md:text-xl text-white/60 font-medium leading-relaxed mb-12">
-            Syscomatics crafts high-performance digital infrastructure for the global intelligent enterprise. We solve complexity through precision.
+            {t.sub}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-5">
@@ -50,23 +58,23 @@ const Hero: React.FC = () => {
               onClick={(e) => handleNavClick(e, 'services')}
               className="px-12 py-5 bg-[#0037f3] text-white text-sm font-extrabold uppercase tracking-widest hover:bg-white hover:text-[#0a0b0d] transition-all duration-300 text-center"
             >
-              Our Solutions
+              {t.cta1}
             </a>
             <a 
               href="#about" 
               onClick={(e) => handleNavClick(e, 'about')}
               className="px-12 py-5 border border-white/20 text-white text-sm font-extrabold uppercase tracking-widest hover:border-white transition-all duration-300 text-center"
             >
-              The Strategy
+              {t.cta2}
             </a>
           </div>
         </div>
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute bottom-12 right-12 hidden md:flex flex-col items-end gap-2 text-white/40 font-mono text-[10px] uppercase tracking-widest">
-        <span>LAT: 40.7128 N</span>
-        <span>LNG: 74.0060 W</span>
+      {/* Decorative Elements - Damascus, Syria */}
+      <div className="absolute bottom-12 right-12 left-12 md:left-auto flex flex-col items-end gap-2 text-white/40 font-mono text-[10px] uppercase tracking-widest">
+        <span>LAT: 33.5138 N</span>
+        <span>LNG: 36.2765 E</span>
       </div>
       
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-[#0037f3]">
