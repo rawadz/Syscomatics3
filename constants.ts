@@ -138,33 +138,33 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       ],
       roadmap: [
         { label: 'Discovery', duration: '', detail: 'Mapping organizational friction points.' },
-        { label: 'Unit Engineering', duration: '', detail: 'Building modular components.' }
+        { label: 'Architecture', duration: '', detail: 'Designing modular logic schemas.' }
       ],
       benchmarks: [],
       techStack: ['Node.js', 'PostgreSQL'],
       businessValue: 'Reduce administrative overhead by up to 40%.'
     },
     {
-        id: 'ecommerce',
-        name: 'Global Ecommerce Engineering',
-        tagline: 'High-conversion commerce systems engineered for the global stage.',
-        description: 'Scalable shopfronts integrated with complex regional logistics and multi-currency gateways.',
-        longDescription: 'We build commerce engines designed for extreme scale. From localized payment gateways in the Middle East to global shipping logistics, our architecture ensures a sub-second checkout experience.',
-        category: 'Development',
-        imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1000',
-        features: ['Multi-currency Gateway', 'Real-time Tax Logic', 'AI Product Recommendations'],
-        domains: [{ name: 'Retail', description: 'Scaling digital sales.' }],
-        pillars: [
-          { title: 'Frictionless Checkout', description: 'Optimized 2-click paths designed for maximum conversion.' },
-          { title: 'Regional Logistics', description: 'Deep integration with local shipping providers.' }
-        ],
-        roadmap: [
-          { label: 'Market Analysis', duration: '', detail: 'Defining specific payment and logistics requirements.' },
-          { label: 'Engine Development', duration: '', detail: 'Building core commerce logic.' }
-        ],
-        benchmarks: [],
-        techStack: ['Next.js', 'Stripe'],
-        businessValue: 'Typical conversion rate increases of 60%.'
+      id: 'ecommerce',
+      name: 'Global Ecommerce Engineering',
+      tagline: 'High-conversion commerce systems engineered for the global stage.',
+      description: 'Scalable shopfronts integrated with complex regional logistics and gateways.',
+      longDescription: 'We build commerce engines designed for extreme scale. From localized payment gateways to global shipping logistics, our architecture ensures a sub-second checkout experience.',
+      category: 'Development',
+      imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1000',
+      features: ['Multi-currency Gateway', 'Real-time Tax Logic', 'AI Product Recommendations'],
+      domains: [{ name: 'Retail', description: 'Scaling digital sales.' }],
+      pillars: [
+        { title: 'Frictionless Checkout', description: 'Optimized paths designed for maximum conversion.' },
+        { title: 'Regional Logistics', description: 'Deep integration with local shipping providers.' }
+      ],
+      roadmap: [
+        { label: 'Market Analysis', duration: '', detail: 'Defining payment and logistics requirements.' },
+        { label: 'Engine Dev', duration: '', detail: 'Building core commerce logic.' }
+      ],
+      benchmarks: [],
+      techStack: ['Next.js', 'Stripe'],
+      businessValue: 'Typical conversion rate increases of 60%.'
     },
     {
       id: 'crm',
@@ -195,7 +195,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Design focused on conversion, user retention, and brand integrity.',
       longDescription: 'We treat design as an engineering discipline. Our UI/UX process is rooted in cognitive psychology and conversion optimization.',
       category: 'Design',
-      imageUrl: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=1000',
+      imageUrl: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1000&auto=format&fit=crop',
       features: ['Behavioral Mapping', 'High-Fidelity Prototypes', 'Design Systems'],
       domains: [{ name: 'Identity', description: 'Premium digital presence.' }],
       pillars: [
@@ -204,7 +204,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       ],
       roadmap: [
         { label: 'UX Flow Logic', duration: '', detail: 'Mapping the skeletal structure.' },
-        { label: 'Visual System', duration: '', detail: 'Developing scalable components.' }
+        { label: 'System Build', duration: '', detail: 'Developing scalable components.' }
       ],
       benchmarks: [],
       techStack: ['Figma', 'React'],
@@ -217,7 +217,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Deep technical SEO to ensure your brand captures high-intent traffic.',
       longDescription: 'SEO is an architecture problem. We optimize from the server level up to ensure your platform dominates rankings.',
       category: 'Consulting',
-      imageUrl: 'https://images.unsplash.com/photo-1562577353-f71e93b5a63c?auto=format&fit=crop&q=80&w=1000',
+      imageUrl: 'https://images.unsplash.com/photo-1551288049-bbbda51658f7?q=80&w=1000&auto=format&fit=crop',
       features: ['Core Web Vitals', 'Semantic Indexing', 'Authority Building'],
       domains: [{ name: 'Growth', description: 'Increasing organic reach.' }],
       pillars: [
@@ -225,7 +225,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         { title: 'Semantic Intelligence', description: 'Targeting user intent clusters.' }
       ],
       roadmap: [
-        { label: 'Infrastructure Audit', duration: '', detail: 'Scanning for crawl errors.' },
+        { label: 'Technical Audit', duration: '', detail: 'Scanning for crawl errors.' },
         { label: 'Authority Campaign', duration: '', detail: 'Executing backlink strategies.' }
       ],
       benchmarks: [],
@@ -261,7 +261,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'High-performance middleware to bridge disparate systems.',
       longDescription: 'We build the connective tissue that allows your ERP, CRM, and web tools to share data instantly and accurately.',
       category: 'Development',
-      imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=1000',
+      imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop',
       features: ['REST & GraphQL', 'Webhook Logic', 'OAuth Security'],
       domains: [{ name: 'Connectivity', description: 'Eliminating manual sync.' }],
       pillars: [
@@ -288,7 +288,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       domains: [{ name: 'Efficiency', description: 'IT resource optimization.' }],
       pillars: [
         { title: 'Waste Detection', description: 'Eliminating unused software licenses.' },
-        { title: 'Sustainability', description: 'Modernization roadmap.' }
+        { title: 'Modernization', description: 'Strategic 5-year roadmap.' }
       ],
       roadmap: [
         { label: 'Discovery Scan', duration: '', detail: 'Mapping the app ecosystem.' },
@@ -439,7 +439,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'تركيز على التحويل، الاحتفاظ بالعملاء، وسلامة العلامة التجارية.',
         longDescription: 'نتعامل مع التصميم كفرع هندسي يجمع بين علم النفس المعرفي وتحسين معدلات التحويل.',
         category: 'Design',
-        imageUrl: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1000&auto=format&fit=crop',
         features: ['خرائط السلوك', 'نظم التصميم', 'واجهات سريعة'],
         domains: [{ name: 'الهوية', description: 'حضور رقمي متميز.' }],
         pillars: [
@@ -461,7 +461,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'ضمان التقاط العملاء المحتملين ذوي النوايا العالية.',
         longDescription: 'تحسين محركات البحث هو مشكلة معمارية. نحن نحسن من مستوى الخادم لضمان السيادة.',
         category: 'Consulting',
-        imageUrl: 'https://images.unsplash.com/photo-1562577353-f71e93b5a63c?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: 'https://images.unsplash.com/photo-1551288049-bbbda51658f7?q=80&w=1000&auto=format&fit=crop',
         features: ['مؤشرات الويب الأساسية', 'الفهرسة الدلالية', 'بناء السلطة'],
         domains: [{ name: 'النمو', description: 'توسيع الوصول المجاني.' }],
         pillars: [
@@ -505,7 +505,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'برمجيات وسيطة لربط الأنظمة المختلفة.',
         longDescription: 'نبني النسيج الرابط الذي يسمح لأنظمتك بمشاركة البيانات فوراً وبدقة.',
         category: 'Development',
-        imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop',
         features: ['REST/GraphQL', 'منطق الويب هوك', 'أمن OAuth'],
         domains: [{ name: 'الربط', description: 'إلغاء المزامنة اليدوية.' }],
         pillars: [
@@ -683,7 +683,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'Sêwirana baldar li ser veguherîn û entegrasyona brandê.',
         longDescription: 'Em sêwirana wekî dîsîplînek endezyariyê dibînin ku psîkolojiya zanistî bikar tîne.',
         category: 'Design',
-        imageUrl: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: 'https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=1000&auto=format&fit=crop',
         features: ['Nexşekirina Reftarî', 'Sîstemên Sêwirandinê', 'UI-ya Performansê'],
         domains: [{ name: 'Nasname', description: 'Hebûna dîjîtal a premium.' }],
         pillars: [
@@ -705,7 +705,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'Piştrast bikin ku branda we trafîka organîk a giran digire.',
         longDescription: 'Optimîzasyona lêgerînê pirsgirêkek mîmarî ye. Em ji asta serverê ve optimîze dikin.',
         category: 'Consulting',
-        imageUrl: 'https://images.unsplash.com/photo-1562577353-f71e93b5a63c?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: 'https://images.unsplash.com/photo-1551288049-bbbda51658f7?q=80&w=1000&auto=format&fit=crop',
         features: ['Core Web Vitals', 'Indeksirina Semantîk', 'Avakirina Otorîteyê'],
         domains: [{ name: 'Mezinbûn', description: 'Berfirehkirina gihîştina organîk.' }],
         pillars: [
@@ -749,7 +749,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'Middleware ji bo girêdana sîstemên nermalavê yên cuda.',
         longDescription: 'Em tevna girêdanê ava dikin ku dihêle sîstemên we daneyan rast û bilez parve bikin.',
         category: 'Development',
-        imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?auto=format&fit=crop&q=80&w=1000',
+        imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop',
         features: ['REST/GraphQL', 'Mantiqê Webhook', 'Ewlehiya OAuth'],
         domains: [{ name: 'Girêdan', description: 'Rakirina hevdengkirina manuwel.' }],
         pillars: [
