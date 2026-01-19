@@ -74,7 +74,8 @@ export const TRANSLATIONS: Record<Language, any> = {
     services: { header: 'Our Solutions', sub: 'Smart tools designed for modern companies.', back: 'Back', spec: 'Expertise in', pillars: 'Why This Matters', roadmap: 'Strategic Roadmap', thesis: 'The Architectural Thesis', value: 'Strategic Business Value', briefAdd: 'Add to Brief', explore: 'Explore' },
     journal: { header: 'Success Stories', sub: 'Transformations', back: 'Back', featured: 'Latest Win', tactical: 'Client Outcomes', readTime: 'min read' },
     inquiry: { title: 'Your Project', sub: 'Selection', empty: 'List is empty.', remove: 'Remove', initiate: 'Start Review', assessment: 'Expert reply in 24h', contact: 'Contact Info', name: 'Your Name', email: 'Email', org: 'Company', context: 'Details', submit: 'Send Request', back: 'Back', success: 'Thank You.', successSub: 'We will contact you soon.', scopes: 'Selected Services' },
-    footer: { sub: 'Architecting sovereign digital futures.', nav: 'Navigation', exp: 'Expertise', newsletter: 'Subscribe', newsd: 'Get updates.', reg: 'Join Us', contact: 'Connect', address: 'Damascus, Syria', email: 'info@syscomatics.com', phone: '+963 932 255 512' }
+    footer: { sub: 'Architecting sovereign digital futures.', nav: 'Navigation', exp: 'Expertise', newsletter: 'Subscribe', newsd: 'Get updates.', reg: 'Join Us', contact: 'Connect', address: 'Damascus, Syria', email: 'info@syscomatics.com', phone: '+963 932 255 512' },
+    cookie: { title: 'Systems Protocol', desc: 'We utilize localized caching to ensure your Project Brief and language preferences persist across sessions.', accept: 'Accept Protocol', reject: 'Decline' }
   },
   ar: {
     nav: { solutions: 'الحلول', strategy: 'الاستراتيجية', insights: 'قصص النجاح', brief: 'ملخص المشروع' },
@@ -95,7 +96,8 @@ export const TRANSLATIONS: Record<Language, any> = {
     services: { header: 'حلولنا', sub: 'أدوات ذكية للشركات.', back: 'العودة', spec: 'الخبرة في', pillars: 'الأهمية الاستراتيجية', roadmap: 'خارطة الطريق', thesis: 'نظرة عامة هندسية', value: 'القيمة الاستراتيجية للأعمال', briefAdd: 'إضافة للملخص', explore: 'اكتشف' },
     journal: { header: 'قصص النجاح', sub: 'التحولات', back: 'العودة', featured: 'أحدث الإنجازات', tactical: 'النتائج', readTime: 'دقائق' },
     inquiry: { title: 'مشروعك', sub: 'الاختيار', empty: 'القائمة فارغة.', remove: 'إزالة', initiate: 'بدء المراجعة', assessment: 'رد خلال ٢٤ ساعة', contact: 'الاتصال', name: 'الاسم', email: 'البريد', org: 'الشركة', context: 'التفاصيل', submit: 'إرسال', back: 'العودة', success: 'شكراً لك.', successSub: 'سنتواصل معك قريباً.', scopes: 'الخدمات المختارة' },
-    footer: { sub: 'بناء مستقبل رقمي سيادي.', nav: 'التنقل', exp: 'الخبرة', newsletter: 'اشترك', newsd: 'احصل على التحديثات.', reg: 'انضم إلينا', contact: 'تواصل', address: 'دمشق، سوريا', email: 'info@syscomatics.com', phone: '+963 932 255 512' }
+    footer: { sub: 'بناء مستقبل رقمي سيادي.', nav: 'التنقل', exp: 'الخبرة', newsletter: 'اشترك', newsd: 'احصل على التحديثات.', reg: 'انضم إلينا', contact: 'تواصل', address: 'دمشق، سوريا', email: 'info@syscomatics.com', phone: '+963 932 255 512' },
+    cookie: { title: 'بروتوكول الأنظمة', desc: 'نحن نستخدم التخزين المحلي لضمان استمرار ملخص مشروعك وتفضيلات اللغة الخاصة بك عبر الجلسات.', accept: 'قبول البروتوكول', reject: 'رفض' }
   },
   ku: {
     nav: { solutions: 'Çareserî', strategy: 'Stratejî', insights: 'Çîrok', brief: 'Kurteya Projeyê' },
@@ -116,7 +118,8 @@ export const TRANSLATIONS: Record<Language, any> = {
     services: { header: 'Çareseriyên Me', sub: 'Amûrên aqilmend ên ji bo pargîdaniyên nûjen hatine sêwirandin.', back: 'Vegere', spec: 'Pisporî di', pillars: 'Çima Ev Girîng e', roadmap: 'Nexşerêya Stratejîk', thesis: 'Teza Mîmarî', value: 'Nirxa Karsaziya Stratejîk', briefAdd: 'Li Kurteyê Zêde Bike', explore: 'Lêkolîn Bike' },
     journal: { header: 'Çîrokên Serkeftinê', sub: 'Veguherîn', back: 'Vegere', featured: 'Serkeftina Dawî', tactical: 'Encamên Mişterî', readTime: 'deqe xwendin' },
     inquiry: { title: 'Projeya We', sub: 'Bijartin', empty: 'Lîste vala ye.', remove: 'Rake', initiate: 'Nirxandinê Destpê Bike', assessment: 'Bersiva pispor di 24 demjimêran de', contact: 'Agahdariya Têkiliyê', name: 'Navê We', email: 'E-peyam', org: 'Pargîdanî', context: 'Kitekit', submit: 'Daxwazê Bişîne', back: 'Vegere', success: 'Spas.', successSub: 'Em ê di nêzîk de bi we re têkilî deynin.', scopes: 'Xizmetên Bijartî' },
-    footer: { sub: 'Avakirina paşerojên dîjîtal ên serwer.', nav: 'Navîgasyon', exp: 'Pisporî', newsletter: 'Abone Bibe', newsd: 'Nûçeyan bistînin.', reg: 'Tevlî Me Bibe', contact: 'Têkilî', address: 'Şam, Sûriye', email: 'info@syscomatics.com', phone: '+963 932 255 512' }
+    footer: { sub: 'Avakirina paşerojên dîjîtal ên serwer.', nav: 'Navîgasyon', exp: 'Pisporî', newsletter: 'Abone Bibe', newsd: 'Nûçeyan bistînin.', reg: 'Tevlî Me Bibe', contact: 'Têkilî', address: 'Şam, Sûriye', email: 'info@syscomatics.com', phone: '+963 932 255 512' },
+    cookie: { title: 'Protokola Sîsteman', desc: 'Em cachkirina herêmî bikar tînin da ku Kurteya Projeya we û tercîhên zimanê we di her rûniştinê de bimînin.', accept: 'Protokolê Pejirîne', reject: 'Red Bike' }
   }
 };
 
@@ -195,7 +198,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Design focused on conversion, user retention, and brand integrity.',
       longDescription: 'We treat design as an engineering discipline. Our UI/UX process is rooted in cognitive psychology and conversion optimization.',
       category: 'Design',
-      imageUrl: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1000&auto=format&fit=crop',
+      imageUrl: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=1000&auto=format&fit=crop',
       features: ['Behavioral Mapping', 'High-Fidelity Prototypes', 'Design Systems'],
       domains: [{ name: 'Identity', description: 'Premium digital presence.' }],
       pillars: [
@@ -217,7 +220,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Deep technical SEO to ensure your brand captures high-intent traffic.',
       longDescription: 'SEO is an architecture problem. We optimize from the server level up to ensure your platform dominates rankings.',
       category: 'Consulting',
-      imageUrl: 'https://images.unsplash.com/photo-1551288049-bbbda51658f7?q=80&w=1000&auto=format&fit=crop',
+      imageUrl: 'https://images.unsplash.com/photo-1562577353-f71e93b5a63c?q=80&w=1000&auto=format&fit=crop',
       features: ['Core Web Vitals', 'Semantic Indexing', 'Authority Building'],
       domains: [{ name: 'Growth', description: 'Increasing organic reach.' }],
       pillars: [
@@ -261,7 +264,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'High-performance middleware to bridge disparate systems.',
       longDescription: 'We build the connective tissue that allows your ERP, CRM, and web tools to share data instantly and accurately.',
       category: 'Development',
-      imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop',
+      imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1000&auto=format&fit=crop',
       features: ['REST & GraphQL', 'Webhook Logic', 'OAuth Security'],
       domains: [{ name: 'Connectivity', description: 'Eliminating manual sync.' }],
       pillars: [
@@ -439,7 +442,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'تركيز على التحويل، الاحتفاظ بالعملاء، وسلامة العلامة التجارية.',
         longDescription: 'نتعامل مع التصميم كفرع هندسي يجمع بين علم النفس المعرفي وتحسين معدلات التحويل.',
         category: 'Design',
-        imageUrl: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1000&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=1000&auto=format&fit=crop',
         features: ['خرائط السلوك', 'نظم التصميم', 'واجهات سريعة'],
         domains: [{ name: 'الهوية', description: 'حضور رقمي متميز.' }],
         pillars: [
@@ -461,7 +464,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'ضمان التقاط العملاء المحتملين ذوي النوايا العالية.',
         longDescription: 'تحسين محركات البحث هو مشكلة معمارية. نحن نحسن من مستوى الخادم لضمان السيادة.',
         category: 'Consulting',
-        imageUrl: 'https://images.unsplash.com/photo-1551288049-bbbda51658f7?q=80&w=1000&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1562577353-f71e93b5a63c?q=80&w=1000&auto=format&fit=crop',
         features: ['مؤشرات الويب الأساسية', 'الفهرسة الدلالية', 'بناء السلطة'],
         domains: [{ name: 'النمو', description: 'توسيع الوصول المجاني.' }],
         pillars: [
@@ -505,7 +508,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'برمجيات وسيطة لربط الأنظمة المختلفة.',
         longDescription: 'نبني النسيج الرابط الذي يسمح لأنظمتك بمشاركة البيانات فوراً وبدقة.',
         category: 'Development',
-        imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1000&auto=format&fit=crop',
         features: ['REST/GraphQL', 'منطق الويب هوك', 'أمن OAuth'],
         domains: [{ name: 'الربط', description: 'إلغاء المزامنة اليدوية.' }],
         pillars: [
@@ -683,7 +686,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'Sêwirana baldar li ser veguherîn û entegrasyona brandê.',
         longDescription: 'Em sêwirana wekî dîsîplînek endezyariyê dibînin ku psîkolojiya zanistî bikar tîne.',
         category: 'Design',
-        imageUrl: 'https://images.unsplash.com/photo-1545235617-9465d2a55698?q=80&w=1000&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=1000&auto=format&fit=crop',
         features: ['Nexşekirina Reftarî', 'Sîstemên Sêwirandinê', 'UI-ya Performansê'],
         domains: [{ name: 'Nasname', description: 'Hebûna dîjîtal a premium.' }],
         pillars: [
@@ -705,7 +708,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'Piştrast bikin ku branda we trafîka organîk a giran digire.',
         longDescription: 'Optimîzasyona lêgerînê pirsgirêkek mîmarî ye. Em ji asta serverê ve optimîze dikin.',
         category: 'Consulting',
-        imageUrl: 'https://images.unsplash.com/photo-1551288049-bbbda51658f7?q=80&w=1000&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1562577353-f71e93b5a63c?q=80&w=1000&auto=format&fit=crop',
         features: ['Core Web Vitals', 'Indeksirina Semantîk', 'Avakirina Otorîteyê'],
         domains: [{ name: 'Mezinbûn', description: 'Berfirehkirina gihîştina organîk.' }],
         pillars: [
@@ -749,7 +752,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'Middleware ji bo girêdana sîstemên nermalavê yên cuda.',
         longDescription: 'Em tevna girêdanê ava dikin ku dihêle sîstemên we daneyan rast û bilez parve bikin.',
         category: 'Development',
-        imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1000&auto=format&fit=crop',
         features: ['REST/GraphQL', 'Mantiqê Webhook', 'Ewlehiya OAuth'],
         domains: [{ name: 'Girêdan', description: 'Rakirina hevdengkirina manuwel.' }],
         pillars: [

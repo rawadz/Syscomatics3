@@ -12,9 +12,10 @@ interface CheckoutProps {
   items: Service[];
   onBack: () => void;
   language: Language;
+  onSuccess: () => void;
 }
 
-const Checkout: React.FC<CheckoutProps> = ({ items, onBack, language }) => {
+const Checkout: React.FC<CheckoutProps> = ({ items, onBack, language, onSuccess }) => {
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -27,7 +28,7 @@ const Checkout: React.FC<CheckoutProps> = ({ items, onBack, language }) => {
   });
 
   // URL verified for deployment compatibility
-  const SUBMISSION_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyO388aofFwj49eIVPBMjmhdeP4mW8opX5DhHatytH_7_0UhoI_JPpatvsNOpUpvr28/exec'; 
+  const SUBMISSION_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyfqG8zbjwwgY3uuvDRyGB_HwhFkXIRtqElDvWmpQNGhgWi-amhKjgBT2o8hntml-lh/exec'; 
 
   const t = (TRANSLATIONS[language]?.inquiry) || TRANSLATIONS.en.inquiry;
 
@@ -51,9 +52,9 @@ const Checkout: React.FC<CheckoutProps> = ({ items, onBack, language }) => {
         console.log('DEV_MODE: No endpoint configured. Payload:', payload);
         await new Promise(resolve => setTimeout(resolve, 1500));
         setSubmitted(true);
+        onSuccess();
       } else {
         // We use fetch with 'no-cors' for Google Apps Script
-        // This allows the POST to hit the doPost(e) function without pre-flight errors
         await fetch(SUBMISSION_ENDPOINT, {
           method: 'POST',
           mode: 'no-cors',
@@ -64,10 +65,10 @@ const Checkout: React.FC<CheckoutProps> = ({ items, onBack, language }) => {
           body: JSON.stringify(payload)
         });
         
-        // Since no-cors doesn't allow reading the response, 
-        // we provide a slight artificial delay for UX before showing success
+        // Artificial delay for UX
         await new Promise(resolve => setTimeout(resolve, 1000));
         setSubmitted(true);
+        onSuccess();
       }
     } catch (err) {
       console.error('Submission technical error:', err);

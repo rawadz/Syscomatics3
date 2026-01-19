@@ -16,19 +16,38 @@ import ServiceDetail from './components/ServiceDetail';
 import JournalDetail from './components/JournalDetail';
 import InquiryDrawer from './components/InquiryDrawer';
 import Checkout from './components/Checkout';
+import CookieBanner from './components/CookieBanner';
 import { Service, ViewState, Language } from './types';
 
 function App() {
+  // PERSISTENCE INIT
+  const storedLang = localStorage.getItem('sys_lang') as Language;
+  const initialLang: Language = storedLang || 'en';
+  
   const [view, setView] = useState<ViewState>({ type: 'home' });
-  const [inquiryList, setInquiryList] = useState<Service[]>([]);
+  const [inquiryList, setInquiryList] = useState<Service[]>(() => {
+    try {
+      const stored = localStorage.getItem('sys_inquiry_list');
+      return stored ? JSON.parse(stored) : [];
+    } catch {
+      return [];
+    }
+  });
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>(initialLang);
 
+  // Sync Language and Direction
   useEffect(() => {
     const dir = (language === 'ar') ? 'rtl' : 'ltr';
     document.documentElement.dir = dir;
     document.documentElement.lang = language;
+    localStorage.setItem('sys_lang', language);
   }, [language]);
+
+  // Sync Inquiry List
+  useEffect(() => {
+    localStorage.setItem('sys_inquiry_list', JSON.stringify(inquiryList));
+  }, [inquiryList]);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
@@ -66,6 +85,11 @@ function App() {
     const newList = [...inquiryList];
     newList.splice(index, 1);
     setInquiryList(newList);
+  };
+
+  const clearBrief = () => {
+    setInquiryList([]);
+    localStorage.removeItem('sys_inquiry_list');
   };
 
   return (
@@ -129,6 +153,7 @@ function App() {
                 items={inquiryList}
                 language={language}
                 onBack={() => setView({ type: 'home' })}
+                onSuccess={clearBrief}
             />
         )}
       </main>
@@ -149,6 +174,8 @@ function App() {
             setView({ type: 'inquiry' });
         }}
       />
+
+      <CookieBanner language={language} />
     </div>
   );
 }
