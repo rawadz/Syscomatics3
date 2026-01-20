@@ -46,7 +46,6 @@ export interface Service {
   businessValue: string;
 }
 
-// Added missing Product interface
 export interface Product {
   id: string;
   name: string;
@@ -77,4 +76,5 @@ export type ViewState =
   | { type: 'home' }
   | { type: 'service', service: Service }
   | { type: 'journal', article: JournalArticle }
+  | { type: 'projects-archive' }
   | { type: 'inquiry' };

@@ -14,6 +14,7 @@ import Assistant from './components/Assistant';
 import Footer from './components/Footer';
 import ServiceDetail from './components/ServiceDetail';
 import JournalDetail from './components/JournalDetail';
+import ProjectsArchive from './components/ProjectsArchive';
 import InquiryDrawer from './components/InquiryDrawer';
 import Checkout from './components/Checkout';
 import CookieBanner from './components/CookieBanner';
@@ -53,17 +54,19 @@ function App() {
     e.preventDefault();
     if (view.type !== 'home') {
       setView({ type: 'home' });
-      setTimeout(() => scrollToSection(targetId), 0);
+      if (targetId) {
+        setTimeout(() => scrollToSection(targetId), 50);
+      }
     } else {
-      scrollToSection(targetId);
+      if (targetId) {
+        scrollToSection(targetId);
+      } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
   };
 
   const scrollToSection = (targetId: string) => {
-    if (!targetId) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        return;
-    }
     const element = document.getElementById(targetId);
     if (element) {
       const headerOffset = 85;
@@ -123,9 +126,21 @@ function App() {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                     setView({ type: 'journal', article: a });
                 }} 
+                onExploreAll={() => setView({ type: 'projects-archive' })}
                 language={language}
             />
           </>
+        )}
+
+        {view.type === 'projects-archive' && (
+          <ProjectsArchive 
+            onArticleClick={(a) => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              setView({ type: 'journal', article: a });
+            }}
+            onBack={() => setView({ type: 'home' })}
+            language={language}
+          />
         )}
 
         {view.type === 'service' && (

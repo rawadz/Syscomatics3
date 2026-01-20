@@ -10,18 +10,21 @@ import { JournalArticle, Language } from '../types';
 
 interface JournalProps {
   onArticleClick: (article: JournalArticle) => void;
+  onExploreAll: () => void;
   language: Language;
 }
 
-const Journal: React.FC<JournalProps> = ({ onArticleClick, language }) => {
+const Journal: React.FC<JournalProps> = ({ onArticleClick, onExploreAll, language }) => {
   // Safe translation access with fallback
   const t = (TRANSLATIONS[language]?.journal) || TRANSLATIONS.en.journal;
-  const articles = JOURNAL_ARTICLES[language] || JOURNAL_ARTICLES.en;
+  const allArticles = JOURNAL_ARTICLES[language] || JOURNAL_ARTICLES.en;
   
-  if (articles.length === 0) return null;
+  if (allArticles.length === 0) return null;
 
-  const featured = articles[0];
-  const others = articles.slice(1);
+  // Show only top 3 on home page
+  const displayed = allArticles.slice(0, 3);
+  const featured = displayed[0];
+  const others = displayed.slice(1);
 
   return (
     <section id="journal" className="bg-white py-20 md:py-48 px-6 md:px-12 text-start">
@@ -50,7 +53,7 @@ const Journal: React.FC<JournalProps> = ({ onArticleClick, language }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                 <div className="absolute top-6 left-6 md:top-8 md:left-8">
                     <div className="px-3 py-1.5 md:px-4 md:py-2 bg-[#0037f3]/90 backdrop-blur-md text-white text-[8px] md:text-[9px] font-black uppercase tracking-widest rounded-lg">
-                       4 {t.readTime}
+                       TRANSFORMATION_RECORD
                     </div>
                 </div>
               </div>
@@ -67,7 +70,7 @@ const Journal: React.FC<JournalProps> = ({ onArticleClick, language }) => {
 
           <div className="lg:col-span-5">
             <div className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] text-[#0037f3] mb-8 md:mb-12">{t.tactical}</div>
-            <div className="space-y-12 md:space-y-16">
+            <div className="space-y-12 md:space-y-16 mb-12">
               {others.map((article) => (
                 <div key={article.id} className="group cursor-pointer flex gap-6 md:gap-8 items-start pb-10 md:pb-12 border-b border-gray-100 last:border-0" onClick={() => onArticleClick(article)}>
                   <div className="flex-1">
@@ -82,18 +85,21 @@ const Journal: React.FC<JournalProps> = ({ onArticleClick, language }) => {
                 </div>
               ))}
             </div>
-            
-            {/* Attractive CTA for customized inquiry */}
-            <div className="mt-12 p-8 md:p-12 bg-[#0037f3] rounded-[3rem] text-white relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full translate-x-12 -translate-y-12 group-hover:scale-150 transition-transform duration-1000"></div>
-                <div className="relative z-10">
-                    <h4 className="text-2xl font-heading font-extrabold mb-4 tracking-tight">Have a unique challenge?</h4>
-                    <p className="text-white/70 text-sm font-medium mb-8 leading-relaxed">Our architects specialize in solving complex infrastructure problems with tailored engineering.</p>
-                    <a href="#services" className="inline-flex items-center gap-3 text-[9px] font-black uppercase tracking-widest bg-white text-[#0037f3] px-6 py-3 rounded-full hover:bg-[#0a0b0d] hover:text-white transition-all">
-                        View Capability Map
-                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-                    </a>
-                </div>
+
+            {/* Navigation to Full Archive */}
+            <div className="pt-8">
+                <button 
+                    onClick={onExploreAll}
+                    className="w-full group flex items-center justify-between p-8 bg-gray-50 border border-gray-100 rounded-[2.5rem] hover:bg-[#0a0b0d] hover:text-white transition-all duration-500"
+                >
+                    <div className="text-start">
+                        <div className="text-[10px] font-black uppercase tracking-[0.3em] text-[#0037f3] mb-2">{language === 'ar' ? 'الأرشيف الكامل' : 'Full Archive'}</div>
+                        <h4 className="text-xl md:text-2xl font-heading font-extrabold tracking-tight">{t.exploreAll}</h4>
+                    </div>
+                    <div className="w-12 h-12 rounded-full bg-[#0037f3] text-white flex items-center justify-center group-hover:translate-x-2 transition-transform">
+                        <svg className={`w-5 h-5 ${language === 'ar' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                    </div>
+                </button>
             </div>
           </div>
         </div>

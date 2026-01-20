@@ -79,7 +79,7 @@ export const TRANSLATIONS: Record<Language, any> = {
       uptimed: 'High-speed systems ensuring continuous operations.' 
     },
     services: { header: 'Our Solutions', sub: 'Smart tools designed for modern companies.', back: 'Back', spec: 'Expertise in', pillars: 'Why This Matters', roadmap: 'Strategic Roadmap', thesis: 'The Architectural Thesis', value: 'Strategic Business Value', briefAdd: 'Add to Brief', explore: 'Explore' },
-    journal: { header: 'Featured Projects', sub: 'Proven Impact', back: 'Back', featured: 'Strategic Milestone', tactical: 'Case Studies', readTime: 'min read' },
+    journal: { header: 'Featured Projects', sub: 'Proven Impact', back: 'Back', featured: 'Strategic Milestone', tactical: 'Case Studies', readTime: 'min read', exploreAll: 'Explore Project Archive' },
     inquiry: { title: 'Your Project', sub: 'Selection', empty: 'List is empty.', remove: 'Remove', initiate: 'Start Review', assessment: 'Expert reply in 24h', contact: 'Contact Info', name: 'Your Name', email: 'Email', org: 'Company', context: 'Details', submit: 'Send Request', back: 'Back', success: 'Thank You.', successSub: 'We will contact you soon.', scopes: 'Selected Services' },
     footer: { sub: 'Architecting sovereign digital futures.', nav: 'Navigation', exp: 'Expertise', newsletter: 'Subscribe', newsd: 'Get updates.', reg: 'Join Us', contact: 'Connect', address: 'Damascus, Syria', email: 'info@syscomatics.com', phone: '+963 932 255 512' },
     cookie: { title: 'Systems Protocol', desc: 'We utilize localized caching to ensure your Project Brief and language preferences persist across sessions.', accept: 'Accept Protocol', reject: 'Decline' }
@@ -108,7 +108,7 @@ export const TRANSLATIONS: Record<Language, any> = {
       uptimed: 'أنظمة تضمن استمرارية أعمالك.' 
     },
     services: { header: 'حلولنا', sub: 'أدوات ذكية للشركات.', back: 'العودة', spec: 'الخبرة في', pillars: 'الأهمية الاستراتيجية', roadmap: 'خارطة الطريق', thesis: 'نظرة عامة هندسية', value: 'القيمة الاستراتيجية للأعمال', briefAdd: 'إضافة للملخص', explore: 'اكتشف' },
-    journal: { header: 'أبرز المشاريع', sub: 'تأثير ملموس', back: 'العودة', featured: 'إنجاز استراتيجي', tactical: 'دراسات الحالة', readTime: 'دقائق' },
+    journal: { header: 'أبرز المشاريع', sub: 'تأثير ملموس', back: 'العودة', featured: 'إنجاز استراتيجي', tactical: 'دراسات الحالة', readTime: 'دقائق', exploreAll: 'استكشف أرشيف المشاريع' },
     inquiry: { title: 'مشروعك', sub: 'الاختيار', empty: 'القائمة فارغة.', remove: 'إزالة', initiate: 'بدء المراجعة', assessment: 'رد خلال ٢٤ ساعة', contact: 'الاتصال', name: 'الاسم', email: 'البريد', org: 'الشركة', context: 'التفاصيل', submit: 'إرسال', back: 'العودة', success: 'شكراً لك.', successSub: 'سنتواصل معك قريباً.', scopes: 'الخدمات المختارة' },
     footer: { sub: 'بناء مستقبل رقمي سيادي.', nav: 'التنقل', exp: 'الخبرة', newsletter: 'اشترك', newsd: 'احصل على التحديثات.', reg: 'انضم إلينا', contact: 'تواصل', address: 'دمشق، سوريا', email: 'info@syscomatics.com', phone: '+963 932 255 512' },
     cookie: { title: 'بروتوكول الأنظمة', desc: 'نحن نستخدم التخزين المحلي لضمان استمرار ملخص مشروعك وتفضيلات اللغة الخاصة بك عبر الجلسات.', accept: 'قبول البروتوكول', reject: 'رفض' }
@@ -137,7 +137,7 @@ export const TRANSLATIONS: Record<Language, any> = {
       uptimed: 'Sîstemên leza bilind ku operasyonên berdewam garantî dikin.' 
     },
     services: { header: 'Çareserîyên Me', sub: 'Amûrên aqilmend ên ji bo pargîdanîyên nûjen hatine sêwirandin.', back: 'Vegere', spec: 'Pisporî di', pillars: 'Çima Ev Girîng e', roadmap: 'Nexşerêya Stratejîk', thesis: 'Teza Mîmarî', value: 'Nirxa Karsaziya Stratejîk', briefAdd: 'Li Kurteyê Zêde Bike', explore: 'Lêkolîn Bike' },
-    journal: { header: 'Projeyên Taybet', sub: 'Bandora îsbatkirî', back: 'Vegere', featured: 'Nîşana Stratejîk', tactical: 'Nimûneyên Serkeftinê', readTime: 'deqe xwendin' },
+    journal: { header: 'Projeyên Taybet', sub: 'Bandora îsbatkirî', back: 'Vegere', featured: 'Nîşana Stratejîk', tactical: 'Nimûneyên Serkeftinê', readTime: 'deqe xwendin', exploreAll: 'Arşîva Projeyan Bibîne' },
     inquiry: { title: 'Projeya We', sub: 'Bijartin', empty: 'Lîste vala ye.', remove: 'Rake', initiate: 'Nirxandinê Destpê Bike', assessment: 'Bersiva pispor di 24 demjimêran de', contact: 'Agahdariya Têkiliyê', name: 'Navê We', email: 'E-peyam', org: 'Pargîdanî', context: 'Kitekit', submit: 'Daxwazê Bişîne', back: 'Vegere', success: 'Spas.', successSub: 'Em ê di nêzîk de bi we re têkilî deynin.', scopes: 'Xizmetên Bijartî' },
     footer: { sub: 'Avakirina paşerojên dîjîtal ên serwer.', nav: 'Navîgasyon', exp: 'Pisporî', newsletter: 'Abone Bibe', newsd: 'Nûçeyan bistînin.', reg: 'Tevlî Me Bibe', contact: 'Têkilî', address: 'Şam, Sûriye', email: 'info@syscomatics.com', phone: '+963 932 255 512' },
     cookie: { title: 'Protokola Sîsteman', desc: 'Em cachkirina herêmî bikar tînin da ku Kurteya Projeya we û tercîhên zimanê we di her rûniştinê de bimînin.', accept: 'Protokolê Pejirîne', reject: 'Red Bike' }
@@ -647,7 +647,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         name: 'عملك في جيبك (Mobile)',
         tagline: 'ضع شركتك في جيب عميلك.',
         description: 'تطبيقات سريعة وسهلة الاستخدام للآيفون والأندرويد.',
-        longDescription: 'تطبيقات الموبايل هي الوسيلة لتكون قريباً من عميلك. نبني تطبيقات تسمح لعملائك بالشراء، الحجز، أو الدردشة معك من أي مكان. مصممة لتعمل بسلاسة حتى في الاتصالات الضعيفة وبإحساس سريع وطبيعي.',
+        longDescription: 'تطبيقات الموبايل هي الوسيلة لتكون قريباً من عميلك. نبني تطبيقات تسمح لعملائك بالشراء، الحجز، أو الدردشة معك من أي مكان. نبنيها لتعمل بسلاسة حتى في الاتصالات الضعيفة وبإحساس سريع وطبيعي.',
         category: 'Development',
         imageUrl: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000',
         features: ['قدرات العمل دون إنترنت', 'إشعارات مخصصة وفورية', 'مزامنة الأمن البيومتري', 'أداء عالٍ عبر المنصات'],
@@ -803,7 +803,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
     {
         id: 'uiux',
         name: 'Mîmariya Dîjîtal (UI/UX)',
-        tagline: 'Bikaranîna nermalavê hêsan û xweşik bikin.',
+        tagline: 'Bikaranîنا nermalavê hêsan û xweşik bikin.',
         description: 'Sêwirana stratejîk ku bikarhêner ber bi çalakiya rast ve dibe.',
         longDescription: 'UI/UX cudahiya di navbera amûrek tevlihev û amûrek xweş de ye. Em "xuyabûn" (UI) û "hest" (UX) sêwirînin da ku bikarhêner qet neyên şaş kirin û her dem tiştê ku lê digerin bi hêsanî bibîنين.',
         category: 'Design',
@@ -828,10 +828,10 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
     },
     {
         id: 'seo',
-        name: 'Nîşana Dîjîtal (SEO)',
+        name: 'Nîşانا Dîjîtal (SEO)',
         tagline: 'Bibin tiştê yekem ku mirov li ser Google dibînin.',
         description: 'Xebata teknîكî û naverokî da ku branda we derkeve serê lêgerînê.',
-        longDescription: 'SEO mîna wê ye ku dikanek we li kolana herî qerebalix a cîhanê hebe. Em kod û naveroka malpera we optimîze dikin da ku dema mirov lêgerînê dikin, navê we yekem derkeve. Ev riya herî baş e ji bo girtina trafîka organîk a belaş.',
+        longDescription: 'SEO mîna wê ye ku dikanek we li kolana herî qerebalix a cîhanê hebe. Em kod û naveroka malpera we optimîze dikin da ku dema mirov lêgerînê dikin, navê we yekem derkeve. Ev riya herî baş e ji bo girtina trafîka organîك a belaş.',
         category: 'Consulting',
         imageUrl: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?q=80&w=1932&auto=format&fit=crop',
         features: ['Stratejiya Naverok û Keyword-an', 'Optimîzasyona Teknîkî ya Lezê', 'Avakirina Otorîteya Backlink', 'Serkeftina Lêgerîna Herêmî'],
@@ -855,7 +855,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
     {
         id: 'cyber',
         name: 'Keleha Dîjîtal (Cyber)',
-        tagline: 'Daneyên xwe ji hackran dûr bigirin.',
+        tagline: 'Daneyên xwe ji hackran dûر bigirin.',
         description: 'Ewlehiya nûjen ji bo parastina raz û dravê pargîdaniyê.',
         longDescription: 'Ewlehiya sîber dîwarê dora karsaziya weya dîjîtal e. Em pergalên ku "nederbasbûyîyan" dişopînin û daneyên weyên krîtîك dipارزێن saz dikin. Ev piştrast dike ku agahdariya pargîdaniya we taybet bimîne û sîstemên we neyên hackkirin.',
         category: 'Security',
@@ -876,14 +876,14 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         ],
         benchmarks: [],
         techStack: ['IDS/IPS', 'AES-256', 'SIEM Platforms'],
-        businessValue: 'Ji dozên yasayî û zirara brandê ya ji ber daxuyaniya daneyan dûr bikevin.'
+        businessValue: 'Ji dozên yasayî û zirara brandê ya ji ber daxuyaniya daneyان dûر bikevin.'
     },
     {
         id: 'api',
         name: 'Pira Nermalavê (API)',
         tagline: 'Bila app-ên we bi hev re bipeyivin.',
         description: 'Girêdana nermalavên cihêreng da ku dane bixweber herikin.',
-        longDescription: 'API mîna pirên di navbera giravên nermalavê de ne. Heke ERP û malperek we hebe, em pirê ava dikin da ku dema kesek tiştek dikire, envantera we bixweber nû bibe. Êdî kopîkirina manuwel di navbera appan de nîne.',
+        longDescription: 'API mîna pirên di navbera giravên nermalavê de ne. Heke ERP û malperek we hebe, em pirê ava dikin da ku dema kesek tiشtek dikire, envantera we bixweber nû bibe. Êdî kopîkirina manuwel di navbera appan de nîne.',
         category: 'Development',
         imageUrl: 'https://images.unsplash.com/photo-1763568258208-a5af30d5a31b?q=80&w=2070&auto=format&fit=crop',
         features: ['Synca Daneyan a Rastî', 'Hub-ên Girêdana Pir-app', 'Veguhestina Daneyan a Ewle', 'Gateway-ên API-yê yên Bilez'],
@@ -898,7 +898,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
           { label: 'Nexşeya Siyakê', duration: 'Hefte 1', detail: 'Tespîtkirina kîjan dane divê herikin.' },
           { label: 'Pêşxistina Mantiqê', duration: 'Hefte 2-4', detail: 'Avakirina qaîdeyên veguhertin û syncê.' },
           { label: 'Testkirina Zextê', duration: 'Hefte 5', detail: 'Piştrastkirina pîrê di dema qerebalixiyê de.' },
-          { label: 'Girêdana Zindî', duration: 'Hefte 6+', detail: 'Vekirina pira otomatîk ji bo karsaziyê.' }
+          { label: 'Girêdana Zindî', duration: 'Hefte 6+', detail: 'Vekirina pira otomatîك ji bo karsaziyê.' }
         ],
         benchmarks: [],
         techStack: ['Go', 'gRPC', 'RabbitMQ'],
@@ -906,10 +906,10 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
     },
     {
         id: 'infra-audit',
-        name: 'Bijîşkê Sîstemê (Audit)',
+        name: 'Bijîشكê Sîstemê (Audit)',
         tagline: 'Teknolojiya we saxlem e an tenê biha ye?',
         description: 'Kontrolek ji bo sazûmana IT-ê da ku wendahî û rîskan bibîne.',
-        longDescription: 'Mîna kontrolek bijîشكî, audita sîstemê li pirsgirêkên veşartî digere. Em server û nermalavên we kontrol dikin da ku bibînin çi hêdî ye, çi ne ewle ye, û hûn ji bo çi drav didin lê bikar nayînin.',
+        longDescription: 'Mîna kontrolek bijîشكî, audita sîstemê li pirsgirêkên veشartî digere. Em server û nermalavên we kontrol dikin da ku bibînin çi hêdî ye, çi ne ewle ye, û hûn ji bo çi drav didin lê bikar nayînin.',
         category: 'Consulting',
         imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000',
         features: ['Analîza Lêçûn-Karîgerî', 'Kontrolên Ewlehiyê yên Giştî', 'Testkirina Performans û Zextê', 'Nirxandina Dewra Çavkaniyan'],
@@ -918,13 +918,13 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
           { title: 'Optimîzasyona Sivik', description: 'Performansa herî bilind bi kêmtirîn windahî.' },
           { title: 'Tespîtkirina Rîskan', description: 'Dîtina gefan berî ku bibin krîzên biha.' },
           { title: 'Stratejiya Fînanse', description: 'Guhertina IT-ê bo motora nirxê.' },
-          { title: 'Kontrola Serwer', description: 'Rakirina girêdana bi firoşkarên biha.' }
+          { title: 'Kontrola Serwer', description: 'Rakirina girêdana bi firoشkarên biha.' }
         ],
         roadmap: [
           { label: 'Envantera Sîsteman', duration: 'Hefte 1', detail: 'Lîstekirina her server, lîsans û kodê.' },
           { label: 'Qonaxa Analîzê', duration: 'Hefte 2', detail: 'Cîbicîkirina testên performansê.' },
-          { label: 'Reçeteya Stratejîk', duration: 'Hefte 3', detail: 'Lîsteya tiştên ku divê werin sererastkirin.' },
-          { label: 'Piştgiriya Cîbicîkirinê', duration: 'Berdewam', detail: 'Rênîşandana tîmê we di paqijkirinê de.' }
+          { label: 'Reçeteya Stratejîk', duration: 'Hefte 3', detail: 'Lîsteya tiشtên ku divê werin sererastkirin.' },
+          { label: 'Piştgiriya Cîbicîkirinê', duration: 'Berdewam', detail: 'Rênîشandana tîmê we di paqijkirinê de.' }
         ],
         benchmarks: [],
         techStack: ['Infrastructure as Code', 'Trivy', 'Cost Optimization'],
@@ -967,7 +967,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         features: ['عقود ذكية مؤتمتة', 'تتبع شفاف لسلسلة التوريد', 'هوية رقمية سيادية', 'سجلات أصول قابلة للتحقق'],
         domains: [{ name: 'Bawerî', description: 'Tomarên verastkirî.' }, { name: 'Fînanse', description: 'Protokolên DeFi.' }, { name: 'Operasyon', description: 'Şopandin.' }, { name: 'Yasayî', description: 'Peymanên mayînde.' }],
         pillars: [
-          { title: 'Neguherbarî', description: 'Tiştê ku hatiye nivîساندن qet nayê guhertin.' },
+          { title: 'Neguherbarî', description: 'Tiştê ku hatiye nivîساندن qet nayê guhertن.' },
           { title: 'Zelaliya Radîkal', description: 'Her kes dikare dîrokê verast bike.' },
           { title: 'Kêrhatina Baweriyê', description: 'Rakirina hewcedariya verastkirina biha.' },
           { title: 'Resilience-a Lamend', description: 'Xala têكçûnê ji bo daneyan tune ye.' }
@@ -1022,6 +1022,14 @@ export const JOURNAL_ARTICLES: Record<Language, JournalArticle[]> = {
       content: 'Developed a ready-to-launch e-commerce website tailored for Syrian online businesses, especially Instagram-based sellers seeking a more professional and automated sales process. The platform supports product management, automated order handling, and structured customer data, reducing manual work and improving order accuracy. AI tools were used to enhance and standardize product images for web presentation, helping businesses maintain a consistent and professional brand identity.'
     },
     {
+      id: 6,
+      title: 'Unified Clinical Operating System',
+      date: '',
+      excerpt: 'Comprehensive clinic management centralizing medical records, scheduling, and billing for multi-specialty practices.',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      content: 'Designed a comprehensive clinic management system suitable for medical clinics of all specialties. The platform centralizes patient management, appointment scheduling, medical records, procedures, billing, and reporting in a single, easy-to-use system. It supports detailed patient profiles, smart scheduling to avoid overlaps, procedure tracking with notes and images, flexible billing with partial or full payments, and real-time operational reports. The system includes multi-user role management for doctors, nurses, receptionists, and accountants, and is fully mobile-friendly, enabling clinics to reduce paperwork, minimize errors, and deliver a more professional patient experience.'
+    },
+    {
       id: 1,
       title: 'Goldsmith Management System',
       date: '',
@@ -1064,6 +1072,14 @@ export const JOURNAL_ARTICLES: Record<Language, JournalArticle[]> = {
       content: 'تطوير موقع تجارة إلكترونية جاهز للإطلاق مخصص للأعمال السورية عبر الإنترنت، وخاصة بائعي الإنستغرام الذين يسعون لعملية مبيعات أكثر احترافية وأتمتة. تدعم المنصة إدارة المنتجات، والتعامل الآلي مع الطلبات، وبيانات العملاء المنظمة، مما يقلل العمل اليدوي ويحسن دقة الطلبات. تم استخدام أدوات الذكاء الاصطناعي لتحسين وتوحيد صور المنتجات للعرض على الويب، مما يساعد الشركات على الحفاظ على هوية علامة تجارية متسقة واحترافية.'
     },
     {
+      id: 6,
+      title: 'نظام التشغيل العيادي الموحد',
+      date: '',
+      excerpt: 'إدارة شاملة للعيادات تدمج السجلات الطبية والجدولة والفوترة للممارسات متعددة التخصصات.',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      content: 'تصميم نظام شامل لإدارة العيادات مناسب للعيادات الطبية من جميع التخصصات. تقوم المنصة بمركزية إدارة المرضى، وجدولة المواعيد، والسجلات الطبية، والإجراءات، والفوترة، والتقارير في نظام واحد سهل الاستخدام. يدعم النظام ملفات المرضى المفصلة، والجدولة الذكية لتجنب التداخلات، وتتبع الإجراءات مع الملاحظات والصور، والفوترة المرنة مع مدفوعات جزئية أو كاملة، وتقارير تشغيلية فورية. يتضمن النظام إدارة أدوار متعددة للمستخدمين للأطباء والممرضات وموظفي الاستقبال والمحاسبين، وهو متوافق تماماً مع الهواتف المحمولة، مما يمكن العيادات من تقليل المعاملات الورقية، وتقليل الأخطاء، وتقديم تجربة مريض أكثر احترافية.'
+    },
+    {
       id: 1,
       title: 'نظام إدارة محلات الصياغة',
       date: '',
@@ -1104,6 +1120,14 @@ export const JOURNAL_ARTICLES: Record<Language, JournalArticle[]> = {
       excerpt: 'Platformek firotanê ya otomatîk ji bo karsaziyên Sûriyê û firoşkarên Instagramê.',
       image: 'https://images.unsplash.com/photo-1665686310429-ee43624978fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       content: 'Malperek e-bazirganiyê ya amade ji bo karsaziyên serhêl ên Sûriyê, bi taybetî ji bo firoşkarên Instagramê yên ku li pêvajoyek firotanê ya profesyoneltir û otomatîktir digerin, hatî pêşve xistin. Platform piştgiriya rêveberiya hilberan, birêvebirina otomatîk a fermanan û daneyên xerîdar ên birêkûpêk dike.'
+    },
+    {
+      id: 6,
+      title: 'Sîstema Operasyona Klînîkî ya Yekbûyî',
+      date: '',
+      excerpt: 'Rêvebiriya klînîkî ya berfireh ku tomarên bijîjkî, bernamekirin û faturekirinê navendî dike.',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      content: 'Sîstemek rêveberiya klînîkî ya berfireh ku ji bo klînîkên bijîjkî yên hemî taybetmendiyan guncan e hatî sêwirandin. Platform rêveberiya nexweşan, bernamekirina randevûyan, tomarên bijîjkî, pêvajoyan, faturekirin û raporkirinê di pergalek yekane de navendî dike. Sîstem bi tevahî mobîl-dostane ye.'
     },
     {
       id: 1,
