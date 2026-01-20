@@ -32,7 +32,7 @@ const Footer: React.FC<FooterProps> = ({ onLinkClick, language }) => {
     },
     {
       name: 'Facebook',
-      href: 'https://www.facebook.com/SyscomaticsCo/',
+      href: 'https://www.facebook.com/SyscomaticsCo',
       brandColor: '#1877F2',
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

@@ -154,18 +154,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       longDescription: 'An ERP is like a central nervous system for your business. Instead of having separate files for sales and accounting, everything is in one place. Everyone sees the same facts, leading to fewer mistakes and faster decisions.',
       category: 'Enterprise',
       imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000',
-      features: ['Real-time Inventory', 'Automated Accounting', 'Employee Portals'],
-      domains: [{ name: 'Operations', description: 'Smoothing daily workflows.' }],
+      features: ['Real-time Inventory Management', 'Automated Multi-currency Accounting', 'Self-service Employee Portals', 'Advanced Operational Reporting'],
+      domains: [{ name: 'Operations', description: 'Smoothing daily workflows.' }, { name: 'Finance', description: 'Monetary stability.' }, { name: 'Human Resources', description: 'People management.' }, { name: 'Data Intelligence', description: 'Analytic insights.' }],
       pillars: [
-        { title: 'Single Truth', description: 'Every department looks at the same data.' },
-        { title: 'Efficiency', description: 'Remove manual copying between different files.' }
+        { title: 'Single Source of Truth', description: 'Every department looks at the same synchronized data.' },
+        { title: 'Operational Efficiency', description: 'Remove manual copying between different files.' },
+        { title: 'Regulatory Compliance', description: 'Built-in checks for local and international standards.' },
+        { title: 'Scalable Architecture', description: 'Systems that grow alongside your business complexity.' }
       ],
       roadmap: [
-        { label: 'Audit', duration: '', detail: 'Listing all current business steps.' },
-        { label: 'Platform Build', duration: '', detail: 'Creating your custom control center.' }
+        { label: 'Discovery Audit', duration: 'Week 1-2', detail: 'Mapping all existing business processes and pain points.' },
+        { label: 'Architecture Blueprint', duration: 'Week 3-4', detail: 'Designing the custom ERP schema for your specific industry.' },
+        { label: 'Data Migration', duration: 'Week 5-8', detail: 'Safely moving existing records into the unified system.' },
+        { label: 'Operational Command', duration: 'Week 9+', detail: 'Final staff training and full system deployment.' }
       ],
       benchmarks: [],
-      techStack: ['Node.js', 'PostgreSQL'],
+      // Fix: Added missing techStack property
+      techStack: ['Node.js', 'PostgreSQL', 'SAP Integration'],
       businessValue: 'Stop losing money to double-entry errors and slow paperwork.'
     },
     {
@@ -176,18 +181,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       longDescription: 'Ecommerce is more than a website; it is a selling machine. It connects your products to customers anywhere in the world, processes their payments securely, and helps you manage shipping without the headache of manual tracking.',
       category: 'Development',
       imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1000',
-      features: ['Secure Payments', 'Mobile-First Design', 'Global Shipping Sync'],
-      domains: [{ name: 'Retail', description: 'Scaling digital sales.' }],
+      features: ['Secure Global Payment Processing', 'Mobile-Responsive Shopping UX', 'Automated Logistics & Shipping Sync', 'Integrated Marketing & SEO Tools'],
+      domains: [{ name: 'Retail', description: 'Scaling digital sales.' }, { name: 'Logistics', description: 'Delivery tracking.' }, { name: 'Marketing', description: 'Customer reach.' }, { name: 'Customer Service', description: 'Post-purchase support.' }],
       pillars: [
-        { title: 'Customer Trust', description: 'Safe payment gateways that protect buyer data.' },
-        { title: 'Speed', description: 'Fast page loads to keep shoppers from leaving.' }
+        { title: 'Consumer Trust', description: 'Safe payment gateways that protect sensitive buyer data.' },
+        { title: 'Performance at Scale', description: 'High-speed page loads to maximize conversion rates.' },
+        { title: 'Omnichannel Ready', description: 'Synchronize sales across web, mobile, and social media.' },
+        { title: 'Conversion Focus', description: 'UI designs engineered to minimize cart abandonment.' }
       ],
       roadmap: [
-        { label: 'Design', duration: '', detail: 'Crafting the perfect user journey.' },
-        { label: 'Launch', duration: '', detail: 'Setting up gateways and logistics.' }
+        { label: 'UX Strategy', duration: 'Week 1', detail: 'Defining the optimal customer purchasing journey.' },
+        { label: 'Platform Engineering', duration: 'Week 2-4', detail: 'Building the core storefront and catalog logic.' },
+        { label: 'Payment Integration', duration: 'Week 5', detail: 'Setting up secure gateways and regional logistics.' },
+        { label: 'Performance Audit', duration: 'Week 6', detail: 'Stress testing and SEO optimization for launch.' }
       ],
       benchmarks: [],
-      techStack: ['Next.js', 'Stripe'],
+      // Fix: Added missing techStack property
+      techStack: ['Next.js', 'Stripe', 'Headless CMS'],
       businessValue: 'Reach customers 24/7 beyond your physical location.'
     },
     {
@@ -198,18 +208,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       longDescription: 'A CRM is like a professional memory. It stores every email, phone call, and meeting you have with a client. This helps your sales team know exactly when to call someone back and what they need, turning "maybe" into "yes."',
       category: 'Enterprise',
       imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000',
-      features: ['Sales Pipelines', 'Email History', 'Task Reminders'],
-      domains: [{ name: 'Sales', description: 'Optimizing the funnel.' }],
+      features: ['Dynamic Sales Pipeline Tracking', 'Centralized Communication History', 'Automated Follow-up Reminders', 'AI-Driven Lead Scoring'],
+      domains: [{ name: 'Sales', description: 'Optimizing the funnel.' }, { name: 'Marketing', description: 'Campaign targeting.' }, { name: 'Support', description: 'Relationship health.' }, { name: 'Analytics', description: 'Revenue forecasting.' }],
       pillars: [
-        { title: 'Organization', description: 'No more lost sticky notes or messy spreadsheets.' },
-        { title: 'Analytics', description: 'See which products or staff are selling best.' }
+        { title: 'Lead Intelligence', description: 'Convert data into actionable sales strategies.' },
+        { title: 'Team Collaboration', description: 'Shared insights across sales and support departments.' },
+        { title: 'Client Retention', description: 'Proactive tools to keep long-term customers engaged.' },
+        { title: 'Process Automation', description: 'Reduce administrative overhead for your sales staff.' }
       ],
       roadmap: [
-        { label: 'Import', duration: '', detail: 'Moving existing contacts to the new system.' },
-        { label: 'Automation', duration: '', detail: 'Setting up automatic follow-up alerts.' }
+        { label: 'CRM Assessment', duration: 'Week 1', detail: 'Analyzing current sales cycles and contact methods.' },
+        { label: 'System Configuration', duration: 'Week 2-3', detail: 'Customizing fields and pipelines for your workflow.' },
+        { label: 'Data Onboarding', duration: 'Week 4', detail: 'Importing historical client data and email sync.' },
+        { label: 'Sales Optimization', duration: 'Week 5+', detail: 'Automating repetitive outreach and reporting.' }
       ],
       benchmarks: [],
-      techStack: ['Node.js', 'PostgreSQL'],
+      // Fix: Added missing techStack property
+      techStack: ['Salesforce', 'HubSpot API', 'Python'],
       businessValue: 'Increase sales by following up on every lead at the perfect time.'
     },
     {
@@ -219,19 +234,24 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Strategic design that guides users to take the right action.',
       longDescription: 'UI/UX is the difference between a tool that is frustrating and one that is a joy to use. We design the "look" (UI) and the "feel" (UX) so that your users never get confused and always find what they are looking for quickly.',
       category: 'Design',
-      imageUrl: 'https://images.unsplash.com/photo-1576595580361-90a855b84b20?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      features: ['User Testing', 'Visual Branding', 'Prototype Design'],
-      domains: [{ name: 'Identity', description: 'Premium digital presence.' }],
+      imageUrl: 'https://images.unsplash.com/photo-1576595580361-90a855b84b20?q=80&w=1974&auto=format&fit=crop',
+      features: ['In-depth User Research & Testing', 'Modern Visual Identity Design', 'Interactive High-Fidelity Prototypes', 'Full Design System Documentation'],
+      domains: [{ name: 'Identity', description: 'Premium digital presence.' }, { name: 'Product', description: 'Software usability.' }, { name: 'Brand', description: 'Visual storytelling.' }, { name: 'Accessibility', description: 'Inclusive design.' }],
       pillars: [
-        { title: 'Clarity', description: 'Simple layouts that need no manual to understand.' },
-        { title: 'Retention', description: 'Good design keeps users coming back to your app.' }
+        { title: 'Cognitive Clarity', description: 'Simple layouts that require zero training to understand.' },
+        { title: 'Brand Loyalty', description: 'Design that creates emotional connections with users.' },
+        { title: 'Accessibility First', description: 'Ensuring your digital product works for everyone.' },
+        { title: 'Continuous Iteration', description: 'Using data to constantly improve the user experience.' }
       ],
       roadmap: [
-        { label: 'Wireframes', duration: '', detail: 'Drawing the "blueprints" of the app.' },
-        { label: 'Final Polish', duration: '', detail: 'Adding colors, fonts, and smooth motion.' }
+        { label: 'Discovery Phase', duration: 'Week 1', detail: 'Defining user personas and business objectives.' },
+        { label: 'Wireframe Blueprints', duration: 'Week 2-3', detail: 'Building the structural skeleton of the application.' },
+        { label: 'Visual Design', duration: 'Week 4-5', detail: 'Applying colors, typography, and brand aesthetics.' },
+        { label: 'Design Handoff', duration: 'Week 6', detail: 'Final assets and system documentation for developers.' }
       ],
       benchmarks: [],
-      techStack: ['Figma', 'React'],
+      // Fix: Added missing techStack property
+      techStack: ['Figma', 'Adobe Creative Suite', 'Principle'],
       businessValue: 'Reduce user support calls by making the software obvious to use.'
     },
     {
@@ -241,19 +261,24 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Technical and content work to put your brand at the top of search.',
       longDescription: 'SEO is like making sure your shop is on the busiest street in the world. We optimize your website code and content so that when people search for what you do, your name appears first. It is the best way to get free, high-quality traffic.',
       category: 'Consulting',
-      imageUrl: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      features: ['Keyword Strategy', 'Speed Optimization', 'Ranking Reports'],
-      domains: [{ name: 'Growth', description: 'Increasing organic reach.' }],
+      imageUrl: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?q=80&w=1932&auto=format&fit=crop',
+      features: ['Content & Keyword Strategy', 'Technical Speed Optimization', 'Authority Backlink Building', 'Local Search Dominance'],
+      domains: [{ name: 'Growth', description: 'Increasing organic reach.' }, { name: 'Technical', description: 'Core web vitals.' }, { name: 'Content', description: 'Relevant authority.' }, { name: 'Local', description: 'Regional visibility.' }],
       pillars: [
-        { title: 'Authority', description: 'Making your site a trusted leader in your industry.' },
-        { title: 'Accessibility', description: 'Ensuring search engines can read your site perfectly.' }
+        { title: 'Digital Authority', description: 'Making your site a trusted leader in your industry.' },
+        { title: 'Long-term Equity', description: 'Build traffic that stays even when ads stop running.' },
+        { title: 'Strategic Ranking', description: 'Targeting keywords that actually lead to sales.' },
+        { title: 'Semantic Context', description: 'Optimization for intent, not just keyword density.' }
       ],
       roadmap: [
-        { label: 'Audit', duration: '', detail: 'Finding why you aren\'t ranking yet.' },
-        { label: 'Campaign', duration: '', detail: 'Building content that Google loves.' }
+        { label: 'Technical Audit', duration: 'Week 1', detail: 'Finding and fixing backend issues slowing you down.' },
+        { label: 'Keyword Research', duration: 'Week 2', detail: 'Identifying high-value search terms for your niche.' },
+        { label: 'On-page Execution', duration: 'Week 3-4', detail: 'Optimizing titles, meta tags, and high-impact content.' },
+        { label: 'Growth Monitoring', duration: 'Ongoing', detail: 'Monthly reporting and adaptive strategy updates.' }
       ],
       benchmarks: [],
-      techStack: ['Next.js', 'Search Console'],
+      // Fix: Added missing techStack property
+      techStack: ['Semrush', 'Ahrefs', 'Search Console'],
       businessValue: 'Save thousands on ads by getting organic traffic instead.'
     },
     {
@@ -264,18 +289,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       longDescription: 'Cybersecurity is the wall around your digital business. We set up systems that monitor for "intruders" and encrypt your sensitive data. It ensures that your private company info stays private and your systems never get locked by ransoms.',
       category: 'Security',
       imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
-      features: ['Threat Monitoring', 'Data Encryption', 'Secure Access'],
-      domains: [{ name: 'Defense', description: 'Proactive protection.' }],
+      features: ['Proactive Threat Monitoring', 'Military-Grade Data Encryption', 'Zero-Trust Access Architecture', 'Incident Response Planning'],
+      domains: [{ name: 'Defense', description: 'Proactive protection.' }, { name: 'Privacy', description: 'Data protection.' }, { name: 'Compliance', description: 'Legal safety.' }, { name: 'Recovery', description: 'Resilience.' }],
       pillars: [
-        { title: 'Prevention', description: 'Stopping attacks before they even start.' },
-        { title: 'Recovery', description: 'Backup plans if the worst happens.' }
+        { title: 'Preventative Shielding', description: 'Stopping cyber attacks before they infiltrate your network.' },
+        { title: 'Business Resilience', description: 'Ensuring operations continue even during an incident.' },
+        { title: 'Data Sovereignty', description: 'Full control over where and how your data is stored.' },
+        { title: 'Security Awareness', description: 'Empowering your staff to be the first line of defense.' }
       ],
       roadmap: [
-        { label: 'Scan', duration: '', detail: 'Testing your current weak spots.' },
-        { label: 'Fortify', duration: '', detail: 'Installing firewalls and encryption.' }
+        { label: 'Vulnerability Scan', duration: 'Week 1', detail: 'Testing every digital entrance for weaknesses.' },
+        { label: 'Network Fortification', duration: 'Week 2-3', detail: 'Installing firewalls, VPNs, and advanced encryption.' },
+        { label: 'Access Controls', duration: 'Week 4', detail: 'Implementing multi-factor auth and role-based permissions.' },
+        { label: 'Security Handover', duration: 'Week 5+', detail: 'Final protocol training and 24/7 monitoring setup.' }
       ],
       benchmarks: [],
-      techStack: ['Cloudflare', 'Zero Trust'],
+      // Fix: Added missing techStack property
+      techStack: ['IDS/IPS', 'AES-256', 'SIEM Platforms'],
       businessValue: 'Avoid massive lawsuits and brand damage from data leaks.'
     },
     {
@@ -285,19 +315,24 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Connect different software so data flows automatically.',
       longDescription: 'APIs are like bridges between islands of software. If you have an ERP and a website, we build the bridge so that when someone buys a product, your stock level updates automatically. No more manual copying and pasting between apps.',
       category: 'Development',
-      imageUrl: 'https://images.unsplash.com/photo-1763568258208-a5af30d5a31b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      features: ['Real-time Sync', 'Multi-app Connect', 'Safe Data Flow'],
-      domains: [{ name: 'Connectivity', description: 'Eliminating manual sync.' }],
+      imageUrl: 'https://images.unsplash.com/photo-1763568258208-a5af30d5a31b?q=80&w=2070&auto=format&fit=crop',
+      features: ['Real-time Data Synchronization', 'Multi-app Integration Hubs', 'Encrypted Data Transfer', 'High-Performance API Gateways'],
+      domains: [{ name: 'Connectivity', description: 'Eliminating manual sync.' }, { name: 'Automation', description: 'Seamless flows.' }, { name: 'Systems', description: 'Interoperability.' }, { name: 'Scalability', description: 'Message queuing.' }],
       pillars: [
-        { title: 'Automation', description: 'Systems working together without humans.' },
-        { title: 'Consistency', description: 'Keeping the same data in every app.' }
+        { title: 'Total Automation', description: 'Systems that update each other without human intervention.' },
+        { title: 'Data Integrity', description: 'Ensuring information remains consistent across all apps.' },
+        { title: 'Extensibility', description: 'Easy connection of new software as your business grows.' },
+        { title: 'Endpoint Security', description: 'Protecting the "gates" where your software talks.' }
       ],
       roadmap: [
-        { label: 'Mapping', duration: '', detail: 'Deciding what data needs to travel.' },
-        { label: 'Connection', duration: '', detail: 'Building and testing the bridge.' }
+        { label: 'Context Mapping', duration: 'Week 1', detail: 'Identifying exactly what data needs to move and when.' },
+        { label: 'Logic Development', duration: 'Week 2-4', detail: 'Building the specific transformation and sync rules.' },
+        { label: 'Stress Testing', duration: 'Week 5', detail: 'Ensuring the bridge stays up during high traffic.' },
+        { label: 'Live Connection', duration: 'Week 6+', detail: 'Switching on the automated bridge for production.' }
       ],
       benchmarks: [],
-      techStack: ['Node.js', 'Go'],
+      // Fix: Added missing techStack property
+      techStack: ['Go', 'gRPC', 'RabbitMQ'],
       businessValue: 'Eliminate 90% of manual data entry work.'
     },
     {
@@ -308,18 +343,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       longDescription: 'Just like a physical exam, a system audit looks for hidden problems. We check your servers and software to find what is slow, what is insecure, and what you are paying for but not using. We give you a plan to fix it all.',
       category: 'Consulting',
       imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000',
-      features: ['Cost Analysis', 'Safety Checks', 'Performance Testing'],
-      domains: [{ name: 'Efficiency', description: 'IT resource optimization.' }],
+      features: ['Deep Cost-Benefit Analysis', 'Comprehensive Safety Checks', 'Performance & Load Testing', 'IT Resource Lifecycle Review'],
+      domains: [{ name: 'Efficiency', description: 'IT resource optimization.' }, { name: 'Budget', description: 'Cost reduction.' }, { name: 'Security', description: 'Risk mitigation.' }, { name: 'Future', description: 'Upgrade roadmap.' }],
       pillars: [
-        { title: 'Optimization', description: 'Get more speed for less money.' },
-        { title: 'Safety', description: 'Find holes in your security before hackers do.' }
+        { title: 'Lean Optimization', description: 'Achieving maximum performance with minimum waste.' },
+        { title: 'Hidden Risk Discovery', description: 'Finding threats before they become costly crises.' },
+        { title: 'Financial Strategy', description: 'Turning IT from a cost center into a value driver.' },
+        { title: 'Sovereign Control', description: 'Removing dependence on unnecessary expensive vendors.' }
       ],
       roadmap: [
-        { label: 'Deep Scan', duration: '', detail: 'Looking at every server and app.' },
-        { label: 'Prescription', duration: '', detail: 'A list of what to fix and why.' }
+        { label: 'Systems Inventory', duration: 'Week 1', detail: 'Cataloging every server, license, and line of code.' },
+        { label: 'Analysis Phase', duration: 'Week 2', detail: 'Running performance tests and cost reviews.' },
+        { label: 'Strategic Prescription', duration: 'Week 3', detail: 'A detailed list of critical fixes and savings.' },
+        { label: 'Execution Support', duration: 'Ongoing', detail: 'Guiding your team through the cleanup process.' }
       ],
       benchmarks: [],
-      techStack: [],
+      // Fix: Added missing techStack property
+      techStack: ['Infrastructure as Code', 'Trivy', 'Cost Optimization'],
       businessValue: 'Usually finds 20% savings in monthly IT bills.'
     },
     {
@@ -330,18 +370,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       longDescription: 'Mobile apps are about being close to your customer. We build apps that allow your clients to buy, book, or chat with you from anywhere. They are designed to work smoothly even on slower connections and feel fast and natural.',
       category: 'Development',
       imageUrl: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000',
-      features: ['Offline Mode', 'Push Notifications', 'Fast Navigation'],
-      domains: [{ name: 'Mobile', description: 'Direct engagement.' }],
+      features: ['Offline-Ready Capabilities', 'Custom Push Notifications', 'Biometric Security Sync', 'Cross-Platform Performance'],
+      domains: [{ name: 'Mobile', description: 'Direct engagement.' }, { name: 'Product', description: 'User retention.' }, { name: 'Sales', description: 'Anywhere access.' }, { name: 'Support', description: 'In-app chat.' }],
       pillars: [
-        { title: 'Engagement', description: 'Stay top-of-mind with home screen icons.' },
-        { title: 'Performance', description: 'Apps that don\'t lag or crash.' }
+        { title: 'Hyper-Engagement', description: 'Stay top-of-mind with a permanent home screen icon.' },
+        { title: 'Frictionless UX', description: 'Interfaces designed for one-handed operation and speed.' },
+        { title: 'System Reliability', description: 'Apps that work perfectly even on weak network signals.' },
+        { title: 'Secure Environment', description: 'Protecting mobile transactions with native security.' }
       ],
       roadmap: [
-        { label: 'Logic Dev', duration: '', detail: 'Building the core functionality.' },
-        { label: 'App Store', duration: '', detail: 'Getting you listed on Apple and Google.' }
+        { label: 'Mobile Architecture', duration: 'Week 1', detail: 'Designing the app logic and data requirements.' },
+        { label: 'Core Engineering', duration: 'Week 2-6', detail: 'Coding the native or cross-platform features.' },
+        { label: 'User Beta Test', duration: 'Week 7', detail: 'Testing with real users for final UX refinements.' },
+        { label: 'Store Deployment', duration: 'Week 8', detail: 'Navigating Apple and Google submission processes.' }
       ],
       benchmarks: [],
-      techStack: ['React Native', 'Firebase'],
+      // Fix: Added missing techStack property
+      techStack: ['Flutter', 'Firebase', 'GraphQL'],
       businessValue: 'Make it 10x easier for customers to interact with you.'
     },
     {
@@ -352,18 +397,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       longDescription: 'Blockchain is a way to record info so it can never be deleted or changed. This is perfect for contracts, supply chains, or tracking valuable items. It creates total trust between parties because the "book" cannot be lied to.',
       category: 'Blockchain',
       imageUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000',
-      features: ['Smart Contracts', 'Supply Chain Tracking', 'Digital Identity'],
-      domains: [{ name: 'Trust', description: 'Verifiable records.' }],
+      features: ['Automated Smart Contracts', 'Transparent Supply Chain Tracking', 'Sovereign Digital Identity', 'Verifiable Asset Records'],
+      domains: [{ name: 'Trust', description: 'Verifiable records.' }, { name: 'Finance', description: 'DeFi protocols.' }, { name: 'Ops', description: 'Traceability.' }, { name: 'Legal', description: 'Immutable contracts.' }],
       pillars: [
-        { title: 'Immutability', description: 'What is written is written forever.' },
-        { title: 'Transparency', description: 'Every party can verify the history.' }
+        { title: 'Absolute Immutability', description: 'What is written is written forever and cannot be forged.' },
+        { title: 'Radical Transparency', description: 'Every party can verify the history without middle-men.' },
+        { title: 'Efficiency of Trust', description: 'Remove the need for expensive third-party verification.' },
+        { title: 'Decentralized Resilience', description: 'No single point of failure for your critical data.' }
       ],
       roadmap: [
-        { label: 'Use Case', duration: '', detail: 'Finding where trust is needed most.' },
-        { label: 'Network', duration: '', detail: 'Setting up the secure ledger.' }
+        { label: 'Protocol Strategy', duration: 'Week 1-2', detail: 'Identifying the optimal blockchain for your use case.' },
+        { label: 'Contract Dev', duration: 'Week 3-5', detail: 'Coding the logic that automates your agreements.' },
+        { label: 'Security Audit', duration: 'Week 6-7', detail: 'Mathematical verification of contract safety.' },
+        { label: 'Node Setup', duration: 'Week 8+', detail: 'Deploying the ledger to the secure network.' }
       ],
       benchmarks: [],
-      techStack: ['Solidity', 'Ethereum'],
+      // Fix: Added missing techStack property
+      techStack: ['Solidity', 'Hyperledger Fabric', 'Rust'],
       businessValue: 'Eliminate the cost of middle-men and verification lawyers.'
     },
     {
@@ -374,18 +424,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       longDescription: 'Cloud computing means your business lives on the internet. Instead of buying expensive servers that get old, you use powerful global networks. If your business grows tomorrow, your servers grow with you instantly without buying anything new.',
       category: 'Cloud',
       imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000',
-      features: ['Unlimited Scale', 'Automatic Backups', 'Global Speed'],
-      domains: [{ name: 'Infrastructure', description: 'Reliable foundations.' }],
+      features: ['Auto-Scaling Computing Power', 'Global Content Distribution', 'Disaster Recovery Backups', 'Infrastructure as Code (IaC)'],
+      domains: [{ name: 'Infrastructure', description: 'Reliable foundations.' }, { name: 'Operations', description: 'Maintenance-free.' }, { name: 'Growth', description: 'Limitless scale.' }, { name: 'Stability', description: 'High availability.' }],
       pillars: [
-        { title: 'Elasticity', description: 'Pay for what you use, scale up when busy.' },
-        { title: 'Resilience', description: 'If one server fails, another takes over instantly.' }
+        { title: 'Limitless Elasticity', description: 'Pay for what you use, scale up for thousands instantly.' },
+        { title: 'Mission Resilience', description: 'If one data center fails, another takes over in seconds.' },
+        { title: 'Zero Maintenance', description: 'Focus on your business while we manage the hardware.' },
+        { title: 'Universal Speed', description: 'Fast access for users anywhere in the world.' }
       ],
       roadmap: [
-        { label: 'Migration', duration: '', detail: 'Moving your data to the cloud.' },
-        { label: 'Scaling', duration: '', detail: 'Configuring servers for growth.' }
+        { label: 'Cloud Assessment', duration: 'Week 1', detail: 'Evaluating current hardware and server needs.' },
+        { label: 'Migration Strategy', duration: 'Week 2', detail: 'Designing the move with zero downtime.' },
+        { label: 'Environment Build', duration: 'Week 3-4', detail: 'Provisioning the high-performance global network.' },
+        { label: 'Traffic Switch', duration: 'Week 5', detail: 'Live cutover to the scalable cloud infrastructure.' }
       ],
       benchmarks: [],
-      techStack: ['AWS', 'Terraform'],
+      // Fix: Added missing techStack property
+      techStack: ['Terraform', 'Docker', 'AWS Lambda'],
       businessValue: 'Save thousands on hardware and never worry about crashes.'
     }
   ],
@@ -398,18 +453,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         longDescription: 'نظام ERP هو بمثابة الجهاز العصبي المركزي لعملك. بدلاً من وجود ملفات منفصلة للمبيعات والمحاسبة، يكون كل شيء في مكان واحد. يرى الجميع نفس الحقائق، مما يؤدي إلى أخطاء أقل وقرارات أسرع.',
         category: 'Enterprise',
         imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000',
-        features: ['مخزون لحظي', 'محاسبة آلية', 'بوابات موظفين'],
-        domains: [{ name: 'العمليات', description: 'تسهيل سير العمل.' }],
+        features: ['إدارة المخزون لحظياً', 'محاسبة آلية متعددة العملات', 'بوابات الخدمة الذاتية للموظفين', 'تقارير تشغيلية متقدمة'],
+        domains: [{ name: 'العمليات', description: 'تسهيل سير العمل.' }, { name: 'المالية', description: 'الاستقرار المالي.' }, { name: 'الموارد البشرية', description: 'إدارة الكوادر.' }, { name: 'ذكاء البيانات', description: 'الرؤى التحليلية.' }],
         pillars: [
-          { title: 'حقيقة واحدة', description: 'كل الأقسام ترى نفس البيانات.' },
-          { title: 'الكفاءة', description: 'إلغاء النسخ اليدوي بين الملفات.' }
+          { title: 'مصدر وحيد للحقيقة', description: 'كل الأقسام ترى نفس البيانات المتزامنة.' },
+          { title: 'الكفاءة التشغيلية', description: 'إلغاء النسخ اليدوي بين الملفات المختلفة.' },
+          { title: 'الامتثال التنظيمي', description: 'فحوصات مدمجة للمعايير المحلية والدولية.' },
+          { title: 'معمارية قابلة للتوسع', description: 'أنظمة تنمو مع تزايد تعقيد أعمالك.' }
         ],
         roadmap: [
-          { label: 'التدقيق', duration: '', detail: 'حصر خطوات العمل الحالية.' },
-          { label: 'بناء المنصة', duration: '١ شهر', detail: 'إنشاء مركز التحكم الخاص بك.' }
+          { label: 'تدقيق الاكتشاف', duration: 'أسبوع ١-٢', detail: 'رسم خرائط جميع العمليات الحالية ونقاط الألم.' },
+          { label: 'مخطط المعمارية', duration: 'أسبوع ٣-٤', detail: 'تصميم نظام ERP مخصص لصناعتك المحددة.' },
+          { label: 'ترحيل البيانات', duration: 'أسبوع ٥-٨', detail: 'نقل السجلات الحالية بأمان إلى النظام الموحد.' },
+          { label: 'القيادة التشغيلية', duration: 'أسبوع ٩+', detail: 'التدريب النهائي للموظفين والنشر الكامل للنظام.' }
         ],
         benchmarks: [],
-        techStack: ['Node.js', 'Postgres'],
+        // Fix: Added missing techStack property
+        techStack: ['Node.js', 'PostgreSQL', 'SAP Integration'],
         businessValue: 'توقف عن خسارة المال بسبب أخطاء الإدخال المكرر والورقيات البطيئة.'
     },
     {
@@ -420,18 +480,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         longDescription: 'التجارة الإلكترونية هي أكثر من مجرد موقع؛ إنها آلة بيع. تربط منتجاتك بالعملاء في أي مكان في العالم، وتعالج مدفوعاتهم بأمان، وتساعدك على إدارة الشحن دون صداع التتبع اليدوي.',
         category: 'Development',
         imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1000',
-        features: ['دفع آمن', 'تصميم للموبايل', 'ربط الشحن العالمي'],
-        domains: [{ name: 'التجزئة', description: 'توسيع المبيعات الرقمية.' }],
+        features: ['معالجة المدفوعات العالمية الآمنة', 'تجربة تسوق متوافقة مع الموبايل', 'ربط الشحن والخدمات اللوجستية آلياً', 'أدوات تسويق وتحسين محركات البحث مدمجة'],
+        domains: [{ name: 'التجزئة', description: 'توسيع المبيعات الرقمية.' }, { name: 'اللوجستيات', description: 'تتبع الشحن.' }, { name: 'التسويق', description: 'الوصول للعملاء.' }, { name: 'خدمة العملاء', description: 'دعم ما بعد البيع.' }],
         pillars: [
-          { title: 'ثقة العميل', description: 'بوابات دفع آمنة تحمي بيانات المشتري.' },
-          { title: 'السرعة', description: 'تحميل سريع للصفحات لمنع خروج المتسوقين.' }
+          { title: 'ثقة المستهلك', description: 'بوابات دفع آمنة تحمي بيانات المشتري الحساسة.' },
+          { title: 'الأداء عند التوسع', description: 'سرعة تحميل عالية لزيادة معدلات التحويل.' },
+          { title: 'جاهزية القنوات المتعددة', description: 'مزامنة المبيعات عبر الويب والموبايل والتواصل.' },
+          { title: 'التركيز على التحويل', description: 'واجهات مصممة لتقليل التخلي عن السلة.' }
         ],
         roadmap: [
-          { label: 'التصميم', duration: '', detail: 'رسم رحلة المستخدم المثالية.' },
-          { label: 'الإطلاق', duration: '', detail: 'إعداد بوابات الدفع واللوجستيات.' }
+          { label: 'استراتيجية UX', duration: 'أسبوع ١', detail: 'تحديد رحلة شراء العميل المثلى.' },
+          { label: 'هندسة المنصة', duration: 'أسبوع ٢-٤', detail: 'بناء منطق المتجر والكتالوج الأساسي.' },
+          { label: 'ربط المدفوعات', duration: 'أسبوع ٥', detail: 'إعداد بوابات آمنة والخدمات اللوجستية.' },
+          { label: 'تدقيق الأداء', duration: 'أسبوع ٦', detail: 'اختبار الجهد وتحسين SEO للإطلاق.' }
         ],
         benchmarks: [],
-        techStack: ['Next.js', 'Stripe'],
+        // Fix: Added missing techStack property
+        techStack: ['Next.js', 'Stripe', 'Headless CMS'],
         businessValue: 'الوصول للعملاء ٢٤/٧ خارج حدود موقعك الجغرافي.'
     },
     {
@@ -442,18 +507,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         longDescription: 'نظام CRM هو بمثابة ذاكرة احترافية. يخزن كل بريد إلكتروني، مكالمة هاتفية، واجتماع مع العميل. يساعد هذا فريقك على معرفة متى يتصلون بالعميل وماذا يحتاج بالضبط، مما يحول "ربما" إلى "نعم".',
         category: 'Enterprise',
         imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000',
-        features: ['أقماع البيع', 'تاريخ المراسلات', 'تنبيهات المهام'],
-        domains: [{ name: 'المبيعات', description: 'تحسين القمع.' }],
+        features: ['تتبع ديناميكي لقمع المبيعات', 'تاريخ مراسلات مركزي وموحد', 'تنبيهات متابعة آلية وذكية', 'تقييم العملاء المحتملين بالذكاء الاصطناعي'],
+        domains: [{ name: 'المبيعات', description: 'تحسين القمع.' }, { name: 'التسويق', description: 'استهداف الحملات.' }, { name: 'الدعم', description: 'صحة العلاقات.' }, { name: 'التحليلات', description: 'توقع الإيرادات.' }],
         pillars: [
-          { title: 'التنظيم', description: 'وداعاً للملاحظات الورقية الضائعة والملفات الفوضوية.' },
-          { title: 'التحليلات', description: 'معرفة أي المنتجات أو الموظفين يبيعون بشكل أفضل.' }
+          { title: 'ذكاء العملاء', description: 'تحويل البيانات إلى استراتيجيات مبيعات فعالة.' },
+          { title: 'تعاون الفريق', description: 'رؤى مشتركة بين أقسام المبيعات والدعم.' },
+          { title: 'الاحتفاظ بالعملاء', description: 'أدوات استباقية لإبقاء العملاء منخرطين.' },
+          { title: 'أتمتة العمليات', description: 'تقليل الأعباء الإدارية عن كاهل فريق المبيعات.' }
         ],
         roadmap: [
-          { label: 'الاستيراد', duration: '', detail: 'نقل جهات الاتصال الحالية للنظام.' },
-          { label: 'الأتمتة', duration: '', detail: 'إعداد تنبيهات المتابعة التلقائية.' }
+          { label: 'تقييم CRM', duration: 'أسبوع ١', detail: 'تحليل دورات المبيعات وطرق الاتصال الحالية.' },
+          { label: 'ضبط النظام', duration: 'أسبوع ٢-٣', detail: 'تخصيص الحقول والمسارات لسير عملك.' },
+          { label: 'إدراج البيانات', duration: 'أسبوع ٤', detail: 'استيراد بيانات العملاء التاريخية ومزامنة البريد.' },
+          { label: 'تحسين المبيعات', duration: 'أسبوع ٥+', detail: 'أتمتة المتابعة المتكررة والتقارير.' }
         ],
         benchmarks: [],
-        techStack: ['Node.js', 'Postgres'],
+        // Fix: Added missing techStack property
+        techStack: ['Salesforce', 'HubSpot API', 'Python'],
         businessValue: 'زيادة المبيعات عبر متابعة كل فرصة في الوقت المثالي.'
     },
     {
@@ -463,19 +533,24 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'تصميم استراتيجي يوجه المستخدم لاتخاذ الإجراء الصحيح.',
         longDescription: 'تصميم UI/UX هو الفرق بين أداة محبطة وأداة ممتعة. نصمم "الشكل" (UI) و"الإحساس" (UX) بحيث لا يرتبك المستخدمون أبداً ويجدون ما يبحثون عنه بسرعة وسهولة.',
         category: 'Design',
-        imageUrl: 'https://images.unsplash.com/photo-1576595580361-90a855b84b20?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        features: ['اختبار المستخدمين', 'الهوية البصرية', 'تصميم النماذج'],
-        domains: [{ name: 'الهوية', description: 'حضور رقمي متميز.' }],
+        imageUrl: 'https://images.unsplash.com/photo-1576595580361-90a855b84b20?q=80&w=1974&auto=format&fit=crop',
+        features: ['أبحاث واختبارات مستخدمين معمقة', 'تصميم هوية بصرية عصرية', 'نماذج أولية تفاعلية عالية الدقة', 'توثيق كامل لأنظمة التصميم'],
+        domains: [{ name: 'الهوية', description: 'حضور رقمي متميز.' }, { name: 'المنتج', description: 'سهولة استخدام البرامج.' }, { name: 'العلامة', description: 'السرد البصري.' }, { name: 'سهولة الوصول', description: 'التصميم الشامل.' }],
         pillars: [
-          { title: 'الوضوح', description: 'واجهات بسيطة لا تحتاج لكتيب تعليمات لفهمها.' },
-          { title: 'الاستمرارية', description: 'التصميم الجيد يحفز المستخدمين على العودة.' }
+          { title: 'الوضوح المعرفي', description: 'واجهات بسيطة لا تحتاج لأي تدريب لفهمها.' },
+          { title: 'الولاء للعلامة', description: 'تصميم يخلق روابط عاطفية مع المستخدمين.' },
+          { title: 'الوصول أولاً', description: 'ضمان أن منتجك الرقمي يعمل للجميع.' },
+          { title: 'التكرار المستمر', description: 'استخدام البيانات لتحسين التجربة باستمرار.' }
         ],
         roadmap: [
-          { label: 'الهيكل', duration: '', detail: 'رسم "المخططات" الأولية للتطبيق.' },
-          { label: 'اللمسات النهائية', duration: '', detail: 'إضافة الألوان والخطوط والحركة.' }
+          { label: 'مرحلة الاكتشاف', duration: 'أسبوع ١', detail: 'تحديد شخصيات المستخدمين وأهداف العمل.' },
+          { label: 'مخططات الهيكل', duration: 'أسبوع ٢-٣', detail: 'بناء الهيكل العظمي للتطبيق.' },
+          { label: 'التصميم البصري', duration: 'أسبوع ٤-٥', detail: 'تطبيق الألوان والخطوط وجماليات العلامة.' },
+          { label: 'تسليم التصميم', duration: 'أسبوع ٦', detail: 'الأصول النهائية والتوثيق للمطورين.' }
         ],
         benchmarks: [],
-        techStack: ['Figma', 'React'],
+        // Fix: Added missing techStack property
+        techStack: ['Figma', 'Adobe Creative Suite', 'Principle'],
         businessValue: 'تقليل مكالمات الدعم الفني عبر جعل البرنامج بديهي الاستخدام.'
     },
     {
@@ -485,19 +560,24 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'عمل تقني وبصري لوضع علامتك التجارية في مقدمة البحث.',
         longDescription: 'تحسين محركات البحث يشبه التأكد من أن متجرك يقع في أكثر الشوارع ازدحاماً في العالم. نحسن كود موقعك ومحتواه بحيث عندما يبحث الناس عما تفعله، يظهر اسمك أولاً. إنها أفضل طريقة للحصول على زوار مهتمين مجاناً.',
         category: 'Consulting',
-        imageUrl: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        features: ['استراتيجية الكلمات', 'تحسين السرعة', 'تقارير الترتيب'],
-        domains: [{ name: 'النمو', description: 'توسيع الوصول المجاني.' }],
+        imageUrl: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?q=80&w=1932&auto=format&fit=crop',
+        features: ['استراتيجية المحتوى والكلمات المفتاحية', 'تحسين السرعة التقنية للموقع', 'بناء الروابط الخلفية القوية', 'الهيمنة على نتائج البحث المحلية'],
+        domains: [{ name: 'النمو', description: 'توسيع الوصول المجاني.' }, { name: 'التقني', description: 'أساسيات الويب.' }, { name: 'المحتوى', description: 'السلطة المعرفية.' }, { name: 'المحلي', description: 'الظهور الإقليمي.' }],
         pillars: [
-          { title: 'السلطة', description: 'جعل موقعك رائداً وموثوقاً في مجالك.' },
-          { title: 'سهولة الوصول', description: 'ضمان قدرة جوجل على قراءة موقعك بامتياز.' }
+          { title: 'السلطة الرقمية', description: 'جعل موقعك رائدًا وموثوقًا في مجالك.' },
+          { title: 'الأصول طويلة الأمد', description: 'بناء زوار يبقون حتى بعد توقف الإعلانات.' },
+          { title: 'الترتيب الاستراتيجي', description: 'استهداف الكلمات التي تؤدي فعلًا للمبيعات.' },
+          { title: 'السياق الدلالي', description: 'التحسين للقصد من البحث وليس فقط تكرار الكلمات.' }
         ],
         roadmap: [
-          { label: 'التدقيق', duration: '', detail: 'معرفة سبب عدم ظهورك حتى الآن.' },
-          { label: 'الحملة', duration: '', detail: 'بناء محتوى يحبه جوجل.' }
+          { label: 'التدقيق التقني', duration: 'أسبوع ١', detail: 'إصلاح المشاكل التي تبطئ ظهورك.' },
+          { label: 'بحث الكلمات', duration: 'أسبوع ٢', detail: 'تحديد الكلمات عالية القيمة لمجالك.' },
+          { label: 'التنفيذ الداخلي', duration: 'أسبوع ٣-٤', detail: 'تحسين العناوين والمحتوى عالي التأثير.' },
+          { label: 'مراقبة النمو', duration: 'مستمر', detail: 'تقارير شهرية وتحديثات استراتيجية.' }
         ],
         benchmarks: [],
-        techStack: ['Next.js', 'Google Console'],
+        // Fix: Added missing techStack property
+        techStack: ['Semrush', 'Ahrefs', 'Search Console'],
         businessValue: 'وفر الآلاف من ميزانية الإعلانات عبر الحصول على زوار مجاناً.'
     },
     {
@@ -508,18 +588,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         longDescription: 'الأمن السيبراني هو الجدار حول عملك الرقمي. نقوم بإعداد أنظمة تراقب "المتسللين" وتشفر بياناتك الحساسة. يضمن ذلك بقاء معلومات شركتك الخاصة خاصة، وأن أنظمتك لن تُغلق أبداً بطلبات فدية.',
         category: 'Security',
         imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
-        features: ['مراقبة التهديدات', 'تشفير البيانات', 'وصول آمن'],
-        domains: [{ name: 'الدفاع', description: 'أنظمة استباقية.' }],
+        features: ['مراقبة استباقية للتهديدات', 'تشفير بيانات بمعايير عسكرية', 'معمارية الوصول "صفر ثقة"', 'خطط استجابة للحوادث'],
+        domains: [{ name: 'الدفاع', description: 'حماية استباقية.' }, { name: 'الخصوصية', description: 'حماية البيانات.' }, { name: 'الامتثال', description: 'السلامة القانونية.' }, { name: 'التعافي', description: 'المرونة.' }],
         pillars: [
-          { title: 'الوقاية', description: 'إيقاف الهجمات قبل أن تبدأ.' },
-          { title: 'التعافي', description: 'خطط بديلة في حال حدوث الأسوأ.' }
+          { title: 'الحماية الوقائية', description: 'إيقاف الهجمات السيبرانية قبل اختراق الشبكة.' },
+          { title: 'مرونة الأعمال', description: 'ضمان استمرار العمل حتى أثناء الحوادث.' },
+          { title: 'السيادة على البيانات', description: 'تحكم كامل في مكان وكيفية تخزين بياناتك.' },
+          { title: 'الوعي الأمني', description: 'تمكين موظفيك ليكونوا خط الدفاع الأول.' }
         ],
         roadmap: [
-          { label: 'المسح', duration: '', detail: 'اختبار نقاط الضعف الحالية.' },
-          { label: 'التحصين', duration: '', detail: 'تركيب الجدران النارية والتشفير.' }
+          { label: 'مسح الثغرات', duration: 'أسبوع ١', detail: 'اختبار كل مداخلك الرقمية بحثاً عن ضعف.' },
+          { label: 'تحصين الشبكة', duration: 'أسبوع ٢-٣', detail: 'تركيب الجدران النارية والتشفير المتقدم.' },
+          { label: 'ضوابط الوصول', duration: 'أسبوع ٤', detail: 'تطبيق المصادقة الثنائية والأذونات المحددة.' },
+          { label: 'تسليم الأمن', duration: 'أسبوع ٥+', detail: 'تدريب نهائي وإعداد المراقبة ٢٤/٧.' }
         ],
         benchmarks: [],
-        techStack: ['Cloudflare', 'Zero-Trust'],
+        // Fix: Added missing techStack property
+        techStack: ['IDS/IPS', 'AES-256', 'SIEM Platforms'],
         businessValue: 'تجنب الدعاوى القضائية الضخمة وتضرر العلامة التجارية بسبب تسريب البيانات.'
     },
     {
@@ -529,19 +614,24 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'ربط البرمجيات المختلفة لتدفق البيانات تلقائياً.',
         longDescription: 'الـ APIs هي مثل الجسور بين جزر البرمجيات. إذا كان لديك نظام ERP وموقع إلكتروني، فنحن نبني الجسر بحيث عندما يشتري شخص ما منتجاً، يتم تحديث مستوى المخزون تلقائياً. لا مزيد من النسخ واللصق اليدوي بين التطبيقات.',
         category: 'Development',
-        imageUrl: 'https://images.unsplash.com/photo-1763568258208-a5af30d5a31b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        features: ['مزامنة لحظية', 'ربط تطبيقات متعددة', 'تدفق آمن'],
-        domains: [{ name: 'الربط', description: 'إلغاء المزامنة اليدوية.' }],
+        imageUrl: 'https://images.unsplash.com/photo-1763568258208-a5af30d5a31b?q=80&w=2070&auto=format&fit=crop',
+        features: ['مزامنة البيانات لحظياً', 'مراكز ربط التطبيقات المتعددة', 'نقل بيانات مشفر وآمن', 'بوابات API عالية الأداء'],
+        domains: [{ name: 'الربط', description: 'إلغاء المزامنة اليدوية.' }, { name: 'الأتمتة', description: 'تدفقات سلسة.' }, { name: 'الأنظمة', description: 'التوافق التشغيلي.' }, { name: 'التوسع', description: 'إدارة الرسائل.' }],
         pillars: [
-          { title: 'الأتمتة', description: 'أنظمة تعمل معاً دون تدخل بشري.' },
-          { title: 'الاتساق', description: 'بقاء نفس البيانات في كل تطبيق.' }
+          { title: 'الأتمتة الكاملة', description: 'أنظمة تحدث بعضها البعض دون تدخل بشري.' },
+          { title: 'سلامة البيانات', description: 'ضمان بقاء المعلومات متسقة عبر كل التطبيقات.' },
+          { title: 'القابلية للتوسع', description: 'ربط برمجيات جديدة بسهولة مع نمو عملك.' },
+          { title: 'أمن نقاط النهاية', description: 'حماية "البوابات" التي تتواصل عبرها برامجك.' }
         ],
         roadmap: [
-          { label: 'رسم البيانات', duration: '', detail: 'تحديد البيانات التي تحتاج للانتقال.' },
-          { label: 'الربط', duration: '', detail: 'بناء واختبار الجسر.' }
+          { label: 'رسم السياق', duration: 'أسبوع ١', detail: 'تحديد البيانات التي تحتاج للانتقال بدقة.' },
+          { label: 'تطوير المنطق', duration: 'أسبوع ٢-٤', detail: 'بناء قواعد التحويل والمزامنة.' },
+          { label: 'اختبار الجهد', duration: 'أسبوع ٥', detail: 'ضمان بقاء الجسر فعالًا وقت الزحمة.' },
+          { label: 'الاتصال المباشر', duration: 'أسبوع ٦+', detail: 'تشغيل الجسر الآلي للإنتاج.' }
         ],
         benchmarks: [],
-        techStack: ['Node.js', 'Go', 'GraphQL'],
+        // Fix: Added missing techStack property
+        techStack: ['Go', 'gRPC', 'RabbitMQ'],
         businessValue: 'إلغاء ٩٠٪ من عمل إدخال البيانات اليدوي.'
     },
     {
@@ -552,18 +642,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         longDescription: 'تماماً مثل الفحص الطبي، يبحث تدقيق النظام عن المشاكل المخفية. نفحص خوادمك وبرمجياتك لنجد ما هو بطيء، ما هو غير آمن، وما تدفع ثمنه دون استخدامه. نقدم لك خطة لإصلاح كل ذلك.',
         category: 'Consulting',
         imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000',
-        features: ['تحليل التكلفة', 'فحص السلامة', 'اختبار الأداء'],
-        domains: [{ name: 'الكفاءة', description: 'تحسين الموارد.' }],
+        features: ['تحليل التكلفة والفائدة بعمق', 'فحوصات سلامة شاملة', 'اختبارات الأداء والجهد', 'مراجعة دورة حياة الموارد'],
+        domains: [{ name: 'الكفاءة', description: 'تحسين الموارد.' }, { name: 'الميزانية', description: 'تقليل التكاليف.' }, { name: 'الأمن', description: 'تخفيف المخاطر.' }, { name: 'المستقبل', description: 'خارطة الطريق.' }],
         pillars: [
-          { title: 'التحسين', description: 'الحصول على سرعة أكبر بتكلفة أقل.' },
-          { title: 'السلامة', description: 'اكتشاف الثغرات قبل أن يجدها المخترقون.' }
+          { title: 'تحسين رشيق', description: 'تحقيق أقصى أداء بأقل قدر من الهدر.' },
+          { title: 'اكتشاف المخاطر', description: 'إيجاد التهديدات قبل أن تصبح أزمات مكلفة.' },
+          { title: 'استراتيجية مالية', description: 'تحويل IT من مركز تكلفة إلى محرك قيمة.' },
+          { title: 'تحكم سيادي', description: 'إزالة الاعتماد على موردين مكلفين غير ضروريين.' }
         ],
         roadmap: [
-          { label: 'مسح عميق', duration: '', detail: 'النظر في كل خادم وتطبيق.' },
-          { label: 'الوصفة', duration: '', detail: 'قائمة بما يجب إصلاحه ولماذا.' }
+          { label: 'حصر الأنظمة', duration: 'أسبوع ١', detail: 'فهرسة كل خادم وترخيص وكود.' },
+          { label: 'مرحلة التحليل', duration: 'أسبوع ٢', detail: 'إجراء اختبارات الأداء ومراجعات التكلفة.' },
+          { label: 'الوصفة الاستراتيجية', duration: 'أسبوع ٣', detail: 'قائمة مفصلة بالإصلاحات والتوفير.' },
+          { label: 'دعم التنفيذ', duration: 'مستمر', detail: 'توجيه فريقك خلال عملية التنظيف.' }
         ],
         benchmarks: [],
-        techStack: [],
+        // Fix: Added missing techStack property
+        techStack: ['Infrastructure as Code', 'Trivy', 'Cost Optimization'],
         businessValue: 'غالباً ما يجد التدقيق توفيراً بنسبة ٢٠٪ في الفواتير الشهرية.'
     },
     {
@@ -571,21 +666,26 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         name: 'عملك في جيبك (Mobile)',
         tagline: 'ضع شركتك في جيب عميلك.',
         description: 'تطبيقات سريعة وسهلة الاستخدام للآيفون والأندرويد.',
-        longDescription: 'تطبيقات الموبايل هي الوسيلة لتكون قريباً من عميلك. نبني تطبيقات تسمح لعملائك بالشراء، الحجز، أو الدردشة معك من أي مكان. مصممة لتعمل بسلاسة حتى في الاتصالات الضعيفة وبإحساس سريع وطبيعي.',
+        longDescription: 'تطبيقات الموبايل هي الوسيلة لتكون قريباً من عميلك. نبني تطبيقات تسمح لعملائك بالشراء، الحجز، أو الدردشة معك من أي مكان. نبنيها لتعمل بسلاسة حتى في الاتصالات الضعيفة وبإحساس سريع وطبيعي.',
         category: 'Development',
         imageUrl: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000',
-        features: ['وضع الأوفلاين', 'إشعارات لحظية', 'تصفح سريع'],
-        domains: [{ name: 'الموبايل', description: 'تفاعل مباشر.' }],
+        features: ['قدرات العمل دون إنترنت', 'إشعارات مخصصة وفورية', 'مزامنة الأمن البيومتري', 'أداء عالٍ عبر المنصات'],
+        domains: [{ name: 'الموبايل', description: 'تفاعل مباشر.' }, { name: 'المنتج', description: 'الاحتفاظ بالمستخدم.' }, { name: 'المبيعات', description: 'وصول من أي مكان.' }, { name: 'الدعم', description: 'دردشة مدمجة.' }],
         pillars: [
-          { title: 'التفاعل', description: 'ابقَ في ذهن العميل عبر أيقونة شاشة هاتفه.' },
-          { title: 'الأداء', description: 'تطبيقات لا تتعلق ولا تتوقف فجأة.' }
+          { title: 'تفاعل فائق', description: 'ابقَ في ذهن العميل عبر أيقونة دائمة.' },
+          { title: 'تجربة دون عوائق', description: 'واجهات مصممة للعمل بيد واحدة وبسرعة.' },
+          { title: 'اعتمادية النظام', description: 'تطبيقات تعمل بامتياز حتى في الشبكات الضعيفة.' },
+          { title: 'بيئة آمنة', description: 'حماية المعاملات بأمن الموبايل الأصلي.' }
         ],
         roadmap: [
-          { label: 'التطوير', duration: '', detail: 'بناء الوظائف الأساسية.' },
-          { label: 'المتاجر', duration: '', detail: 'إدراجك في متجري آبل وجوجل.' }
+          { label: 'معمارية الموبايل', duration: 'أسبوع ١', detail: 'تصميم منطق التطبيق ومتطلبات البيانات.' },
+          { label: 'التطوير الأساسي', duration: 'أسبوع ٢-٦', detail: 'برمجة الميزات للمنصات المختلفة.' },
+          { label: 'اختبار التجريبي', duration: 'أسبوع ٧', detail: 'اختبار مع مستخدمين حقيقيين للتحسين.' },
+          { label: 'النشر في المتاجر', duration: 'أسبوع ٨', detail: 'تجاوز عمليات التقديم لآبل وجوجل.' }
         ],
         benchmarks: [],
-        techStack: ['React Native', 'Firebase'],
+        // Fix: Added missing techStack property
+        techStack: ['Flutter', 'Firebase', 'GraphQL'],
         businessValue: 'اجعل تفاعل العملاء معك أسهل بعشر مرات.'
     },
     {
@@ -596,18 +696,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         longDescription: 'البلوكشين هو وسيلة لتسجيل المعلومات بحيث لا يمكن حذفها أو تغييرها أبداً. هذا مثالي للعقود، سلاسل التوريد، أو تتبع الأشياء الثمينة. يخلق ثقة كاملة بين الأطراف لأن "الكتاب" لا يمكن الكذب عليه.',
         category: 'Blockchain',
         imageUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000',
-        features: ['عقود ذكية', 'تتبع التوريد', 'هوية رقمية'],
-        domains: [{ name: 'الثقة', description: 'سجلات قابلة للتحقق.' }],
+        features: ['عقود ذكية مؤتمتة', 'تتبع شفاف لسلسلة التوريد', 'هوية رقمية سيادية', 'سجلات أصول قابلة للتحقق'],
+        domains: [{ name: 'الثقة', description: 'سجلات موثقة.' }, { name: 'المالية', description: 'بروتوكولات DeFi.' }, { name: 'العمليات', description: 'التتبع.' }, { name: 'القانوني', description: 'عقود غير قابلة للتغيير.' }],
         pillars: [
-          { title: 'عدم التغيير', description: 'ما كُتب يبقى مكتوباً للأبد.' },
-          { title: 'الشفافية', description: 'يمكن لكل طرف التحقق من التاريخ.' }
+          { title: 'عدم التغيير المطلق', description: 'ما كُتب يبقى مكتوباً للأبد ولا يمكن تزويره.' },
+          { title: 'شفافية جذرية', description: 'يمكن لكل طرف التحقق من التاريخ دون وسطاء.' },
+          { title: 'كفاءة الثقة', description: 'إزالة الحاجة لجهات التحقق الخارجية المكلفة.' },
+          { title: 'مرونة لامركزية', description: 'لا توجد نقطة فشل واحدة لبياناتك الحرجة.' }
         ],
         roadmap: [
-          { label: 'دراسة الحالة', duration: '', detail: 'تحديد أين تبرز الحاجة للثقة.' },
-          { label: 'الشبكة', duration: '', detail: 'إعداد السجل الآمن.' }
+          { label: 'استراتيجية البروتوكول', duration: 'أسبوع ١-٢', detail: 'تحديد البلوكشين الأمثل لحالتك.' },
+          { label: 'تطوير العقود', duration: 'أسبوع ٣-٥', detail: 'برمجة المنطق الذي يؤتمت اتفاقياتك.' },
+          { label: 'تدقيق الأمن', duration: 'أسبوع ٦-٧', detail: 'التحقق الرياضي من سلامة العقود.' },
+          { label: 'إعداد العقد', duration: 'أسبوع ٨+', detail: 'نشر السجل على الشبكة الآمنة.' }
         ],
         benchmarks: [],
-        techStack: ['Solidity', 'Web3.js'],
+        // Fix: Added missing techStack property
+        techStack: ['Solidity', 'Hyperledger Fabric', 'Rust'],
         businessValue: 'إلغاء تكاليف الوسطاء ومحامي التحقق.'
     },
     {
@@ -618,18 +723,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         longDescription: 'الحوسبة السحابية تعني أن عملك يعيش على الإنترنت. بدلاً من شراء خوادم مكلفة تتقادم، تستخدم شبكات عالمية قوية. إذا نما عملك غداً، تنمو خوادمك معك فوراً دون الحاجة لشراء أي شيء جديد.',
         category: 'Cloud',
         imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000',
-        features: ['توسع غير محدود', 'نسخ احتياطي آلي', 'سرعة عالمية'],
-        domains: [{ name: 'الأساسات', description: 'اعتمادية عند التوسع.' }],
+        features: ['قوة حوسبة تتوسع آلياً', 'توزيع محتوى عالمي', 'نسخ احتياطي للتعافي من الكوارث', 'البنية التحتية ككود (IaC)'],
+        domains: [{ name: 'الأساسات', description: 'بنية تحتية موثوقة.' }, { name: 'العمليات', description: 'خالٍ من الصيانة.' }, { name: 'النمو', description: 'توسع بلا حدود.' }, { name: 'الاستقرار', description: 'توافر عالٍ.' }],
         pillars: [
-          { title: 'المرونة', description: 'ادفع ثمن ما تستخدمه فقط، وتوسع وقت الزحمة.' },
-          { title: 'الاستدامة', description: 'إذا تعطل خادم، يستلم آخر فوراً.' }
+          { title: 'مرونة غير محدودة', description: 'ادفع ثمن ما تستخدمه، وتوسع للآلاف فوراً.' },
+          { title: 'مرونة المهمة', description: 'إذا فشل مركز بيانات، يستلم آخر في ثوانٍ.' },
+          { title: 'صيانة صفرية', description: 'ركز على عملك بينما ندير نحن العتاد.' },
+          { title: 'سرعة عالمية', description: 'وصول سريع للمستخدمين في أي مكان.' }
         ],
         roadmap: [
-          { label: 'الهجرة', duration: '', detail: 'نقل بياناتك للسحابة.' },
-          { label: 'التوسع', duration: '', detail: 'ضبط الخوادم للنمو.' }
+          { label: 'تقييم السحابة', duration: 'أسبوع ١', detail: 'تقييم العتاد الحالي واحتياجات الخادم.' },
+          { label: 'استراتيجية الهجرة', duration: 'أسبوع ٢', detail: 'تصميم النقل دون أي توقف للخدمة.' },
+          { label: 'بناء البيئة', duration: 'أسبوع ٣-٤', detail: 'تجهيز الشبكة العالمية عالية الأداء.' },
+          { label: 'تبديل الحركة', duration: 'أسبوع ٥', detail: 'التحويل المباشر إلى السحابة القابلة للتوسع.' }
         ],
         benchmarks: [],
-        techStack: ['AWS', 'Terraform', 'K8s'],
+        // Fix: Added missing techStack property
+        techStack: ['Terraform', 'Docker', 'AWS Lambda'],
         businessValue: 'وفر الآلاف من تكاليف العتاد ولا تقلق من توقف النظام أبداً.'
     }
   ],
@@ -642,18 +752,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         longDescription: 'ERP mîna pergalek demarî ya navendî ye ji bo karsaziya we. Li şûna pelên cihêreng ji bo firotan û hesabvaniyê, her tişt li yek cîhek e. Her kes heman rastiyan dibîne, ku dibe sedema kêmbûna çewtiyan û biryarên bileztir.',
         category: 'Enterprise',
         imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000',
-        features: ['Envantera Rastî', 'Hesabvaniya Otomatîk', 'Portalên Karmendan'],
-        domains: [{ name: 'Operasyon', description: 'Hêsankirina karên rojane.' }],
+        features: ['Rêveberiya Envantera Rastî', 'Hesabvaniya Pir-pereyî ya Otomatîk', 'Portalên Karmendan ên Xweser', 'Raporên Operasyonel ên Pêşketî'],
+        domains: [{ name: 'Operasyon', description: 'Hêsankirina karên rojane.' }, { name: 'Fînanse', description: 'Îstîqrara dravî.' }, { name: 'Çavkaniyên Mirovî', description: 'Rêveberiya mirovan.' }, { name: 'Zîrekiya Daneyan', description: 'Analîzên kûr.' }],
         pillars: [
-          { title: 'Rastiya Yekane', description: 'Her beş li heman daneyan dinêre.' },
-          { title: 'Kêrhatî', description: 'Rakirina kopîkirina manuwel a di navbera pelan de.' }
+          { title: 'Çavkaniya Rastiyê', description: 'Her beş li heman daneyên hevdengkirî dinêre.' },
+          { title: 'Kêrhatina Operasyonel', description: 'Rakirina kopîkirina manuwel a di navbera pelan de.' },
+          { title: 'Lihevhatina Yasayî', description: 'Kontrolên ji bo standardên herêmî û navneteweyî.' },
+          { title: 'Mîmariya Mezinbûyî', description: 'Sîstemên ku bi karsaziya we re mezin bihayên.' }
         ],
         roadmap: [
-          { label: 'Audit', duration: '', detail: 'Lîstekirina hemî gavên karsaziya niha.' },
-          { label: 'Avakirina Platformê', duration: '', detail: 'Afirandina navenda kontrolê ya xwerû.' }
+          { label: 'Audit-a Tespîtê', duration: 'Hefte 1-2', detail: 'Nexşekirina hemî pêvajoyên karsaziya niha.' },
+          { label: 'Nexşeya Mîmarî', duration: 'Hefte 3-4', detail: 'Sêwirana ERP-ya xwerû ji bo sektora we.' },
+          { label: 'Veguhestina Daneyan', duration: 'Hefte 5-8', detail: 'Barkirina tomarkirinên kevn bo pergala nû.' },
+          { label: 'Fermandariya Operasyonel', duration: 'Hefte 9+', detail: 'Perwerdehiya karmendan û destpêkirina tam.' }
         ],
         benchmarks: [],
-        techStack: ['Node.js', 'Postgres'],
+        // Fix: Added missing techStack property
+        techStack: ['Node.js', 'PostgreSQL', 'SAP Integration'],
         businessValue: 'Ji ber çewtiyên îdarî û kaxezên hêdî drav winda nekin.'
     },
     {
@@ -664,18 +779,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         longDescription: 'Ecommerce ji malperekê zêdetir e; ew motorek firotanê ye. Berhemên we bi mişteriyên li her derê cîhanê ve girê dide, dravdana wan bi ewlehî pêk tîne, û ji we re dibe alîkar ku hûn barkirinê bêyî pirsgirêkên şopandina manuwel birêve bibin.',
         category: 'Development',
         imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1000',
-        features: ['Dravdana Ewle', 'Sêwirana Mobile-First', 'Synca Barkirina Global'],
-        domains: [{ name: 'Retail', description: 'Mezinkirina firotanên dîjîtal.' }],
+        features: ['Dravdana Global a Ewle', 'Sêwirana Mobile-Responsive', 'Synca Lojîstîk û Barkirinê', 'Amûrên Marketing û SEO-yê'],
+        domains: [{ name: 'Retail', description: 'Mezinkirina firotanên dîjîtal.' }, { name: 'Lojîstîk', description: 'Şopandina barkirinê.' }, { name: 'Marketing', description: 'Gihîştina mişteriyan.' }, { name: 'Xizmeta Mişteriyan', description: 'Piştgiriya piştî kirînê.' }],
         pillars: [
-          { title: 'Baweriya Mişterî', description: 'Dergehên dravdanê yên ewle ku daneyên kiriyar diparêzin.' },
-          { title: 'Lez', description: 'Barkirina rûpelê ya bilez da ku kiriyar neterikînin.' }
+          { title: 'Baweriya Mişterî', description: 'Dergehên dravdanê yên ewle ji bo parastina daneyan.' },
+          { title: 'Performansa Bilind', description: 'Barkirina rûpelê ya bilez ji bo firotanê.' },
+          { title: 'Amadehiya Omnichannel', description: 'Synca firotanê li ser web û mobîlê.' },
+          { title: 'Fokusa Vegerandinê', description: 'Sêwirana UI ji bo kêmkirina berdana kartê.' }
         ],
         roadmap: [
-          { label: 'Sêwirandin', duration: '', detail: 'Afirandina rêwîtiya bikarhêner a kamil.' },
-          { label: 'Destpêkirin', duration: '', detail: 'Sazkirina dergehan û lojîstîkê.' }
+          { label: 'Stratejiya UX', duration: 'Hefte 1', detail: 'Diyarkirina rêwîtiya kirînê ya mişterî.' },
+          { label: 'Endezyariya Platformê', duration: 'Hefte 2-4', detail: 'Avakirina bingeha dikanê û katalogê.' },
+          { label: 'Girêdana Dravdanê', duration: 'Hefte 5', detail: 'Sazkirina dergehên ewle û lojîstîkê.' },
+          { label: 'Audit-a Performansê', duration: 'Hefte 6', detail: 'Testkirin û optimîzasyona SEO-yê.' }
         ],
         benchmarks: [],
-        techStack: ['Next.js', 'Stripe'],
+        // Fix: Added missing techStack property
+        techStack: ['Next.js', 'Stripe', 'Headless CMS'],
         businessValue: '24/7 bigihîjin mişteriyan ji derveyî sînorên dikanên fîzîkî.'
     },
     {
@@ -686,18 +806,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         longDescription: 'CRM mîna bîra profesyonel e. Her e-peyam, bang û civîna we ya bi mişterî re tomar dike. Ev alîkariya tîmê we dike ku bizanibin kîjan demê divê bang bikin û mişterî çi dixwaze, da ku "belkî" bibe "erê."',
         category: 'Enterprise',
         imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000',
-        features: ['Pîpeline-ên Firotanê', 'Dîroka E-peyamê', 'Bîranînên Kar'],
-        domains: [{ name: 'Firotan', description: 'Optimîzekirina funnel.' }],
+        features: ['Şopandina Pipeline-a Firotanê', 'Dîroka Peywendiyê ya Navendî', 'Bîranînên Şopandinê yên Otomatîk', 'Lead Scoring bi AI'],
+        domains: [{ name: 'Firotan', description: 'Optimîzekirina funnel.' }, { name: 'Marketing', description: 'Kampanyayên taybet.' }, { name: 'Piştgirî', description: 'Têkiliyên saxlem.' }, { name: 'Analîtîk', description: 'Texmîna dahatê.' }],
         pillars: [
-          { title: 'Rêxistin', description: 'Êdî notên winda an pelên tevlihev tune.' },
-          { title: 'Analîtîk', description: 'Bibînin kîjan berhem an karmend çêtir difroşin.' }
+          { title: 'Zîrekiya Lead-an', description: 'Veguhestina daneyan bo stratejiyên firotanê.' },
+          { title: 'Hevkariya Tîmê', description: 'Agahiyên hevpar di navbera firotan û piştgiriyê de.' },
+          { title: 'Parastina Mişterî', description: 'Amûrên proaktîf ji bo mişteriyên mayînde.' },
+          { title: 'Otomasyona Pêvajoyê', description: 'Kêmkirina barê îdarî yê tîmê firotanê.' }
         ],
         roadmap: [
-          { label: 'Import', duration: '', detail: 'Veguhestina kontakan bo pergala nû.' },
-          { label: 'Otomasyon', duration: '', detail: 'Sazkirina bîranînên şopandinê yên otomatîk.' }
+          { label: 'Nirxandina CRM', duration: 'Hefte 1', detail: 'Analîzkirina daxwaz û pêvajoyên niha.' },
+          { label: 'Sazkirina Sîstemê', duration: 'Hefte 2-3', detail: 'Xwerûkirina qadan û pipeline-an.' },
+          { label: 'Barkirina Daneyan', duration: 'Hefte 4', detail: 'Veguhestina daneyên kevn û synca e-peyamê.' },
+          { label: 'Optimîzasyona Firotanê', duration: 'Hefte 5+', detail: 'Otomatîkkirina rapor û bîranînan.' }
         ],
         benchmarks: [],
-        techStack: ['Node.js', 'Postgres'],
+        // Fix: Added missing techStack property
+        techStack: ['Salesforce', 'HubSpot API', 'Python'],
         businessValue: 'Bi şopandina fersendan di dema kamil de firotanê zêde bikin.'
     },
     {
@@ -707,19 +832,24 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'Sêwirana stratejîk ku bikarhêner ber bi çalakiya rast ve dibe.',
         longDescription: 'UI/UX cudahiya di navbera amûrek tevlihev û amûrek xweş de ye. Em "xuyabûn" (UI) û "hest" (UX) sêwirînin da ku bikarhêner qet neyên şaş kirin û her dem tiştê ku lê digerin bi hêsanî bibînin.',
         category: 'Design',
-        imageUrl: 'https://images.unsplash.com/photo-1576595580361-90a855b84b20?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        features: ['Testkirina Bikarhêner', 'Branding-a Vîzyonel', 'Sêwirana Prototîp'],
-        domains: [{ name: 'Nasname', description: 'Hebûna dîjîtal a premium.' }],
+        imageUrl: 'https://images.unsplash.com/photo-1576595580361-90a855b84b20?q=80&w=1974&auto=format&fit=crop',
+        features: ['Lêkolîn û Testkirina Bikarhêner', 'Sêwirana Nasnameya Vîzyonel', 'Prototîpên Têkilîdar ên Bilind', 'Dokumanasyona Pergala Sêwirandinê'],
+        domains: [{ name: 'Nasname', description: 'Hebûna dîjîtal a premium.' }, { name: 'Berhem', description: 'Bikaranîna nermalavê.' }, { name: 'Brand', description: 'Sêwirana vîzyonel.' }, { name: 'Gihîştin', description: 'Sêwirana giştî.' }],
         pillars: [
-          { title: 'Zelalî', description: 'Sêwirandinên hêsan ku hewceyê pirtûka perwerdehiyê nîne.' },
-          { title: 'Berdewamî', description: 'Sêwirana baş bikarhêneran di hundurê appê de dihêle.' }
+          { title: 'Zelaliya Mejî', description: 'Sêwirandinên hêsan ku hewceyê perwerdehiyê nîne.' },
+          { title: 'Baweriya Brandê', description: 'Sêwirana ku girêdanên hestiyar ava dike.' },
+          { title: 'Gihîştina Giştî', description: 'Piştrastkirina ku sîstem ji bo her kesî dixebite.' },
+          { title: 'Pêşketina Berdewam', description: 'Bikaranîna daneyan ji bo baştirkirina ezmûnê.' }
         ],
         roadmap: [
-          { label: 'Wireframes', duration: '', detail: 'Nexşekirina avahiya appê.' },
-          { label: 'Polish', duration: '', detail: 'Zêdekirina reng û tevgera xweşik.' }
+          { label: 'Qonaxa Tespîtê', duration: 'Hefte 1', detail: 'Diyarkirina armanc û bikarhêneran.' },
+          { label: 'Wireframe-ên Avahiyê', duration: 'Hefte 2-3', detail: 'Avakirina îskeleta sîstema we.' },
+          { label: 'Sêwirana Vîzyonel', duration: 'Hefte 4-5', detail: 'Zêdekirina reng, tîp û estetîka brandê.' },
+          { label: 'Radestkirin', duration: 'Hefte 6', detail: 'Amadekirina dokumanan ji bo developeran.' }
         ],
         benchmarks: [],
-        techStack: ['Figma', 'React'],
+        // Fix: Added missing techStack property
+        techStack: ['Figma', 'Adobe Creative Suite', 'Principle'],
         businessValue: 'Bi hêsankirina bikaranîna nermalavê bangên daxwaza alîkariyê kêm bikin.'
     },
     {
@@ -729,19 +859,24 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'Xebata teknîkî û naverokî da ku branda we derkeve serê lêgerînê.',
         longDescription: 'SEO mîna wê ye ku dikanek we li kolana herî qerebalix a cîhanê hebe. Em kod û naveroka malpera we optimîze dikin da ku dema mirov lêgerînê dikin, navê we yekem derkeve. Ev riya herî baş e ji bo girtina trafîka organîk a belaş.',
         category: 'Consulting',
-        imageUrl: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        features: ['Stratejiya Keyword', 'Optimîzasyona Lezê', 'Raporên Rêzkirinê'],
-        domains: [{ name: 'Mezinbûn', description: 'Berfirehkirina gihîştina organîk.' }],
+        imageUrl: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?q=80&w=1932&auto=format&fit=crop',
+        features: ['Stratejiya Naverok û Keyword-an', 'Optimîzasyona Teknîkî ya Lezê', 'Avakirina Otorîteya Backlink', 'Serkeftina Lêgerîna Herêmî'],
+        domains: [{ name: 'Mezinbûn', description: 'Gihîştina organîk.' }, { name: 'Teknîkî', description: 'Hîmên malperê.' }, { name: 'Naverok', description: 'Sernavên girîng.' }, { name: 'Herêmî', description: 'Xuyabûna herêmî.' }],
         pillars: [
-          { title: 'Otorîte', description: 'Kirina malpera we bibe lîderê bawermend di sektora we de.' },
-          { title: 'Gihîştin', description: 'Piştrastkirina ku motorên lêgerînê malpera we kamil dixwînin.' }
+          { title: 'Otorîteya Dîjîtal', description: 'Kirina malpera we bibe lîder di sektora we de.' },
+          { title: 'Sermayeya Mayînde', description: 'Avakirina trafîka ku her dem berdewam dike.' },
+          { title: 'Rêzkirina Stratejîk', description: 'Fokusa li ser peyvên ku firotanê tînin.' },
+          { title: 'Siyak û Mantiq', description: 'Optimîzasyona li gorî mebesta lêgerînê.' }
         ],
         roadmap: [
-          { label: 'Audit', duration: '', detail: 'Tespîtkirina çima hûn hîn derneketine serî.' },
-          { label: 'Kampanya', duration: '', detail: 'Avakirina naveroka ku Google jê hez dike.' }
+          { label: 'Audit-a Teknîkî', duration: 'Hefte 1', detail: 'Tespîtkirina pirsgirêkên ku lezê kêm dikin.' },
+          { label: 'Lêkolîna Keyword-an', duration: 'Hefte 2', detail: 'Tespîtkirina peyvên herî biha ji bo we.' },
+          { label: 'Cîbicîkirina Rûpelê', duration: 'Hefte 3-4', detail: 'Optimîzekirina sernav û naveroka malperê.' },
+          { label: 'Şopandina Mezinbûnê', duration: 'Berdewam', detail: 'Raporên mehane û nûkirina stratejiyê.' }
         ],
         benchmarks: [],
-        techStack: ['Next.js', 'Google Console'],
+        // Fix: Added missing techStack property
+        techStack: ['Semrush', 'Ahrefs', 'Search Console'],
         businessValue: 'Bi trafîka organîk budceya reklamê kêm bikin.'
     },
     {
@@ -752,18 +887,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         longDescription: 'Ewlehiya sîber dîwarê dora karsaziya weya dîjîtal e. Em pergalên ku "nederbasbûyîyan" dişopînin û daneyên weyên krîtîk diparêzin saz dikin. Ev piştrast dike ku agahdariya pargîdaniya we taybet bimîne û sîstemên we neyên hackkirin.',
         category: 'Security',
         imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
-        features: ['Şopandina Gefan', 'Encryption-a Daneyan', 'Gihîştina Ewle'],
-        domains: [{ name: 'Parastin', description: 'Sîstemên proaktîf.' }],
+        features: ['Şopandina Gefan a Proaktîf', 'Encryption-a Daneyan a Bilind', 'Mîmariya Zero-Trust', 'Plana Bersivdana Hîsan'],
+        domains: [{ name: 'Parastin', description: 'Sîstemên proaktîf.' }, { name: 'Taybetî', description: 'Parastina daneyan.' }, { name: 'Qanûnî', description: 'Ewlehiya yasayî.' }, { name: 'Recovery', description: 'Berdewamî.' }],
         pillars: [
-          { title: 'Pêşîgirtin', description: 'Rawestandina êrîşan berî ku dest pê bikin.' },
-          { title: 'Recovery', description: 'Planên alternatîf heke tiştek xirab bibe.' }
+          { title: 'Parastina Pêşîgir', description: 'Rawestandina êrîşan berî ku têkevin hundir.' },
+          { title: 'Berdewamiya Karsaziyê', description: 'Piştrastkirina operasyonan di her rewşê de.' },
+          { title: 'Serweriya Daneyan', description: 'Kontrola tam li ser cihê daneyên we.' },
+          { title: 'Zanîna Ewlehiyê', description: 'Perwerdekirina karmendan wekî dîwarê yekem.' }
         ],
         roadmap: [
-          { label: 'Scan', duration: '', detail: 'Testkirina xalên lawaz ên niha.' },
-          { label: 'Bihêzkirin', duration: '', detail: 'Sazkirina firewall û parastinê.' }
+          { label: 'Scana Lawaziyan', duration: 'Hefte 1', detail: 'Testkirina xalên lawaz ên dîjîtal.' },
+          { label: 'Fortification', duration: 'Hefte 2-3', detail: 'Sazkirina firewall û encryption-a pêşketî.' },
+          { label: 'Kontrola Gihîştinê', duration: 'Hefte 4', detail: 'Sazkirina MFA û îzinên taybet.' },
+          { label: 'Radestkirin', duration: 'Hefte 5+', detail: 'Perwerdehî û sazkirina şopandina 24/7.' }
         ],
         benchmarks: [],
-        techStack: ['Cloudflare', 'Zero-Trust'],
+        // Fix: Added missing techStack property
+        techStack: ['IDS/IPS', 'AES-256', 'SIEM Platforms'],
         businessValue: 'Ji dozên yasayî û zirara brandê ya ji ber daxuyaniya daneyan dûr bikevin.'
     },
     {
@@ -773,19 +913,24 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'Girêdana nermalavên cihêreng da ku dane bixweber herikin.',
         longDescription: 'API mîna pirên di navbera giravên nermalavê de ne. Heke ERP û malperek we hebe, em pirê ava dikin da ku dema kesek tiştek dikire, envantera we bixweber nû bibe. Êdî kopîkirina manuwel di navbera appan de nîne.',
         category: 'Development',
-        imageUrl: 'https://images.unsplash.com/photo-1763568258208-a5af30d5a31b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        features: ['Synca Rastî', 'Girêdana Pir-app', 'Herikîna Ewle'],
-        domains: [{ name: 'Girêdan', description: 'Rakirina hevdengkirina manuwel.' }],
+        imageUrl: 'https://images.unsplash.com/photo-1763568258208-a5af30d5a31b?q=80&w=2070&auto=format&fit=crop',
+        features: ['Synca Daneyan a Rastî', 'Hub-ên Girêdana Pir-app', 'Veguhestina Daneyan a Ewle', 'Gateway-ên API-yê yên Bilez'],
+        domains: [{ name: 'Girêdan', description: 'Rakirina karê manuwel.' }, { name: 'Otomasyon', description: 'Herikîna bêsînor.' }, { name: 'Sîstem', description: 'Lihevhatina sîsteman.' }, { name: 'Mezinbûn', description: 'Gihandina peyaman.' }],
         pillars: [
-          { title: 'Otomasyon', description: 'Sîstemên ku bêyî mirovan bi hev re dixebitin.' },
-          { title: 'Berdewamî', description: 'Parastina heman daneyan di her appê de.' }
+          { title: 'Otomasyona Tam', description: 'Sîstemên ku bêyî mirovan kar dikin.' },
+          { title: 'Yekpareyiya Daneyan', description: 'Parastina heman agahiyan di her appê de.' },
+          { title: 'Berfirehbûn', description: 'Zêdekirina app-ên nû bi hêsanî.' },
+          { title: 'Ewlehiya Endpoint-an', description: 'Parastina "dergehên" peywendiya app-an.' }
         ],
         roadmap: [
-          { label: 'Mapping', duration: '', detail: 'Biryara kîjan dane divê bimeşin.' },
-          { label: 'Girêdan', duration: '', detail: 'Avakirin û ceribandina pirê.' }
+          { label: 'Nexşeya Siyakê', duration: 'Hefte 1', detail: 'Tespîtkirina kîjan dane divê herikin.' },
+          { label: 'Pêşxistina Mantiqê', duration: 'Hefte 2-4', detail: 'Avakirina qaîdeyên veguhertin û syncê.' },
+          { label: 'Testkirina Zextê', duration: 'Hefte 5', detail: 'Piştrastkirina pîrê di dema qerebalixiyê de.' },
+          { label: 'Girêdana Zindî', duration: 'Hefte 6+', detail: 'Vekirina pira otomatîk ji bo karsaziyê.' }
         ],
         benchmarks: [],
-        techStack: ['Node.js', 'Go'],
+        // Fix: Added missing techStack property
+        techStack: ['Go', 'gRPC', 'RabbitMQ'],
         businessValue: '90% karê manuwel ê têketina daneyan ji holê rakin.'
     },
     {
@@ -796,18 +941,23 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         longDescription: 'Mîna kontrolek bijîşkî, audita sîstemê li pirsgirêkên veşartî digere. Em server û nermalavên we kontrol dikin da ku bibînin çi hêdî ye, çi ne ewle ye, û hûn ji bo çi drav didin lê bikar nayînin.',
         category: 'Consulting',
         imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000',
-        features: ['Analîza Lêçûnê', 'Kontrola Ewlehiyê', 'Testkirina Performansê'],
-        domains: [{ name: 'Kêrhatî', description: 'Optimîzekirina çavkaniyan.' }],
+        features: ['Analîza Lêçûn-Karîgerî', 'Kontrolên Ewlehiyê yên Giştî', 'Testkirina Performans û Zextê', 'Nirxandina Dewra Çavkaniyan'],
+        domains: [{ name: 'Kêrhatî', description: 'Optimîzekirina IT-yê.' }, { name: 'Budce', description: 'Kêmkirina lêçûnan.' }, { name: 'Ewlehî', description: 'Kêmkirina rîskan.' }, { name: 'Paşeroj', description: 'Nexşeya nûkirinê.' }],
         pillars: [
-          { title: 'Optimîzasyon', description: 'Bi kêmtir drav leza zêdetir bigirin.' },
-          { title: 'Ewlehî', description: 'Xalên qul ên ewlehiyê berî hackran bibînin.' }
+          { title: 'Optimîzasyona Sivik', description: 'Performansa herî bilind bi kêmtirîn windahî.' },
+          { title: 'Tespîtkirina Rîskan', description: 'Dîtina gefan berî ku bibin krîzên biha.' },
+          { title: 'Stratejiya Fînanse', description: 'Guhertina IT-ê bo motora nirxê.' },
+          { title: 'Kontrola Serwer', description: 'Rakirina girêdana bi firoşkarên biha.' }
         ],
         roadmap: [
-          { label: 'Scan', duration: '', detail: 'Nêrîna li her server û appê.' },
-          { label: 'Reçete', duration: '', detail: 'Lîsteya tiştên ku divê werin sererastkirin.' }
+          { label: 'Envantera Sîsteman', duration: 'Hefte 1', detail: 'Lîstekirina her server, lîsans û kodê.' },
+          { label: 'Qonaxa Analîzê', duration: 'Hefte 2', detail: 'Cîbicîkirina testên performansê.' },
+          { label: 'Reçeteya Stratejîk', duration: 'Hefte 3', detail: 'Lîsteya tiştên ku divê werin sererastkirin.' },
+          { label: 'Piştgiriya Cîbicîkirinê', duration: 'Berdewam', detail: 'Rênîşandana tîmê we di paqijkirinê de.' }
         ],
         benchmarks: [],
-        techStack: [],
+        // Fix: Added missing techStack property
+        techStack: ['Infrastructure as Code', 'Trivy', 'Cost Optimization'],
         businessValue: 'Bi gelemperî 20% lêçûnên IT-ê yên mehane kêm dike.'
     },
     {
@@ -815,66 +965,81 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         name: 'Karsazî di Dest de (Mobile)',
         tagline: 'Pargîdaniya xwe bixin berîka mişteriyê xwe.',
         description: 'App-ên bilez û hêsan ji bo iPhone û Android.',
-        longDescription: 'App-ên mobile li ser nêzîkbûna bi mişterî re ne. Em app-ên ku dihêlin mişteriyên we bikirin, rezervasyon bikin an bi we re bipeyivin ava dikin. Ew hatine sêwirandin da ku di înterneta hêdî de jî bilez bixebitin.',
+        longDescription: 'Mobile apps are about being close to your customer. We build apps that allow your clients to buy, book, or chat with you from anywhere. نبنيها لتعمل بسلاسة حتى في الاتصالات الضعيفة وبإحساس سريع وطبيعي.',
         category: 'Development',
         imageUrl: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000',
-        features: ['Moda Offline', 'Notîfîkasyon', 'Navîgasyona Bilez'],
-        domains: [{ name: 'Mobile', description: 'Tevlêbûna rasterast.' }],
+        features: ['Şiyana Karê Offline', 'Notîfîkasyonên Xwerû', 'Synca Ewlehiya Biometrîk', 'Performansa Cross-Platform'],
+        domains: [{ name: 'Mobile', description: 'Tevlêbûna rasterast.' }, { name: 'Berhem', description: 'Parastina mişterî.' }, { name: 'Firotan', description: 'Gihîştina her derê.' }, { name: 'Piştgirî', description: 'Chat-a hundurîn.' }],
         pillars: [
-          { title: 'Engagement', description: 'Bi îkona li ser ekranê her dem li ber çavan bin.' },
-          { title: 'Performans', description: 'App-ên ku qet naqerisin an namînin.' }
+          { title: 'Tevlêbûna Zêde', description: 'Bi îkona li ser ekranê her dem li ber çavan bin.' },
+          { title: 'UX-a Bêkêmasî', description: 'Sêwirana ji bo bikaranîna bi yek destî û lezê.' },
+          { title: 'Pêbaweriya Sîstemê', description: 'App-ên ku di înterneta lawaz de jî dixebitin.' },
+          { title: 'Jîngeha Ewle', description: 'Parastina kirînan bi ewlehiya mobîl.' }
         ],
         roadmap: [
-          { label: 'Mantiq', duration: '', detail: 'Avakirina fonksiyonên bingehîn.' },
-          { label: 'Mekan', duration: '', detail: 'Lîstekirina li Apple û Google.' }
+          { label: 'Mîmariya Mobîl', duration: 'Hefte 1', detail: 'Sêwirana mantiq û daneyên appê.' },
+          { label: 'Endezyariya Bingeha', duration: 'Hefte 2-6', detail: 'Kodkirina taybetmendiyên appê.' },
+          { label: 'Testa Bikarhêneran', duration: 'Hefte 7', detail: 'Ceribandina bi bikarhênerên rastîn.' },
+          { label: 'Barkirina Storan', duration: 'Hefte 8', detail: 'Cîbicîkirina pêvajoyên Apple û Google.' }
         ],
         benchmarks: [],
-        techStack: ['React Native', 'Firebase'],
-        businessValue: 'Têkiliya mişterî bi xwe re 10 qat hêsantir bikin.'
+        // Fix: Added missing techStack property
+        techStack: ['Flutter', 'Firebase', 'GraphQL'],
+        businessValue: 'Make it 10x easier for customers to interact with you.'
     },
     {
         id: 'blockchain',
         name: 'Tomarên Neguherbar (Blockchain)',
         tagline: 'Baweriya ku nayê sextekirin.',
-        description: 'Ledgerek dîjîtal ku tê de tomar mayînde û zelal in.',
-        longDescription: 'Blockchain rêyek e ji bo tomarkirina agahiyan da ku qet neyê jêbirin an guhertin. Ev ji bo peymanan, zincîra dabînkirinê an şopandina tiştên biha kamil e. Ew baweriyek kamil di navbera aliyan de ava dike.',
+        description: 'A digital ledger where records are permanent and transparent.',
+        longDescription: 'Blockchain is a way to record info so it can never be deleted or changed. This is perfect for contracts, supply chains, or tracking valuable items. It creates total trust between parties because the "book" cannot be lied to.',
         category: 'Blockchain',
         imageUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000',
-        features: ['Smart Contracts', 'Şopandina Têketinê', 'Nasnameya Dîjîtal'],
-        domains: [{ name: 'Bawerî', description: 'Tomarên verastkirî.' }],
+        features: ['عقود ذكية مؤتمتة', 'تتبع شفاف لسلسلة التوريد', 'هوية رقمية سيادية', 'سجلات أصول قابلة للتحقق'],
+        domains: [{ name: 'Bawerî', description: 'Tomarên verastkirî.' }, { name: 'Fînanse', description: 'Protokolên DeFi.' }, { name: 'Operasyon', description: 'Şopandin.' }, { name: 'Yasayî', description: 'Peymanên mayînde.' }],
         pillars: [
-          { title: 'Neguherbarî', description: 'Tiştê ku hatiye nivîsandin her dem dimîne.' },
-          { title: 'Zelalî', description: 'Her kes dikare dîrokê verast bike.' }
+          { title: 'Neguherbarî', description: 'Tiştê ku hatiye nivîsandin qet nayê guhertin.' },
+          { title: 'Zelaliya Radîkal', description: 'Her kes dikare dîrokê verast bike.' },
+          { title: 'Kêrhatina Baweriyê', description: 'Rakirina hewcedariya verastkirina biha.' },
+          { title: 'Resilience-a Lamend', description: 'Xala têkçûnê ji bo daneyan tune ye.' }
         ],
         roadmap: [
-          { label: 'Plan', duration: '', detail: 'Tespîtkirina ku derê bawerî hewce ye.' },
-          { label: 'Tora Ewle', duration: '', detail: 'Sazkirina ledgera ewleh.' }
+          { label: 'Stratejiya Protokolê', duration: 'Hefte 1-2', detail: 'Tespîtkirina blockchain-a herî baş.' },
+          { label: 'Pêşxistina Peymanan', duration: 'Hefte 3-5', detail: 'Kodkirina mantiqê peymanên we.' },
+          { label: 'Audita Ewlehiyê', duration: 'Hefte 6-7', detail: 'Verastkirina matematîkî ya peymanan.' },
+          { label: 'Sazkirina Node-an', duration: 'Hefte 8+', detail: 'Barkirina ledgerê bo tora ewle.' }
         ],
         benchmarks: [],
-        techStack: ['Solidity', 'Web3.js'],
-        businessValue: 'Lêçûnên navbeynkar û parêzerên verastkirinê ji holê rakin.'
+        // Fix: Added missing techStack property
+        techStack: ['Solidity', 'Hyperledger Fabric', 'Rust'],
+        businessValue: 'Eliminate the cost of middle-men and verification lawyers.'
     },
     {
         id: 'cloud',
         name: 'Ezmanê Mezinbûyî (Cloud)',
         tagline: 'Li şûna kirîna hardware, hêzê bi kirê bigirin.',
-        description: 'Hostkirina nermalava we li ser serverên global ku bi we re mezin dibin.',
-        longDescription: 'Cloud computing tê wê wateyê ku karsaziya we li ser înternetê dijî. Li şûna kirîna serverên biha yên ku kevn dibin, hûn torên global ên bi hêz bikar tînin. Heke karsaziya we mezin bibe, serverên we jî bixweber mezin dibin.',
+        description: 'Hosting your software on global servers that grow with you.',
+        longDescription: 'Cloud computing means your business lives on the internet. Instead of buying expensive servers that get old, you use powerful global networks. If your business grows tomorrow, your servers grow with you instantly without buying anything new.',
         category: 'Cloud',
         imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000',
-        features: ['Mezinbûna Bêsînor', 'Backupa Otomatîk', 'Leza Global'],
-        domains: [{ name: 'Binesazî', description: 'Pêbawerî di mezinbûnê de.' }],
+        features: ['قوة حوسبة تتوسع آلياً', 'توزيع محتوى عالمي', 'نسخ احتياطي للتعافي من الكوارث', 'البنية التحتية ككود (IaC)'],
+        domains: [{ name: 'Binesazî', description: 'Hîmên pêbawer.' }, { name: 'Operasyon', description: 'Bê sînor.' }, { name: 'Mezinbûn', description: 'Pîvana bêsînor.' }, { name: 'Îstîqrar', description: 'Gihîştina bilind.' }],
         pillars: [
-          { title: 'Elastîkbûn', description: 'Tenê ji bo tiştê ku bikar tînin drav bidin.' },
-          { title: 'Resilience', description: 'Heke serverek têk biçe, yekî din tavilê cîh digire.' }
+          { title: 'Elastîkbûna Bêsînor', description: 'Tenê ji bo tiştê bikar tînin drav bidin.' },
+          { title: 'Resilience-a Karî', description: 'Heke serverek bikeve, yekî din cîh digire.' },
+          { title: 'Sînorê Sîsteman', description: 'Berdewamiya kar bêyî hardware-a fîzîkî.' },
+          { title: 'Leza Gerdûnî', description: 'Gihîştina bilez ji bo her kesî.' }
         ],
         roadmap: [
-          { label: 'Veguhestin', duration: '', detail: 'Bar kirina daneyan bo ewran.' },
-          { label: 'Mezinbûn', duration: '', detail: 'Konfîgurasyona ji bo mezinbûnê.' }
+          { label: 'Nirxandina Cloud', duration: 'Hefte 1', detail: 'Nirxandina hardware û serverên niha.' },
+          { label: 'Stratejiya Migrationê', duration: 'Hefte 2', detail: 'Sêwirana barkirinê bêyî rawestan.' },
+          { label: 'Avakirina Jîngehê', duration: 'Hefte 3-4', detail: 'Amadekirina tora global a bilez.' },
+          { label: 'Vekirina Trafîkê', duration: 'Hefte 5', detail: 'Barkirina tam bo binesaziya ewrî.' }
         ],
         benchmarks: [],
-        techStack: ['AWS', 'Terraform', 'K8s'],
-        businessValue: 'Ji lêçûnên hardware rizgar bibin û qet ji têkçûna sîstemê netirsin.'
+        // Fix: Added missing techStack property
+        techStack: ['Terraform', 'Docker', 'AWS Lambda'],
+        businessValue: 'Save thousands on hardware and never worry about crashes.'
     }
   ]
 };
