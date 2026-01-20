@@ -15,8 +15,28 @@ interface CookieBannerProps {
 const CookieBanner: React.FC<CookieBannerProps> = ({ language }) => {
   const [isVisible, setIsVisible] = useState(false);
 
+  // Helper to set cookie with expiration in minutes
+  const setCookie = (name: string, value: string, minutes: number) => {
+    const date = new Date();
+    date.setTime(date.getTime() + (minutes * 60 * 1000));
+    const expires = "; expires=" + date.toUTCString();
+    document.cookie = `${name}=${value || ""}${expires}; path=/; SameSite=Lax`;
+  };
+
+  // Helper to get cookie value by name
+  const getCookie = (name: string) => {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  };
+
   useEffect(() => {
-    const consent = localStorage.getItem('sys_cookie_consent');
+    const consent = getCookie('sys_cookie_consent');
     if (!consent) {
       const timer = setTimeout(() => setIsVisible(true), 2000);
       return () => clearTimeout(timer);
@@ -24,7 +44,8 @@ const CookieBanner: React.FC<CookieBannerProps> = ({ language }) => {
   }, []);
 
   const handleAction = (choice: 'accept' | 'reject') => {
-    localStorage.setItem('sys_cookie_consent', choice);
+    // Set cookie to expire in 30 minutes (1800 seconds)
+    setCookie('sys_cookie_consent', choice, 30);
     setIsVisible(false);
   };
 
