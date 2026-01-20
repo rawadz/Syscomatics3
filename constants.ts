@@ -136,7 +136,7 @@ export const TRANSLATIONS: Record<Language, any> = {
       uptime: 'Her Dem Vekirî', 
       uptimed: 'Sîstemên leza bilind ku operasyonên berdewam garantî dikin.' 
     },
-    services: { header: 'Çareseriyên Me', sub: 'Amûrên aqilmend ên ji bo pargîdaniyên nûjen hatine sêwirandin.', back: 'Vegere', spec: 'Pisporî di', pillars: 'Çima Ev Girîng e', roadmap: 'Nexşerêya Stratejîk', thesis: 'Teza Mîmarî', value: 'Nirxa Karsaziya Stratejîk', briefAdd: 'Li Kurteyê Zêde Bike', explore: 'Lêkolîn Bike' },
+    services: { header: 'Çareserîyên Me', sub: 'Amûrên aqilmend ên ji bo pargîdanîyên nûjen hatine sêwirandin.', back: 'Vegere', spec: 'Pisporî di', pillars: 'Çima Ev Girîng e', roadmap: 'Nexşerêya Stratejîk', thesis: 'Teza Mîmarî', value: 'Nirxa Karsaziya Stratejîk', briefAdd: 'Li Kurteyê Zêde Bike', explore: 'Lêkolîn Bike' },
     journal: { header: 'Projeyên Taybet', sub: 'Bandora îsbatkirî', back: 'Vegere', featured: 'Nîşana Stratejîk', tactical: 'Nimûneyên Serkeftinê', readTime: 'deqe xwendin' },
     inquiry: { title: 'Projeya We', sub: 'Bijartin', empty: 'Lîste vala ye.', remove: 'Rake', initiate: 'Nirxandinê Destpê Bike', assessment: 'Bersiva pispor di 24 demjimêran de', contact: 'Agahdariya Têkiliyê', name: 'Navê We', email: 'E-peyam', org: 'Pargîdanî', context: 'Kitekit', submit: 'Daxwazê Bişîne', back: 'Vegere', success: 'Spas.', successSub: 'Em ê di nêzîk de bi we re têkilî deynin.', scopes: 'Xizmetên Bijartî' },
     footer: { sub: 'Avakirina paşerojên dîjîtal ên serwer.', nav: 'Navîgasyon', exp: 'Pisporî', newsletter: 'Abone Bibe', newsd: 'Nûçeyan bistînin.', reg: 'Tevlî Me Bibe', contact: 'Têkilî', address: 'Şam, Sûriye', email: 'info@syscomatics.com', phone: '+963 932 255 512' },
@@ -647,7 +647,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         name: 'عملك في جيبك (Mobile)',
         tagline: 'ضع شركتك في جيب عميلك.',
         description: 'تطبيقات سريعة وسهلة الاستخدام للآيفون والأندرويد.',
-        longDescription: 'تطبيقات الموبايل هي الوسيلة لتكون قريباً من عميلك. نبني تطبيقات تسمح لعملائك بالشراء، الحجز، أو الدردشة معك من أي مكان. نبنيها لتعمل بسلاسة حتى في الاتصالات الضعيفة وبإحساس سريع وطبيعي.',
+        longDescription: 'تطبيقات الموبايل هي الوسيلة لتكون قريباً من عميلك. نبني تطبيقات تسمح لعملائك بالشراء، الحجز، أو الدردشة معك من أي مكان. مصممة لتعمل بسلاسة حتى في الاتصالات الضعيفة وبإحساس سريع وطبيعي.',
         category: 'Development',
         imageUrl: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000',
         features: ['قدرات العمل دون إنترنت', 'إشعارات مخصصة وفورية', 'مزامنة الأمن البيومتري', 'أداء عالٍ عبر المنصات'],
@@ -671,50 +671,50 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
     {
         id: 'blockchain',
         name: 'سجلات لا تتغير (Blockchain)',
-        tagline: 'Trust that cannot be faked.',
-        description: 'A digital ledger where records are permanent and transparent.',
-        longDescription: 'Blockchain is a way to record info so it can never be deleted or changed. This is perfect for contracts, supply chains, or tracking valuable items. It creates total trust between parties because the "book" cannot be lied to.',
+        tagline: 'ثقة لا يمكن تزييفها.',
+        description: 'سجل رقمي حيث البيانات دائمة وشفافة.',
+        longDescription: 'البلوكشين هو وسيلة لتسجيل المعلومات بحيث لا يمكن حذفها أو تغييرها أبداً. هذا مثالي للعقود، سلاسل التوريد، أو تتبع الأشياء الثمينة. يخلق ثقة كاملة بين الأطراف لأن "الكتاب" لا يمكن الكذب عليه.',
         category: 'Blockchain',
         imageUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000',
         features: ['عقود ذكية مؤتمتة', 'تتبع شفاف لسلسلة التوريد', 'هوية رقمية سيادية', 'سجلات أصول قابلة للتحقق'],
-        domains: [{ name: 'Bawerî', description: 'Tomarên verastkirî.' }, { name: 'Fînanse', description: 'Protokolên DeFi.' }, { name: 'Operasyon', description: 'Şopandin.' }, { name: 'Yasayî', description: 'Peymanên mayînde.' }],
+        domains: [{ name: 'الثقة', description: 'سجلات موثقة.' }, { name: 'المالية', description: 'بروتوكولات DeFi.' }, { name: 'العمليات', description: 'التتبع.' }, { name: 'القانوني', description: 'عقود غير قابلة للتغيير.' }],
         pillars: [
-          { title: 'Neguherbarî', description: 'Tiştê ku hatiye nivîساندن qet nayê guhertin.' },
-          { title: 'Zelaliya Radîkal', description: 'Her kes dikare dîrokê verast bike.' },
-          { title: 'Kêrhatina Baweriyê', description: 'Rakirina hewcedariya verastkirina biha.' },
-          { title: 'Resilience-a Lamend', description: 'Xala têكçûnê ji bo daneyan tune ye.' }
+          { title: 'عدم التغيير المطلق', description: 'ما كُتب يبقى مكتوباً للأبد ولا يمكن تزويره.' },
+          { title: 'شفافية جذرية', description: 'يمكن لكل طرف التحقق من التاريخ دون وسطاء.' },
+          { title: 'كفاءة الثقة', description: 'إزالة الحاجة لجهات التحقق الخارجية المكلفة.' },
+          { title: 'مرونة لامركزية', description: 'لا توجد نقطة فشل واحدة لبياناتك الحرجة.' }
         ],
         roadmap: [
-          { label: 'Stratejiya Protokolê', duration: 'Hefte 1-2', detail: 'Tespîtkirina blockchain-a herî baş.' },
-          { label: 'Pêşxistina Peymanan', duration: 'Hefte 3-5', detail: 'Kodkirina mantiqê peymanên we.' },
-          { label: 'Audita Ewlehiyê', duration: 'Hefte 6-7', detail: 'Verastkirina matematîkî ya peymanan.' },
-          { label: 'Sazkirina Node-an', duration: 'Hefte 8+', detail: 'Barkirina ledgerê bo tora ewle.' }
+          { label: 'استراتيجية البروتوكول', duration: 'أسبوع ١-٢', detail: 'تحديد البلوكشين الأمثل لحالتك.' },
+          { label: 'تطوير العقود', duration: 'أسبوع ٣-٥', detail: 'برمجة المنطق الذي يؤتمت اتفاقياتك.' },
+          { label: 'تدقيق الأمن', duration: 'أسبوع ٦-٧', detail: 'التحقق الرياضي من سلامة العقود.' },
+          { label: 'إعداد العقد', duration: 'أسبوع ٨+', detail: 'نشر السجل على الشبكة الآمنة.' }
         ],
         benchmarks: [],
         techStack: ['Solidity', 'Hyperledger Fabric', 'Rust'],
-        businessValue: 'Eliminate the cost of middle-men and verification lawyers.'
+        businessValue: 'إلغاء تكاليف الوسطاء ومحامي التحقق.'
     },
     {
         id: 'cloud',
-        name: 'Ezmanê Mezinbûyî (Cloud)',
-        tagline: 'Li şûna kirîna hardware, hêzê bi kirê bigirin.',
-        description: 'Hosting your software on global servers that grow with you.',
-        longDescription: 'Cloud computing means your business lives on the internet. Instead of buying expensive servers that get old, you use powerful global networks. If your business grows tomorrow, your servers grow with you instantly without buying anything new.',
+        name: 'السماء المرنة (Cloud)',
+        tagline: 'استأجر القوة بدلاً من شراء العتاد.',
+        description: 'استضافة برامجك على خوادم عالمية تنمو معك.',
+        longDescription: 'الحوسبة السحابية تعني أن عملك يعيش على الإنترنت. بدلاً من شراء خوادم مكلفة تتقادم، تستخدم شبكات عالمية قوية. إذا نما عملك غداً، تنمو خوادمك معك فوراً دون الحاجة لشراء أي شيء جديد.',
         category: 'Cloud',
         imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000',
         features: ['قوة حوسبة تتوسع آلياً', 'توزيع محتوى عالمي', 'نسخ احتياطي للتعافي من الكوارث', 'البنية التحتية ككود (IaC)'],
-        domains: [{ name: 'Binesazî', description: 'Hîmên pêbawer.' }, { name: 'Operasyon', description: 'Bê sînor.' }, { name: 'Mezinbûn', description: 'Pîvana bêsînor.' }, { name: 'Îstîqrar', description: 'Gihîştina bilind.' }],
+        domains: [{ name: 'الأساسات', description: 'بنية تحتية موثوقة.' }, { name: 'العمليات', description: 'خالٍ من الصيانة.' }, { name: 'النمو', description: 'توسع بلا حدود.' }, { name: 'الاستقرار', description: 'توافر عالٍ.' }],
         pillars: [
-          { title: 'Elastîkbûna Bêsînor', description: 'Tenê ji bo tiştê bikar tînin drav bidin.' },
-          { title: 'Resilience-a Karî', description: 'Heke serverek bikeve, yekî din cîh digire.' },
-          { title: 'Sînorê Sîsteman', description: 'Berdewamiya kar bêyî hardware-a fîzîkî.' },
-          { title: 'Leza Gerdûnî', description: 'Gihîştina bilez ji bo her kesî.' }
+          { title: 'مرونة غير محدودة', description: 'ادفع ثمن ما تستخدمه، وتوسع للآلاف فوراً.' },
+          { title: 'مرونة المهمة', description: 'إذا فشل مركز بيانات، يستلم آخر في ثوانٍ.' },
+          { title: 'صيانة صفرية', description: 'ركز على عملك بينما ندير نحن العتاد.' },
+          { title: 'سرعة عالمية', description: 'وصول سريع للمستخدمين في أي مكان.' }
         ],
         roadmap: [
-          { label: 'Nirxandina Cloud', duration: 'Hefte 1', detail: 'Nirxandina hardware û serverên niha.' },
-          { label: 'Stratejiya Migrationê', duration: 'Hefte 2', detail: 'Sêwirana barkirinê bêyî rawestan.' },
-          { label: 'Avakirina Jîngehê', duration: 'Hefte 3-4', detail: 'Amadekirina tora global a bilez.' },
-          { label: 'Vekirina Trafîkê', duration: 'Hefte 5', detail: 'Barkirina tam bo binesaziya ewrî.' }
+          { label: 'تقييم السحابة', duration: 'أسبوع ١', detail: 'تقييم العتاد الحالي واحتياجات الخادم.' },
+          { label: 'استراتيجية الهجرة', duration: 'أسبوع ٢', detail: 'تصميم النقل دون أي توقف للخدمة.' },
+          { label: 'بناء البيئة', duration: 'أسبوع ٣-٤', detail: 'تجهيز الشبكة العالمية عالية الأداء.' },
+          { label: 'تبديل الحركة', duration: 'أسبوع ٥', detail: 'التحويل المباشر إلى السحابة القابلة للتوسع.' }
         ],
         benchmarks: [],
         techStack: ['Terraform', 'Docker', 'AWS Lambda'],
@@ -803,7 +803,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
     {
         id: 'uiux',
         name: 'Mîmariya Dîjîtal (UI/UX)',
-        tagline: 'Bikaranîنا nermalavê hêsan û xweşik bikin.',
+        tagline: 'Bikaranîna nermalavê hêsan û xweşik bikin.',
         description: 'Sêwirana stratejîk ku bikarhêner ber bi çalakiya rast ve dibe.',
         longDescription: 'UI/UX cudahiya di navbera amûrek tevlihev û amûrek xweş de ye. Em "xuyabûn" (UI) û "hest" (UX) sêwirînin da ku bikarhêner qet neyên şaş kirin û her dem tiştê ku lê digerin bi hêsanî bibîنين.',
         category: 'Design',
@@ -857,7 +857,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         name: 'Keleha Dîjîtal (Cyber)',
         tagline: 'Daneyên xwe ji hackran dûr bigirin.',
         description: 'Ewlehiya nûjen ji bo parastina raz û dravê pargîdaniyê.',
-        longDescription: 'Ewlehiya sîber dîwarê dora karsaziya weya dîjîtal e. Em pergalên ku "nederbasbûyîyan" dişopînin û daneyên weyên krîtîk dipارزێن saz dikin. Ev piştrast dike ku agahdariya pargîdaniya we taybet bimîne û sîstemên we neyên hackkirin.',
+        longDescription: 'Ewlehiya sîber dîwarê dora karsaziya weya dîjîtal e. Em pergalên ku "nederbasbûyîyan" dişopînin û daneyên weyên krîtîك dipارزێن saz dikin. Ev piştrast dike ku agahdariya pargîdaniya we taybet bimîne û sîstemên we neyên hackkirin.',
         category: 'Security',
         imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
         features: ['Şopandina Gefan a Proaktîf', 'Encryption-a Daneyan a Bilind', 'Mîmariya Zero-Trust', 'Plana Bersivdana Hîsan'],
@@ -913,7 +913,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         category: 'Consulting',
         imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000',
         features: ['Analîza Lêçûn-Karîgerî', 'Kontrolên Ewlehiyê yên Giştî', 'Testkirina Performans û Zextê', 'Nirxandina Dewra Çavkaniyan'],
-        domains: [{ name: 'Kêrhatî', description: 'Optimîzekirina IT-yê.' }, { name: 'Budce', description: 'Kêmkirina lêçûnan.' }, { name: 'Ewlehî', description: 'Kêmkirina rîskan.' }, { name: 'Paşeroj', description: 'Nexşeya nûkirinê.' }],
+        domains: [{ name: 'Kêrhatí', description: 'Optimîzekirina IT-yê.' }, { name: 'Budce', description: 'Kêmkirina lêçûnan.' }, { name: 'Ewlehî', description: 'Kêmkirina rîskan.' }, { name: 'Paşeroj', description: 'Nexşeya nûkirinê.' }],
         pillars: [
           { title: 'Optimîzasyona Sivik', description: 'Performansa herî bilind bi kêmtirîn windahî.' },
           { title: 'Tespîtkirina Rîskan', description: 'Dîtina gefan berî ku bibin krîzên biha.' },
@@ -975,7 +975,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         roadmap: [
           { label: 'Stratejiya Protokolê', duration: 'Hefte 1-2', detail: 'Tespîtkirina blockchain-a herî baş.' },
           { label: 'Pêşxistina Peymanan', duration: 'Hefte 3-5', detail: 'Kodkirina mantiqê peymanên we.' },
-          { label: 'Audita Ewlehiyê', duration: 'Hefte 6-7', detail: 'Verastkirina matematîkî ya peymanan.' },
+          { label: 'Audita Ewlehiyê', duration: 'Hefte 6-7', detail: 'Verastkirina matematîكî ya peymanan.' },
           { label: 'Sazkirina Node-an', duration: 'Hefte 8+', detail: 'Barkirina ledgerê bo tora ewle.' }
         ],
         benchmarks: [],
@@ -995,7 +995,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         pillars: [
           { title: 'Elastîkbûna Bêsînor', description: 'Tenê ji bo tiştê bikar tînin drav bidin.' },
           { title: 'Resilience-a Karî', description: 'Heke serverek bikeve, yekî din cîh digire.' },
-          { title: 'Sînorê Sîsteman', description: 'Berdewamiya kar bêyî hardware-a fîzîkî.' },
+          { title: 'Sînorê Sîsteman', description: 'Berdewamiya kar bêyî hardware-a fîzîكî.' },
           { title: 'Leza Gerdûnî', description: 'Gihîştina bilez ji bo her kesî.' }
         ],
         roadmap: [
@@ -1006,7 +1006,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         ],
         benchmarks: [],
         techStack: ['Terraform', 'Docker', 'AWS Lambda'],
-        businessValue: 'Save thousands on hardware and never worry about crashes.'
+        businessValue: 'وفر الآلاف من تكاليف العتاد ولا تقلق من توقف النظام أبداً.'
     }
   ]
 };
@@ -1031,7 +1031,7 @@ export const JOURNAL_ARTICLES: Record<Language, JournalArticle[]> = {
     },
     {
       id: 2,
-      title: 'ERPNext Implementation – Cheese Manufacturing',
+      title: 'ERPNext Implementation – Cheese Manufacturing (Lebanon)',
       date: '',
       excerpt: 'Digitalizing operations for a major cheese producer in Lebanon, improving workflow efficiency and reliable system adoption.',
       image: 'https://images.unsplash.com/photo-1610037275499-00c6b17c8ddd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -1047,10 +1047,10 @@ export const JOURNAL_ARTICLES: Record<Language, JournalArticle[]> = {
     },
     {
       id: 4,
-      title: 'AVIS Car Rental CRM Transformation',
+      title: 'CRM System for AVIS Car Rental Erbil',
       date: '',
       excerpt: 'Transitioning manual Excel processes to a structured CRM system for AVIS Erbil, enhancing reporting accuracy.',
-      image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=1000',
+      image: 'https://images.unsplash.com/photo-1765446925577-59a34c05f778?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       content: 'Supported the transition from manual processes and Excel files to a structured CRM system for AVIS Erbil. Enhanced customer management, reservations handling, and reporting accuracy. Improved workflow efficiency and provided guidance to staff to ensure effective system utilization and continuity of operations.'
     }
   ],
@@ -1089,10 +1089,10 @@ export const JOURNAL_ARTICLES: Record<Language, JournalArticle[]> = {
     },
     {
       id: 4,
-      title: 'تحول CRM لشركة AVIS لتأجير السيارات',
+      title: 'نظام CRM لشركة AVIS لتأجير السيارات (أربيل)',
       date: '',
       excerpt: 'الانتقال من العمليات اليدوية لفرع AVIS في أربيل إلى نظام CRM منظم، مما عزز دقة التقارير.',
-      image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=1000',
+      image: 'https://images.unsplash.com/photo-1765446925577-59a34c05f778?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       content: 'دعم الانتقال من العمليات اليدوية وملفات إكسل إلى نظام CRM منظم لشركة AVIS في أربيل. تحسين إدارة العملاء، والتعامل مع الحجوزات، ودقة التقارير. تحسين كفاءة سير العمل وتقديم الإرشادات للموظفين لضمان الاستخدام الفعال للنظام واستمرارية العمليات.'
     }
   ],
@@ -1134,7 +1134,7 @@ export const JOURNAL_ARTICLES: Record<Language, JournalArticle[]> = {
       title: 'AVIS Erbil CRM Transformation',
       date: '',
       excerpt: 'Veguherîna ji pêvajoyên Excel bo sîstema CRM ji bo AVIS li Hewlêrê.',
-      image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=1000',
+      image: 'https://images.unsplash.com/photo-1765446925577-59a34c05f778?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       content: 'Piştgirîkirina veguherîna ji Excel bo sîstema CRM ji bo AVIS Hewlêr. Baştirkirina rêveberiya mişteriyan, rezervasyon û daxuyaniyên raporan. Karîgeriya herikîna kar hatiye zêdekirin.'
     }
   ]
