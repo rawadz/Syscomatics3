@@ -56,7 +56,7 @@ export const KNOWLEDGE_BASE: Record<Language, any> = {
 
 export const TRANSLATIONS: Record<Language, any> = {
   en: {
-    nav: { solutions: 'Solutions', strategy: 'Strategy', insights: 'Stories', brief: 'Project Brief' },
+    nav: { solutions: 'Solutions', strategy: 'Strategy', insights: 'Projects', brief: 'Project Brief' },
     hero: { 
       tagline: 'Architecting Digital Sovereignty', 
       title: 'Engineered for', 
@@ -79,13 +79,13 @@ export const TRANSLATIONS: Record<Language, any> = {
       uptimed: 'High-speed systems ensuring continuous operations.' 
     },
     services: { header: 'Our Solutions', sub: 'Smart tools designed for modern companies.', back: 'Back', spec: 'Expertise in', pillars: 'Why This Matters', roadmap: 'Strategic Roadmap', thesis: 'The Architectural Thesis', value: 'Strategic Business Value', briefAdd: 'Add to Brief', explore: 'Explore' },
-    journal: { header: 'Success Stories', sub: 'Transformations', back: 'Back', featured: 'Latest Win', tactical: 'Client Outcomes', readTime: 'min read' },
+    journal: { header: 'Featured Projects', sub: 'Proven Impact', back: 'Back', featured: 'Strategic Milestone', tactical: 'Case Studies', readTime: 'min read' },
     inquiry: { title: 'Your Project', sub: 'Selection', empty: 'List is empty.', remove: 'Remove', initiate: 'Start Review', assessment: 'Expert reply in 24h', contact: 'Contact Info', name: 'Your Name', email: 'Email', org: 'Company', context: 'Details', submit: 'Send Request', back: 'Back', success: 'Thank You.', successSub: 'We will contact you soon.', scopes: 'Selected Services' },
     footer: { sub: 'Architecting sovereign digital futures.', nav: 'Navigation', exp: 'Expertise', newsletter: 'Subscribe', newsd: 'Get updates.', reg: 'Join Us', contact: 'Connect', address: 'Damascus, Syria', email: 'info@syscomatics.com', phone: '+963 932 255 512' },
     cookie: { title: 'Systems Protocol', desc: 'We utilize localized caching to ensure your Project Brief and language preferences persist across sessions.', accept: 'Accept Protocol', reject: 'Decline' }
   },
   ar: {
-    nav: { solutions: 'الحلول', strategy: 'الاستراتيجية', insights: 'قصص النجاح', brief: 'ملخص المشروع' },
+    nav: { solutions: 'الحلول', strategy: 'الاستراتيجية', insights: 'المشاريع', brief: 'ملخص المشروع' },
     hero: { 
       tagline: 'معمارية السيادة الرقمية', 
       title: 'هندسة من أجل', 
@@ -108,13 +108,13 @@ export const TRANSLATIONS: Record<Language, any> = {
       uptimed: 'أنظمة تضمن استمرارية أعمالك.' 
     },
     services: { header: 'حلولنا', sub: 'أدوات ذكية للشركات.', back: 'العودة', spec: 'الخبرة في', pillars: 'الأهمية الاستراتيجية', roadmap: 'خارطة الطريق', thesis: 'نظرة عامة هندسية', value: 'القيمة الاستراتيجية للأعمال', briefAdd: 'إضافة للملخص', explore: 'اكتشف' },
-    journal: { header: 'قصص النجاح', sub: 'التحولات', back: 'العودة', featured: 'أحدث الإنجازات', tactical: 'النتائج', readTime: 'دقائق' },
+    journal: { header: 'أبرز المشاريع', sub: 'تأثير ملموس', back: 'العودة', featured: 'إنجاز استراتيجي', tactical: 'دراسات الحالة', readTime: 'دقائق' },
     inquiry: { title: 'مشروعك', sub: 'الاختيار', empty: 'القائمة فارغة.', remove: 'إزالة', initiate: 'بدء المراجعة', assessment: 'رد خلال ٢٤ ساعة', contact: 'الاتصال', name: 'الاسم', email: 'البريد', org: 'الشركة', context: 'التفاصيل', submit: 'إرسال', back: 'العودة', success: 'شكراً لك.', successSub: 'سنتواصل معك قريباً.', scopes: 'الخدمات المختارة' },
     footer: { sub: 'بناء مستقبل رقمي سيادي.', nav: 'التنقل', exp: 'الخبرة', newsletter: 'اشترك', newsd: 'احصل على التحديثات.', reg: 'انضم إلينا', contact: 'تواصل', address: 'دمشق، سوريا', email: 'info@syscomatics.com', phone: '+963 932 255 512' },
     cookie: { title: 'بروتوكول الأنظمة', desc: 'نحن نستخدم التخزين المحلي لضمان استمرار ملخص مشروعك وتفضيلات اللغة الخاصة بك عبر الجلسات.', accept: 'قبول البروتوكول', reject: 'رفض' }
   },
   ku: {
-    nav: { solutions: 'Çareserî', strategy: 'Stratejî', insights: 'Çîrok', brief: 'Kurteya Projeyê' },
+    nav: { solutions: 'Çareserî', strategy: 'Stratejî', insights: 'Projeyên', brief: 'Kurteya Projeyê' },
     hero: { 
       tagline: 'Mîmariya Serweriya Dîjîtal', 
       title: 'Ji bo performansa', 
@@ -137,7 +137,7 @@ export const TRANSLATIONS: Record<Language, any> = {
       uptimed: 'Sîstemên leza bilind ku operasyonên berdewam garantî dikin.' 
     },
     services: { header: 'Çareseriyên Me', sub: 'Amûrên aqilmend ên ji bo pargîdaniyên nûjen hatine sêwirandin.', back: 'Vegere', spec: 'Pisporî di', pillars: 'Çima Ev Girîng e', roadmap: 'Nexşerêya Stratejîk', thesis: 'Teza Mîmarî', value: 'Nirxa Karsaziya Stratejîk', briefAdd: 'Li Kurteyê Zêde Bike', explore: 'Lêkolîn Bike' },
-    journal: { header: 'Çîrokên Serkeftinê', sub: 'Veguherîn', back: 'Vegere', featured: 'Serkeftina Dawî', tactical: 'Encamên Mişterî', readTime: 'deqe xwendin' },
+    journal: { header: 'Projeyên Taybet', sub: 'Bandora îsbatkirî', back: 'Vegere', featured: 'Nîşana Stratejîk', tactical: 'Nimûneyên Serkeftinê', readTime: 'deqe xwendin' },
     inquiry: { title: 'Projeya We', sub: 'Bijartin', empty: 'Lîste vala ye.', remove: 'Rake', initiate: 'Nirxandinê Destpê Bike', assessment: 'Bersiva pispor di 24 demjimêran de', contact: 'Agahdariya Têkiliyê', name: 'Navê We', email: 'E-peyam', org: 'Pargîdanî', context: 'Kitekit', submit: 'Daxwazê Bişîne', back: 'Vegere', success: 'Spas.', successSub: 'Em ê di nêzîk de bi we re têkilî deynin.', scopes: 'Xizmetên Bijartî' },
     footer: { sub: 'Avakirina paşerojên dîjîtal ên serwer.', nav: 'Navîgasyon', exp: 'Pisporî', newsletter: 'Abone Bibe', newsd: 'Nûçeyan bistînin.', reg: 'Tevlî Me Bibe', contact: 'Têkilî', address: 'Şam, Sûriye', email: 'info@syscomatics.com', phone: '+963 932 255 512' },
     cookie: { title: 'Protokola Sîsteman', desc: 'Em cachkirina herêmî bikar tînin da ku Kurteya Projeya we û tercîhên zimanê we di her rûniştinê de bimînin.', accept: 'Protokolê Pejirîne', reject: 'Red Bike' }
@@ -169,7 +169,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         { label: 'Operational Command', duration: 'Week 9+', detail: 'Final staff training and full system deployment.' }
       ],
       benchmarks: [],
-      // Fix: Added missing techStack property
       techStack: ['Node.js', 'PostgreSQL', 'SAP Integration'],
       businessValue: 'Stop losing money to double-entry errors and slow paperwork.'
     },
@@ -196,7 +195,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         { label: 'Performance Audit', duration: 'Week 6', detail: 'Stress testing and SEO optimization for launch.' }
       ],
       benchmarks: [],
-      // Fix: Added missing techStack property
       techStack: ['Next.js', 'Stripe', 'Headless CMS'],
       businessValue: 'Reach customers 24/7 beyond your physical location.'
     },
@@ -223,7 +221,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         { label: 'Sales Optimization', duration: 'Week 5+', detail: 'Automating repetitive outreach and reporting.' }
       ],
       benchmarks: [],
-      // Fix: Added missing techStack property
       techStack: ['Salesforce', 'HubSpot API', 'Python'],
       businessValue: 'Increase sales by following up on every lead at the perfect time.'
     },
@@ -250,7 +247,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         { label: 'Design Handoff', duration: 'Week 6', detail: 'Final assets and system documentation for developers.' }
       ],
       benchmarks: [],
-      // Fix: Added missing techStack property
       techStack: ['Figma', 'Adobe Creative Suite', 'Principle'],
       businessValue: 'Reduce user support calls by making the software obvious to use.'
     },
@@ -277,7 +273,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         { label: 'Growth Monitoring', duration: 'Ongoing', detail: 'Monthly reporting and adaptive strategy updates.' }
       ],
       benchmarks: [],
-      // Fix: Added missing techStack property
       techStack: ['Semrush', 'Ahrefs', 'Search Console'],
       businessValue: 'Save thousands on ads by getting organic traffic instead.'
     },
@@ -304,7 +299,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         { label: 'Security Handover', duration: 'Week 5+', detail: 'Final protocol training and 24/7 monitoring setup.' }
       ],
       benchmarks: [],
-      // Fix: Added missing techStack property
       techStack: ['IDS/IPS', 'AES-256', 'SIEM Platforms'],
       businessValue: 'Avoid massive lawsuits and brand damage from data leaks.'
     },
@@ -331,7 +325,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         { label: 'Live Connection', duration: 'Week 6+', detail: 'Switching on the automated bridge for production.' }
       ],
       benchmarks: [],
-      // Fix: Added missing techStack property
       techStack: ['Go', 'gRPC', 'RabbitMQ'],
       businessValue: 'Eliminate 90% of manual data entry work.'
     },
@@ -358,7 +351,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         { label: 'Execution Support', duration: 'Ongoing', detail: 'Guiding your team through the cleanup process.' }
       ],
       benchmarks: [],
-      // Fix: Added missing techStack property
       techStack: ['Infrastructure as Code', 'Trivy', 'Cost Optimization'],
       businessValue: 'Usually finds 20% savings in monthly IT bills.'
     },
@@ -385,7 +377,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         { label: 'Store Deployment', duration: 'Week 8', detail: 'Navigating Apple and Google submission processes.' }
       ],
       benchmarks: [],
-      // Fix: Added missing techStack property
       techStack: ['Flutter', 'Firebase', 'GraphQL'],
       businessValue: 'Make it 10x easier for customers to interact with you.'
     },
@@ -412,7 +403,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         { label: 'Node Setup', duration: 'Week 8+', detail: 'Deploying the ledger to the secure network.' }
       ],
       benchmarks: [],
-      // Fix: Added missing techStack property
       techStack: ['Solidity', 'Hyperledger Fabric', 'Rust'],
       businessValue: 'Eliminate the cost of middle-men and verification lawyers.'
     },
@@ -439,7 +429,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         { label: 'Traffic Switch', duration: 'Week 5', detail: 'Live cutover to the scalable cloud infrastructure.' }
       ],
       benchmarks: [],
-      // Fix: Added missing techStack property
       techStack: ['Terraform', 'Docker', 'AWS Lambda'],
       businessValue: 'Save thousands on hardware and never worry about crashes.'
     }
@@ -468,7 +457,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
           { label: 'القيادة التشغيلية', duration: 'أسبوع ٩+', detail: 'التدريب النهائي للموظفين والنشر الكامل للنظام.' }
         ],
         benchmarks: [],
-        // Fix: Added missing techStack property
         techStack: ['Node.js', 'PostgreSQL', 'SAP Integration'],
         businessValue: 'توقف عن خسارة المال بسبب أخطاء الإدخال المكرر والورقيات البطيئة.'
     },
@@ -495,7 +483,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
           { label: 'تدقيق الأداء', duration: 'أسبوع ٦', detail: 'اختبار الجهد وتحسين SEO للإطلاق.' }
         ],
         benchmarks: [],
-        // Fix: Added missing techStack property
         techStack: ['Next.js', 'Stripe', 'Headless CMS'],
         businessValue: 'الوصول للعملاء ٢٤/٧ خارج حدود موقعك الجغرافي.'
     },
@@ -522,7 +509,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
           { label: 'تحسين المبيعات', duration: 'أسبوع ٥+', detail: 'أتمتة المتابعة المتكررة والتقارير.' }
         ],
         benchmarks: [],
-        // Fix: Added missing techStack property
         techStack: ['Salesforce', 'HubSpot API', 'Python'],
         businessValue: 'زيادة المبيعات عبر متابعة كل فرصة في الوقت المثالي.'
     },
@@ -549,7 +535,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
           { label: 'تسليم التصميم', duration: 'أسبوع ٦', detail: 'الأصول النهائية والتوثيق للمطورين.' }
         ],
         benchmarks: [],
-        // Fix: Added missing techStack property
         techStack: ['Figma', 'Adobe Creative Suite', 'Principle'],
         businessValue: 'تقليل مكالمات الدعم الفني عبر جعل البرنامج بديهي الاستخدام.'
     },
@@ -576,7 +561,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
           { label: 'مراقبة النمو', duration: 'مستمر', detail: 'تقارير شهرية وتحديثات استراتيجية.' }
         ],
         benchmarks: [],
-        // Fix: Added missing techStack property
         techStack: ['Semrush', 'Ahrefs', 'Search Console'],
         businessValue: 'وفر الآلاف من ميزانية الإعلانات عبر الحصول على زوار مجاناً.'
     },
@@ -603,7 +587,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
           { label: 'تسليم الأمن', duration: 'أسبوع ٥+', detail: 'تدريب نهائي وإعداد المراقبة ٢٤/٧.' }
         ],
         benchmarks: [],
-        // Fix: Added missing techStack property
         techStack: ['IDS/IPS', 'AES-256', 'SIEM Platforms'],
         businessValue: 'تجنب الدعاوى القضائية الضخمة وتضرر العلامة التجارية بسبب تسريب البيانات.'
     },
@@ -630,7 +613,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
           { label: 'الاتصال المباشر', duration: 'أسبوع ٦+', detail: 'تشغيل الجسر الآلي للإنتاج.' }
         ],
         benchmarks: [],
-        // Fix: Added missing techStack property
         techStack: ['Go', 'gRPC', 'RabbitMQ'],
         businessValue: 'إلغاء ٩٠٪ من عمل إدخال البيانات اليدوي.'
     },
@@ -657,7 +639,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
           { label: 'دعم التنفيذ', duration: 'مستمر', detail: 'توجيه فريقك خلال عملية التنظيف.' }
         ],
         benchmarks: [],
-        // Fix: Added missing techStack property
         techStack: ['Infrastructure as Code', 'Trivy', 'Cost Optimization'],
         businessValue: 'غالباً ما يجد التدقيق توفيراً بنسبة ٢٠٪ في الفواتير الشهرية.'
     },
@@ -684,313 +665,13 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
           { label: 'النشر في المتاجر', duration: 'أسبوع ٨', detail: 'تجاوز عمليات التقديم لآبل وجوجل.' }
         ],
         benchmarks: [],
-        // Fix: Added missing techStack property
         techStack: ['Flutter', 'Firebase', 'GraphQL'],
         businessValue: 'اجعل تفاعل العملاء معك أسهل بعشر مرات.'
     },
     {
         id: 'blockchain',
         name: 'سجلات لا تتغير (Blockchain)',
-        tagline: 'ثقة لا يمكن تزييفها.',
-        description: 'سجل رقمي حيث البيانات دائمة وشفافة.',
-        longDescription: 'البلوكشين هو وسيلة لتسجيل المعلومات بحيث لا يمكن حذفها أو تغييرها أبداً. هذا مثالي للعقود، سلاسل التوريد، أو تتبع الأشياء الثمينة. يخلق ثقة كاملة بين الأطراف لأن "الكتاب" لا يمكن الكذب عليه.',
-        category: 'Blockchain',
-        imageUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000',
-        features: ['عقود ذكية مؤتمتة', 'تتبع شفاف لسلسلة التوريد', 'هوية رقمية سيادية', 'سجلات أصول قابلة للتحقق'],
-        domains: [{ name: 'الثقة', description: 'سجلات موثقة.' }, { name: 'المالية', description: 'بروتوكولات DeFi.' }, { name: 'العمليات', description: 'التتبع.' }, { name: 'القانوني', description: 'عقود غير قابلة للتغيير.' }],
-        pillars: [
-          { title: 'عدم التغيير المطلق', description: 'ما كُتب يبقى مكتوباً للأبد ولا يمكن تزويره.' },
-          { title: 'شفافية جذرية', description: 'يمكن لكل طرف التحقق من التاريخ دون وسطاء.' },
-          { title: 'كفاءة الثقة', description: 'إزالة الحاجة لجهات التحقق الخارجية المكلفة.' },
-          { title: 'مرونة لامركزية', description: 'لا توجد نقطة فشل واحدة لبياناتك الحرجة.' }
-        ],
-        roadmap: [
-          { label: 'استراتيجية البروتوكول', duration: 'أسبوع ١-٢', detail: 'تحديد البلوكشين الأمثل لحالتك.' },
-          { label: 'تطوير العقود', duration: 'أسبوع ٣-٥', detail: 'برمجة المنطق الذي يؤتمت اتفاقياتك.' },
-          { label: 'تدقيق الأمن', duration: 'أسبوع ٦-٧', detail: 'التحقق الرياضي من سلامة العقود.' },
-          { label: 'إعداد العقد', duration: 'أسبوع ٨+', detail: 'نشر السجل على الشبكة الآمنة.' }
-        ],
-        benchmarks: [],
-        // Fix: Added missing techStack property
-        techStack: ['Solidity', 'Hyperledger Fabric', 'Rust'],
-        businessValue: 'إلغاء تكاليف الوسطاء ومحامي التحقق.'
-    },
-    {
-        id: 'cloud',
-        name: 'السماء المرنة (Cloud)',
-        tagline: 'استأجر القوة بدلاً من شراء العتاد.',
-        description: 'استضافة برامجك على خوادم عالمية تنمو معك.',
-        longDescription: 'الحوسبة السحابية تعني أن عملك يعيش على الإنترنت. بدلاً من شراء خوادم مكلفة تتقادم، تستخدم شبكات عالمية قوية. إذا نما عملك غداً، تنمو خوادمك معك فوراً دون الحاجة لشراء أي شيء جديد.',
-        category: 'Cloud',
-        imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000',
-        features: ['قوة حوسبة تتوسع آلياً', 'توزيع محتوى عالمي', 'نسخ احتياطي للتعافي من الكوارث', 'البنية التحتية ككود (IaC)'],
-        domains: [{ name: 'الأساسات', description: 'بنية تحتية موثوقة.' }, { name: 'العمليات', description: 'خالٍ من الصيانة.' }, { name: 'النمو', description: 'توسع بلا حدود.' }, { name: 'الاستقرار', description: 'توافر عالٍ.' }],
-        pillars: [
-          { title: 'مرونة غير محدودة', description: 'ادفع ثمن ما تستخدمه، وتوسع للآلاف فوراً.' },
-          { title: 'مرونة المهمة', description: 'إذا فشل مركز بيانات، يستلم آخر في ثوانٍ.' },
-          { title: 'صيانة صفرية', description: 'ركز على عملك بينما ندير نحن العتاد.' },
-          { title: 'سرعة عالمية', description: 'وصول سريع للمستخدمين في أي مكان.' }
-        ],
-        roadmap: [
-          { label: 'تقييم السحابة', duration: 'أسبوع ١', detail: 'تقييم العتاد الحالي واحتياجات الخادم.' },
-          { label: 'استراتيجية الهجرة', duration: 'أسبوع ٢', detail: 'تصميم النقل دون أي توقف للخدمة.' },
-          { label: 'بناء البيئة', duration: 'أسبوع ٣-٤', detail: 'تجهيز الشبكة العالمية عالية الأداء.' },
-          { label: 'تبديل الحركة', duration: 'أسبوع ٥', detail: 'التحويل المباشر إلى السحابة القابلة للتوسع.' }
-        ],
-        benchmarks: [],
-        // Fix: Added missing techStack property
-        techStack: ['Terraform', 'Docker', 'AWS Lambda'],
-        businessValue: 'وفر الآلاف من تكاليف العتاد ولا تقلق من توقف النظام أبداً.'
-    }
-  ],
-  ku: [
-    {
-        id: 'erp',
-        name: 'Mejiyê Pargîdaniyê (ERP)',
-        tagline: 'Navendek ji bo hemî daneyên pargîdaniya we.',
-        description: 'Pergalek hevpar ku tê de drav, envanter û karmend bi hev re dixebitin.',
-        longDescription: 'ERP mîna pergalek demarî ya navendî ye ji bo karsaziya we. Li şûna pelên cihêreng ji bo firotan û hesabvaniyê, her tişt li yek cîhek e. Her kes heman rastiyan dibîne, ku dibe sedema kêmbûna çewtiyan û biryarên bileztir.',
-        category: 'Enterprise',
-        imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000',
-        features: ['Rêveberiya Envantera Rastî', 'Hesabvaniya Pir-pereyî ya Otomatîk', 'Portalên Karmendan ên Xweser', 'Raporên Operasyonel ên Pêşketî'],
-        domains: [{ name: 'Operasyon', description: 'Hêsankirina karên rojane.' }, { name: 'Fînanse', description: 'Îstîqrara dravî.' }, { name: 'Çavkaniyên Mirovî', description: 'Rêveberiya mirovan.' }, { name: 'Zîrekiya Daneyan', description: 'Analîzên kûr.' }],
-        pillars: [
-          { title: 'Çavkaniya Rastiyê', description: 'Her beş li heman daneyên hevdengkirî dinêre.' },
-          { title: 'Kêrhatina Operasyonel', description: 'Rakirina kopîkirina manuwel a di navbera pelan de.' },
-          { title: 'Lihevhatina Yasayî', description: 'Kontrolên ji bo standardên herêmî û navneteweyî.' },
-          { title: 'Mîmariya Mezinbûyî', description: 'Sîstemên ku bi karsaziya we re mezin bihayên.' }
-        ],
-        roadmap: [
-          { label: 'Audit-a Tespîtê', duration: 'Hefte 1-2', detail: 'Nexşekirina hemî pêvajoyên karsaziya niha.' },
-          { label: 'Nexşeya Mîmarî', duration: 'Hefte 3-4', detail: 'Sêwirana ERP-ya xwerû ji bo sektora we.' },
-          { label: 'Veguhestina Daneyan', duration: 'Hefte 5-8', detail: 'Barkirina tomarkirinên kevn bo pergala nû.' },
-          { label: 'Fermandariya Operasyonel', duration: 'Hefte 9+', detail: 'Perwerdehiya karmendan û destpêkirina tam.' }
-        ],
-        benchmarks: [],
-        // Fix: Added missing techStack property
-        techStack: ['Node.js', 'PostgreSQL', 'SAP Integration'],
-        businessValue: 'Ji ber çewtiyên îdarî û kaxezên hêdî drav winda nekin.'
-    },
-    {
-        id: 'ecommerce',
-        name: 'Dikana Dîjîtal (Ecommerce)',
-        tagline: 'Dikanek ku dema hûn radizên jî difiroşe.',
-        description: 'Malperek bi hêz ku dravdanê digire û barkirinê dişopîne.',
-        longDescription: 'Ecommerce ji malperekê zêdetir e; ew motorek firotanê ye. Berhemên we bi mişteriyên li her derê cîhanê ve girê dide, dravdana wan bi ewlehî pêk tîne, û ji we re dibe alîkar ku hûn barkirinê bêyî pirsgirêkên şopandina manuwel birêve bibin.',
-        category: 'Development',
-        imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1000',
-        features: ['Dravdana Global a Ewle', 'Sêwirana Mobile-Responsive', 'Synca Lojîstîk û Barkirinê', 'Amûrên Marketing û SEO-yê'],
-        domains: [{ name: 'Retail', description: 'Mezinkirina firotanên dîjîtal.' }, { name: 'Lojîstîk', description: 'Şopandina barkirinê.' }, { name: 'Marketing', description: 'Gihîştina mişteriyan.' }, { name: 'Xizmeta Mişteriyan', description: 'Piştgiriya piştî kirînê.' }],
-        pillars: [
-          { title: 'Baweriya Mişterî', description: 'Dergehên dravdanê yên ewle ji bo parastina daneyan.' },
-          { title: 'Performansa Bilind', description: 'Barkirina rûpelê ya bilez ji bo firotanê.' },
-          { title: 'Amadehiya Omnichannel', description: 'Synca firotanê li ser web û mobîlê.' },
-          { title: 'Fokusa Vegerandinê', description: 'Sêwirana UI ji bo kêmkirina berdana kartê.' }
-        ],
-        roadmap: [
-          { label: 'Stratejiya UX', duration: 'Hefte 1', detail: 'Diyarkirina rêwîtiya kirînê ya mişterî.' },
-          { label: 'Endezyariya Platformê', duration: 'Hefte 2-4', detail: 'Avakirina bingeha dikanê û katalogê.' },
-          { label: 'Girêdana Dravdanê', duration: 'Hefte 5', detail: 'Sazkirina dergehên ewle û lojîstîkê.' },
-          { label: 'Audit-a Performansê', duration: 'Hefte 6', detail: 'Testkirin û optimîzasyona SEO-yê.' }
-        ],
-        benchmarks: [],
-        // Fix: Added missing techStack property
-        techStack: ['Next.js', 'Stripe', 'Headless CMS'],
-        businessValue: '24/7 bigihîjin mişteriyan ji derveyî sînorên dikanên fîzîkî.'
-    },
-    {
-        id: 'crm',
-        name: 'Bîra Mişteriyan (CRM)',
-        tagline: 'Qet mişterîyek an fersendekê ji bîr nekin.',
-        description: 'Pergalek ji bo şopandina her axaftin û fersendê ji bo tîmê firotanê.',
-        longDescription: 'CRM mîna bîra profesyonel e. Her e-peyam, bang û civîna we ya bi mişterî re tomar dike. Ev alîkariya tîmê we dike ku bizanibin kîjan demê divê bang bikin û mişterî çi dixwaze, da ku "belkî" bibe "erê."',
-        category: 'Enterprise',
-        imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000',
-        features: ['Şopandina Pipeline-a Firotanê', 'Dîroka Peywendiyê ya Navendî', 'Bîranînên Şopandinê yên Otomatîk', 'Lead Scoring bi AI'],
-        domains: [{ name: 'Firotan', description: 'Optimîzekirina funnel.' }, { name: 'Marketing', description: 'Kampanyayên taybet.' }, { name: 'Piştgirî', description: 'Têkiliyên saxlem.' }, { name: 'Analîtîk', description: 'Texmîna dahatê.' }],
-        pillars: [
-          { title: 'Zîrekiya Lead-an', description: 'Veguhestina daneyan bo stratejiyên firotanê.' },
-          { title: 'Hevkariya Tîmê', description: 'Agahiyên hevpar di navbera firotan û piştgiriyê de.' },
-          { title: 'Parastina Mişterî', description: 'Amûrên proaktîf ji bo mişteriyên mayînde.' },
-          { title: 'Otomasyona Pêvajoyê', description: 'Kêmkirina barê îdarî yê tîmê firotanê.' }
-        ],
-        roadmap: [
-          { label: 'Nirxandina CRM', duration: 'Hefte 1', detail: 'Analîzkirina daxwaz û pêvajoyên niha.' },
-          { label: 'Sazkirina Sîstemê', duration: 'Hefte 2-3', detail: 'Xwerûkirina qadan û pipeline-an.' },
-          { label: 'Barkirina Daneyan', duration: 'Hefte 4', detail: 'Veguhestina daneyên kevn û synca e-peyamê.' },
-          { label: 'Optimîzasyona Firotanê', duration: 'Hefte 5+', detail: 'Otomatîkkirina rapor û bîranînan.' }
-        ],
-        benchmarks: [],
-        // Fix: Added missing techStack property
-        techStack: ['Salesforce', 'HubSpot API', 'Python'],
-        businessValue: 'Bi şopandina fersendan di dema kamil de firotanê zêde bikin.'
-    },
-    {
-        id: 'uiux',
-        name: 'Mîmariya Dîjîtal (UI/UX)',
-        tagline: 'Bikaranîna nermalavê hêsan û xweşik bikin.',
-        description: 'Sêwirana stratejîk ku bikarhêner ber bi çalakiya rast ve dibe.',
-        longDescription: 'UI/UX cudahiya di navbera amûrek tevlihev û amûrek xweş de ye. Em "xuyabûn" (UI) û "hest" (UX) sêwirînin da ku bikarhêner qet neyên şaş kirin û her dem tiştê ku lê digerin bi hêsanî bibînin.',
-        category: 'Design',
-        imageUrl: 'https://images.unsplash.com/photo-1576595580361-90a855b84b20?q=80&w=1974&auto=format&fit=crop',
-        features: ['Lêkolîn û Testkirina Bikarhêner', 'Sêwirana Nasnameya Vîzyonel', 'Prototîpên Têkilîdar ên Bilind', 'Dokumanasyona Pergala Sêwirandinê'],
-        domains: [{ name: 'Nasname', description: 'Hebûna dîjîtal a premium.' }, { name: 'Berhem', description: 'Bikaranîna nermalavê.' }, { name: 'Brand', description: 'Sêwirana vîzyonel.' }, { name: 'Gihîştin', description: 'Sêwirana giştî.' }],
-        pillars: [
-          { title: 'Zelaliya Mejî', description: 'Sêwirandinên hêsan ku hewceyê perwerdehiyê nîne.' },
-          { title: 'Baweriya Brandê', description: 'Sêwirana ku girêdanên hestiyar ava dike.' },
-          { title: 'Gihîştina Giştî', description: 'Piştrastkirina ku sîstem ji bo her kesî dixebite.' },
-          { title: 'Pêşketina Berdewam', description: 'Bikaranîna daneyan ji bo baştirkirina ezmûnê.' }
-        ],
-        roadmap: [
-          { label: 'Qonaxa Tespîtê', duration: 'Hefte 1', detail: 'Diyarkirina armanc û bikarhêneran.' },
-          { label: 'Wireframe-ên Avahiyê', duration: 'Hefte 2-3', detail: 'Avakirina îskeleta sîstema we.' },
-          { label: 'Sêwirana Vîzyonel', duration: 'Hefte 4-5', detail: 'Zêdekirina reng, tîp û estetîka brandê.' },
-          { label: 'Radestkirin', duration: 'Hefte 6', detail: 'Amadekirina dokumanan ji bo developeran.' }
-        ],
-        benchmarks: [],
-        // Fix: Added missing techStack property
-        techStack: ['Figma', 'Adobe Creative Suite', 'Principle'],
-        businessValue: 'Bi hêsankirina bikaranîna nermalavê bangên daxwaza alîkariyê kêm bikin.'
-    },
-    {
-        id: 'seo',
-        name: 'Nîşana Dîjîtal (SEO)',
-        tagline: 'Bibin tiştê yekem ku mirov li ser Google dibînin.',
-        description: 'Xebata teknîkî û naverokî da ku branda we derkeve serê lêgerînê.',
-        longDescription: 'SEO mîna wê ye ku dikanek we li kolana herî qerebalix a cîhanê hebe. Em kod û naveroka malpera we optimîze dikin da ku dema mirov lêgerînê dikin, navê we yekem derkeve. Ev riya herî baş e ji bo girtina trafîka organîk a belaş.',
-        category: 'Consulting',
-        imageUrl: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?q=80&w=1932&auto=format&fit=crop',
-        features: ['Stratejiya Naverok û Keyword-an', 'Optimîzasyona Teknîkî ya Lezê', 'Avakirina Otorîteya Backlink', 'Serkeftina Lêgerîna Herêmî'],
-        domains: [{ name: 'Mezinbûn', description: 'Gihîştina organîk.' }, { name: 'Teknîkî', description: 'Hîmên malperê.' }, { name: 'Naverok', description: 'Sernavên girîng.' }, { name: 'Herêmî', description: 'Xuyabûna herêmî.' }],
-        pillars: [
-          { title: 'Otorîteya Dîjîtal', description: 'Kirina malpera we bibe lîder di sektora we de.' },
-          { title: 'Sermayeya Mayînde', description: 'Avakirina trafîka ku her dem berdewam dike.' },
-          { title: 'Rêzkirina Stratejîk', description: 'Fokusa li ser peyvên ku firotanê tînin.' },
-          { title: 'Siyak û Mantiq', description: 'Optimîzasyona li gorî mebesta lêgerînê.' }
-        ],
-        roadmap: [
-          { label: 'Audit-a Teknîkî', duration: 'Hefte 1', detail: 'Tespîtkirina pirsgirêkên ku lezê kêm dikin.' },
-          { label: 'Lêkolîna Keyword-an', duration: 'Hefte 2', detail: 'Tespîtkirina peyvên herî biha ji bo we.' },
-          { label: 'Cîbicîkirina Rûpelê', duration: 'Hefte 3-4', detail: 'Optimîzekirina sernav û naveroka malperê.' },
-          { label: 'Şopandina Mezinbûnê', duration: 'Berdewam', detail: 'Raporên mehane û nûkirina stratejiyê.' }
-        ],
-        benchmarks: [],
-        // Fix: Added missing techStack property
-        techStack: ['Semrush', 'Ahrefs', 'Search Console'],
-        businessValue: 'Bi trafîka organîk budceya reklamê kêm bikin.'
-    },
-    {
-        id: 'cyber',
-        name: 'Keleha Dîjîtal (Cyber)',
-        tagline: 'Daneyên xwe ji hackran dûr bigirin.',
-        description: 'Ewlehiya nûjen ji bo parastina raz û dravê pargîdaniyê.',
-        longDescription: 'Ewlehiya sîber dîwarê dora karsaziya weya dîjîtal e. Em pergalên ku "nederbasbûyîyan" dişopînin û daneyên weyên krîtîk diparêzin saz dikin. Ev piştrast dike ku agahdariya pargîdaniya we taybet bimîne û sîstemên we neyên hackkirin.',
-        category: 'Security',
-        imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
-        features: ['Şopandina Gefan a Proaktîf', 'Encryption-a Daneyan a Bilind', 'Mîmariya Zero-Trust', 'Plana Bersivdana Hîsan'],
-        domains: [{ name: 'Parastin', description: 'Sîstemên proaktîf.' }, { name: 'Taybetî', description: 'Parastina daneyan.' }, { name: 'Qanûnî', description: 'Ewlehiya yasayî.' }, { name: 'Recovery', description: 'Berdewamî.' }],
-        pillars: [
-          { title: 'Parastina Pêşîgir', description: 'Rawestandina êrîşan berî ku têkevin hundir.' },
-          { title: 'Berdewamiya Karsaziyê', description: 'Piştrastkirina operasyonan di her rewşê de.' },
-          { title: 'Serweriya Daneyan', description: 'Kontrola tam li ser cihê daneyên we.' },
-          { title: 'Zanîna Ewlehiyê', description: 'Perwerdekirina karmendan wekî dîwarê yekem.' }
-        ],
-        roadmap: [
-          { label: 'Scana Lawaziyan', duration: 'Hefte 1', detail: 'Testkirina xalên lawaz ên dîjîtal.' },
-          { label: 'Fortification', duration: 'Hefte 2-3', detail: 'Sazkirina firewall û encryption-a pêşketî.' },
-          { label: 'Kontrola Gihîştinê', duration: 'Hefte 4', detail: 'Sazkirina MFA û îzinên taybet.' },
-          { label: 'Radestkirin', duration: 'Hefte 5+', detail: 'Perwerdehî û sazkirina şopandina 24/7.' }
-        ],
-        benchmarks: [],
-        // Fix: Added missing techStack property
-        techStack: ['IDS/IPS', 'AES-256', 'SIEM Platforms'],
-        businessValue: 'Ji dozên yasayî û zirara brandê ya ji ber daxuyaniya daneyan dûr bikevin.'
-    },
-    {
-        id: 'api',
-        name: 'Pira Nermalavê (API)',
-        tagline: 'Bila app-ên we bi hev re bipeyivin.',
-        description: 'Girêdana nermalavên cihêreng da ku dane bixweber herikin.',
-        longDescription: 'API mîna pirên di navbera giravên nermalavê de ne. Heke ERP û malperek we hebe, em pirê ava dikin da ku dema kesek tiştek dikire, envantera we bixweber nû bibe. Êdî kopîkirina manuwel di navbera appan de nîne.',
-        category: 'Development',
-        imageUrl: 'https://images.unsplash.com/photo-1763568258208-a5af30d5a31b?q=80&w=2070&auto=format&fit=crop',
-        features: ['Synca Daneyan a Rastî', 'Hub-ên Girêdana Pir-app', 'Veguhestina Daneyan a Ewle', 'Gateway-ên API-yê yên Bilez'],
-        domains: [{ name: 'Girêdan', description: 'Rakirina karê manuwel.' }, { name: 'Otomasyon', description: 'Herikîna bêsînor.' }, { name: 'Sîstem', description: 'Lihevhatina sîsteman.' }, { name: 'Mezinbûn', description: 'Gihandina peyaman.' }],
-        pillars: [
-          { title: 'Otomasyona Tam', description: 'Sîstemên ku bêyî mirovan kar dikin.' },
-          { title: 'Yekpareyiya Daneyan', description: 'Parastina heman agahiyan di her appê de.' },
-          { title: 'Berfirehbûn', description: 'Zêdekirina app-ên nû bi hêsanî.' },
-          { title: 'Ewlehiya Endpoint-an', description: 'Parastina "dergehên" peywendiya app-an.' }
-        ],
-        roadmap: [
-          { label: 'Nexşeya Siyakê', duration: 'Hefte 1', detail: 'Tespîtkirina kîjan dane divê herikin.' },
-          { label: 'Pêşxistina Mantiqê', duration: 'Hefte 2-4', detail: 'Avakirina qaîdeyên veguhertin û syncê.' },
-          { label: 'Testkirina Zextê', duration: 'Hefte 5', detail: 'Piştrastkirina pîrê di dema qerebalixiyê de.' },
-          { label: 'Girêdana Zindî', duration: 'Hefte 6+', detail: 'Vekirina pira otomatîk ji bo karsaziyê.' }
-        ],
-        benchmarks: [],
-        // Fix: Added missing techStack property
-        techStack: ['Go', 'gRPC', 'RabbitMQ'],
-        businessValue: '90% karê manuwel ê têketina daneyan ji holê rakin.'
-    },
-    {
-        id: 'infra-audit',
-        name: 'Bijîşkê Sîstemê (Audit)',
-        tagline: 'Teknolojiya we saxlem e an tenê biha ye?',
-        description: 'Kontrolek ji bo sazûmana IT-ê da ku wendahî û rîskan bibîne.',
-        longDescription: 'Mîna kontrolek bijîşkî, audita sîstemê li pirsgirêkên veşartî digere. Em server û nermalavên we kontrol dikin da ku bibînin çi hêdî ye, çi ne ewle ye, û hûn ji bo çi drav didin lê bikar nayînin.',
-        category: 'Consulting',
-        imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000',
-        features: ['Analîza Lêçûn-Karîgerî', 'Kontrolên Ewlehiyê yên Giştî', 'Testkirina Performans û Zextê', 'Nirxandina Dewra Çavkaniyan'],
-        domains: [{ name: 'Kêrhatî', description: 'Optimîzekirina IT-yê.' }, { name: 'Budce', description: 'Kêmkirina lêçûnan.' }, { name: 'Ewlehî', description: 'Kêmkirina rîskan.' }, { name: 'Paşeroj', description: 'Nexşeya nûkirinê.' }],
-        pillars: [
-          { title: 'Optimîzasyona Sivik', description: 'Performansa herî bilind bi kêmtirîn windahî.' },
-          { title: 'Tespîtkirina Rîskan', description: 'Dîtina gefan berî ku bibin krîzên biha.' },
-          { title: 'Stratejiya Fînanse', description: 'Guhertina IT-ê bo motora nirxê.' },
-          { title: 'Kontrola Serwer', description: 'Rakirina girêdana bi firoşkarên biha.' }
-        ],
-        roadmap: [
-          { label: 'Envantera Sîsteman', duration: 'Hefte 1', detail: 'Lîstekirina her server, lîsans û kodê.' },
-          { label: 'Qonaxa Analîzê', duration: 'Hefte 2', detail: 'Cîbicîkirina testên performansê.' },
-          { label: 'Reçeteya Stratejîk', duration: 'Hefte 3', detail: 'Lîsteya tiştên ku divê werin sererastkirin.' },
-          { label: 'Piştgiriya Cîbicîkirinê', duration: 'Berdewam', detail: 'Rênîşandana tîmê we di paqijkirinê de.' }
-        ],
-        benchmarks: [],
-        // Fix: Added missing techStack property
-        techStack: ['Infrastructure as Code', 'Trivy', 'Cost Optimization'],
-        businessValue: 'Bi gelemperî 20% lêçûnên IT-ê yên mehane kêm dike.'
-    },
-    {
-        id: 'mobile-eng',
-        name: 'Karsazî di Dest de (Mobile)',
-        tagline: 'Pargîdaniya xwe bixin berîka mişteriyê xwe.',
-        description: 'App-ên bilez û hêsan ji bo iPhone û Android.',
-        longDescription: 'Mobile apps are about being close to your customer. We build apps that allow your clients to buy, book, or chat with you from anywhere. نبنيها لتعمل بسلاسة حتى في الاتصالات الضعيفة وبإحساس سريع وطبيعي.',
-        category: 'Development',
-        imageUrl: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000',
-        features: ['Şiyana Karê Offline', 'Notîfîkasyonên Xwerû', 'Synca Ewlehiya Biometrîk', 'Performansa Cross-Platform'],
-        domains: [{ name: 'Mobile', description: 'Tevlêbûna rasterast.' }, { name: 'Berhem', description: 'Parastina mişterî.' }, { name: 'Firotan', description: 'Gihîştina her derê.' }, { name: 'Piştgirî', description: 'Chat-a hundurîn.' }],
-        pillars: [
-          { title: 'Tevlêbûna Zêde', description: 'Bi îkona li ser ekranê her dem li ber çavan bin.' },
-          { title: 'UX-a Bêkêmasî', description: 'Sêwirana ji bo bikaranîna bi yek destî û lezê.' },
-          { title: 'Pêbaweriya Sîstemê', description: 'App-ên ku di înterneta lawaz de jî dixebitin.' },
-          { title: 'Jîngeha Ewle', description: 'Parastina kirînan bi ewlehiya mobîl.' }
-        ],
-        roadmap: [
-          { label: 'Mîmariya Mobîl', duration: 'Hefte 1', detail: 'Sêwirana mantiq û daneyên appê.' },
-          { label: 'Endezyariya Bingeha', duration: 'Hefte 2-6', detail: 'Kodkirina taybetmendiyên appê.' },
-          { label: 'Testa Bikarhêneran', duration: 'Hefte 7', detail: 'Ceribandina bi bikarhênerên rastîn.' },
-          { label: 'Barkirina Storan', duration: 'Hefte 8', detail: 'Cîbicîkirina pêvajoyên Apple û Google.' }
-        ],
-        benchmarks: [],
-        // Fix: Added missing techStack property
-        techStack: ['Flutter', 'Firebase', 'GraphQL'],
-        businessValue: 'Make it 10x easier for customers to interact with you.'
-    },
-    {
-        id: 'blockchain',
-        name: 'Tomarên Neguherbar (Blockchain)',
-        tagline: 'Baweriya ku nayê sextekirin.',
+        tagline: 'Trust that cannot be faked.',
         description: 'A digital ledger where records are permanent and transparent.',
         longDescription: 'Blockchain is a way to record info so it can never be deleted or changed. This is perfect for contracts, supply chains, or tracking valuable items. It creates total trust between parties because the "book" cannot be lied to.',
         category: 'Blockchain',
@@ -998,10 +679,10 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         features: ['عقود ذكية مؤتمتة', 'تتبع شفاف لسلسلة التوريد', 'هوية رقمية سيادية', 'سجلات أصول قابلة للتحقق'],
         domains: [{ name: 'Bawerî', description: 'Tomarên verastkirî.' }, { name: 'Fînanse', description: 'Protokolên DeFi.' }, { name: 'Operasyon', description: 'Şopandin.' }, { name: 'Yasayî', description: 'Peymanên mayînde.' }],
         pillars: [
-          { title: 'Neguherbarî', description: 'Tiştê ku hatiye nivîsandin qet nayê guhertin.' },
+          { title: 'Neguherbarî', description: 'Tiştê ku hatiye nivîساندن qet nayê guhertin.' },
           { title: 'Zelaliya Radîkal', description: 'Her kes dikare dîrokê verast bike.' },
           { title: 'Kêrhatina Baweriyê', description: 'Rakirina hewcedariya verastkirina biha.' },
-          { title: 'Resilience-a Lamend', description: 'Xala têkçûnê ji bo daneyan tune ye.' }
+          { title: 'Resilience-a Lamend', description: 'Xala têكçûnê ji bo daneyan tune ye.' }
         ],
         roadmap: [
           { label: 'Stratejiya Protokolê', duration: 'Hefte 1-2', detail: 'Tespîtkirina blockchain-a herî baş.' },
@@ -1010,7 +691,6 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
           { label: 'Sazkirina Node-an', duration: 'Hefte 8+', detail: 'Barkirina ledgerê bo tora ewle.' }
         ],
         benchmarks: [],
-        // Fix: Added missing techStack property
         techStack: ['Solidity', 'Hyperledger Fabric', 'Rust'],
         businessValue: 'Eliminate the cost of middle-men and verification lawyers.'
     },
@@ -1037,7 +717,294 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
           { label: 'Vekirina Trafîkê', duration: 'Hefte 5', detail: 'Barkirina tam bo binesaziya ewrî.' }
         ],
         benchmarks: [],
-        // Fix: Added missing techStack property
+        techStack: ['Terraform', 'Docker', 'AWS Lambda'],
+        businessValue: 'وفر الآلاف من تكاليف العتاد ولا تقلق من توقف النظام أبداً.'
+    }
+  ],
+  ku: [
+    {
+        id: 'erp',
+        name: 'Mejiyê Pargîdaniyê (ERP)',
+        tagline: 'Navendek ji bo hemî daneyên pargîdaniya we.',
+        description: 'Pergalek hevpar ku tê de drav, envanter û karmend bi hev re dixebitin.',
+        longDescription: 'ERP mîna pergalek demarî ya navendî ye ji bo karsaziya we. Li şûna pelên cihêreng ji bo firotan û hesabvaniyê, her tişt li yek cîhek e. Her kes heman rastiyan dibîne, ku dibe sedema kêmbûna çewtiyan û biryarên bileztir.',
+        category: 'Enterprise',
+        imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000',
+        features: ['Rêveberiya Envantera Rastî', 'Hesabvaniya Pir-pereyî ya Otomatîk', 'Portalên Karmendan ة Xweser', 'Raporên Operasyonel ên Pêşketî'],
+        domains: [{ name: 'Operasyon', description: 'Hêsankirina karên rojane.' }, { name: 'Fînanse', description: 'Îstîqrara dravî.' }, { name: 'Çavkaniyên Mirovî', description: 'Rêveberiya mirovan.' }, { name: 'Zîrekiya Daneyan', description: 'Analîzên kûr.' }],
+        pillars: [
+          { title: 'Çavkaniya Rastiyê', description: 'Her beş li heman daneyên hevdengkirî dinêre.' },
+          { title: 'Kêrhatina Operasyonel', description: 'Rakirina kopîkirina manuwel a di navbera pelan de.' },
+          { title: 'Lihevhatina Yasayî', description: 'Kontrolên ji bo standardên herêmî û navneteweyî.' },
+          { title: 'Mîmariya Mezinbûyî', description: 'Sîstemên ku bi karsaziya we re mezin bihayên.' }
+        ],
+        roadmap: [
+          { label: 'Audit-a Tespîtê', duration: 'Hefte 1-2', detail: 'Nexşekirina hemî pêvajoyên karsaziya niha.' },
+          { label: 'Nexşeya Mîmarî', duration: 'Hefte 3-4', detail: 'Sêwirana ERP-ya xwerû ji bo sektora we.' },
+          { label: 'Veguhestina Daneyan', duration: 'Hefte 5-8', detail: 'Barkirina tomarkirinên kevn bo pergala nû.' },
+          { label: 'Fermandariya Operasyonel', duration: 'Hefte 9+', detail: 'Perwerdehiya karmendan û destpêkirina tam.' }
+        ],
+        benchmarks: [],
+        techStack: ['Node.js', 'PostgreSQL', 'SAP Integration'],
+        businessValue: 'Ji ber çewtiyên îdarî û kaxezên hêdî drav winda nekin.'
+    },
+    {
+        id: 'ecommerce',
+        name: 'Dikana Dîjîtal (Ecommerce)',
+        tagline: 'Dikanek ku dema hûn radizên jî difiroşe.',
+        description: 'Malperek bi hêz ku dravdanê digire û barkirinê dişopîne.',
+        longDescription: 'Ecommerce ji malperekê zêdetir e; ew motorek firotanê ye. Berhemên we bi mişteriyên li her derê cîhanê ve girê dide, dravdana wan bi ewlehî pêk tîne, û ji we re dibe alîkar ku hûn barkirinê bêyî pirsgirêkên şopandina manuwel birêve bibin.',
+        category: 'Development',
+        imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1000',
+        features: ['Dravdana Global a Ewle', 'Sêwirana Mobile-Responsive', 'Synca Lojîstîk û Barkirinê', 'Amûrên Marketing û SEO-yê'],
+        domains: [{ name: 'Retail', description: 'Mezinkirina firotanên dîjîtal.' }, { name: 'Lojîstîk', description: 'Şopandina barkirinê.' }, { name: 'Marketing', description: 'Gihîştina mişteriyan.' }, { name: 'Xizmeta Mişteriyan', description: 'Piştgiriya piştî kirînê.' }],
+        pillars: [
+          { title: 'Baweriya Mişterî', description: 'Dergehên dravdanê yn ewle ji bo parastina daneyan.' },
+          { title: 'Performansa Bilind', description: 'Barkirina rûpelê ya bilez ji bo firotanê.' },
+          { title: 'Amadehiya Omnichannel', description: 'Synca firotanê li ser web û mobîlê.' },
+          { title: 'Fokusa Vegerandinê', description: 'Sêwirana UI ji bo kêmkirina berdana kartê.' }
+        ],
+        roadmap: [
+          { label: 'Stratejiya UX', duration: 'Hefte 1', detail: 'Diyarkirina rêwîtiya kirînê ya mişterî.' },
+          { label: 'Endezyariya Platformê', duration: 'Hefte 2-4', detail: 'Avakirina bingeha dikanê û katalogê.' },
+          { label: 'Girêdana Dravdanê', duration: 'Hefte 5', detail: 'Sazkirina dergehên ewle û lojîstîkê.' },
+          { label: 'Audit-a Performansê', duration: 'Hefte 6', detail: 'Testkirin û optimîzasyona SEO-yê.' }
+        ],
+        benchmarks: [],
+        techStack: ['Next.js', 'Stripe', 'Headless CMS'],
+        businessValue: '24/7 bigihîjin mişteriyan ji derveyî sînorên dikanên fîzîkî.'
+    },
+    {
+        id: 'crm',
+        name: 'Bîra Mişteriyan (CRM)',
+        tagline: 'Qet mişterîyek an fersendekê ji bîr nekin.',
+        description: 'Pergalek ji bo şopandina her axaftin û fersendê ji bo tîmê firotanê.',
+        longDescription: 'CRM mîna bîra profesyonel e. Her e-peyam, bang û civîna we ya bi mişterî re tomar dike. Ev alîkariya tîmê we dike ku bizanibin kîjan demê divê bang bikin û mişterî çi dixwaze, da ku "belkî" bibe "erê."',
+        category: 'Enterprise',
+        imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000',
+        features: ['Şopandina Pipeline-a Firotanê', 'Dîroka Peywendiyê ya Navendî', 'Bîranînên Şopandinê yên Otomatîk', 'Lead Scoring bi AI'],
+        domains: [{ name: 'Firotan', description: 'Optimîzekirina funnel.' }, { name: 'Marketing', description: 'Kampanyayên taybet.' }, { name: 'Piştgirî', description: 'Têkiliyên saxlem.' }, { name: 'Analîtîk', description: 'Texmîna dahatê.' }],
+        pillars: [
+          { title: 'Zîrekiya Lead-an', description: 'Veguhestina daneyan bo stratejiyên firotanê.' },
+          { title: 'Hevkariya Tîmê', description: 'Agahiyên hevpar di navbera firotan û piştgiriyê de.' },
+          { title: 'Parastina Mişterî', description: 'Amûrên proaktîf ji bo mişteriyên mayînde.' },
+          { title: 'Otomasyona Pêvajoyê', description: 'Kêmkirina barê îdarî yê tîmê firotanê.' }
+        ],
+        roadmap: [
+          { label: 'Nirxandina CRM', duration: 'Hefte 1', detail: 'Analîzkirina daxwaz û pêvajoyên niha.' },
+          { label: 'Sazkirina Sîstemê', duration: 'Hefte 2-3', detail: 'Xwerûkirina qadan û pipeline-an.' },
+          { label: 'Barkirina Daneyan', duration: 'Hefte 4', detail: 'Veguhestina daneyên kevn û synca e-peyamê.' },
+          { label: 'Optimîzasyona Firotanê', duration: 'Hefte 5+', detail: 'Otomatîkkirina rapor û bîranînan.' }
+        ],
+        benchmarks: [],
+        techStack: ['Salesforce', 'HubSpot API', 'Python'],
+        businessValue: 'Bi şopandina fersendan di dema kamil de firotanê zêde bikin.'
+    },
+    {
+        id: 'uiux',
+        name: 'Mîmariya Dîjîtal (UI/UX)',
+        tagline: 'Bikaranîنا nermalavê hêsan û xweşik bikin.',
+        description: 'Sêwirana stratejîk ku bikarhêner ber bi çalakiya rast ve dibe.',
+        longDescription: 'UI/UX cudahiya di navbera amûrek tevlihev û amûrek xweş de ye. Em "xuyabûn" (UI) û "hest" (UX) sêwirînin da ku bikarhêner qet neyên şaş kirin û her dem tiştê ku lê digerin bi hêsanî bibîنين.',
+        category: 'Design',
+        imageUrl: 'https://images.unsplash.com/photo-1576595580361-90a855b84b20?q=80&w=1974&auto=format&fit=crop',
+        features: ['Lêkolîn û Testkirina Bikarhêner', 'Sêwirana Nasnameya Vîzyonel', 'Prototîpên Têkilîdar ên Bilind', 'Dokumanasyona Pergala Sêwirandinê'],
+        domains: [{ name: 'Nasname', description: 'Hebûna dîjîtal a premium.' }, { name: 'Berhem', description: 'Bikaranîna nermalavê.' }, { name: 'Brand', description: 'Sêwirana vîzyonel.' }, { name: 'Gihîştin', description: 'Sêwirana giştî.' }],
+        pillars: [
+          { title: 'Zelaliya Mejî', description: 'Sêwirandinên hêsan ku hewceyê perwerdehiyê nîne.' },
+          { title: 'Baweriya Brandê', description: 'Sêwirana ku girêdanên hestiyar ava dike.' },
+          { title: 'Gihîştina Giştî', description: 'Piştrastkirina ku sîstem ji bo her kesî dixebite.' },
+          { title: 'Pêşketina Berdewam', description: 'Bikaranîna daneyan ji bo baştirkirina ezmûnê.' }
+        ],
+        roadmap: [
+          { label: 'Qonaxa Tespîtê', duration: 'Hefte 1', detail: 'Diyarkirina armanc û bikarhêneran.' },
+          { label: 'Wireframe-ên Avahiyê', duration: 'Hefte 2-3', detail: 'Avakirina îskeleta sîstema we.' },
+          { label: 'Sêwirana Vîzyonel', duration: 'Hefte 4-5', detail: 'Zêdekirina reng, tîp û estetîka brandê.' },
+          { label: 'Radestkirin', duration: 'Hefte 6', detail: 'Amadekirina dokumanan ji bo developeran.' }
+        ],
+        benchmarks: [],
+        techStack: ['Figma', 'Adobe Creative Suite', 'Principle'],
+        businessValue: 'Bi hêsankirina bikaranîna nermalavê bangên daxwaza alîكariyê kêm bikin.'
+    },
+    {
+        id: 'seo',
+        name: 'Nîşana Dîjîtal (SEO)',
+        tagline: 'Bibin tiştê yekem ku mirov li ser Google dibînin.',
+        description: 'Xebata teknîكî û naverokî da ku branda we derkeve serê lêgerînê.',
+        longDescription: 'SEO mîna wê ye ku dikanek we li kolana herî qerebalix a cîhanê hebe. Em kod û naveroka malpera we optimîze dikin da ku dema mirov lêgerînê dikin, navê we yekem derkeve. Ev riya herî baş e ji bo girtina trafîka organîk a belaş.',
+        category: 'Consulting',
+        imageUrl: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?q=80&w=1932&auto=format&fit=crop',
+        features: ['Stratejiya Naverok û Keyword-an', 'Optimîzasyona Teknîkî ya Lezê', 'Avakirina Otorîteya Backlink', 'Serkeftina Lêgerîna Herêmî'],
+        domains: [{ name: 'Mezinbûn', description: 'Gihîştina organîk.' }, { name: 'Teknîkî', description: 'Hîmên malperê.' }, { name: 'Naverok', description: 'Sernavên girîng.' }, { name: 'Herêmî', description: 'Xuyabûna herêmî.' }],
+        pillars: [
+          { title: 'Otorîteya Dîjîtal', description: 'Kirina malpera we bibe lîder di sektora we de.' },
+          { title: 'Sermayeya Mayînde', description: 'Avakirina trafîka ku her dem berdewam dike.' },
+          { title: 'Rêzkirina Stratejîk', description: 'Fokusa li ser peyvên ku firotanê tînin.' },
+          { title: 'Siyak û Mantiq', description: 'Optimîzasyona li gorî mebesta lêgerînê.' }
+        ],
+        roadmap: [
+          { label: 'Audit-a Teknîkî', duration: 'Hefte 1', detail: 'Tespîtkirina pirsgirêkên ku lezê kêm dikin.' },
+          { label: 'Lêkolîna Keyword-an', duration: 'Hefte 2', detail: 'Tespîtkirina peyvên herî biha ji bo we.' },
+          { label: 'Cîbicîkirina Rûpelê', duration: 'Hefte 3-4', detail: 'Optimîzekirina sernav û naveroka malperê.' },
+          { label: 'Şopandina Mezinbûnê', duration: 'Berdewam', detail: 'Raporên mehane û nûkirina stratejiyê.' }
+        ],
+        benchmarks: [],
+        techStack: ['Semrush', 'Ahrefs', 'Search Console'],
+        businessValue: 'Bi trafîka organîk budceya reklamê kêm bikin.'
+    },
+    {
+        id: 'cyber',
+        name: 'Keleha Dîjîtal (Cyber)',
+        tagline: 'Daneyên xwe ji hackran dûr bigirin.',
+        description: 'Ewlehiya nûjen ji bo parastina raz û dravê pargîdaniyê.',
+        longDescription: 'Ewlehiya sîber dîwarê dora karsaziya weya dîjîtal e. Em pergalên ku "nederbasbûyîyan" dişopînin û daneyên weyên krîtîk dipارزێن saz dikin. Ev piştrast dike ku agahdariya pargîdaniya we taybet bimîne û sîstemên we neyên hackkirin.',
+        category: 'Security',
+        imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
+        features: ['Şopandina Gefan a Proaktîf', 'Encryption-a Daneyan a Bilind', 'Mîmariya Zero-Trust', 'Plana Bersivdana Hîsan'],
+        domains: [{ name: 'Parastin', description: 'Sîstemên proaktîf.' }, { name: 'Taybetî', description: 'Parastina daneyan.' }, { name: 'Qanûnî', description: 'Ewlehiya yasayî.' }, { name: 'Recovery', description: 'Berdewamî.' }],
+        pillars: [
+          { title: 'Parastina Pêşîgir', description: 'Rawestandina êrîşan berî ku têkevin hundir.' },
+          { title: 'Berdewamiya Karsaziyê', description: 'Piştrastkirina operasyonan di her rewşê de.' },
+          { title: 'Serweriya Daneyan', description: 'Kontrola tam li ser cihê daneyên we.' },
+          { title: 'Zanîna Ewlehiyê', description: 'Perwerdekirina karmendan wekî dîwarê yekem.' }
+        ],
+        roadmap: [
+          { label: 'Scana Lawaziyan', duration: 'Hefte 1', detail: 'Testkirina xalên lawaz ên dîjîtal.' },
+          { label: 'Fortification', duration: 'Hefte 2-3', detail: 'Sazkirina firewall û encryption-a pêşketî.' },
+          { label: 'Kontrola Gihîştinê', duration: 'Hefte 4', detail: 'Sazkirina MFA û îzinên taybet.' },
+          { label: 'Radestkirin', duration: 'Hefte 5+', detail: 'Perwerdehî û sazkirina şopandina 24/7.' }
+        ],
+        benchmarks: [],
+        techStack: ['IDS/IPS', 'AES-256', 'SIEM Platforms'],
+        businessValue: 'Ji dozên yasayî û zirara brandê ya ji ber daxuyaniya daneyan dûr bikevin.'
+    },
+    {
+        id: 'api',
+        name: 'Pira Nermalavê (API)',
+        tagline: 'Bila app-ên we bi hev re bipeyivin.',
+        description: 'Girêdana nermalavên cihêreng da ku dane bixweber herikin.',
+        longDescription: 'API mîna pirên di navbera giravên nermalavê de ne. Heke ERP û malperek we hebe, em pirê ava dikin da ku dema kesek tiştek dikire, envantera we bixweber nû bibe. Êdî kopîkirina manuwel di navbera appan de nîne.',
+        category: 'Development',
+        imageUrl: 'https://images.unsplash.com/photo-1763568258208-a5af30d5a31b?q=80&w=2070&auto=format&fit=crop',
+        features: ['Synca Daneyan a Rastî', 'Hub-ên Girêdana Pir-app', 'Veguhestina Daneyan a Ewle', 'Gateway-ên API-yê yên Bilez'],
+        domains: [{ name: 'Girêdan', description: 'Rakirina karê manuwel.' }, { name: 'Otomasyon', description: 'Herikîna bêsînor.' }, { name: 'Sîstem', description: 'Lihevhatina sîsteman.' }, { name: 'Mezinbûn', description: 'Gihandina peyaman.' }],
+        pillars: [
+          { title: 'Otomasyona Tam', description: 'Sîstemên ku bêyî mirovan kar dikin.' },
+          { title: 'Yekpareyiya Daneyan', description: 'Parastina heman agahiyan di her appê de.' },
+          { title: 'Berfirehbûn', description: 'Zêdekirina app-ên nû bi hêsanî.' },
+          { title: 'Ewlehiya Endpoint-an', description: 'Parastina "dergehên" peywendiya app-an.' }
+        ],
+        roadmap: [
+          { label: 'Nexşeya Siyakê', duration: 'Hefte 1', detail: 'Tespîtkirina kîjan dane divê herikin.' },
+          { label: 'Pêşxistina Mantiqê', duration: 'Hefte 2-4', detail: 'Avakirina qaîdeyên veguhertin û syncê.' },
+          { label: 'Testkirina Zextê', duration: 'Hefte 5', detail: 'Piştrastkirina pîrê di dema qerebalixiyê de.' },
+          { label: 'Girêdana Zindî', duration: 'Hefte 6+', detail: 'Vekirina pira otomatîk ji bo karsaziyê.' }
+        ],
+        benchmarks: [],
+        techStack: ['Go', 'gRPC', 'RabbitMQ'],
+        businessValue: '90% karê manuwel ê têketina daneyan ji holê rakin.'
+    },
+    {
+        id: 'infra-audit',
+        name: 'Bijîşkê Sîstemê (Audit)',
+        tagline: 'Teknolojiya we saxlem e an tenê biha ye?',
+        description: 'Kontrolek ji bo sazûmana IT-ê da ku wendahî û rîskan bibîne.',
+        longDescription: 'Mîna kontrolek bijîشكî, audita sîstemê li pirsgirêkên veşartî digere. Em server û nermalavên we kontrol dikin da ku bibînin çi hêdî ye, çi ne ewle ye, û hûn ji bo çi drav didin lê bikar nayînin.',
+        category: 'Consulting',
+        imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000',
+        features: ['Analîza Lêçûn-Karîgerî', 'Kontrolên Ewlehiyê yên Giştî', 'Testkirina Performans û Zextê', 'Nirxandina Dewra Çavkaniyan'],
+        domains: [{ name: 'Kêrhatî', description: 'Optimîzekirina IT-yê.' }, { name: 'Budce', description: 'Kêmkirina lêçûnan.' }, { name: 'Ewlehî', description: 'Kêmkirina rîskan.' }, { name: 'Paşeroj', description: 'Nexşeya nûkirinê.' }],
+        pillars: [
+          { title: 'Optimîzasyona Sivik', description: 'Performansa herî bilind bi kêmtirîn windahî.' },
+          { title: 'Tespîtkirina Rîskan', description: 'Dîtina gefan berî ku bibin krîzên biha.' },
+          { title: 'Stratejiya Fînanse', description: 'Guhertina IT-ê bo motora nirxê.' },
+          { title: 'Kontrola Serwer', description: 'Rakirina girêdana bi firoşkarên biha.' }
+        ],
+        roadmap: [
+          { label: 'Envantera Sîsteman', duration: 'Hefte 1', detail: 'Lîstekirina her server, lîsans û kodê.' },
+          { label: 'Qonaxa Analîzê', duration: 'Hefte 2', detail: 'Cîbicîkirina testên performansê.' },
+          { label: 'Reçeteya Stratejîk', duration: 'Hefte 3', detail: 'Lîsteya tiştên ku divê werin sererastkirin.' },
+          { label: 'Piştgiriya Cîbicîkirinê', duration: 'Berdewam', detail: 'Rênîşandana tîmê we di paqijkirinê de.' }
+        ],
+        benchmarks: [],
+        techStack: ['Infrastructure as Code', 'Trivy', 'Cost Optimization'],
+        businessValue: 'Bi gelemperî 20% lêçûnên IT-ê yên mehane kêm dike.'
+    },
+    {
+        id: 'mobile-eng',
+        name: 'Karsazî di Dest de (Mobile)',
+        tagline: 'Pargîdaniya xwe bixin berîka mişteriyê xwe.',
+        description: 'App-ên bilez û hêsan ji bo iPhone û Android.',
+        longDescription: 'Mobile apps are about being close to your customer. We build apps that allow your clients to buy, book, or chat with you from anywhere. نبنيها لتعمل بسلاسة حتى في الاتصالات الضعيفة وبإحساس سريع وطبيعي.',
+        category: 'Development',
+        imageUrl: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000',
+        features: ['Şiyana Karê Offline', 'Notîfîkasyonên Xwerû', 'Synca Ewlehiya Biometrîk', 'Performansa Cross-Platform'],
+        domains: [{ name: 'Mobile', description: 'Tevlêbûna rasterast.' }, { name: 'Berhem', description: 'Parastina mişterî.' }, { name: 'Firotan', description: 'Gihîştina her derê.' }, { name: 'Piştgirî', description: 'Chat-a hundurîn.' }],
+        pillars: [
+          { title: 'Tevlêbûna Zêde', description: 'Bi îkona li ser ekranê her dem li ber çavan bin.' },
+          { title: 'UX-a Bêkêmasî', description: 'Sêwirana ji bo bikaranîna bi yek destî û lezê.' },
+          { title: 'Pêbaweriya Sîstemê', description: 'App-ên ku di înterneta lawaz de jî dixebitin.' },
+          { title: 'Jîngeha Ewle', description: 'Parastina kirînan bi ewlehiya mobîl.' }
+        ],
+        roadmap: [
+          { label: 'Mîmariya Mobîl', duration: 'Hefte 1', detail: 'Sêwirana mantiq û daneyên appê.' },
+          { label: 'Endezyariya Bingeha', duration: 'Hefte 2-6', detail: 'Kodkirina taybetmendiyên appê.' },
+          { label: 'Testa Bikarhêneran', duration: 'Hefte 7', detail: 'Ceribandina bi bikarhênerên rastîn.' },
+          { label: 'Barkirina Storan', duration: 'Hefte 8', detail: 'Cîbicîkirina pêvajoyên Apple û Google.' }
+        ],
+        benchmarks: [],
+        techStack: ['Flutter', 'Firebase', 'GraphQL'],
+        businessValue: 'Make it 10x easier for customers to interact with you.'
+    },
+    {
+        id: 'blockchain',
+        name: 'Tomarên Neguherbar (Blockchain)',
+        tagline: 'Trust that cannot be faked.',
+        description: 'A digital ledger where records are permanent and transparent.',
+        longDescription: 'Blockchain is a way to record info so it can never be deleted or changed. This is perfect for contracts, supply chains, or tracking valuable items. It creates total trust between parties because the "book" cannot be lied to.',
+        category: 'Blockchain',
+        imageUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000',
+        features: ['عقود ذكية مؤتمتة', 'تتبع شفاف لسلسلة التوريد', 'هوية رقمية سيادية', 'سجلات أصول قابلة للتحقق'],
+        domains: [{ name: 'Bawerî', description: 'Tomarên verastkirî.' }, { name: 'Fînanse', description: 'Protokolên DeFi.' }, { name: 'Operasyon', description: 'Şopandin.' }, { name: 'Yasayî', description: 'Peymanên mayînde.' }],
+        pillars: [
+          { title: 'Neguherbarî', description: 'Tiştê ku hatiye nivîساندن qet nayê guhertin.' },
+          { title: 'Zelaliya Radîkal', description: 'Her kes dikare dîrokê verast bike.' },
+          { title: 'Kêrhatina Baweriyê', description: 'Rakirina hewcedariya verastkirina biha.' },
+          { title: 'Resilience-a Lamend', description: 'Xala têكçûnê ji bo daneyan tune ye.' }
+        ],
+        roadmap: [
+          { label: 'Stratejiya Protokolê', duration: 'Hefte 1-2', detail: 'Tespîtkirina blockchain-a herî baş.' },
+          { label: 'Pêşxistina Peymanan', duration: 'Hefte 3-5', detail: 'Kodkirina mantiqê peymanên we.' },
+          { label: 'Audita Ewlehiyê', duration: 'Hefte 6-7', detail: 'Verastkirina matematîkî ya peymanan.' },
+          { label: 'Sazkirina Node-an', duration: 'Hefte 8+', detail: 'Barkirina ledgerê bo tora ewle.' }
+        ],
+        benchmarks: [],
+        techStack: ['Solidity', 'Hyperledger Fabric', 'Rust'],
+        businessValue: 'Eliminate the cost of middle-men and verification lawyers.'
+    },
+    {
+        id: 'cloud',
+        name: 'Ezmanê Mezinbûyî (Cloud)',
+        tagline: 'Li şûna kirîna hardware, hêzê bi kirê bigirin.',
+        description: 'Hosting your software on global servers that grow with you.',
+        longDescription: 'Cloud computing means your business lives on the internet. Instead of buying expensive servers that get old, you use powerful global networks. If your business grows tomorrow, your servers grow with you instantly without buying anything new.',
+        category: 'Cloud',
+        imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000',
+        features: ['قوة حوسبة تتوسع آلياً', 'توزيع محتوى عالمي', 'نسخ احتياطي للتعافي من الكوارث', 'البنية التحتية ككود (IaC)'],
+        domains: [{ name: 'Binesazî', description: 'Hîmên pêbawer.' }, { name: 'Operasyon', description: 'Bê sînor.' }, { name: 'Mezinbûn', description: 'Pîvana bêsînor.' }, { name: 'Îstîqrar', description: 'Gihîştina bilind.' }],
+        pillars: [
+          { title: 'Elastîkbûna Bêsînor', description: 'Tenê ji bo tiştê bikar tînin drav bidin.' },
+          { title: 'Resilience-a Karî', description: 'Heke serverek bikeve, yekî din cîh digire.' },
+          { title: 'Sînorê Sîsteman', description: 'Berdewamiya kar bêyî hardware-a fîzîkî.' },
+          { title: 'Leza Gerdûnî', description: 'Gihîştina bilez ji bo her kesî.' }
+        ],
+        roadmap: [
+          { label: 'Nirxandina Cloud', duration: 'Hefte 1', detail: 'Nirxandina hardware û serverên niha.' },
+          { label: 'Stratejiya Migrationê', duration: 'Hefte 2', detail: 'Sêwirana barkirinê bêyî rawestan.' },
+          { label: 'Avakirina Jîngehê', duration: 'Hefte 3-4', detail: 'Amadekirina tora global a bilez.' },
+          { label: 'Vekirina Trafîkê', duration: 'Hefte 5', detail: 'Barkirina tam bo binesaziya ewrî.' }
+        ],
+        benchmarks: [],
         techStack: ['Terraform', 'Docker', 'AWS Lambda'],
         businessValue: 'Save thousands on hardware and never worry about crashes.'
     }
@@ -1047,32 +1014,128 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
 export const JOURNAL_ARTICLES: Record<Language, JournalArticle[]> = {
   en: [
     {
+      id: 5,
+      title: 'E-Commerce Platform for Online Businesses (Syria)',
+      date: '',
+      excerpt: 'A ready-to-launch automated sales platform tailored for Syrian businesses and Instagram sellers.',
+      image: 'https://images.unsplash.com/photo-1665686310429-ee43624978fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      content: 'Developed a ready-to-launch e-commerce website tailored for Syrian online businesses, especially Instagram-based sellers seeking a more professional and automated sales process. The platform supports product management, automated order handling, and structured customer data, reducing manual work and improving order accuracy. AI tools were used to enhance and standardize product images for web presentation, helping businesses maintain a consistent and professional brand identity.'
+    },
+    {
       id: 1,
-      title: 'Digital Transformation in Damascus',
-      date: 'Jan 15, 2025',
-      excerpt: 'How we rebuilt the infrastructure for a leading regional bank.',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000',
-      content: 'Detailed content about rebuilding bank infrastructure in Damascus.'
+      title: 'Goldsmith Management System',
+      date: '',
+      excerpt: 'Comprehensive Frappe-based ERP designed for jewelry workshops to manage daily transactions and business workflows.',
+      image: 'https://images.unsplash.com/photo-1609619741907-dcc81add10f7?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      content: 'Designed and deployed a comprehensive Frappe-based ERP system for jewelry workshops to manage transactions, balances, daily operations, and business workflows. Implemented mobile-friendly interfaces, structured data handling, and system reliability features, contributing to improved operational efficiency and better decision-making.'
+    },
+    {
+      id: 2,
+      title: 'ERPNext Implementation – Cheese Manufacturing',
+      date: '',
+      excerpt: 'Digitalizing operations for a major cheese producer in Lebanon, improving workflow efficiency and reliable system adoption.',
+      image: 'https://images.unsplash.com/photo-1610037275499-00c6b17c8ddd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      content: 'Implemented and customized ERPNext for a cheese manufacturing company in Lebanon, digitalizing operations and improving workflow efficiency. Configured key modules, managed data migration, set user roles and permissions, and trained staff to ensure smooth adoption and reliable system use.'
+    },
+    {
+      id: 3,
+      title: 'Blockchain Degree Verification',
+      date: '',
+      excerpt: 'Developed a private Ethereum verification system with Solidity smart contracts and secure QR-code scanning.',
+      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000',
+      content: 'Developed a blockchain-based verification system using a private Ethereum network with multiple nodes. Implemented Solidity smart contracts and a web interface enabling institutions and users to verify educational certificates via secure QR-code scanning, enhancing credibility and preventing document fraud.'
+    },
+    {
+      id: 4,
+      title: 'AVIS Car Rental CRM Transformation',
+      date: '',
+      excerpt: 'Transitioning manual Excel processes to a structured CRM system for AVIS Erbil, enhancing reporting accuracy.',
+      image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=1000',
+      content: 'Supported the transition from manual processes and Excel files to a structured CRM system for AVIS Erbil. Enhanced customer management, reservations handling, and reporting accuracy. Improved workflow efficiency and provided guidance to staff to ensure effective system utilization and continuity of operations.'
     }
   ],
   ar: [
     {
+      id: 5,
+      title: 'منصة تجارة إلكترونية للأعمال السورية',
+      date: '',
+      excerpt: 'منصة مبيعات مؤتمتة جاهزة للإطلاق مخصصة للشركات السورية وبائعي الإنستغرام.',
+      image: 'https://images.unsplash.com/photo-1665686310429-ee43624978fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      content: 'تطوير موقع تجارة إلكترونية جاهز للإطلاق مخصص للأعمال السورية عبر الإنترنت، وخاصة بائعي الإنستغرام الذين يسعون لعملية مبيعات أكثر احترافية وأتمتة. تدعم المنصة إدارة المنتجات، والتعامل الآلي مع الطلبات، وبيانات العملاء المنظمة، مما يقلل العمل اليدوي ويحسن دقة الطلبات. تم استخدام أدوات الذكاء الاصطناعي لتحسين وتوحيد صور المنتجات للعرض على الويب، مما يساعد الشركات على الحفاظ على هوية علامة تجارية متسقة واحترافية.'
+    },
+    {
       id: 1,
-      title: 'التحول الرقمي في دمشق',
-      date: '١٥ يناير ٢٠٢٥',
-      excerpt: 'كيف أعدنا بناء البنية التحتية لأحد البنوك الإقليمية الرائدة.',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000',
-      content: 'محتوى مفصل حول إعادة بناء البنية التحتية لأحد البنوك الإقليمية الرائدة في دمشق.'
+      title: 'نظام إدارة محلات الصياغة',
+      date: '',
+      excerpt: 'نظام ERP شامل مبني على Frappe مصمم لورش المجوهرات لإدارة المعاملات اليومية وسير العمل.',
+      image: 'https://images.unsplash.com/photo-1609619741907-dcc81add10f7?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      content: 'تصميم ونشر نظام ERP شامل مبني على Frappe لورش المجوهرات لإدارة المعاملات والأرصدة والعمليات اليومية وسير العمل. تنفيذ واجهات متوافقة مع الموبايل، ومعالجة منظمة للبيانات، وميزات موثوقية النظام، مما ساهم في تحسين الكفاءة التشغيلية واتخاذ قرارات أفضل.'
+    },
+    {
+      id: 2,
+      title: 'تنفيذ ERPNext – شركة تصنيع أجبان (لبنان)',
+      date: '',
+      excerpt: 'رقمنة العمليات لمنتج رئيسي للأجبان في لبنان، لتحسين كفاءة سير العمل واعتماد النظام بشكل موثوق.',
+      image: 'https://images.unsplash.com/photo-1610037275499-00c6b17c8ddd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      content: 'تنفيذ وتخصيص ERPNext لشركة تصنيع أجبان في لبنان، ورقمنة العمليات وتحسين كفاءة سير العمل. تهيئة الوحدات الرئيسية، وإدارة ترحيل البيانات، وتحديد أدوار المستخدمين والأذونات، وتدريب الموظفين لضمان التبني السلس والاستخدام الموثوق للنظام.'
+    },
+    {
+      id: 3,
+      title: 'التحقق من الشهادات بالبلوكشين',
+      date: '',
+      excerpt: 'تطوير نظام تحقق قائم على البلوكشين باستخدام عقود Solidity الذكية ومسح كود QR آمن.',
+      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000',
+      content: 'تطوير نظام تحقق قائم على البلوكشين باستخدام شبكة إيثيريوم خاصة ذات عقد متعددة. تنفيذ عقود Solidity الذكية وواجهة ويب تمكن المؤسسات والمستخدمين من التحقق من الشهادات التعليمية عبر مسح كود QR آمن، مما يعزز المصداقية ويمنع تزوير الوثائق.'
+    },
+    {
+      id: 4,
+      title: 'تحول CRM لشركة AVIS لتأجير السيارات',
+      date: '',
+      excerpt: 'الانتقال من العمليات اليدوية لفرع AVIS في أربيل إلى نظام CRM منظم، مما عزز دقة التقارير.',
+      image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=1000',
+      content: 'دعم الانتقال من العمليات اليدوية وملفات إكسل إلى نظام CRM منظم لشركة AVIS في أربيل. تحسين إدارة العملاء، والتعامل مع الحجوزات، ودقة التقارير. تحسين كفاءة سير العمل وتقديم الإرشادات للموظفين لضمان الاستخدام الفعال للنظام واستمرارية العمليات.'
     }
   ],
   ku: [
     {
+      id: 5,
+      title: 'Platforma E-Bazirganiyê ji bo Karên Sûriyê',
+      date: '',
+      excerpt: 'Platformek firotanê ya otomatîk ji bo karsaziyên Sûriyê û firoşkarên Instagramê.',
+      image: 'https://images.unsplash.com/photo-1665686310429-ee43624978fa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      content: 'Malperek e-bazirganiyê ya amade ji bo karsaziyên serhêl ên Sûriyê, bi taybetî ji bo firoşkarên Instagramê yên ku li pêvajoyek firotanê ya profesyoneltir û otomatîktir digerin, hatî pêşve xistin. Platform piştgiriya rêveberiya hilberan, birêvebirina otomatîk a fermanan û daneyên xerîdar ên birêkûpêk dike.'
+    },
+    {
       id: 1,
-      title: 'Veguherîna Dîjîtal li Şamê',
-      date: '15 Rêbendan 2025',
-      excerpt: 'Me çawa binesaziya bankek herêmî ya pêşeng ji nû ve ava kir.',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000',
-      content: 'Naveroka berfireh li ser çawaniya me ji nû ve avakirina binesaziya ji bo bankek herêmî ya pêşeng li Şamê.'
+      title: 'Sîstema Rêveberiya Zêrkeran',
+      date: '',
+      excerpt: 'ERP li ser bingeha Frappe ji bo kargehên zêrgeran hatiye sêwirandin da ku karên rojane birêve bibin.',
+      image: 'https://images.unsplash.com/photo-1609619741907-dcc81add10f7?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      content: 'Sêwirandin û bicihkirina sîstema ERP li ser bingeha Frappe ji bo kargehên zêrgeran da ku danûstandin, bîlanço, operasyonên rojane û herikîna kar birêve bibin. Navberên guncan ji bo mobîlê hatine çêkirin.'
+    },
+    {
+      id: 2,
+      title: 'ERPNext – Cheese Manufacturing (Libnan)',
+      date: '',
+      excerpt: 'Dîjîtalîzekirina operasyonan ji bo hilberînerê penîr li Libnanê û baştirkirina karîgeriya herikîna kar.',
+      image: 'https://images.unsplash.com/photo-1610037275499-00c6b17c8ddd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      content: 'Bicihkirina ERPNext ji bo kompanyayeke penîr li Libnanê, dîjîtalîzekirina operasyonan û baştirkirina karîgeriya herikîna kar. Perwerdekirina karmendan ji bo bikaranîna sîstemê hat encamdan.'
+    },
+    {
+      id: 3,
+      title: 'Verastkirina Dîplomayan bi Blockchain',
+      date: '',
+      excerpt: 'Pêşxistina sîstema verastkirinê ya li ser bingeha blockchain bi karanîna tora Ethereum.',
+      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000',
+      content: 'Pêşxistina sîstema verastkirinê ya li ser bingeha blockchain bi karanîna tora taybet a Ethereum. Peymanên biaqil ên Solidity hatine bikaranîn da ku pêşî li sextekariya belgeyan were girtin.'
+    },
+    {
+      id: 4,
+      title: 'AVIS Erbil CRM Transformation',
+      date: '',
+      excerpt: 'Veguherîna ji pêvajoyên Excel bo sîstema CRM ji bo AVIS li Hewlêrê.',
+      image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=1000',
+      content: 'Piştgirîkirina veguherîna ji Excel bo sîstema CRM ji bo AVIS Hewlêr. Baştirkirina rêveberiya mişteriyan, rezervasyon û daxuyaniyên raporan. Karîgeriya herikîna kar hatiye zêdekirin.'
     }
   ]
 };
