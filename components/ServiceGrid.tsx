@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
 */
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { TRANSLATIONS } from '../translations';
 import { getServices } from '../servicesData';
 import { Service, Language } from '../types';
@@ -17,10 +17,11 @@ interface ServiceGridProps {
 
 const ServiceGrid: React.FC<ServiceGridProps> = ({ onServiceClick, language }) => {
   const [activeCategory, setActiveCategory] = useState('All');
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
   
-  // Safe translation access
   const t = (TRANSLATIONS[language]?.services) || TRANSLATIONS.en.services;
-  
   const categories = ['All', 'Enterprise', 'Development', 'Security', 'Design', 'Consulting', 'Cloud', 'Blockchain'];
   const localizedServices = getServices(language);
 
@@ -35,27 +36,59 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ onServiceClick, language }) =
     ku: 'Hemî'
   };
 
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      setCanScrollLeft(scrollLeft > 10);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+    }
+  };
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const { clientWidth } = scrollRef.current;
+      const moveAmount = clientWidth * 0.8;
+      const isRtl = language === 'ar';
+      
+      let scrollValue = direction === 'left' ? -moveAmount : moveAmount;
+      if (isRtl) scrollValue = -scrollValue;
+
+      scrollRef.current.scrollBy({ left: scrollValue, behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    handleScroll();
+    // Reset scroll when category changes
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+    }
+  }, [activeCategory]);
+
   return (
-    <section id="services" className="py-20 md:py-32 px-6 md:px-12 bg-white">
+    <section id="services" className="py-20 md:py-48 px-6 md:px-12 bg-white relative overflow-hidden">
       <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 md:mb-24 gap-8 md:gap-12 text-start">
           <div className="max-w-2xl">
-            <div className="h-1 w-12 md:w-16 bg-[#0037f3] mb-6 md:mb-8"></div>
-            <h2 className="text-3xl md:text-7xl font-heading font-extrabold text-[#0a0b0d] tracking-tighter mb-4 md:mb-6">
+            <div className="flex items-center gap-4 mb-6 md:mb-8">
+              <span className="h-1 w-12 md:w-20 bg-[#0037f3]"></span>
+              <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-[#0037f3]">Core Expertise</span>
+            </div>
+            <h2 className="text-4xl md:text-8xl font-heading font-extrabold text-[#0a0b0d] tracking-tighter mb-4 md:mb-6 leading-[0.9]">
                 {t.header}
             </h2>
-            <p className="text-lg md:text-xl text-gray-400 font-medium">{t.sub}</p>
+            <p className="text-lg md:text-2xl text-gray-400 font-medium max-w-xl">{t.sub}</p>
           </div>
           
-          <div className="flex flex-wrap gap-2 md:gap-3">
+          <div className="flex flex-wrap gap-2 md:gap-3 bg-gray-50 p-2 rounded-2xl border border-gray-100">
             {categories.map(cat => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 md:px-6 md:py-3 text-[9px] md:text-[10px] font-black uppercase tracking-widest transition-all duration-300 border-2 ${
+                className={`px-4 py-2 md:px-6 md:py-3 text-[9px] md:text-[10px] font-black uppercase tracking-widest transition-all duration-500 rounded-xl ${
                   activeCategory === cat 
-                    ? 'bg-[#0a0b0d] border-[#0a0b0d] text-white shadow-xl' 
-                    : 'bg-white border-gray-100 text-gray-400 hover:border-[#0037f3] hover:text-[#0037f3]'
+                    ? 'bg-[#0037f3] text-white shadow-lg shadow-[#0037f3]/20' 
+                    : 'text-gray-400 hover:text-[#0a0b0d] hover:bg-white'
                 }`}
               >
                 {cat === 'All' ? allLabelMap[language] : cat}
@@ -64,12 +97,51 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ onServiceClick, language }) =
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {filteredServices.map(service => (
-            <ServiceCard key={service.id} service={service} onClick={onServiceClick} language={language} />
-          ))}
+        {/* Carousel Container */}
+        <div className="relative group/carousel">
+          {/* Navigation Arrows - Desktop Only */}
+          <div className={`hidden lg:flex absolute top-1/2 -translate-y-1/2 z-20 w-full justify-between pointer-events-none transition-opacity duration-300 px-4 ${filteredServices.length < 4 ? 'lg:opacity-0' : ''}`}>
+            <button 
+              onClick={() => scroll('left')}
+              disabled={!canScrollLeft}
+              className={`w-14 h-14 bg-white shadow-2xl border border-gray-100 rounded-full flex items-center justify-center pointer-events-auto transition-all hover:scale-110 active:scale-95 disabled:opacity-0 ${language === 'ar' ? 'rotate-180' : ''}`}
+              aria-label="Scroll Left"
+            >
+              <svg className="w-6 h-6 text-[#0a0b0d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button 
+              onClick={() => scroll('right')}
+              disabled={!canScrollRight}
+              className={`w-14 h-14 bg-white shadow-2xl border border-gray-100 rounded-full flex items-center justify-center pointer-events-auto transition-all hover:scale-110 active:scale-95 disabled:opacity-0 ${language === 'ar' ? 'rotate-180' : ''}`}
+              aria-label="Scroll Right"
+            >
+              <svg className="w-6 h-6 text-[#0a0b0d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Scrolling Wrapper */}
+          <div 
+            ref={scrollRef}
+            onScroll={handleScroll}
+            className="flex gap-6 md:gap-10 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-12 pt-4 -mx-6 px-6"
+          >
+            {filteredServices.map(service => (
+              <div key={service.id} className="min-w-[85vw] md:min-w-[45vw] lg:min-w-[32%] snap-start">
+                <ServiceCard service={service} onClick={onServiceClick} language={language} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
+
+      <style>{`
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
     </section>
   );
 };
