@@ -1,4 +1,3 @@
-
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -32,7 +31,7 @@ const About: React.FC<AboutProps> = ({ language }) => {
              <span className="w-1.5 h-1.5 rounded-full bg-[#0037f3]"></span>
              {t.badge}
           </div>
-          <h2 className="text-4xl md:text-8xl font-heading font-extrabold text-white leading-[1] md:leading-[0.85] tracking-tighter mb-6 md:mb-10">
+          <h2 className="text-4xl md:text-8xl font-heading font-extrabold text-white leading-[1.2] md:leading-[1.1] tracking-tighter mb-6 md:mb-10">
               {t.title} <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0037f3] to-[#4e79ff]">{t.accent}</span>
           </h2>
@@ -63,7 +62,7 @@ const About: React.FC<AboutProps> = ({ language }) => {
                      
                      {/* Text Overlay */}
                      <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10">
-                        <h3 className="text-2xl md:text-3xl font-heading font-extrabold text-white mb-2 md:mb-4 tracking-tight group-hover:text-[#0037f3] transition-colors">
+                        <h3 className="text-2xl md:text-3xl font-heading font-extrabold text-white mb-2 md:mb-4 tracking-tight group-hover:text-[#0037f3] transition-colors leading-[1.3]">
                            {step.title}
                         </h3>
                         <p className="text-white/40 text-xs md:text-sm font-medium leading-relaxed group-hover:text-white/70 transition-colors">

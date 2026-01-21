@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,7 +31,7 @@
         margin: 0;
       }
 
-      /* RTL Font Stack */
+      /* RTL Font Stack and Line Height Fixes */
       [dir="rtl"], .font-arabic {
         font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
       }
@@ -41,9 +40,15 @@
         font-family: 'Plus Jakarta Sans', sans-serif;
       }
       
-      [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] .font-heading {
+      [dir="rtl"] h1, 
+      [dir="rtl"] h2, 
+      [dir="rtl"] h3, 
+      [dir="rtl"] h4, 
+      [dir="rtl"] .font-heading {
         font-family: 'Noto Sans Arabic', sans-serif;
         font-weight: 800;
+        /* Fix for character overlap in Arabic titles */
+        line-height: 1.25 !important;
       }
 
       .text-sys-blue { color: var(--syscomatics-blue); }

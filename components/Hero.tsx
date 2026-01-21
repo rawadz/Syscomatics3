@@ -1,4 +1,3 @@
-
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -37,19 +36,19 @@ const Hero: React.FC<HeroProps> = ({ language }) => {
 
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="max-w-4xl animate-fade-in-up">
-          <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+          <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8 text-start">
             <span className="h-0.5 w-8 md:w-12 bg-[#0037f3]"></span>
             <span className="text-[10px] md:text-sm font-bold uppercase tracking-[0.3em] md:tracking-[0.4em] text-[#0037f3]">
               {t.tagline}
             </span>
           </div>
           
-          <h1 className="text-4xl md:text-8xl lg:text-9xl font-heading font-extrabold text-white leading-[1] md:leading-[0.9] tracking-tighter mb-8 md:mb-10">
+          <h1 className="text-4xl md:text-8xl lg:text-9xl font-heading font-extrabold text-white leading-[1.1] md:leading-[1] tracking-tighter mb-8 md:mb-10 text-start">
             {t.title} <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0037f3] to-[#4e79ff]">{t.accent}</span>
           </h1>
           
-          <p className="max-w-xl text-base md:text-xl text-white/60 font-medium leading-relaxed mb-10 md:mb-12">
+          <p className="max-w-xl text-base md:text-xl text-white/60 font-medium leading-relaxed mb-10 md:mb-12 text-start">
             {t.sub}
           </p>
           
