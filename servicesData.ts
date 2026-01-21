@@ -1,3 +1,4 @@
+
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -214,6 +215,136 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       benchmarks: [],
       techStack: ['Infrastructure as Code', 'Trivy', 'Cost Optimization'],
       businessValue: 'Usually finds 20% savings in monthly IT bills.'
+    },
+    {
+      id: 'cloud',
+      name: 'Sovereign Cloud Infrastructure',
+      tagline: 'Absolute control over your data territory.',
+      description: 'High-performance private and hybrid cloud setups designed for regional data residency.',
+      longDescription: 'Generic cloud solutions put your data in hands you don’t control. Our Sovereign Cloud infrastructure provides the same performance as global providers but on your territory, under your laws, and protected by your encryption keys.',
+      category: 'Cloud',
+      imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop',
+      features: ['Zero-Knowledge Private Clusters', 'Hybrid Sync Architecture', 'Automated Scaling Protocols', 'Localized Hardware Deployment'],
+      domains: [{ name: 'Infrastructure', description: 'Rock-solid stability.' }, { name: 'Security', description: 'Absolute privacy.' }, { name: 'Performance', description: 'Global speed, local control.' }],
+      pillars: [
+        { title: 'Data Residency', description: 'Ensuring your data never leaves your specified geographic borders.' },
+        { title: 'Elastic Resilience', description: 'Resources that expand instantly during peak traffic loads.' },
+        { title: 'Encrypted Persistence', description: 'Multiple layers of hardware and software encryption.' },
+        { title: 'Open-Stack Control', description: 'Avoiding vendor lock-in through open infrastructure standards.' }
+      ],
+      roadmap: [
+        { label: 'Load Analysis', duration: 'Week 1', detail: 'Measuring current and projected compute/storage needs.' },
+        { label: 'Architecture Design', duration: 'Week 2-3', detail: 'Blueprint of the hybrid or private cloud mesh.' },
+        { label: 'Deployment Phase', duration: 'Week 4-8', detail: 'Hardware procurement and cluster configuration.' },
+        { label: 'Migration', duration: 'Week 9+', detail: 'Moving workloads to the new sovereign environment.' }
+      ],
+      benchmarks: [],
+      techStack: ['Kubernetes', 'Terraform', 'OpenStack', 'Nginx'],
+      businessValue: 'Eliminate compliance risks and foreign interference in your data.'
+    },
+    {
+      id: 'ai',
+      name: 'Neural Intelligence Systems',
+      tagline: 'Predict the future of your business.',
+      description: 'Custom AI models that analyze patterns and automate complex decision-making.',
+      longDescription: 'Our Neural Intelligence systems move beyond simple automation. We build proprietary AI models that live on your infrastructure, ensuring data sovereignty while providing predictive insights on inventory, customer churn, and market shifts.',
+      category: 'AI',
+      imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop',
+      features: ['Predictive Demand Forecasting', 'Automated Lead Qualification', 'Natural Language Document Processing', 'Sovereign On-Premise AI Hosting'],
+      domains: [{ name: 'Strategy', description: 'Data-driven decision making.' }, { name: 'Automation', description: 'Reducing cognitive load.' }, { name: 'Intelligence', description: 'Market foresight.' }],
+      pillars: [
+        { title: 'Sovereign AI', description: 'Models trained on your data, staying within your private network.' },
+        { title: 'Pattern Recognition', description: 'Discovering hidden efficiencies in existing data sets.' },
+        { title: 'Ethical Accuracy', description: 'Explainable AI models that provide clear reasoning for outputs.' },
+        { title: 'Hyper-Personalization', description: 'Tailoring customer experiences at absolute scale.' }
+      ],
+      roadmap: [
+        { label: 'Data Feasibility', duration: 'Week 1-2', detail: 'Analyzing availability and quality of training data.' },
+        { label: 'Model Architecture', duration: 'Week 3-5', detail: 'Designing the neural network structure for your specific use case.' },
+        { label: 'Training & Refinement', duration: 'Week 6-10', detail: 'Iterative model training and accuracy testing.' },
+        { label: 'Integration', duration: 'Week 11+', detail: 'Embedding the AI model into your existing ERP/CRM workflow.' }
+      ],
+      benchmarks: [],
+      techStack: ['Python', 'PyTorch', 'TensorFlow', 'NVIDIA CUDA'],
+      businessValue: 'Identify market opportunities and operational risks before they occur.'
+    },
+    {
+      id: 'blockchain',
+      name: 'Private Ledger Architecture',
+      tagline: 'Trust built into the very code.',
+      description: 'Transparent, immutable auditing systems for high-stakes enterprise transactions.',
+      longDescription: 'Blockchain is the ultimate auditing tool. We build private, high-speed ledger systems that make it impossible to fake records, ensuring absolute transparency in supply chains, finance, and legal documentation.',
+      category: 'Blockchain',
+      imageUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000',
+      features: ['Immutable Audit Trails', 'Smart Contract Automation', 'Multi-Node Verification', 'Encrypted Document Hashing'],
+      domains: [{ name: 'Trust', description: 'Verifiable integrity.' }, { name: 'Finance', description: 'Fraud-proof transactions.' }, { name: 'Audit', description: 'Automated transparency.' }],
+      pillars: [
+        { title: 'Immutability', description: 'Records that cannot be changed once they are verified.' },
+        { title: 'Decentralized Security', description: 'Eliminating single points of failure in data storage.' },
+        { title: 'Process Efficiency', description: 'Removing middle-men through self-executing smart contracts.' },
+        { title: 'Auditable Logic', description: 'Complete history of every transaction and system state.' }
+      ],
+      roadmap: [
+        { label: 'Protocol Selection', duration: 'Week 1-2', detail: 'Choosing the right consensus mechanism for your speed needs.' },
+        { label: 'Smart Contract Design', duration: 'Week 3-5', detail: 'Programming the business rules directly into the chain.' },
+        { label: 'Security Audit', duration: 'Week 6-7', detail: 'Rigorous testing of the contract logic for vulnerabilities.' },
+        { label: 'Node Setup', duration: 'Week 8+', detail: 'Full network deployment and integration with existing systems.' }
+      ],
+      benchmarks: [],
+      techStack: ['Solidity', 'Hyperledger Fabric', 'Go', 'Rust'],
+      businessValue: 'Reduce fraud and auditing costs by 70% through technical transparency.'
+    },
+    {
+      id: 'resilience',
+      name: 'Business Resilience & Recovery',
+      tagline: 'The system that refuses to fail.',
+      description: 'Advanced engineering to ensure your operations survive any physical or digital crisis.',
+      longDescription: 'Disaster recovery is more than just backups. We engineer "Anti-Fragile" systems that can detect failures instantly and switch to redundant infrastructure without users noticing. We protect your business from hardware failure and cyber attacks.',
+      category: 'Security',
+      imageUrl: 'https://images.unsplash.com/photo-1454165833767-02a698d1316d?q=80&w=2070&auto=format&fit=crop',
+      features: ['Real-time Data Replication', 'Instant Automated Failover', 'Offline Operational Modes', 'Redundant Power & Network Mesh'],
+      domains: [{ name: 'Continuity', description: 'Operations that never stop.' }, { name: 'Safety', description: 'Protecting the company core.' }, { name: 'Resilience', description: 'Bouncing back stronger.' }],
+      pillars: [
+        { title: 'Zero Downtime', description: 'Ensuring your primary services stay online through any incident.' },
+        { title: 'Data Integrity', description: 'Protecting records from corruption during system switches.' },
+        { title: 'Rapid Recovery', description: 'Targeting RTOs (Recovery Time Objectives) measured in seconds.' },
+        { title: 'Global Failover', description: 'The ability to move your operations across regions instantly.' }
+      ],
+      roadmap: [
+        { label: 'Risk Assessment', duration: 'Week 1', detail: 'Identifying all points of failure in current setup.' },
+        { label: 'Redundancy Blueprint', duration: 'Week 2-3', detail: 'Designing the mirror systems and sync protocols.' },
+        { label: 'Stress Testing', duration: 'Week 4-5', detail: 'Simulating disasters to prove the resilience of the design.' },
+        { label: 'Command Setup', duration: 'Week 6+', detail: 'Final monitoring dashboard and auto-recovery activation.' }
+      ],
+      benchmarks: [],
+      techStack: ['Veeam', 'Zerto', 'Rsync', 'HAProxy'],
+      businessValue: 'Stop worrying about the "what-if" and focus on growth with absolute safety.'
+    },
+    {
+      id: 'iot',
+      name: 'Industrial IoT & Edge Intelligence',
+      tagline: 'Connect your physical assets to your digital brain.',
+      description: 'Hardware and software integration for real-time factory, warehouse, and fleet monitoring.',
+      longDescription: 'Industrial IoT bridges the gap between your physical assets and your ERP. We install sensors and edge-computing devices that monitor machines, track vehicles, and manage energy usage, feeding all that data directly into your decision-making systems.',
+      category: 'Development',
+      imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop',
+      features: ['Real-time Sensor Networks', 'Predictive Maintenance Alerts', 'Fleet Tracking & Telematics', 'Energy Efficiency Monitoring'],
+      domains: [{ name: 'Manufacturing', description: 'Smart factory floors.' }, { name: 'Logistics', description: 'Total asset visibility.' }, { name: 'Efficiency', description: 'Reducing physical waste.' }],
+      pillars: [
+        { title: 'Edge Processing', description: 'Analyzing data locally to ensure instant response times.' },
+        { title: 'Asset Visibility', description: 'Knowing where everything is and how it is performing, 24/7.' },
+        { title: 'Predictive Care', description: 'Fixing machines before they break, based on vibration and heat data.' },
+        { title: 'Unified Data Stream', description: 'One dashboard for both your office and your factory.' }
+      ],
+      roadmap: [
+        { label: 'Hardware Audit', duration: 'Week 1-2', detail: 'Evaluating current machinery and connectivity potential.' },
+        { label: 'Sensor Integration', duration: 'Week 3-6', detail: 'Physical installation and protocol setup (MQTT/Modbus).' },
+        { label: 'Edge Configuration', duration: 'Week 7-9', detail: 'Setting up local processing to reduce cloud lag.' },
+        { label: 'System Sync', duration: 'Week 10+', detail: 'Final connection to the ERP for automated reporting.' }
+      ],
+      benchmarks: [],
+      techStack: ['MQTT', 'Industrial PC', 'C++', 'Grafana'],
+      businessValue: 'Reduce machine downtime by 40% and optimize energy costs.'
     }
   ],
   ar: [
@@ -277,7 +408,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         longDescription: 'نظام CRM هو الذاكرة الاحترافية لمؤسستك، حيث يجمع كافة المراسلات والاجتماعات في مكان واحد، مما يساعد فريقك على المتابعة الدقيقة وتحويل الفرص إلى صفقات ناجحة.',
         category: 'Enterprise',
         imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000',
-        features: ['تتبع ديناميكي لمراحل المبيعات', 'أرشفة موحدة لتاريخ التواصل', 'تنبيهات متابعة آلية وذكية', 'تقييم العملاء المحتملين بالذكاء الاصطناعي'],
+        features: ['تتبع ديناميكي لمراحل المبيعات', 'أرشفة موحدة لتاريخ التواصل', 'تنبيهات متابعة آلية وذكية', 'تقييم العملاء المحتمين بالذكاء الاصطناعي'],
         domains: [{ name: 'المبيعات', description: 'تحسين قمع المبيعات.' }, { name: 'التسويق', description: 'استهداف الحملات بدقة.' }, { name: 'الدعم', description: 'رفع مستوى رضا العملاء.' }, { name: 'التحليلات', description: 'توقع الإيرادات المستقبلية.' }],
         pillars: [
           { title: 'ذكاء المبيعات', description: 'تحويل البيانات إلى استراتيجيات بيع فعالة.' },
@@ -424,6 +555,136 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         benchmarks: [],
         techStack: ['Infrastructure as Code', 'Trivy', 'Cost Optimization'],
         businessValue: 'غالباً ما يساهم التدقيق في توفير ٢٠٪ من فواتير تكنولوجيا المعلومات الشهرية.'
+    },
+    {
+        id: 'cloud',
+        name: 'البنية التحتية السحابية السيادية',
+        tagline: 'سيطرة مطلقة على إقليمك الرقمي.',
+        description: 'إعدادات سحابية خاصة وهجينة عالية الأداء مصممة لضمان إقامة البيانات محلياً.',
+        longDescription: 'توفر بنيتنا التحتية السحابية السيادية نفس أداء المزودين العالميين ولكن على أرضك، وتحت قوانينك، ومحمية بمفاتيح التشفير الخاصة بك فقط.',
+        category: 'Cloud',
+        imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop',
+        features: ['عناقيد خاصة', 'معمارية هجينة', 'توسع آلي', 'أجهزة محلية'],
+        domains: [{ name: 'البنية التحتية', description: 'استقرار تقني صلب.' }, { name: 'الأمن', description: 'خصوصية مطلقة.' }, { name: 'الأداء', description: 'سرعة عالمية، تحكم محلي.' }],
+        pillars: [
+          { title: 'سيادة البيانات', description: 'ضمان عدم خروج بياناتك أبداً من الحدود الجغرافية المحددة.' },
+          { title: 'المرونة المطاطية', description: 'موارد تتوسع فوريًا خلال فترات ذروة حركة البيانات.' },
+          { title: 'الاستمرارية المشفرة', description: 'طبقات متعددة من تشفير العتاد والبرمجيات.' },
+          { title: 'التحكم المفتوح', description: 'تجنب الارتباط بمورد واحد من خلال معايير البنية التحتية المفتوحة.' }
+        ],
+        roadmap: [
+          { label: 'تحليل الأحمال', duration: 'أسبوع ١', detail: 'قياس احتياجات الحوسبة والتخزين الحالية والمتوقعة.' },
+          { label: 'تصميم المعمارية', duration: 'أسبوع ٢-٣', detail: 'مخطط هندسي للسحابة الخاصة أو الهجينة.' },
+          { label: 'مرحلة النشر', duration: 'أسبوع ٤-٨', detail: 'تأمين العتاد وتهيئة العناقيد البرمجية.' },
+          { label: 'الهجرة التقنية', duration: 'أسبوع ٩+', detail: 'نقل أعباء العمل إلى البيئة السيادية الجديدة.' }
+        ],
+        benchmarks: [],
+        techStack: ['Kubernetes', 'Terraform', 'OpenStack'],
+        businessValue: 'إلغاء مخاطر الامتثال والتدخل الخارجي في بياناتك.'
+    },
+    {
+        id: 'ai',
+        name: 'أنظمة الذكاء العصبي',
+        tagline: 'توقع مستقبل أعمالك بدقة متناهية.',
+        description: 'نماذج ذكاء اصطناعي مخصصة لتحليل الأنماط وأتمتة اتخاذ القرارات المعقدة.',
+        longDescription: 'تتجاوز أنظمة الذكاء العصبي لدينا مفهوم الأتمتة البسيطة؛ فنحن نبني نماذج ذكاء اصطناعي مملوكة لك تعمل ضمن بنيتك التحتية الخاصة، مما يضمن سيادة البيانات مع توفير رؤى تنبؤية حول المخزون والعملاء وتغيرات السوق.',
+        category: 'AI',
+        imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop',
+        features: ['توقع الطلب', 'تأهيل العملاء', 'معالجة اللغات', 'استضافة AI محلية'],
+        domains: [{ name: 'الاستراتيجية', description: 'صناعة القرار المبني على البيانات.' }, { name: 'الأتمتة', description: 'تقليل العبء الذهني.' }, { name: 'الذكاء', description: 'استشراف السوق.' }],
+        pillars: [
+          { title: 'ذكاء اصطناعي سيادي', description: 'نماذج مدربة على بياناتك، تبقى ضمن شبكتك الخاصة.' },
+          { title: 'التعرف على الأنماط', description: 'اكتشاف الكفاءات المخفية في مجموعات البيانات الحالية.' },
+          { title: 'الدقة الأخلاقية', description: 'نماذج ذكاء اصطناعي قابلة للتفسير توفر أسباباً واضحة للمخرجات.' },
+          { title: 'التخصيص الفائق', description: 'تصميم تجارب العملاء بدقة متناهية وعلى نطاق واسع.' }
+        ],
+        roadmap: [
+          { label: 'جدوى البيانات', duration: 'أسبوع ١-٢', detail: 'تحليل توفر وجودة بيانات التدريب.' },
+          { label: 'معمارية النموذج', duration: 'أسبوع ٣-٥', detail: 'تصميم هيكل الشبكة العصبية لحالتك الخاصة.' },
+          { label: 'التدريب والتحسين', duration: 'أسبوع ٦-١٠', detail: 'تدريب النموذج التكراري واختبار الدقة.' },
+          { label: 'التكامل المؤسسي', duration: 'أسبوع ١١+', detail: 'دمج نموذج AI في سير عمل ERP/CRM الحالي.' }
+        ],
+        benchmarks: [],
+        techStack: ['Python', 'PyTorch', 'TensorFlow'],
+        businessValue: 'تحديد فرص السوق والمخاطر التشغيلية قبل وقوعها.'
+    },
+    {
+        id: 'blockchain',
+        name: 'معمارية السجلات الخاصة',
+        tagline: 'ثقة مدمجة في صلب الكود البرمجي.',
+        description: 'أنظمة تدقيق شفافة وغير قابلة للتلاعب للمعاملات عالية الأهمية.',
+        longDescription: 'البلوكشين هو أداة التدقيق النهائية. نحن نبني أنظمة سجلات خاصة وعالية السرعة تجعل من المستحيل تزيير السجلات، مما يضمن الشفافية المطلقة في سلاسل التوريد والتمويل والوثائق القانونية.',
+        category: 'Blockchain',
+        imageUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000',
+        features: ['مسارات تدقيق', 'عقود ذكية', 'تشفير المستندات', 'تحقق متعدد العقد'],
+        domains: [{ name: 'الثقة', description: 'نزاهة قابلة للتحقق.' }, { name: 'المالية', description: 'معاملات مقاومة للاحتيال.' }, { name: 'التدقيق', description: 'شفافية مؤتمتة.' }],
+        pillars: [
+          { title: 'عدم التغيير', description: 'السجلات التي لا يمكن تغييرها بمجرد التحقق منها.' },
+          { title: 'الأمان اللامركزي', description: 'إلغاء نقاط الفشل الواحدة في تخزين البيانات.' },
+          { title: 'كفاءة العمليات', description: 'إزالة الوسطاء من خلال عقود ذكية ذاتية التنفيذ.' },
+          { title: 'المنطق القابل للتدقيق', description: 'تاريخ كامل لكل معاملة وحالة للنظام.' }
+        ],
+        roadmap: [
+          { label: 'اختيار البروتوكول', duration: 'أسبوع ١-٢', detail: 'اختيار آلية الإجماع المناسبة لاحتياجات السرعة.' },
+          { label: 'تصميم العقود الذكية', duration: 'أسبوع ٣-٥', detail: 'برمجة قواعد العمل مباشرة في السلسلة.' },
+          { label: 'تدقيق الأمان', duration: 'أسبوع ٦-٧', detail: 'اختبار صارم لمنطق العقود بحثاً عن ثغرات.' },
+          { label: 'إعداد العقد', duration: 'أسبوع ٨+', detail: 'النشر الكامل للشبكة والتكامل مع الأنظمة الحالية.' }
+        ],
+        benchmarks: [],
+        techStack: ['Solidity', 'Rust', 'Hyperledger'],
+        businessValue: 'تقليل تكاليف الاحتيال والتدقيق بنسبة ٧٠٪ من خلال الشفافية التقنية.'
+    },
+    {
+        id: 'resilience',
+        name: 'مرونة الأعمال والتعافي',
+        tagline: 'النظام الذي يرفض الفشل.',
+        description: 'هندسة متقدمة لضمان بقاء عملياتك تحت أي ظرف أو أزمة.',
+        longDescription: 'التعافي من الكوارث أكثر من مجرد نسخ احتياطية. نحن نهندس أنظمة "مضادة للهشاشة" يمكنها كشف الأعطال لحظياً والانتقال إلى بنية تحتية بديلة دون أن يشعر المستخدمون، مما يحمي عملك من فشل العتاد والهجمات السيبرانية.',
+        category: 'Security',
+        imageUrl: 'https://images.unsplash.com/photo-1454165833767-02a698d1316d?q=80&w=2070&auto=format&fit=crop',
+        features: ['مزامنة لحظية', 'انتقال فوري', 'عمل أوفلاين', 'شبكة طاقة مكررة'],
+        domains: [{ name: 'الاستمرارية', description: 'عمليات لا تتوقف أبداً.' }, { name: 'الأمان', description: 'حماية جوهر الشركة.' }, { name: 'المرونة', description: 'العودة بشكل أقوى.' }],
+        pillars: [
+          { title: 'صفر توقف', description: 'ضمان بقاء خدماتك الأساسية متصلة خلال أي حادث.' },
+          { title: 'سلامة البيانات', description: 'حماية السجلات من الفساد خلال عمليات تبديل النظام.' },
+          { title: 'التعافي السريع', description: 'استهداف أهداف زمن التعافي (RTOs) المقاسة بالثواني.' },
+          { title: 'الانتقال العالمي', description: 'القدرة على نقل عملياتك عبر المناطق الجغرافية فوراً.' }
+        ],
+        roadmap: [
+          { label: 'تقييم المخاطر', duration: 'أسبوع ١', detail: 'تحديد كافة نقاط الفشل في الإعداد الحالي.' },
+          { label: 'مخطط التكرار', duration: 'أسبوع ٢-٣', detail: 'تصميم الأنظمة المرآتية وبروتوكولات المزامنة.' },
+          { label: 'اختبار الجهد', duration: 'أسبوع ٤-٥', detail: 'محاكاة الكوارث لإثبات مرونة التصميم.' },
+          { label: 'إعداد القيادة', duration: 'أسبوع ٦+', detail: 'لوحة مراقبة نهائية وتفعيل التعافي التلقائي.' }
+        ],
+        benchmarks: [],
+        techStack: ['Veeam', 'HAProxy', 'Rsync'],
+        businessValue: 'توقف عن القلق بشأن "ماذا لو" وركز على النمو بأمان مطلق.'
+    },
+    {
+        id: 'iot',
+        name: 'إنترنت الأشياء الصناعي وذكاء الحافة',
+        tagline: 'اربط عالمك المادي بدماغك الرقمي.',
+        description: 'تكامل العتاد والبرمجيات للمراقبة اللحظية للمصانع والمستودعات والأساطيل.',
+        longDescription: 'يسد إنترنت الأشياء الصناعي الفجوة بين أصولك المادية ونظام ERP الخاص بك. نحن نركب حساسات وأجهزة حوسبة الحافة التي تراقب الآلات، وتتبع المركبات، وتدير استهلاك الطاقة، مما يغذي أنظمة اتخاذ القرار بالبيانات المباشرة.',
+        category: 'Development',
+        imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop',
+        features: ['حساسات لحظية', 'صيانة تنبؤية', 'تتبع الأساطيل', 'مراقبة الطاقة'],
+        domains: [{ name: 'التصنيع', description: 'أرضيات مصانع ذكية.' }, { name: 'اللوجستيات', description: 'وضوح كامل للأصول.' }, { name: 'الكفاءة', description: 'تقليل الهدر المادي.' }],
+        pillars: [
+          { title: 'معالجة الحافة', description: 'تحليل البيانات محلياً لضمان أوقات استجابة فورية.' },
+          { title: 'وضوح الأصول', description: 'معرفة مكان كل شيء وكيفية أدائه على مدار الساعة.' },
+          { title: 'العناية التنبؤية', description: 'إصلاح الآلات قبل تعطلها بناءً على بيانات الاهتزاز والحرارة.' },
+          { title: 'تدفق البيانات الموحد', description: 'لوحة تحكم واحدة لمكتبك ومصنعك معاً.' }
+        ],
+        roadmap: [
+          { label: 'تدقيق العتاد', duration: 'أسبوع ١-٢', detail: 'تقييم الآلات الحالية وإمكانيات الاتصال.' },
+          { label: 'تكامل الحساسات', duration: 'أسبوع ٣-٦', detail: 'التركيب الفعلي وإعداد البروتوكولات (MQTT).' },
+          { label: 'تهيئة الحافة', duration: 'أسبوع ٧-٩', detail: 'إعداد المعالجة المحلية لتقليل تأخر السحابة.' },
+          { label: 'مزامنة النظام', duration: 'أسبوع ١٠+', detail: 'الاتصال النهائي بنظام ERP للتقارير المؤتمتة.' }
+        ],
+        benchmarks: [],
+        techStack: ['MQTT', 'C++', 'Industrial PC'],
+        businessValue: 'تقليل وقت توقف الآلات بنسبة ٤٠٪ وتحسين تكاليف الطاقة.'
     }
   ],
   ku: [
@@ -441,7 +702,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
           { title: 'Çavkaniya Rastiyê ya Yekane', description: 'Her beş li heman daneyên hevdengkirî dinêre.' },
           { title: 'Kêrhatina Operasyonel', description: 'Rakirina kopîkirina manuwel a di navbera pelên cihê de.' },
           { title: 'Lihevhatina Yasayî', description: 'Kontrolên navxweyî yên ji bo standardên herêmî û navneteweyî.' },
-          { title: 'Mîmariya Mezinbûyî', description: 'Pergalên ku bi tevliheviya karsaziya we re mezin dibin.' }
+          { title: 'Mîmariya Mezinbûyî', description: 'Pergalên ku bi tevliheviya karsaziya we re mezin bovin.' }
         ],
         roadmap: [
           { label: 'Audita Tespîtê', duration: 'Hefte 1-2', detail: 'Nexşekirina hemî pêvajoyên karsaziyê û tespîtkirina kêşeyan.' },
@@ -458,7 +719,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         name: 'Dikana Dîjîtal (Ecommerce)',
         tagline: 'Dikanek ku dema hûn radizên jî difiroşe.',
         description: 'Malperek bi hêz ku dravdanê digire û barkirinê li seranserê cîhanê dişopîne.',
-        longDescription: 'Ecommerce ji malperekê zêdetir e; ew motorek firotanê ye. Berhemên we bi mişteriyên li her derê cîhanê ve girê dide, dravdana wan bi ewlehî pêk tîne, û ji we re dibe alîkar ku hûn barkirinê bêyî pirsgirêkên şopandina manuwel birêve bibin.',
+        longDescription: 'Ecommerce ji malperekê zêdetir e; ew motorek firotanê ye. Berhemên we bi mişteriyên li her derê cîhanê ve girê dide, dravdana wan bi ewlehî pêk tîne, û ji we re dibe alîkar ku hûn barkirinê bêyî pirsgirêkên şopandina manuwel birêve bînin.',
         category: 'Development',
         imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1000',
         features: ['Dravdana Global a Ewle', 'Sêwirana Mobile-Responsive', 'Synca Lojîstîk û Barkirinê ya Otomatîk', 'Amûrên Marketing û SEO-yê yên Navxweyî'],
@@ -504,6 +765,266 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         benchmarks: [],
         techStack: ['Salesforce', 'HubSpot API', 'Python'],
         businessValue: 'Bi şopandina fersendan di dema kamil de firotanê zêde bikin.'
+    },
+    {
+      id: 'uiux',
+      name: 'Mîmariya Dîjîtal (UI/UX)',
+      tagline: 'Bikaranîna nermalavê hêsan û xweşik bikin.',
+      description: 'Sêwirana stratejîk ku bikarhêneran ber bi çalakiya rast ve dibe.',
+      longDescription: 'UI/UX ferqa di navbera amûrek acizker û ya ku karanîna wê kêf e de ye. Em "xuyang" (UI) û "hest" (UX) sêwirandin dikin da ku bikarhênerên we qet tevlihev nebin û her dem tiştê ku lê digerin zû bibînin.',
+      category: 'Design',
+      imageUrl: 'https://images.unsplash.com/photo-1576595580361-90a855b84b20?q=80&w=1974&auto=format&fit=crop',
+      features: ['Lêkolîn û Testkirina Bikarhêneran', 'Sêwirana Nasnameya Dîtbarî', 'Prototîpên Înteraktîf', 'Belgekirina Pergalê'],
+      domains: [{ name: 'Nasname', description: 'Hebûna dîjîtal a premium.' }, { name: 'Hilber', description: 'Karanîna nermalavê.' }],
+      pillars: [
+        { title: 'Zelaliya Nasînê', description: 'Sêwiranên hêsan ku ji bo têgihîştinê pêdivî bi perwerdehiyê tune.' },
+        { title: 'Daxwaza Marqeyê', description: 'Sêwirana ku bi bikarhêneran re pewendiyên hestyarî ava dike.' },
+        { title: 'Pêşî Gihîştin', description: 'Garantîkirina ku hilbera we ji bo her kesî dixebite.' },
+        { title: 'Dubarekirina Berdewam', description: 'Bikaranîna daneyan ji bo baştirkirina ezmûnê.' }
+      ],
+      roadmap: [
+        { label: 'Qonaxa Vedîtinê', duration: 'Hefte 1', detail: 'Diyarkirina kesayetên bikarhêneran û armancan.' },
+        { label: 'Nexşeyên Wireframe', duration: 'Hefte 2-3', detail: 'Avakirina îskeletê serîlêdanê.' },
+        { label: 'Sêwirana Dîtbarî', duration: 'Hefte 4-5', detail: 'Sêwirana reng, tîp û estetîka marqeyê.' },
+        { label: 'Radestkirina Sêwiranê', duration: 'Hefte 6', detail: 'Amûrên dawî û belgekirina pergalê.' }
+      ],
+      benchmarks: [],
+      techStack: ['Figma', 'Adobe Creative Suite'],
+      businessValue: 'Kêmkirina bangên piştgiriyê bi hêsankirina nermalavê.'
+    },
+    {
+      id: 'seo',
+      name: 'Nîşana Dîjîtal (SEO)',
+      tagline: 'Bibin tiştê yekem ku mirov li ser Google dibînin.',
+      description: 'Karê teknîkî û naverokê da ku marqeya we di serê lêgerînê de cih bigire.',
+      longDescription: 'SEO mîna wê ye ku dikana we li ser kolana herî qerebalix a cîhanê be. Em koda malpera we û naveroka we optimîze dikin da ku gava mirov li karê we digerin, navê we pêşî derkeve. Ev riya herî baş e ji bo trafîka belaş.',
+      category: 'Consulting',
+      imageUrl: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?q=80&w=1932&auto=format&fit=crop',
+      features: ['Stratejiya Naverokê', 'Optimîzasyona Leza Teknîkî', 'Backlink Building', 'Serweriya Lêgerîna Herêmî'],
+      domains: [{ name: 'Mezinbûn', description: 'Zêdekirina gihîştina organî.' }, { name: 'Teknîkî', description: 'Core web vitals.' }],
+      pillars: [
+        { title: 'Desthilatdariya Dîjîtal', description: 'Malpera we di pîşesaziya we de bibe rêberek pêbawer.' },
+        { title: 'Hêza Demdirêj', description: 'Trafîka ku dimîne gava reklam disekinin.' },
+        { title: 'Ranking Stratejîk', description: 'Targetkirina peyvên ku bi rastî dibin sedema firotanê.' },
+        { title: 'Naveroka Semantîk', description: 'Optimîzekirina li gorî mebesta lêgerînê.' }
+      ],
+      roadmap: [
+        { label: 'Audîta Teknîkî', duration: 'Hefte 1', detail: 'Fixkirina kêşeyên ku malperê hêdî dikin.' },
+        { label: 'Lêkolîna Peyvên Sereke', duration: 'Hefte 2', detail: 'Diyarkirina peyvên herî biha.' },
+        { label: 'Cîbicîkirina li ser Rûpelê', duration: 'Hefte 3-4', detail: 'Optimîzekirina sernav û naverokan.' },
+        { label: 'Şopandina Mezinbûnê', duration: 'Berdewam', detail: 'Raporkirina mehane û nûvekirina stratejiyê.' }
+      ],
+      benchmarks: [],
+      techStack: ['Semrush', 'Search Console'],
+      businessValue: 'Bi wergirtina trafîka organî li şûna reklaman, bi hezaran dolar qezenc bikin.'
+    },
+    {
+      id: 'cyber',
+      name: 'Kela Dîjîtal (Sîber)',
+      tagline: 'Daneyên xwe ji hakeran biparêzin.',
+      description: 'Ewlehiya nûjen ji bo parastina raz û dravê pargîdaniya we.',
+      longDescription: 'Ewlehiya sîber dîwarê li dora karsaziya weya dîjîtal e. Em pergalên ku çavdêriya "dagirkeran" dikin û daneyên weyên hesas şîfre dikin ava dikin. Ev garantî dike ku agahiyên weyên taybet her dem parastî bimînin.',
+      category: 'Security',
+      imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
+      features: ['Çavdêriya Tehdîtan', 'Şîfrekirina Daneyan', 'Zero-Trust Architecture', 'Bersivdana Bûyeran'],
+      domains: [{ name: 'Parastin', description: 'Parastina proaktîf.' }, { name: 'Taybetmendî', description: 'Parastina daneyan.' }],
+      pillars: [
+        { title: 'Parastina Berî Tehdîtê', description: 'Rawestandina êrîşên sîber berî ku bikevin tora we.' },
+        { title: 'Berxwedana Karsaziyê', description: 'Garantîkirina operasyonan di dema bûyeran de.' },
+        { title: 'Serweriya Daneyan', description: 'Kontrola tam li ser cih û awayê tomarkirina daneyan.' },
+        { title: 'Hişmendiya Ewlehiyê', description: 'Perwerdekirina karmendan wekî xeta parastinê.' }
+      ],
+      roadmap: [
+        { label: 'Vulnerability Scan', duration: 'Hefte 1', detail: 'Testkirina her dergehek dîjîtal ji bo lawaziyan.' },
+        { label: 'Fortification-a Torê', duration: 'Hefte 2-3', detail: 'Sazkirina firewall û şîfrekirina pêşketî.' },
+        { label: 'Kontrolên Gihîştinê', duration: 'Hefte 4', detail: 'Cîbicîkirina multi-factor auth û destûran.' },
+        { label: 'Radestkirina Ewlehiyê', duration: 'Hefte 5+', detail: 'Perwerdehiya dawî û sazkirina çavdêriyê.' }
+      ],
+      benchmarks: [],
+      techStack: ['IDS/IPS', 'AES-256'],
+      businessValue: 'Ji dozên mezin û zirara marqeyê ji ber leakbûna daneyan dûr bikevin.'
+    },
+    {
+      id: 'api',
+      name: 'Pira Nermalavê (API)',
+      tagline: 'Bila sepanên we bi hev re bipeyivin.',
+      description: 'Nermalavên cihêreng bi hev ve girêdin da ku daneyan bixweber biherikin.',
+      longDescription: 'API mîna pirên di navbera giravên nermalavê de ne. Ger ERP û malperek we hebe, em pirê ava dikin da ku gava kesek hilberek bikire, asta stoka we bixweber nûve bibe. Êdî kopîkirina manuwel tune.',
+      category: 'Development',
+      imageUrl: 'https://images.unsplash.com/photo-1763568258208-a5af30d5a31b?q=80&w=2070&auto=format&fit=crop',
+      features: ['Hefdengkirina Rastî', 'Gateway-ên Performansa-Bilind', 'Veguhestina Daneyên Şîfrekirî'],
+      domains: [{ name: 'Girêdan', description: 'Rakirina synca manuwel.' }, { name: 'Otomasyon', description: 'Herikîna bêkêmasî.' }],
+      pillars: [
+        { title: 'Otomasyona Tevahî', description: 'Pergalên ku bêyî destwerdana mirovî hev nûve dikin.' },
+        { title: 'Integrîtiya Daneyan', description: 'Garantîkirina ku agahî di hemî sepanan de wekhev bimînin.' },
+        { title: 'Berfirehbûn', description: 'Girêdana hêsan a nermalavên nû gava karsazî mezin dibe.' },
+        { title: 'Ewlehiya Endpoint', description: 'Parastina dergehên ku nermalav lê diaxivin.' }
+      ],
+      roadmap: [
+        { label: 'Nexşekirina Daneyan', duration: 'Hefte 1', detail: 'Diyarkirina kîjan dane divê biçin kîjan derê.' },
+        { label: 'Pêşxistina Mantiqê', duration: 'Hefte 2-4', detail: 'Avakirina qaîdeyên veguhertin û synca taybet.' },
+        { label: 'Testkirina Stresê', duration: 'Hefte 5', detail: 'Garantîkirina pira piralî di bin trafîka zêde de.' },
+        { label: 'Girêdana Zindî', duration: 'Hefte 6+', detail: 'Vekirina pira otomatîk ji bo hilberînê.' }
+      ],
+      benchmarks: [],
+      techStack: ['Go', 'gRPC'],
+      businessValue: '90% ji xebata daxuyaniya daneyan a manuwel ji holê rakin.'
+    },
+    {
+      id: 'infra-audit',
+      name: 'Bijîşkê Pergalê (Audît)',
+      tagline: 'Ma teknolojiya we saxlem e an tenê biha ye?',
+      description: 'Kontrolek ji bo sazkirina IT-ya we da ku hûn windahî û rîskan bibînin.',
+      longDescription: 'Mîna muayeneya fîzîkî, audîta pergalê li pirsgirêkên veşartî digere. Em server û nermalava we kontrol dikin da ku bibînin ka çi hêdî ye, çi ne ewle ye, û hûn ji bo çi pere didin lê bikar nayînin.',
+      category: 'Consulting',
+      imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000',
+      features: ['Analîza Cost-Benefit', 'Check-ên Ewlehiyê', 'Testên Performansê', 'Nirxandina Çavkaniyên IT'],
+      domains: [{ name: 'Kêrhatinî', description: 'Optimîzekirina çavkaniyên IT.' }, { name: 'Budçe', description: 'Kêmkirina mesrefan.' }],
+      pillars: [
+        { title: 'Optimîzasyona Lean', description: 'Bidestxistina performansa herî zêde bi windahiya herî kêm.' },
+        { title: 'Vedîtina Rîskên Veşartî', description: 'Dîtina gefan berî ku bibin krîzên biha.' },
+        { title: 'Stratejiya Fînanse', description: 'Veguherandina IT-yê bo ajokerek nirxê.' },
+        { title: 'Kontrola Serwer', description: 'Rakirina girêdayîbûna bi firoşkarên biha yên nehewce.' }
+      ],
+      roadmap: [
+        { label: 'Înventara Pergalan', duration: 'Hefte 1', detail: 'Katalogkirina her server, lîsans û koda we.' },
+        { label: 'Qonaxa Analîzê', duration: 'Hefte 2', detail: 'Testên performansê û nirxandina mesrefên IT.' },
+        { label: 'Reçeteya Stratejîk', duration: 'Hefte 3', detail: 'Lîsteya kitekit a çareseriyên krîtîk û teserûfê.' },
+        { label: 'Piştgiriya Cîbicîkirinê', duration: 'Berdewam', detail: 'Rêberiya tîmê we di pêvajoya paqijkirinê de.' }
+      ],
+      benchmarks: [],
+      techStack: ['Infrastructure as Code'],
+      businessValue: 'Bi gelemperî 20% teserûfê di fatûreyên IT-yê de peyda dike.'
+    },
+    {
+        id: 'cloud',
+        name: 'Binesaziya Ewr a Serwer',
+        tagline: 'Kontrola mutleq li ser herêma we.',
+        description: 'Sazkirinên ewr ên taybet û hîbrîd ên performansa-bilind ku ji bo residenciya daneyên herêmî hatine sêwirandin.',
+        longDescription: 'Çareseriyên ewr ên giştî daneyên we dixin destên ku hûn kontrol nakin. Binesaziya me ya Ewr a Serwer heman performansê pêşkêşî we dike, lê li ser axa we û di bin kontrola we de.',
+        category: 'Cloud',
+        imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop',
+        features: ['Clusterên Taybet', 'Mîmariya Hîbrîd', 'Mezinbûna Otomatîk', 'Hardware-a Herêmî'],
+        domains: [{ name: 'Binesazî', description: 'Îstîqrara herî bilind.' }, { name: 'Ewlehî', description: 'Taybetmendiya mutleq.' }, { name: 'Performans', description: 'Leza global.' }],
+        pillars: [
+            { title: 'Residenciya Daneyan', description: 'Garantîkirina ku daneyên we sînorên herêmî dernakevin.' },
+            { title: 'Berxwedana Elastîk', description: 'Çavkaniyên ku di dema barê giran de tavilê mezin dibin.' },
+            { title: 'Berdewamiya Şîfrekirî', description: 'Çend qatên şîfrekirina hardware û software.' },
+            { title: 'Kontrola Open-Stack', description: 'Dûrketina ji girtîbûna firoşkaran bi standardên vekirî.' }
+        ],
+        roadmap: [
+            { label: 'Analîza Barê', duration: 'Hefte 1', detail: 'Pîvandina hewcedariyên compute û storage yên niha.' },
+            { label: 'Sêwirana Mîmarî', duration: 'Hefte 2-3', detail: 'Nexşeya ewr a hîbrîd an taybet.' },
+            { label: 'Qonaxa Deployment', duration: 'Hefte 4-8', detail: 'Peydakirina hardware û konfîgurasyona clustera.' },
+            { label: 'Veguhastin (Migration)', duration: 'Hefte 9+', detail: 'Barkirina karên we bo hawîrdora nû ya serwer.' }
+        ],
+        benchmarks: [],
+        techStack: ['Kubernetes', 'Terraform', 'OpenStack'],
+        businessValue: 'Rîskên yasayî û destwerdana biyanî di daneyên we de ji holê rakin.'
+    },
+    {
+        id: 'ai',
+        name: 'Pergalên Zîrekiya Neural',
+        tagline: 'Pêşeroja karsaziya xwe pêşbînî bikin.',
+        description: 'Modelên AI-yê yên taybet ku piranîya biryarên tevlihev otomatîk dikin.',
+        longDescription: 'Pergalên me yên Zîrekiya Neural ji otomasyona hêsan derbas dibin. Em modelên AI-yê yên xwerû ava dikin ku li ser binesaziya we dimînin, serweriya daneyan garantî dikin.',
+        category: 'AI',
+        imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop',
+        features: ['Pêşbîniya Daxwazê', 'Lead Qualification-a Otomatîk', 'AI Hosting li ser Erdê', 'NLP Document Processing'],
+        domains: [{ name: 'Strategî', description: 'Biryardana bi daneyan.' }, { name: 'Otomasyon', description: 'Kêmkirina barê hişî.' }, { name: 'Zîrekî', description: 'Pêşdîtina bazarê.' }],
+        pillars: [
+            { title: 'AI-ya Serwer', description: 'Modelên ku li ser daneyên we hatine perwerdekirin.' },
+            { title: 'Naskirina Anmatan', description: 'Vedîtina kêrhatiyên veşartî di daneyan de.' },
+            { title: 'Rastiya Etîk', description: 'Modelên AI-yê yên şirovebar ku mantiqê eşkere dikin.' },
+            { title: 'Hyper-Personalization', description: 'Sêwirana tecrubeyên mişterî bi awayekî mezin.' }
+        ],
+        roadmap: [
+            { label: 'Analîza Daneyan', duration: 'Hefte 1-2', detail: 'Nirxandina kalîte û hejmara daneyên perwerdehiyê.' },
+            { label: 'Mîmariya Modelê', duration: 'Hefte 3-5', detail: 'Sêwirandina tora neural ji bo rewşa we.' },
+            { label: 'Perwerdekirin & Başkirin', duration: 'Hefte 6-10', detail: 'Testkirina rastiya modelê û perwerdekirina dubare.' },
+            { label: 'Integrasyon', duration: 'Hefte 11+', detail: 'Bicihkirina modela AI di nav herikîna ERP/CRM de.' }
+        ],
+        benchmarks: [],
+        techStack: ['Python', 'PyTorch', 'TensorFlow'],
+        businessValue: 'Fersendên bazarê û rîskên operasyonel berî ku pêş bikevin nas bikin.'
+    },
+    {
+        id: 'blockchain',
+        name: 'Mîmariya Ledger a Taybet',
+        tagline: 'Baweriya di hundurê kodê de.',
+        description: 'Pergalên audîtê yên zelal û neguherbar ji bo danûstandinên giring.',
+        longDescription: 'Blockchain amûra audîtê ya herî dawî ye. Em pergalên ledger ên taybet û bilez ava dikin ku çêkirina tomarên sexte ne gengaz dike, û zelaliya mutleq di zincîrên dabînkirinê de peyda dike.',
+        category: 'Blockchain',
+        imageUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000',
+        features: ['Trailên Audîtê yên Neguherbar', 'Smart Contracts', 'Multi-Node Verification', 'Encrypted Document Hashing'],
+        domains: [{ name: 'Bawerî', description: 'Yekparebûna verastkirî.' }, { name: 'Fînans', description: 'Danûstandinên ewle.' }, { name: 'Audît', description: 'Zelaliya otomatîk.' }],
+        pillars: [
+            { title: 'Neguherbarî', description: 'Tomarên ku piştî verastkirinê nayên guhertin.' },
+            { title: 'Ewlehiya Nenavendî', description: 'Rakirina xalên têkçûnê yên yekane di hilanînê de.' },
+            { title: 'Kêrhatina Pêvajoyê', description: 'Rakirina navbeynkaran bi peymanên biaqil.' },
+            { title: 'Mantiqê Audîtbar', description: 'Dîroka tevahî ya her danûstandin û rewşa pergalê.' }
+        ],
+        roadmap: [
+            { label: 'Hilbijartina Protokolê', duration: 'Hefte 1-2', detail: 'Hilbijartina mekanîzmaya consensus a guncan.' },
+            { label: 'Sêwirana Smart Contract', duration: 'Hefte 3-5', detail: 'Bernamekirina qaîdeyên karsaziyê di hundurê zincîrê de.' },
+            { label: 'Audîta Ewlehiyê', duration: 'Hefte 6-7', detail: 'Testkirina tund a mantiqê peymanan ji bo lawaziyan.' },
+            { label: 'Sazkirina Node', duration: 'Hefte 8+', detail: 'Deploymenta tevahî ya torê û integrasyona pergalê.' }
+        ],
+        benchmarks: [],
+        techStack: ['Solidity', 'Go', 'Rust'],
+        businessValue: 'Mesrefên sextekarî û audîtê bi saya zelaliya teknîkî %70 kêm bikin.'
+    },
+    {
+        id: 'resilience',
+        name: 'Berxwedana Karsaziyê & Recovery',
+        tagline: 'Pergala ku red dike ku têk biçe.',
+        description: 'Endezyariya pêşkeftî ji bo operasyonên saxlem di her krîza fîzîkî an dîjîtal de.',
+        longDescription: 'Recovery-a ji felaketan ji yedekgirtinê zêdetir e. Em pergalên "Anti-Fragile" endezyar dikin ku dikarin têkçûnan di cih de tespît bikin û bêyî ku bikarhêner pê bihesin derbasî binesaziya yedek bibin.',
+        category: 'Security',
+        imageUrl: 'https://images.unsplash.com/photo-1454165833767-02a698d1316d?q=80&w=2070&auto=format&fit=crop',
+        features: ['Replîkasyona Daneyan a Rastî', 'Failover-a Otomatîk', 'Mode-ên Operasyona Offline', 'Redundant Power Mesh'],
+        domains: [{ name: 'Berdewamî', description: 'Operasyonên bê rawest.' }, { name: 'Ewlehî', description: 'Parastina bingeha pargîdaniyê.' }, { name: 'Berxwedan', description: 'Vegera bi hêztir.' }],
+        pillars: [
+            { title: 'Zero Downtime', description: 'Xizmetên weyên sereke di her bûyerê de serhêl dimînin.' },
+            { title: 'Integrîtiya Daneyan', description: 'Parastina tomaran ji gendeliyê di dema guhertinê de.' },
+            { title: 'Recovery-a Bilez', description: 'Targetkirina demên vegerê yên di nav çirkeyan de.' },
+            { title: 'Global Failover', description: 'Şiyana barkirina operasyonan bo herêmên din tavilê.' }
+        ],
+        roadmap: [
+            { label: 'Nirxandina Rîskê', duration: 'Hefte 1', detail: 'Tespîtkirina hemî xalên têkçûnê yên di sazkirina niha de.' },
+            { label: 'Blueprint-a Redundans', duration: 'Hefte 2-3', detail: 'Sêwirana pergalên neynik û protokolên synca.' },
+            { label: 'Testkirina Stresê', duration: 'Hefte 4-5', detail: 'Simulasîyona felaketan ji bo îsbatkirina berxwedanê.' },
+            { label: 'Sazkirina Fermandariyê', duration: 'Hefte 6+', detail: 'Dashboarda çavdêriyê û aktîvkirina recovery-a otomatîk.' }
+        ],
+        benchmarks: [],
+        techStack: ['Veeam', 'Zerto', 'HAProxy'],
+        businessValue: 'Bi ewlehiya tam mezin bibin û xema "gelo çi bibe" ji holê rakin.'
+    },
+    {
+        id: 'iot',
+        name: 'IoT-a Pîşesazî & Edge Intelligence',
+        tagline: 'Cîhana fîzîkî bi mejiyê dîjîtal ve girêbidin.',
+        description: 'Hardware û software ji bo şopandina fabrîka, dikan û wesayîtan di wextê rast de.',
+        longDescription: 'IoT-a Pîşesazî valahiya di navbera milkên fîzîkî û ERP-ya we de tije dike. Em sensoran sazi dikin ku makîneyan dişopînin, wesayîtan dişopînin û bikaranîna enerjiyê birêve dibin.',
+        category: 'Development',
+        imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop',
+        features: ['Torên Sensoran yên Rastî', 'Lênêrîna Pêşbînîker', 'Şopandina Wesayîtan', 'Mîna Enerjiyê'],
+        domains: [{ name: 'Hilberîn', description: 'Fabrîkayên biaqil.' }, { name: 'Lojîstîk', description: 'Vîzîbîlîteya tevahî ya milkan.' }, { name: 'Kêrhatinî', description: 'Kêmkirina windahiya fîzîkî.' }],
+        pillars: [
+            { title: 'Pêvajoya Edge', description: 'Analîzkirina daneyan di cih de ji bo bersiva bilez.' },
+            { title: 'Vîzîbîlîteya Milkan', description: 'Zanîna her tiştî û performansa wan, 24/7.' },
+            { title: 'Lênêrîna Pêşbînîker', description: 'Fixkirina makîneyan berî ku xera bibin bi daneyên germ û lerzê.' },
+            { title: 'Herikîna Daneyan a Yekbûyî', description: 'Yek dashboard ji bo ofîs û fabrîkaya we.' }
+        ],
+        roadmap: [
+            { label: 'Audîta Hardware', duration: 'Hefte 1-2', detail: 'Nirxandina makîneyên niha û potansiyela girêdanê.' },
+            { label: 'Integrasyona Sensoran', duration: 'Hefte 3-6', detail: 'Sazkirina fîzîkî û sazkirina protokolan (MQTT).' },
+            { label: 'Konfîgurasyona Edge', duration: 'Hefte 7-9', detail: 'Sazkirina pêvajoya herêmî ji bo kêmkirina derengiyê.' },
+            { label: 'Synca Pergalê', duration: 'Hefte 10+', detail: 'Girêdana dawî ya bi ERP-ê re ji bo raporên otomatîk.' }
+        ],
+        benchmarks: [],
+        techStack: ['MQTT', 'Industrial PC', 'C++', 'Grafana'],
+        businessValue: 'Dema têkçûna makîneyan %40 kêm bikin û mesrefên enerjiyê optimîze bikin.'
     }
   ]
 };

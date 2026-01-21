@@ -1,3 +1,4 @@
+
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -155,7 +156,25 @@ export const TRANSLATIONS: Record<Language, any> = {
         founder: 'Founded by Rawad Zaitoun',
         version: 'Damascus Hub | V.2.5.0'
     },
-    cookie: { title: 'Systems Protocol', desc: 'We utilize localized caching to ensure your Project Brief and language preferences persist across sessions.', accept: 'Accept Protocol', reject: 'Decline' }
+    cookie: { title: 'Systems Protocol', desc: 'We utilize localized caching to ensure your Project Brief and language preferences persist across sessions.', accept: 'Accept Protocol', reject: 'Decline' },
+    labs: {
+        badge: 'Interactive Labs',
+        title: 'Architectural',
+        accent: 'Simulations.',
+        sub: 'Experience our high-performance logic through real-time technical visualizations.',
+        arch: 'Architecture',
+        archVal: 'SYS_CORE_V4',
+        latency: 'Latency',
+        latencyVal: '14ms',
+        button: 'Run Simulation',
+        processing: 'Processing...',
+        modules: [
+            { id: 'ERP', label: 'Company Brain', desc: 'ERP_NODE_MAP' },
+            { id: 'CRM', label: 'Customer Memory', desc: 'CRM_INTEL_RADAR' },
+            { id: 'Ecommerce', label: 'Storefront', desc: 'EC_PIPELINE' },
+            { id: 'Cyber', label: 'Fortress', desc: 'SEC_SHIELD' }
+        ]
+    }
   },
   ar: {
     nav: { solutions: 'الحلول التقنية', strategy: 'الاستراتيجية', insights: 'سجل المشاريع', brief: 'ملخص المشروع' },
@@ -253,7 +272,25 @@ export const TRANSLATIONS: Record<Language, any> = {
         founder: 'تأسست من قبل رواد زيتون',
         version: 'مركز دمشق التقني | V.2.5.0'
     },
-    cookie: { title: 'بروتوكول الأنظمة', desc: 'نستخدم تقنيات التخزين المحلي لضمان استمرار ملخص مشروعك وتفضيلات اللغة الخاصة بك عبر الجلسات المختلفة.', accept: 'قبول البروتوكول', reject: 'رفض' }
+    cookie: { title: 'بروتوكول الأنظمة', desc: 'نستخدم تقنيات التخزين المحلي لضمان استمرار ملخص مشروعك وتفضيلات اللغة الخاصة بك عبر الجلسات المختلفة.', accept: 'قبول البروتوكول', reject: 'رفض' },
+    labs: {
+        badge: 'مختبرات تفاعلية',
+        title: 'محاكاة',
+        accent: 'معمارية.',
+        sub: 'اختبر قوة منطقنا البرمجي عبر أدوات مرئية تقنية في الوقت الفعلي.',
+        arch: 'المعمارية',
+        archVal: 'SYS_CORE_V4',
+        latency: 'الاستجابة',
+        latencyVal: '١٤ مللي ثانية',
+        button: 'بدء المحاكاة',
+        processing: 'جاري المعالجة...',
+        modules: [
+            { id: 'ERP', label: 'دماغ الشركة', desc: 'نظام_ERP' },
+            { id: 'CRM', label: 'ذاكرة العميل', desc: 'رادار_CRM' },
+            { id: 'Ecommerce', label: 'متجر رقمي', desc: 'خط_التجارة' },
+            { id: 'Cyber', label: 'الحصن الرقمي', desc: 'درع_الأمان' }
+        ]
+    }
   },
   ku: {
     nav: { solutions: 'Çareserî', strategy: 'Stratejî', insights: 'Projeyên Me', brief: 'Kurteya Projeyê' },
@@ -285,7 +322,7 @@ export const TRANSLATIONS: Record<Language, any> = {
       back: 'Vegere', 
       spec: 'Pisporî di', 
       pillars: 'Çima ev girîng e', 
-      pillarsSub: 'Bingehên endezyarkirî ku mezinbûn, ewlehî û jêhatiya operasyonel garantî dikin.',
+      pillarsSub: 'Bingehên endezyarkirî ku mezinbûn, ewlehî û jêhatiya operasyonel garantî din.',
       roadmap: 'Nexşerêya Stratejîk', 
       thesis: 'Teza Mîmarî', 
       value: 'Nirxa Karsaziya Stratejîk', 
@@ -351,6 +388,24 @@ export const TRANSLATIONS: Record<Language, any> = {
         founder: 'Ji hêla Rawad Zaitoun ve hat damezrandin',
         version: 'Navenda Şamê | V.2.5.0'
     },
-    cookie: { title: 'Protokola Pergalan', desc: 'Em cachkirina herêmî bikar tînin da ku Kurteya Projeya we û tercîhên zimanê we di her rûniştinê de bimînin.', accept: 'Protokolê Pejirîne', reject: 'Red Bike' }
+    cookie: { title: 'Protokola Pergalan', desc: 'Em cachkirina herêmî bikar tînin da ku Kurteya Projeya we û tercîhên zimanê we di her rûniştinê de bimînin.', accept: 'Protokolê Pejirîne', reject: 'Red Bike' },
+    labs: {
+        badge: 'Laboratuvarên Înteraktîf',
+        title: 'Mîmarî',
+        accent: 'Sîmulasîyon.',
+        sub: 'Hêza mantiqê me bi navgîniya amûrên dîtbarî yên teknîkî biceribînin.',
+        arch: 'Mîmarî',
+        archVal: 'SYS_CORE_V4',
+        latency: 'Derengî',
+        latencyVal: '14ms',
+        button: 'Sîmulasîyonê Bide Destpêkirin',
+        processing: 'Tê kirin...',
+        modules: [
+            { id: 'ERP', label: 'Mejiyê Şîrketê', desc: 'ERP_NODE_MAP' },
+            { id: 'CRM', label: 'Bîra Mişterî', desc: 'CRM_INTEL_RADAR' },
+            { id: 'Ecommerce', label: 'Dikan', desc: 'EC_PIPELINE' },
+            { id: 'Cyber', label: 'Kela Dîjîtal', desc: 'SEC_SHIELD' }
+        ]
+    }
   }
 };

@@ -35,7 +35,8 @@ export interface Service {
   tagline: string;
   description: string;
   longDescription: string;
-  category: 'Enterprise' | 'Development' | 'Security' | 'Blockchain' | 'Design' | 'Consulting' | 'Cloud';
+  // Added 'AI' to allowed categories to resolve assignability errors in servicesData.ts
+  category: 'Enterprise' | 'Development' | 'Security' | 'Blockchain' | 'Design' | 'Consulting' | 'Cloud' | 'AI';
   imageUrl: string;
   features: string[];
   domains: ServiceDomain[];
