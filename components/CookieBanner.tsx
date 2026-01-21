@@ -5,7 +5,7 @@
 */
 
 import React, { useState, useEffect } from 'react';
-import { TRANSLATIONS } from '../constants';
+import { TRANSLATIONS } from '../translations';
 import { Language } from '../types';
 
 interface CookieBannerProps {

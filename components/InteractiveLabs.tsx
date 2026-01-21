@@ -5,18 +5,27 @@
 */
 
 import React, { useState, useEffect } from 'react';
+// Fix: Import TRANSLATIONS from the correct translations file instead of constants
+import { TRANSLATIONS } from '../translations';
+import { Language } from '../types';
 
 type LabModule = 'ERP' | 'CRM' | 'Ecommerce' | 'Cyber';
 
-const InteractiveLabs: React.FC = () => {
+interface InteractiveLabsProps {
+  language: Language;
+}
+
+const InteractiveLabs: React.FC<InteractiveLabsProps> = ({ language }) => {
+  const t = (TRANSLATIONS[language]?.labs) || TRANSLATIONS.en.labs;
+  
   const [activeTab, setActiveTab] = useState<LabModule>('ERP');
   const [isProcessing, setIsProcessing] = useState(false);
-  const [statusText, setStatusText] = useState('SYSTEM_IDLE');
+  const [statusText, setStatusText] = useState(t.archVal);
   const [activeNodes, setActiveNodes] = useState<number[]>([]);
 
   const runSimulation = () => {
     setIsProcessing(true);
-    setStatusText('INITIALIZING_SEQUENCE...');
+    setStatusText(t.processing);
     setActiveNodes([]);
     
     // Simulate multi-stage processing
@@ -40,30 +49,25 @@ const InteractiveLabs: React.FC = () => {
   }, [activeTab]);
 
   return (
-    <section id="labs" className="py-32 bg-[#0a0b0d] overflow-hidden selection:bg-[#0037f3] selection:text-white">
+    <section id="labs" className="py-32 bg-[#0a0b0d] overflow-hidden selection:bg-[#0037f3] selection:text-white text-start">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="flex flex-col lg:flex-row gap-20 items-stretch">
           
           <div className="lg:w-[35%] flex flex-col justify-center">
             <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#0037f3]/10 text-[#0037f3] text-[10px] font-black uppercase tracking-[0.4em] mb-10 rounded-full border border-[#0037f3]/20 self-start">
               <span className="w-2 h-2 rounded-full bg-[#0037f3] animate-pulse"></span>
-              Live Systems Lab
+              {t.badge}
             </div>
             <h2 className="text-5xl md:text-7xl font-heading font-extrabold text-white leading-[0.9] tracking-tighter mb-8">
-                Interactive <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0037f3] to-[#4e79ff]">Prototypes.</span>
+                {t.title} <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0037f3] to-[#4e79ff]">{t.accent}</span>
             </h2>
             <p className="text-white/40 text-lg font-medium mb-12 max-w-sm">
-              Interact with the core logic architectures that power Syscomatics. Select a specialized module to visualize live data flows.
+              {t.sub}
             </p>
             
             <div className="grid grid-cols-1 gap-4">
-              {[
-                { id: 'ERP', label: 'Enterprise ERP', desc: 'Global Sync Hub' },
-                { id: 'CRM', label: 'Intelligence CRM', desc: 'Neural Analysis' },
-                { id: 'Ecommerce', label: 'Checkout Logic', desc: 'Transaction Flow' },
-                { id: 'Cyber', label: 'Security Shield', desc: 'Threat Defense' }
-              ].map((tab) => (
+              {t.modules.map((tab: any) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id as LabModule)}
@@ -78,8 +82,8 @@ const InteractiveLabs: React.FC = () => {
                   </div>
                   <div className="text-white font-heading font-bold text-lg">{tab.label}</div>
                   {activeTab === tab.id && (
-                    <div className="absolute right-6 top-1/2 -translate-y-1/2">
-                        <svg className="w-5 h-5 text-[#0037f3]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className={`absolute ${language === 'ar' ? 'left-6' : 'right-6'} top-1/2 -translate-y-1/2`}>
+                        <svg className={`w-5 h-5 text-[#0037f3] ${language === 'ar' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
                         </svg>
                     </div>
@@ -189,7 +193,7 @@ const InteractiveLabs: React.FC = () => {
                                 <div className={`mt-4 text-[9px] font-black uppercase tracking-widest text-center transition-colors ${activeNodes.includes(i) ? 'text-white' : 'text-white/20'}`}>{step.name}</div>
                                 <div className={`text-[7px] font-mono mt-1 opacity-40 ${activeNodes.includes(i) ? 'text-[#0037f3]' : 'text-white'}`}>{step.label}</div>
                             </div>
-                            {i < 3 && (
+                            {i < 4 && (
                                 <div className="w-0.5 h-12 md:w-16 md:h-0.5 bg-white/5 relative overflow-hidden rounded-full">
                                     <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-[#0037f3] to-transparent transition-all duration-[800ms] ${activeNodes.includes(i + 1) ? 'translate-x-full' : '-translate-x-full'}`}></div>
                                 </div>
@@ -235,13 +239,13 @@ const InteractiveLabs: React.FC = () => {
               <div className="absolute bottom-12 left-12 right-12 flex flex-col md:flex-row items-center justify-between gap-8 z-20">
                  <div className="flex gap-4">
                     <div className="flex flex-col">
-                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20 mb-1">Architecture</span>
-                        <span className="text-[11px] font-heading font-bold text-white/60">Cloud-Native Polyglot</span>
+                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20 mb-1">{t.arch}</span>
+                        <span className="text-[11px] font-heading font-bold text-white/60">{t.archVal}</span>
                     </div>
                     <div className="w-px h-8 bg-white/10"></div>
                     <div className="flex flex-col">
-                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20 mb-1">Latency</span>
-                        <span className="text-[11px] font-heading font-bold text-white/60">~14ms AVG</span>
+                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20 mb-1">{t.latency}</span>
+                        <span className="text-[11px] font-heading font-bold text-white/60">{t.latencyVal}</span>
                     </div>
                  </div>
 
@@ -250,7 +254,7 @@ const InteractiveLabs: React.FC = () => {
                     disabled={isProcessing}
                     className="group relative px-12 py-5 bg-[#0037f3] text-white text-[11px] font-black uppercase tracking-[0.3em] overflow-hidden shadow-2xl shadow-[#0037f3]/40 transition-all active:scale-95 disabled:opacity-50"
                    >
-                     <span className="relative z-10">{isProcessing ? 'Executing Sequence...' : 'Run Simulation'}</span>
+                     <span className="relative z-10">{isProcessing ? t.processing : t.button}</span>
                      <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500 mix-blend-difference"></div>
                  </button>
               </div>

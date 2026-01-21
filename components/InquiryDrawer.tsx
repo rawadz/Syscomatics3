@@ -6,7 +6,7 @@
 
 import React from 'react';
 import { Service, Language } from '../types';
-import { TRANSLATIONS } from '../constants';
+import { TRANSLATIONS } from '../translations';
 
 interface InquiryDrawerProps {
   isOpen: boolean;
@@ -56,7 +56,6 @@ const InquiryDrawer: React.FC<InquiryDrawerProps> = ({ isOpen, onClose, items, o
             items.map((item, idx) => (
               <div key={`${item.id}-${idx}`} className="flex gap-6 animate-fade-in-up border-b border-gray-100 pb-8 last:border-0">
                 <div className="w-20 h-24 bg-gray-100 flex-shrink-0 relative overflow-hidden group">
-                  {/* Image is in full color now */}
                   <img src={item.imageUrl} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
                 </div>
                 <div className="flex-1 flex flex-col justify-between">

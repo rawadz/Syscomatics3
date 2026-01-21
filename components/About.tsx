@@ -5,7 +5,7 @@
 */
 
 import React from 'react';
-import { TRANSLATIONS } from '../constants';
+import { TRANSLATIONS } from '../translations';
 import { Language } from '../types';
 
 interface AboutProps {
@@ -85,7 +85,7 @@ const About: React.FC<AboutProps> = ({ language }) => {
                  </svg>
               </div>
               <div>
-                 <div className="text-2xl md:text-4xl font-heading font-black text-white mb-1 md:mb-2 tracking-tight">99.9% Uptime</div>
+                 <div className="text-2xl md:text-4xl font-heading font-black text-white mb-1 md:mb-2 tracking-tight">{t.uptimeLabel}</div>
                  <div className="text-[8px] md:text-sm font-black text-[#0037f3] uppercase tracking-[0.4em]">{t.uptime}</div>
               </div>
            </div>

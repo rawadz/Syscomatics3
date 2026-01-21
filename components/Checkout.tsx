@@ -6,7 +6,7 @@
 
 import React, { useState } from 'react';
 import { Service, Language } from '../types';
-import { TRANSLATIONS } from '../constants';
+import { TRANSLATIONS } from '../translations';
 
 interface CheckoutProps {
   items: Service[];
@@ -87,7 +87,7 @@ const Checkout: React.FC<CheckoutProps> = ({ items, onBack, language, onSuccess 
           <h1 className="text-3xl font-heading font-extrabold text-[#0a0b0d] mb-4 tracking-tighter">{t.success}</h1>
           <p className="text-gray-500 mb-10 text-base leading-relaxed">{t.successSub}</p>
           <button onClick={onBack} className="px-10 py-4 bg-[#0a0b0d] text-white text-[10px] font-black uppercase tracking-[0.2em] hover:bg-[#0037f3] transition-all rounded-xl">
-              {language === 'ar' ? 'العودة للرئيسية' : 'Return Home'}
+              {t.returnHome}
           </button>
         </div>
       </div>
@@ -132,7 +132,7 @@ const Checkout: React.FC<CheckoutProps> = ({ items, onBack, language, onSuccess 
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-[9px] font-black uppercase tracking-widest text-gray-400 ml-1">{language === 'ar' ? 'سياق المشروع' : 'Project Scope'}</label>
+                <label className="text-[9px] font-black uppercase tracking-widest text-gray-400 ml-1">{t.scopeLabel}</label>
                 <textarea 
                   required
                   name="details"
@@ -152,7 +152,7 @@ const Checkout: React.FC<CheckoutProps> = ({ items, onBack, language, onSuccess 
                     disabled={isSubmitting || items.length === 0}
                     className="w-full py-5 bg-[#0037f3] text-white uppercase tracking-[0.2em] text-[11px] font-black hover:bg-[#0a0b0d] transition-all rounded-xl shadow-lg shadow-[#0037f3]/20 disabled:opacity-50 flex items-center justify-center gap-3"
                 >
-                    {isSubmitting ? (language === 'ar' ? 'جاري المعالجة...' : 'Processing...') : (
+                    {isSubmitting ? t.processing : (
                       <>
                         {t.submit}
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className={`w-3.5 h-3.5 ${language === 'ar' ? 'rotate-180' : ''}`}>
@@ -187,8 +187,14 @@ const Checkout: React.FC<CheckoutProps> = ({ items, onBack, language, onSuccess 
                 <div className="mt-8 p-6 bg-[#0a0b0d] rounded-2xl text-white relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-24 h-24 bg-[#0037f3]/20 rounded-full translate-x-12 -translate-y-12"></div>
                     <div className="relative z-10">
-                        <div className="text-[8px] font-black uppercase tracking-[0.3em] text-[#0037f3] mb-2">Secure Channel</div>
-                        <p className="text-[10px] text-white/50 leading-relaxed font-medium">Data is protected by Damascus Hub encryption protocols. Technical verification starts upon submission.</p>
+                        <div className="text-[8px] font-black uppercase tracking-[0.3em] text-[#0037f3] mb-2">
+                            {language === 'ar' ? 'قناة آمنة' : 'Secure Channel'}
+                        </div>
+                        <p className="text-[10px] text-white/50 leading-relaxed font-medium">
+                            {language === 'ar' 
+                                ? 'البيانات محمية ببروتوكولات تشفير مركز دمشق. يبدأ التحقق الفني فور الإرسال.' 
+                                : 'Data is protected by Damascus Hub encryption protocols. Technical verification starts upon submission.'}
+                        </p>
                     </div>
                 </div>
             </div>

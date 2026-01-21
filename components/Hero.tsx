@@ -5,7 +5,7 @@
 */
 
 import React from 'react';
-import { TRANSLATIONS } from '../constants';
+import { TRANSLATIONS } from '../translations';
 import { Language } from '../types';
 
 interface HeroProps {

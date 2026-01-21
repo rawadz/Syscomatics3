@@ -22,7 +22,7 @@ const Assistant: React.FC<AssistantProps> = ({ language }) => {
   useEffect(() => {
     const greetings: Record<Language, string> = {
         en: 'Strategic analysis initiated. I am the Syscomatics Solution Architect. How can I help you transform your infrastructure?',
-        ar: 'بدأ التحليل الاستراتيجي. أنا مهندس الحلول في سيسكوماتيكس. كيف يمكنني مساعدتك؟',
+        ar: 'بدأ التحليل الاستراتيجي. أنا مهندس الحلول في سيسكوماتيكس. كيف يمكنني مساعدتك في تطوير بنيتك التحتية؟',
         ku: 'Analîza stratejîk dest pê kir. Ez mîmarê çareseriyê yê Syscomatics im. Ez çawa dikarim alîkar bim?'
     };
     setMessages([{ role: 'model', text: greetings[language], timestamp: Date.now() }]);
@@ -77,10 +77,14 @@ const Assistant: React.FC<AssistantProps> = ({ language }) => {
                    <SparkleIcon />
                 </div>
                 <div>
-                    <h3 className="font-heading font-extrabold text-sm tracking-wide">Solution Architect</h3>
+                    <h3 className="font-heading font-extrabold text-sm tracking-wide">
+                        {language === 'ar' ? 'مهندس الحلول' : 'Solution Architect'}
+                    </h3>
                     <div className="flex items-center gap-1.5 opacity-70">
                         <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
-                        <span className="text-[10px] uppercase font-bold tracking-widest">Grounded Intelligence</span>
+                        <span className="text-[10px] uppercase font-bold tracking-widest">
+                            {language === 'ar' ? 'ذكاء متصل' : 'Grounded Intelligence'}
+                        </span>
                     </div>
                 </div>
             </div>
@@ -119,7 +123,7 @@ const Assistant: React.FC<AssistantProps> = ({ language }) => {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={handleKeyPress}
-                placeholder="Query architectural engine..." 
+                placeholder={language === 'ar' ? 'اسأل مهندس المعمارية...' : "Query architectural engine..."} 
                 className="flex-1 bg-transparent px-3 py-2 text-sm outline-none font-medium placeholder-gray-400"
               />
               <button 

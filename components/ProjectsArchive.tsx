@@ -5,7 +5,8 @@
 */
 
 import React, { useEffect } from 'react';
-import { JOURNAL_ARTICLES, TRANSLATIONS } from '../constants';
+import { TRANSLATIONS } from '../translations';
+import { JOURNAL_ARTICLES } from '../journalArticles';
 import { JournalArticle, Language } from '../types';
 
 interface ProjectsArchiveProps {
@@ -43,11 +44,11 @@ const ProjectsArchive: React.FC<ProjectsArchiveProps> = ({ onArticleClick, onBac
              <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-[#0037f3]">{t.sub}</span>
           </div>
           <h1 className="text-4xl md:text-8xl font-heading font-extrabold text-[#0a0b0d] tracking-tighter leading-[1] md:leading-[0.85] mb-8">
-            The Digital <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0037f3] to-[#4e79ff]">Transformations.</span>
+            {t.archiveHeader} <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0037f3] to-[#4e79ff]">{t.archiveAccent}</span>
           </h1>
           <p className="text-lg md:text-2xl text-gray-400 font-medium max-w-2xl leading-relaxed">
-            A comprehensive record of engineering excellence and sovereign digital infrastructure built across the region.
+            {t.archiveSub}
           </p>
         </header>
 
@@ -79,7 +80,7 @@ const ProjectsArchive: React.FC<ProjectsArchiveProps> = ({ onArticleClick, onBac
                   {article.excerpt}
                 </p>
                 <div className="mt-auto pt-6 border-t border-gray-50 flex items-center justify-between">
-                    <span className="text-[9px] font-black uppercase tracking-widest text-gray-300">Architecture Log</span>
+                    <span className="text-[9px] font-black uppercase tracking-widest text-gray-300">{t.logLabel}</span>
                     <svg className={`w-5 h-5 text-[#0037f3] opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all ${language === 'ar' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </div>
               </div>

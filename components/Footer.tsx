@@ -5,7 +5,7 @@
 */
 
 import React from 'react';
-import { TRANSLATIONS } from '../constants';
+import { TRANSLATIONS } from '../translations';
 import { Language } from '../types';
 
 interface FooterProps {
@@ -85,22 +85,26 @@ const Footer: React.FC<FooterProps> = ({ onLinkClick, language }) => {
             <div className="space-y-4">
                 <h4 className="text-[9px] font-black uppercase tracking-[0.4em] text-[#0037f3]">{t.contact}</h4>
                 <ul className="space-y-2">
-                    <li className="flex flex-col">
-                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20">Operational Hub</span>
+                    <li className="flex flex-col items-start">
+                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20">{t.opsHub}</span>
                         <span className="text-base font-heading font-extrabold text-white/90">{t.address}</span>
                     </li>
-                    <li className="flex flex-col pt-2">
-                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20">Voice Link</span>
-                        <a href={`tel:${t.phone.replace(/\s/g, '')}`} className="text-base font-heading font-extrabold text-white/90 hover:text-[#0037f3] transition-colors">{t.phone}</a>
+                    <li className="flex flex-col pt-2 items-start">
+                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20">{t.voiceLink}</span>
+                        <a href={`tel:${t.phone.replace(/\s/g, '')}`} className="text-base font-heading font-extrabold text-white/90 hover:text-[#0037f3] transition-colors block">
+                          <span dir="ltr">{t.phone}</span>
+                        </a>
                     </li>
                 </ul>
             </div>
             <div className="space-y-4">
                 <h4 className="text-[9px] font-black uppercase tracking-[0.4em] text-[#0037f3] opacity-0 sm:block hidden">.</h4>
                 <ul className="space-y-2">
-                    <li className="flex flex-col">
-                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20">Correspondence</span>
-                        <a href={`mailto:${t.email}`} className="text-base font-heading font-extrabold text-white/90 hover:text-[#0037f3] transition-colors">{t.email}</a>
+                    <li className="flex flex-col items-start">
+                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20">{t.correspondence}</span>
+                        <a href={`mailto:${t.email}`} className="text-base font-heading font-extrabold text-white/90 hover:text-[#0037f3] transition-colors block">
+                           <span dir="ltr">{t.email}</span>
+                        </a>
                     </li>
                     <li className="pt-4">
                         <div className="flex items-center gap-3">
@@ -143,9 +147,9 @@ const Footer: React.FC<FooterProps> = ({ onLinkClick, language }) => {
           <div className="lg:col-span-3 lg:text-right">
               <h4 className="text-[9px] font-black uppercase tracking-[0.4em] text-[#0037f3] mb-4">{t.nav}</h4>
               <ul className="space-y-2">
-                <li><a href="#services" onClick={(e) => onLinkClick(e, 'services')} className="text-xs font-bold text-white/40 hover:text-white transition-all">Engineering Solutions</a></li>
-                <li><a href="#about" onClick={(e) => onLinkClick(e, 'about')} className="text-xs font-bold text-white/40 hover:text-white transition-all">Strategy Roadmap</a></li>
-                <li><a href="#journal" onClick={(e) => onLinkClick(e, 'journal')} className="text-xs font-bold text-white/40 hover:text-white transition-all">Transformation Stories</a></li>
+                <li><a href="#services" onClick={(e) => onLinkClick(e, 'services')} className="text-xs font-bold text-white/40 hover:text-white transition-all">{t.link1}</a></li>
+                <li><a href="#about" onClick={(e) => onLinkClick(e, 'about')} className="text-xs font-bold text-white/40 hover:text-white transition-all">{t.link2}</a></li>
+                <li><a href="#journal" onClick={(e) => onLinkClick(e, 'journal')} className="text-xs font-bold text-white/40 hover:text-white transition-all">{t.link3}</a></li>
               </ul>
           </div>
         </div>
@@ -153,13 +157,13 @@ const Footer: React.FC<FooterProps> = ({ onLinkClick, language }) => {
         {/* Footer Bottom Bar - High Compression */}
         <div className="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-start">
           <div className="flex flex-wrap justify-center sm:justify-start gap-x-8 gap-y-2">
-            <p className="text-[8px] font-black uppercase tracking-[0.4em] text-white/10">&copy; {currentYear} Syscomatics Global Systems.</p>
-            <p className="text-[8px] font-black uppercase tracking-[0.4em] text-white/10">Founded by Rawad Zaitoun</p>
+            <p className="text-[8px] font-black uppercase tracking-[0.4em] text-white/10">&copy; {currentYear} {t.copyright}.</p>
+            <p className="text-[8px] font-black uppercase tracking-[0.4em] text-white/10">{t.founder}</p>
           </div>
           
           <div className="flex items-center gap-3">
             <div className="w-1 h-1 rounded-full bg-[#0037f3]/20"></div>
-            <span className="text-[8px] font-black uppercase tracking-[0.5em] text-white/5">Damascus Hub | V.2.5.0</span>
+            <span className="text-[8px] font-black uppercase tracking-[0.5em] text-white/5">{t.version}</span>
           </div>
         </div>
       </div>

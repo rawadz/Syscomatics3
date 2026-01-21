@@ -5,7 +5,8 @@
 */
 
 import { GoogleGenAI } from "@google/genai";
-import { getServices, KNOWLEDGE_BASE } from '../constants';
+import { getServices } from '../servicesData';
+import { KNOWLEDGE_BASE } from '../translations';
 import { Language } from '../types';
 
 const getSystemInstruction = (language: Language) => {

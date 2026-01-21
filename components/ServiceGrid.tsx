@@ -5,7 +5,8 @@
 */
 
 import React, { useState, useMemo } from 'react';
-import { getServices, TRANSLATIONS } from '../constants';
+import { TRANSLATIONS } from '../translations';
+import { getServices } from '../servicesData';
 import { Service, Language } from '../types';
 import ServiceCard from './ServiceCard';
 
@@ -27,6 +28,12 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ onServiceClick, language }) =
     if (activeCategory === 'All') return localizedServices;
     return localizedServices.filter(s => s.category === activeCategory);
   }, [activeCategory, localizedServices]);
+
+  const allLabelMap: Record<Language, string> = {
+    en: 'All',
+    ar: 'الكل',
+    ku: 'Hemî'
+  };
 
   return (
     <section id="services" className="py-20 md:py-32 px-6 md:px-12 bg-white">
@@ -51,7 +58,7 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ onServiceClick, language }) =
                     : 'bg-white border-gray-100 text-gray-400 hover:border-[#0037f3] hover:text-[#0037f3]'
                 }`}
               >
-                {cat === 'All' ? (language === 'ar' ? 'الكل' : (language === 'ku' ? 'Hemî' : 'All')) : cat}
+                {cat === 'All' ? allLabelMap[language] : cat}
               </button>
             ))}
           </div>

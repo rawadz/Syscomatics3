@@ -6,7 +6,7 @@
 
 import React from 'react';
 import { Service, Language } from '../types';
-import { TRANSLATIONS } from '../constants';
+import { TRANSLATIONS } from '../translations';
 
 interface ServiceCardProps {
   service: Service;

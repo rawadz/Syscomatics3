@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
 */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ServiceGrid from './components/ServiceGrid';
@@ -18,7 +18,9 @@ import ProjectsArchive from './components/ProjectsArchive';
 import InquiryDrawer from './components/InquiryDrawer';
 import Checkout from './components/Checkout';
 import CookieBanner from './components/CookieBanner';
-import { Service, ViewState, Language } from './types';
+import { Service, ViewState, Language, JournalArticle } from './types';
+import { getServices } from './servicesData';
+import { JOURNAL_ARTICLES } from './journalArticles';
 
 function App() {
   // PERSISTENCE INIT
@@ -36,6 +38,22 @@ function App() {
   });
   const [isInquiryOpen, setIsInquiryOpen] = useState(false);
   const [language, setLanguage] = useState<Language>(initialLang);
+
+  // Derive current data based on view ID and current language
+  const activeService = useMemo(() => {
+    if (view.type === 'service') {
+      return getServices(language).find(s => s.id === view.serviceId);
+    }
+    return null;
+  }, [view, language]);
+
+  const activeArticle = useMemo(() => {
+    if (view.type === 'journal') {
+      const articles = JOURNAL_ARTICLES[language] || JOURNAL_ARTICLES.en;
+      return articles.find(a => a.id === view.articleId);
+    }
+    return null;
+  }, [view, language]);
 
   // Sync Language and Direction
   useEffect(() => {
@@ -115,7 +133,7 @@ function App() {
                 <ServiceGrid 
                   onServiceClick={(s) => {
                       window.scrollTo({ top: 0, behavior: 'smooth' });
-                      setView({ type: 'service', service: s });
+                      setView({ type: 'service', serviceId: s.id });
                   }} 
                   language={language}
                 />
@@ -124,7 +142,7 @@ function App() {
             <Journal 
                 onArticleClick={(a) => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
-                    setView({ type: 'journal', article: a });
+                    setView({ type: 'journal', articleId: a.id });
                 }} 
                 onExploreAll={() => setView({ type: 'projects-archive' })}
                 language={language}
@@ -136,16 +154,16 @@ function App() {
           <ProjectsArchive 
             onArticleClick={(a) => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
-              setView({ type: 'journal', article: a });
+              setView({ type: 'journal', articleId: a.id });
             }}
             onBack={() => setView({ type: 'home' })}
             language={language}
           />
         )}
 
-        {view.type === 'service' && (
+        {view.type === 'service' && activeService && (
           <ServiceDetail 
-            service={view.service} 
+            service={activeService} 
             language={language}
             onBack={() => {
               setView({ type: 'home' });
@@ -155,9 +173,9 @@ function App() {
           />
         )}
 
-        {view.type === 'journal' && (
+        {view.type === 'journal' && activeArticle && (
           <JournalDetail 
-            article={view.article} 
+            article={activeArticle} 
             language={language}
             onBack={() => setView({ type: 'home' })}
           />

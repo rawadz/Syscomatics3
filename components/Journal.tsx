@@ -5,7 +5,8 @@
 */
 
 import React from 'react';
-import { JOURNAL_ARTICLES, TRANSLATIONS } from '../constants';
+import { TRANSLATIONS } from '../translations';
+import { JOURNAL_ARTICLES } from '../journalArticles';
 import { JournalArticle, Language } from '../types';
 
 interface JournalProps {
@@ -51,11 +52,6 @@ const Journal: React.FC<JournalProps> = ({ onArticleClick, onExploreAll, languag
               <div className="relative aspect-[16/9] bg-gray-100 overflow-hidden mb-8 md:mb-12 rounded-[2rem] md:rounded-[3rem] shadow-2xl">
                 <img src={featured.image} alt={featured.title} className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                <div className="absolute top-6 left-6 md:top-8 md:left-8">
-                    <div className="px-3 py-1.5 md:px-4 md:py-2 bg-[#0037f3]/90 backdrop-blur-md text-white text-[8px] md:text-[9px] font-black uppercase tracking-widest rounded-lg">
-                       TRANSFORMATION_RECORD
-                    </div>
-                </div>
               </div>
               <div className="max-w-2xl">
                 <h3 className="text-2xl md:text-5xl font-heading font-extrabold text-[#0a0b0d] group-hover:text-[#0037f3] transition-colors tracking-tighter mb-4 md:mb-6">
@@ -93,7 +89,7 @@ const Journal: React.FC<JournalProps> = ({ onArticleClick, onExploreAll, languag
                     className="w-full group flex items-center justify-between p-8 bg-gray-50 border border-gray-100 rounded-[2.5rem] hover:bg-[#0a0b0d] hover:text-white transition-all duration-500"
                 >
                     <div className="text-start">
-                        <div className="text-[10px] font-black uppercase tracking-[0.3em] text-[#0037f3] mb-2">{language === 'ar' ? 'الأرشيف الكامل' : 'Full Archive'}</div>
+                        <div className="text-[10px] font-black uppercase tracking-[0.3em] text-[#0037f3] mb-2">{t.fullArchive}</div>
                         <h4 className="text-xl md:text-2xl font-heading font-extrabold tracking-tight">{t.exploreAll}</h4>
                     </div>
                     <div className="w-12 h-12 rounded-full bg-[#0037f3] text-white flex items-center justify-center group-hover:translate-x-2 transition-transform">

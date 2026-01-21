@@ -6,7 +6,8 @@
 
 import React, { useEffect } from 'react';
 import { Service, Language } from '../types';
-import { TRANSLATIONS } from '../constants';
+// Fix: Import TRANSLATIONS from the correct translations file instead of constants
+import { TRANSLATIONS } from '../translations';
 
 interface ServiceDetailProps {
   service: Service;
@@ -92,12 +93,12 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onAddToB
             <div className="max-w-2xl mb-12 md:mb-24">
                 <div className="h-1 w-12 md:w-16 bg-[#0037f3] mb-6 md:mb-8"></div>
                 <h2 className="text-3xl md:text-6xl font-heading font-extrabold text-[#0a0b0d] tracking-tighter mb-4 md:mb-8">{t.pillars}</h2>
-                <p className="text-gray-400 text-base md:text-lg font-medium">Engineered foundations ensuring scalability, security, and operational excellence.</p>
+                <p className="text-gray-400 text-base md:text-lg font-medium">{t.pillarsSub}</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 {service.pillars?.map((pillar, idx) => (
                     <div key={idx} className="p-8 md:p-12 bg-white border border-gray-100 rounded-[2rem] md:rounded-[3rem] hover:shadow-4xl hover:border-[#0037f3]/40 transition-all group relative overflow-hidden">
-                        <div className="absolute top-0 right-0 p-6 md:p-8 text-3xl md:text-4xl font-heading font-black text-gray-50 group-hover:text-[#0037f3]/10 transition-colors">0{idx + 1}</div>
+                        <div className={`absolute top-0 ${language === 'ar' ? 'left-0' : 'right-0'} p-6 md:p-8 text-3xl md:text-4xl font-heading font-black text-gray-50 group-hover:text-[#0037f3]/10 transition-colors`}>0{idx + 1}</div>
                         <h3 className="text-xl md:text-3xl font-heading font-extrabold text-[#0a0b0d] mb-4 md:mb-6 tracking-tight group-hover:text-[#0037f3] transition-colors">{pillar.title}</h3>
                         <p className="text-base md:text-lg text-gray-500 font-medium leading-relaxed">{pillar.description}</p>
                     </div>
@@ -115,7 +116,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onAddToB
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20">
                 <div>
                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#0037f3]/20 border border-[#0037f3]/30 text-[#0037f3] text-[8px] md:text-[9px] font-black uppercase tracking-widest mb-6 md:mb-10 rounded-full">
-                        ROI & Strategic Outcomes
+                        {t.roiBadge}
                     </div>
                     <h2 className="text-3xl md:text-7xl font-heading font-extrabold tracking-tighter mb-8 md:mb-12">{t.value}</h2>
                     <p className="text-lg md:text-2xl text-white/70 font-medium leading-relaxed">
@@ -146,8 +147,8 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onAddToB
         {/* Final CTA */}
         <section className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 pt-16 md:pt-24 border-t border-gray-100">
             <div className="text-center md:text-start max-w-md">
-                <h3 className="text-2xl md:text-3xl font-heading font-extrabold text-[#0a0b0d] mb-3 md:mb-4">Ready for Engineering?</h3>
-                <p className="text-sm md:text-base text-gray-400 font-medium">Add this solution to your project brief for a technical architecture review within 24 hours.</p>
+                <h3 className="text-2xl md:text-3xl font-heading font-extrabold text-[#0a0b0d] mb-3 md:mb-4">{t.ctaHeader}</h3>
+                <p className="text-sm md:text-base text-gray-400 font-medium">{t.ctaSub}</p>
             </div>
             <button 
                 onClick={() => onAddToBrief(service)}
