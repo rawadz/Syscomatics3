@@ -76,9 +76,9 @@ export const TRANSLATIONS: Record<Language, any> = {
       accent: 'Effective.', 
       sub: 'Three steps to power your business growth.',
       steps: [
-        { title: 'Listen', desc: 'We understand your goals and business challenges first.', img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000' },
-        { title: 'Build', desc: 'Our engineers create your custom digital architecture.', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000' },
-        { title: 'Command', desc: 'You take control of a powerful, scaling system.', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000' }
+        { title: 'Listen', desc: 'We understand your goals and business challenges first.', img: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+        { title: 'Build', desc: 'Our engineers create your custom digital architecture.', img: 'https://images.unsplash.com/photo-1759984782632-732eea46df77?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+        { title: 'Command', desc: 'You take control of a powerful, scaling system.', img: 'https://images.unsplash.com/photo-1748609339084-ea43ec1b8fbb?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
       ],
       uptime: 'Always On', 
       uptimed: 'High-speed systems ensuring continuous operations.',
@@ -192,9 +192,9 @@ export const TRANSLATIONS: Record<Language, any> = {
       accent: 'نتائج ملموسة.', 
       sub: 'ثلاث خطوات تقنية مدروسة لتعزيز نمو أعمالك وضمان تفوقها التشغيلي.',
       steps: [
-        { title: 'نصغي', desc: 'نبدأ بفهم أهدافك والتحديات التي تواجه أعمالك بعمق واحترافية.', img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000' },
-        { title: 'نبني', desc: 'يقوم مهندسونا بابتكار معمارية رقمية مخصصة بالكامل لاحتياجاتك.', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000' },
-        { title: 'تقود', desc: 'تتولى السيطرة الكاملة على نظام قوي، آمن، وقابل للتوسع اللامتناهي.', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000' }
+        { title: 'نصغي', desc: 'نبدأ بفهم أهدافك والتحديات التي تواجه أعمالك بعمق واحترافية.', img: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+        { title: 'نبني', desc: 'يقوم مهندسونا بابتكار معمارية رقمية مخصصة بالكامل لاحتياجاتك.', img: 'https://images.unsplash.com/photo-1759984782632-732eea46df77?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+        { title: 'تقود', desc: 'تتولى السيطرة الكاملة على نظام قوي، آمن، وقابل للتوسع اللامتناهي.', img: 'https://images.unsplash.com/photo-1748609339084-ea43ec1b8fbb?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
       ],
       uptime: 'جاهزية دائمة', 
       uptimed: 'أنظمة عالية السرعة تضمن استمرارية أعمالك دون أي انقطاع تقني.',
@@ -308,9 +308,9 @@ export const TRANSLATIONS: Record<Language, any> = {
       accent: 'Bibandor.', 
       sub: 'Sê gav ji bo bihêzkirina mezinbûna karsaziya we.',
       steps: [
-        { title: 'Guhdarî', desc: 'Em pêşî armanc û kêşeyên karsaziya we fam dikin.', img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000' },
-        { title: 'Avakirin', desc: 'Endezyarên me mîmariya dîjîtal a taybet ji we re ava dikin.', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000' },
-        { title: 'Fermandekirin', desc: 'Hûn kontrola pergalek bi hêz û mezin dibin.', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000' }
+        { title: 'Guhdarî', desc: 'Em pêşî armanc û kêşeyên karsaziya we fam dikin.', img: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+        { title: 'Avakirin', desc: 'Endezyarên me mîmariya dîjîtal a taybet ji we re ava dikin.', img: 'https://images.unsplash.com/photo-1759984782632-732eea46df77?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
+        { title: 'Fermandekirin', desc: 'Hûn kontrola pergalek bi hêz û mezin dibin.', img: 'https://images.unsplash.com/photo-1748609339084-ea43ec1b8fbb?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
       ],
       uptime: 'Her Dem Vekirî', 
       uptimed: 'Pergalên leza bilind ku operasyonên berdewam garantî dikin.',

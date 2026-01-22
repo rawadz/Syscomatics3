@@ -64,15 +64,6 @@ const About: React.FC<AboutProps> = ({ language }) => {
                           className="w-full h-full object-cover grayscale brightness-[0.6] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out"
                        />
                        <div className="absolute inset-0 bg-gradient-to-t from-[#111215] via-[#111215]/20 to-transparent"></div>
-                       
-                       {/* Floating Badge (Replacement for bulky numbers) */}
-                       <div className="absolute top-6 left-6 md:top-8 md:left-8">
-                          <div className="flex items-center gap-2 px-3 py-1 bg-[#0037f3]/90 backdrop-blur-md rounded-lg shadow-xl">
-                             <span className="text-[10px] font-black text-white/50 tracking-tighter">0{idx + 1}</span>
-                             <div className="w-px h-3 bg-white/20"></div>
-                             <span className="text-[8px] font-black text-white uppercase tracking-widest">{step.title}</span>
-                          </div>
-                       </div>
                     </div>
 
                     {/* Content Block */}
@@ -111,7 +102,7 @@ const About: React.FC<AboutProps> = ({ language }) => {
                  <div className="text-[10px] md:text-xs font-black text-[#0037f3] uppercase tracking-[0.4em]">
                     {t.uptime}
                  </div>
-              </div>
+              </div> 
            </div>
            <p className="text-white/30 text-lg md:text-xl font-medium max-w-sm text-center lg:text-start leading-relaxed">
               {t.uptimed}

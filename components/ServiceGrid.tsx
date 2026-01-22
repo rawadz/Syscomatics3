@@ -25,6 +25,15 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ onServiceClick, language }) =
   const categories = ['All', 'Enterprise', 'Development', 'Security', 'Design', 'Consulting', 'Cloud', 'Blockchain'];
   const localizedServices = getServices(language);
 
+  // Dynamic counting of services per category
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = { All: localizedServices.length };
+    localizedServices.forEach(s => {
+      counts[s.category] = (counts[s.category] || 0) + 1;
+    });
+    return counts;
+  }, [localizedServices]);
+
   const filteredServices = useMemo(() => {
     if (activeCategory === 'All') return localizedServices;
     return localizedServices.filter(s => s.category === activeCategory);
@@ -59,7 +68,6 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ onServiceClick, language }) =
 
   useEffect(() => {
     handleScroll();
-    // Reset scroll when category changes
     if (scrollRef.current) {
       scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
     }
@@ -68,39 +76,55 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ onServiceClick, language }) =
   return (
     <section id="services" className="py-20 md:py-48 px-6 md:px-12 bg-white relative overflow-hidden">
       <div className="max-w-[1440px] mx-auto">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 md:mb-24 gap-8 md:gap-12 text-start">
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-4 mb-6 md:mb-8">
-              <span className="h-1 w-12 md:w-20 bg-[#0037f3]"></span>
-              <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-[#0037f3]">Core Expertise</span>
-            </div>
-            <h2 className="text-4xl md:text-8xl font-heading font-extrabold text-[#0a0b0d] tracking-tighter mb-4 md:mb-6 leading-[0.9]">
-                {t.header}
-            </h2>
-            <p className="text-lg md:text-2xl text-gray-400 font-medium max-w-xl">{t.sub}</p>
+        
+        {/* Header Block */}
+        <div className="flex flex-col mb-16 md:mb-20 text-start">
+          <div className="flex items-center gap-4 mb-6 md:mb-8">
+            <span className="h-1 w-12 md:w-20 bg-[#0037f3]"></span>
+            <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-[#0037f3]">Core Expertise</span>
           </div>
-          
-          <div className="flex flex-wrap gap-2 md:gap-3 bg-gray-50 p-2 rounded-2xl border border-gray-100">
-            {categories.map(cat => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 md:px-6 md:py-3 text-[9px] md:text-[10px] font-black uppercase tracking-widest transition-all duration-500 rounded-xl ${
-                  activeCategory === cat 
-                    ? 'bg-[#0037f3] text-white shadow-lg shadow-[#0037f3]/20' 
-                    : 'text-gray-400 hover:text-[#0a0b0d] hover:bg-white'
-                }`}
-              >
-                {cat === 'All' ? allLabelMap[language] : cat}
-              </button>
-            ))}
+          <h2 className="text-4xl md:text-8xl font-heading font-extrabold text-[#0a0b0d] tracking-tighter mb-4 md:mb-6 leading-[0.9]">
+              {t.header}
+          </h2>
+          <p className="text-lg md:text-2xl text-gray-400 font-medium max-w-xl">{t.sub}</p>
+        </div>
+
+        {/* Categories Navigation Bar */}
+        <div className="mb-12 md:mb-16">
+          <div className="flex items-center gap-4 overflow-x-auto no-scrollbar -mx-6 px-6 md:mx-0 md:px-0 md:flex-wrap">
+            {categories.map(cat => {
+              const isActive = activeCategory === cat;
+              const count = categoryCounts[cat] || 0;
+              
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`group relative flex items-center gap-3 shrink-0 px-6 py-3.5 rounded-full border-2 transition-all duration-500 font-black uppercase tracking-[0.15em] text-[10px] md:text-[11px] ${
+                    isActive 
+                      ? 'bg-[#0a0b0d] border-[#0a0b0d] text-white shadow-xl shadow-[#0a0b0d]/10' 
+                      : 'bg-white border-gray-100 text-gray-400 hover:border-[#0037f3] hover:text-[#0037f3]'
+                  }`}
+                >
+                  {cat === 'All' ? allLabelMap[language] : cat}
+                  
+                  <span className={`flex items-center justify-center min-w-[24px] h-[24px] rounded-full text-[8px] transition-colors duration-500 ${
+                    isActive 
+                      ? 'bg-[#0037f3] text-white' 
+                      : 'bg-gray-50 text-gray-400 group-hover:bg-[#0037f3]/10 group-hover:text-[#0037f3]'
+                  }`}>
+                    {count.toString().padStart(2, '0')}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
 
         {/* Carousel Container */}
         <div className="relative group/carousel">
           {/* Navigation Arrows - Desktop Only */}
-          <div className={`hidden lg:flex absolute top-1/2 -translate-y-1/2 z-20 w-full justify-between pointer-events-none transition-opacity duration-300 px-4 ${filteredServices.length < 4 ? 'lg:opacity-0' : ''}`}>
+          <div className={`hidden lg:flex absolute top-1/2 -translate-y-1/2 z-20 w-full justify-between pointer-events-none transition-opacity duration-300 -mx-10 px-4 ${filteredServices.length < 4 ? 'lg:opacity-0' : ''}`}>
             <button 
               onClick={() => scroll('left')}
               disabled={!canScrollLeft}
@@ -134,6 +158,13 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ onServiceClick, language }) =
                 <ServiceCard service={service} onClick={onServiceClick} language={language} />
               </div>
             ))}
+            
+            {/* Empty State / Coming Soon */}
+            {filteredServices.length === 0 && (
+              <div className="w-full py-20 text-center bg-gray-50 rounded-[3rem] border border-dashed border-gray-200">
+                <p className="text-gray-400 font-bold uppercase tracking-widest text-xs">Architectural Logic Pending for this Sector</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
