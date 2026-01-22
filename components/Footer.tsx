@@ -14,9 +14,7 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ onLinkClick, language }) => {
-  // Safe translation access with fallback
   const t = (TRANSLATIONS[language]?.footer) || TRANSLATIONS.en.footer;
-
   const LOGO_WHITE = "https://images.unsplash.com/vector-1768853907602-d0fb4587ae8d?q=80&w=400&auto=format&fit=crop";
 
   const socialLinks = [
@@ -65,105 +63,84 @@ const Footer: React.FC<FooterProps> = ({ onLinkClick, language }) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0a0b0d] text-white pt-10 pb-8 relative overflow-hidden border-t border-white/5">
+    <footer className="bg-[#0a0b0d] text-white pt-16 md:pt-24 pb-8 relative overflow-hidden border-t border-white/5 text-start">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start">
           
-          {/* Logo Section - High-end vector */}
-          <div className="lg:col-span-3 flex items-start">
-             <div className="h-8 md:h-10">
-                <img 
-                  src={LOGO_WHITE} 
-                  alt="Syscomatics White Logo" 
-                  className="h-full w-auto object-contain opacity-90"
-                />
+          {/* Brand Info */}
+          <div className="md:col-span-5 space-y-6">
+             <div className="h-7 md:h-10">
+                <img src={LOGO_WHITE} alt="Syscomatics Logo" className="h-full w-auto object-contain" />
              </div>
-          </div>
-
-          {/* Contact Details - Compact Grid */}
-          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <div className="space-y-4">
-                <h4 className="text-[9px] font-black uppercase tracking-[0.4em] text-[#0037f3]">{t.contact}</h4>
-                <ul className="space-y-2">
-                    <li className="flex flex-col items-start">
-                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20">{t.opsHub}</span>
-                        <span className="text-base font-heading font-extrabold text-white/90">{t.address}</span>
-                    </li>
-                    <li className="flex flex-col pt-2 items-start">
-                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20">{t.voiceLink}</span>
-                        <a href={`tel:${t.phone.replace(/\s/g, '')}`} className="text-base font-heading font-extrabold text-white/90 hover:text-[#0037f3] transition-colors block">
-                          <span dir="ltr">{t.phone}</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div className="space-y-4">
-                <h4 className="text-[9px] font-black uppercase tracking-[0.4em] text-[#0037f3] opacity-0 sm:block hidden">.</h4>
-                <ul className="space-y-2">
-                    <li className="flex flex-col items-start">
-                        <span className="text-[8px] font-black uppercase tracking-widest text-white/20">{t.correspondence}</span>
-                        <a href={`mailto:${t.email}`} className="text-base font-heading font-extrabold text-white/90 hover:text-[#0037f3] transition-colors block">
-                           <span dir="ltr">{t.email}</span>
-                        </a>
-                    </li>
-                    <li className="pt-4">
-                        <div className="flex items-center gap-3">
-                            {socialLinks.map((social) => (
-                                <a
-                                key={social.name}
-                                href={social.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-10 h-10 rounded-lg border border-white/5 bg-white/5 text-white/30 flex items-center justify-center transition-all duration-300"
-                                style={{ 
-                                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.backgroundColor = social.brandColor;
-                                    e.currentTarget.style.borderColor = social.brandColor;
-                                    e.currentTarget.style.color = '#ffffff';
-                                    e.currentTarget.style.boxShadow = `0 10px 20px -5px ${social.brandColor}40`;
-                                    e.currentTarget.style.transform = 'translateY(-3px)';
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
-                                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)';
-                                    e.currentTarget.style.color = 'rgba(255, 255, 255, 0.3)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                    e.currentTarget.style.transform = 'translateY(0)';
-                                }}
-                                aria-label={social.name}
-                                >
-                                {social.icon}
-                                </a>
-                            ))}
-                        </div>
-                    </li>
-                </ul>
+             <p className="text-white/40 text-base md:text-xl font-medium max-w-sm leading-relaxed">
+                {t.sub}
+             </p>
+             <div className="flex items-center gap-3">
+                {socialLinks.map((social) => (
+                    <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 rounded-xl border border-white/5 bg-white/5 text-white/30 flex items-center justify-center transition-all duration-500 hover:-translate-y-1 hover:text-white"
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = social.brandColor;
+                        e.currentTarget.style.borderColor = social.brandColor;
+                        e.currentTarget.style.boxShadow = `0 10px 20px -5px ${social.brandColor}40`;
+                    }}
+                    onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+                        e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)';
+                        e.currentTarget.style.boxShadow = 'none';
+                    }}
+                    aria-label={social.name}
+                    >
+                    {social.icon}
+                    </a>
+                ))}
             </div>
           </div>
 
-          {/* Navigation - Compact */}
-          <div className="lg:col-span-3 lg:text-right">
-              <h4 className="text-[9px] font-black uppercase tracking-[0.4em] text-[#0037f3] mb-4">{t.nav}</h4>
-              <ul className="space-y-2">
-                <li><a href="#services" onClick={(e) => onLinkClick(e, 'services')} className="text-xs font-bold text-white/40 hover:text-white transition-all">{t.link1}</a></li>
-                <li><a href="#about" onClick={(e) => onLinkClick(e, 'about')} className="text-xs font-bold text-white/40 hover:text-white transition-all">{t.link2}</a></li>
-                <li><a href="#journal" onClick={(e) => onLinkClick(e, 'journal')} className="text-xs font-bold text-white/40 hover:text-white transition-all">{t.link3}</a></li>
-              </ul>
+          {/* Links & Contact */}
+          <div className="md:col-span-7 grid grid-cols-2 gap-8 md:gap-12">
+              <div>
+                  <h4 className="text-[9px] font-black uppercase tracking-[0.4em] text-[#0037f3] mb-6">{t.nav}</h4>
+                  <ul className="space-y-3">
+                    <li><a href="#services" onClick={(e) => onLinkClick(e, 'services')} className="text-sm font-bold text-white/40 hover:text-white transition-all">{t.link1}</a></li>
+                    <li><a href="#about" onClick={(e) => onLinkClick(e, 'about')} className="text-sm font-bold text-white/40 hover:text-white transition-all">{t.link2}</a></li>
+                    <li><a href="#journal" onClick={(e) => onLinkClick(e, 'journal')} className="text-sm font-bold text-white/40 hover:text-white transition-all">{t.link3}</a></li>
+                  </ul>
+              </div>
+
+              <div>
+                  <h4 className="text-[9px] font-black uppercase tracking-[0.4em] text-[#0037f3] mb-6">{t.contact}</h4>
+                  <div className="space-y-4">
+                      <div className="group">
+                          <span className="block text-[7px] font-black uppercase tracking-widest text-white/20 mb-0.5">Location</span>
+                          <span className="text-xs md:text-sm font-heading font-extrabold text-white/90 block group-hover:text-white transition-colors">{t.address}</span>
+                      </div>
+                      <div className="group">
+                          <span className="block text-[7px] font-black uppercase tracking-widest text-white/20 mb-0.5">Direct Correspondence</span>
+                          <a href={`mailto:${t.email}`} className="text-xs md:text-sm font-heading font-extrabold text-white/90 hover:text-[#0037f3] transition-colors block truncate" dir="ltr">
+                             {t.email}
+                          </a>
+                      </div>
+                      <div className="group">
+                          <span className="block text-[7px] font-black uppercase tracking-widest text-white/20 mb-0.5">Support Line</span>
+                          <a href={`tel:${t.phone.replace(/\s/g, '')}`} className="text-xs md:text-sm font-heading font-extrabold text-white/90 hover:text-[#0037f3] transition-colors block" dir="ltr">
+                            {t.phone}
+                          </a>
+                      </div>
+                  </div>
+              </div>
           </div>
         </div>
 
-        {/* Footer Bottom Bar - High Compression */}
-        <div className="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-start">
+        {/* Footer Bottom */}
+        <div className="mt-16 md:mt-24 pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="flex flex-wrap justify-center sm:justify-start gap-x-8 gap-y-2">
-            <p className="text-[8px] font-black uppercase tracking-[0.4em] text-white/10">&copy; {currentYear} {t.copyright}.</p>
-            <p className="text-[8px] font-black uppercase tracking-[0.4em] text-white/10">{t.founder}</p>
-          </div>
-          
-          <div className="flex items-center gap-3">
-            <div className="w-1 h-1 rounded-full bg-[#0037f3]/20"></div>
-            <span className="text-[8px] font-black uppercase tracking-[0.5em] text-white/5">{t.version}</span>
+            <p className="text-[9px] font-black uppercase tracking-[0.3em] text-white/10">&copy; {currentYear} {t.copyright}</p>
+            <p className="text-[9px] font-black uppercase tracking-[0.3em] text-white/10">{t.founder}</p>
           </div>
         </div>
       </div>
