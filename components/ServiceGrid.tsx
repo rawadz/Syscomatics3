@@ -124,24 +124,25 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ onServiceClick, language }) =
         {/* Carousel Container */}
         <div className="relative group/carousel">
           {/* Navigation Arrows - Desktop Only */}
+          {/* We use bg-transparent and border-none to ensure absolute readability of cards behind */}
           <div className={`hidden lg:flex absolute top-1/2 -translate-y-1/2 z-20 w-full justify-between pointer-events-none transition-opacity duration-300 -mx-10 px-4 ${filteredServices.length < 4 ? 'lg:opacity-0' : ''}`}>
             <button 
               onClick={() => scroll('left')}
               disabled={!canScrollLeft}
-              className={`w-14 h-14 bg-white shadow-2xl border border-gray-100 rounded-full flex items-center justify-center pointer-events-auto transition-all hover:scale-110 active:scale-95 disabled:opacity-0 ${language === 'ar' ? 'rotate-180' : ''}`}
+              className={`w-14 h-14 bg-transparent border border-gray-200/20 rounded-full flex items-center justify-center pointer-events-auto transition-all hover:bg-gray-50/50 hover:border-[#0037f3]/30 active:scale-95 disabled:opacity-0 ${language === 'ar' ? 'rotate-180' : ''}`}
               aria-label="Scroll Left"
             >
-              <svg className="w-6 h-6 text-[#0a0b0d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-gray-400/30 transition-colors group-hover:text-[#0037f3]/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
             <button 
               onClick={() => scroll('right')}
               disabled={!canScrollRight}
-              className={`w-14 h-14 bg-white shadow-2xl border border-gray-100 rounded-full flex items-center justify-center pointer-events-auto transition-all hover:scale-110 active:scale-95 disabled:opacity-0 ${language === 'ar' ? 'rotate-180' : ''}`}
+              className={`w-14 h-14 bg-transparent border border-gray-200/20 rounded-full flex items-center justify-center pointer-events-auto transition-all hover:bg-gray-50/50 hover:border-[#0037f3]/30 active:scale-95 disabled:opacity-0 ${language === 'ar' ? 'rotate-180' : ''}`}
               aria-label="Scroll Right"
             >
-              <svg className="w-6 h-6 text-[#0a0b0d]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-gray-400/30 transition-colors group-hover:text-[#0037f3]/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
               </svg>
             </button>
