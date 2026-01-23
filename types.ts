@@ -76,6 +76,6 @@ export interface ChatMessage {
 export type ViewState = 
   | { type: 'home' }
   | { type: 'service', serviceId: string }
-  | { type: 'journal', articleId: number }
+  | { type: 'journal', articleId: number, from?: 'home' | 'projects-archive' }
   | { type: 'projects-archive' }
   | { type: 'inquiry' };

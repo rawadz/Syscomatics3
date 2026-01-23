@@ -98,7 +98,18 @@ export const TRANSLATIONS: Record<Language, any> = {
       ctaHeader: 'Ready for Engineering?',
       ctaSub: 'Add this solution to your project brief for a technical architecture review within 24 hours.',
       briefAdd: 'Add to Brief', 
-      explore: 'Explore' 
+      explore: 'Explore',
+      categoryLabels: {
+        All: 'All',
+        Enterprise: 'Enterprise',
+        Development: 'Development',
+        Security: 'Security',
+        Design: 'Design',
+        Consulting: 'Consulting',
+        Cloud: 'Cloud',
+        Blockchain: 'Blockchain',
+        AI: 'AI'
+      }
     },
     journal: { 
       header: 'Featured Projects', 
@@ -211,7 +222,18 @@ export const TRANSLATIONS: Record<Language, any> = {
       ctaHeader: 'هل أنت جاهز للتنفيذ؟',
       ctaSub: 'أضف هذا الحل إلى ملخص مشروعك للحصول على مراجعة شاملة للمعمارية التقنية خلال ٢٤ ساعة.',
       briefAdd: 'إضافة للملخص', 
-      explore: 'استكشف التفاصيل' 
+      explore: 'استكشف التفاصيل',
+      categoryLabels: {
+        All: 'الكل',
+        Enterprise: 'المؤسسات',
+        Development: 'التطوير',
+        Security: 'الأمن',
+        Design: 'التصميم',
+        Consulting: 'الاستشارات',
+        Cloud: 'السحابية',
+        Blockchain: 'بلوكشين',
+        AI: 'الذكاء الاصطناعي'
+      }
     },
     journal: { 
       header: 'أبرز المشاريع', 
@@ -324,7 +346,18 @@ export const TRANSLATIONS: Record<Language, any> = {
       ctaHeader: 'Ji bo Endezyariyê Amade ne?',
       ctaSub: 'Vê çareseriyê li kurteya projeya xwe zêde bikin ji bo nirxandina mîmariya teknîkî di nav 24 demjimêran de.',
       briefAdd: 'Li Kurteyê Zêde Bike', 
-      explore: 'Lêkolîn Bike' 
+      explore: 'Lêkolîn Bike',
+      categoryLabels: {
+        All: 'Hemî',
+        Enterprise: 'Pargîdanî',
+        Development: 'Pêşxistin',
+        Security: 'Ewlehî',
+        Design: 'Sêwirandin',
+        Consulting: 'Şêwirmendî',
+        Cloud: 'Ewr',
+        Blockchain: 'Blockchain',
+        AI: 'AI'
+      }
     },
     journal: { 
       header: 'Projeyên Taybet', 

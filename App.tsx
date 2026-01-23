@@ -142,7 +142,7 @@ function App() {
             <Journal 
                 onArticleClick={(a) => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
-                    setView({ type: 'journal', articleId: a.id });
+                    setView({ type: 'journal', articleId: a.id, from: 'home' });
                 }} 
                 onExploreAll={() => setView({ type: 'projects-archive' })}
                 language={language}
@@ -154,7 +154,7 @@ function App() {
           <ProjectsArchive 
             onArticleClick={(a) => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
-              setView({ type: 'journal', articleId: a.id });
+              setView({ type: 'journal', articleId: a.id, from: 'projects-archive' });
             }}
             onBack={() => setView({ type: 'home' })}
             language={language}
@@ -177,7 +177,13 @@ function App() {
           <JournalDetail 
             article={activeArticle} 
             language={language}
-            onBack={() => setView({ type: 'home' })}
+            onBack={() => {
+              if (view.type === 'journal' && view.from === 'projects-archive') {
+                setView({ type: 'projects-archive' });
+              } else {
+                setView({ type: 'home' });
+              }
+            }}
           />
         )}
 

@@ -22,7 +22,7 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ onServiceClick, language }) =
   const [canScrollRight, setCanScrollRight] = useState(true);
   
   const t = (TRANSLATIONS[language]?.services) || TRANSLATIONS.en.services;
-  const categories = ['All', 'Enterprise', 'Development', 'Security', 'Design', 'Consulting', 'Cloud', 'Blockchain'];
+  const categories = ['All', 'Enterprise', 'Development', 'Security', 'Design', 'Consulting', 'Cloud', 'Blockchain', 'AI'];
   const localizedServices = getServices(language);
 
   // Dynamic counting of services per category
@@ -38,12 +38,6 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ onServiceClick, language }) =
     if (activeCategory === 'All') return localizedServices;
     return localizedServices.filter(s => s.category === activeCategory);
   }, [activeCategory, localizedServices]);
-
-  const allLabelMap: Record<Language, string> = {
-    en: 'All',
-    ar: 'الكل',
-    ku: 'Hemî'
-  };
 
   const handleScroll = () => {
     if (scrollRef.current) {
@@ -95,6 +89,7 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ onServiceClick, language }) =
             {categories.map(cat => {
               const isActive = activeCategory === cat;
               const count = categoryCounts[cat] || 0;
+              const label = t.categoryLabels?.[cat] || cat;
               
               return (
                 <button
@@ -106,7 +101,7 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ onServiceClick, language }) =
                       : 'bg-white border-gray-100 text-gray-400 hover:border-[#0037f3] hover:text-[#0037f3]'
                   }`}
                 >
-                  {cat === 'All' ? allLabelMap[language] : cat}
+                  {label}
                   
                   <span className={`flex items-center justify-center min-w-[24px] h-[24px] rounded-full text-[8px] transition-colors duration-500 ${
                     isActive 
@@ -124,7 +119,6 @@ const ServiceGrid: React.FC<ServiceGridProps> = ({ onServiceClick, language }) =
         {/* Carousel Container */}
         <div className="relative group/carousel">
           {/* Navigation Arrows - Desktop Only */}
-          {/* We use bg-transparent and border-none to ensure absolute readability of cards behind */}
           <div className={`hidden lg:flex absolute top-1/2 -translate-y-1/2 z-20 w-full justify-between pointer-events-none transition-opacity duration-300 -mx-10 px-4 ${filteredServices.length < 4 ? 'lg:opacity-0' : ''}`}>
             <button 
               onClick={() => scroll('left')}

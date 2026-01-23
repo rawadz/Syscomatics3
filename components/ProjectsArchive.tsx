@@ -17,77 +17,109 @@ interface ProjectsArchiveProps {
 
 const ProjectsArchive: React.FC<ProjectsArchiveProps> = ({ onArticleClick, onBack, language }) => {
   const t = (TRANSLATIONS[language]?.journal) || TRANSLATIONS.en.journal;
+  const backLabel = TRANSLATIONS[language]?.services?.back || TRANSLATIONS.en.services.back;
   const articles = JOURNAL_ARTICLES[language] || JOURNAL_ARTICLES.en;
+  
+  // Updated image as per user request
+  const HERO_IMAGE = "https://images.unsplash.com/photo-1526666923127-b2970f64b422?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#fcfbf9] pt-24 pb-32 animate-fade-in-up text-start">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12">
+    <div className="min-h-screen bg-white animate-fade-in-up text-start selection:bg-[#0037f3] selection:text-white">
+      
+      {/* Cinematic Hero Section - Matches Service Detail Style */}
+      <div className="relative w-full h-[60vh] md:h-[75vh] min-h-[500px] overflow-hidden bg-[#0a0b0d]">
+        <img 
+          src={HERO_IMAGE} 
+          alt="Technical Archive Hero" 
+          className="w-full h-full object-cover scale-105 animate-[subtle-zoom_30s_infinite_alternate] opacity-70 md:opacity-90 transition-opacity duration-1000"
+        />
+        {/* Gradient Overlay: Transition from technical dark to clean white grid */}
+        <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-transparent to-black/60"></div>
         
-        {/* Header Block */}
-        <header className="mb-20 md:mb-32 max-w-4xl">
-          <button 
-            onClick={onBack}
-            className="group flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-[#0037f3] transition-colors mb-10"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className={`w-3.5 h-3.5 transition-transform ${language === 'ar' ? 'rotate-180' : 'group-hover:-translate-x-1'}`}>
-               <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-            </svg>
-            {TRANSLATIONS[language].services.back}
-          </button>
-          
-          <div className="flex items-center gap-4 mb-6">
-             <div className="w-10 md:w-16 h-px bg-[#0037f3]"></div>
-             <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-[#0037f3]">{t.sub}</span>
-          </div>
-          <h1 className="text-4xl md:text-8xl font-heading font-extrabold text-[#0a0b0d] tracking-tighter leading-[1] md:leading-[0.85] mb-8">
-            {t.archiveHeader} <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0037f3] to-[#4e79ff]">{t.archiveAccent}</span>
-          </h1>
-          <p className="text-lg md:text-2xl text-gray-400 font-medium max-w-2xl leading-relaxed">
-            {t.archiveSub}
-          </p>
-        </header>
+        {/* Hero Content Overlay */}
+        <div className="absolute inset-0 flex flex-col justify-end pb-12 md:pb-24 px-6 md:px-12">
+            <div className="max-w-[1440px] mx-auto w-full">
+                
+                <button 
+                  onClick={onBack}
+                  className="group inline-flex items-center gap-3 px-4 py-2 bg-white/20 backdrop-blur-md border border-white/30 text-[10px] font-black uppercase tracking-widest text-white hover:bg-white hover:text-[#0a0b0d] transition-all mb-8 md:mb-12 rounded-lg"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className={`w-3.5 h-3.5 transition-transform ${language === 'ar' ? 'rotate-180' : 'group-hover:-translate-x-1'}`}>
+                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                  </svg>
+                  {backLabel}
+                </button>
 
-        {/* Dynamic Grid */}
+                <div className="flex items-center gap-4 mb-6">
+                   <div className="w-12 md:w-20 h-1 bg-[#0037f3]"></div>
+                   <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-white/80 drop-shadow-md">{t.sub}</span>
+                </div>
+                
+                <h1 className="text-5xl md:text-8xl lg:text-9xl font-heading font-extrabold text-white tracking-tighter leading-[1] md:leading-[0.85] mb-6 drop-shadow-2xl">
+                  {t.archiveHeader} <br/>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0037f3] to-[#4e79ff]">{t.archiveAccent}</span>
+                </h1>
+                
+                <p className="text-lg md:text-2xl text-white/60 font-medium max-w-2xl leading-relaxed drop-shadow-md">
+                  {t.archiveSub}
+                </p>
+            </div>
+        </div>
+      </div>
+
+      {/* Project Grid Section - Matches clean grid aesthetic */}
+      <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-32">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-          {articles.map((article, idx) => (
+          {articles.map((article) => (
             <div 
               key={article.id} 
-              className="group cursor-pointer bg-white border border-gray-100 rounded-[2.5rem] overflow-hidden hover:shadow-4xl transition-all duration-700 flex flex-col"
+              className="group cursor-pointer bg-white border border-gray-100 rounded-[2.5rem] md:rounded-[3rem] overflow-hidden hover:border-[#0037f3]/20 transition-all duration-700 flex flex-col transform-gpu hover:-translate-y-2 shadow-sm hover:shadow-4xl"
               onClick={() => onArticleClick(article)}
             >
-              <div className="aspect-[4/3] overflow-hidden relative">
+              <div className="aspect-[4/3] overflow-hidden relative bg-gray-50">
                  <img 
                     src={article.image} 
                     alt={article.title} 
-                    className="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-105"
+                    className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
                  />
-                 <div className="absolute top-6 left-6">
-                    <div className="px-3 py-1.5 bg-[#0a0b0d]/80 backdrop-blur text-white text-[8px] font-black uppercase tracking-widest rounded-lg">
-                        REF_{article.id.toString().padStart(3, '0')}
-                    </div>
-                 </div>
+                 <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-transparent"></div>
               </div>
-              <div className="p-8 md:p-10 flex-1 flex flex-col">
+              
+              <div className="p-8 md:p-12 flex-1 flex flex-col">
                 <h3 className="text-2xl md:text-3xl font-heading font-extrabold text-[#0a0b0d] group-hover:text-[#0037f3] transition-colors tracking-tight mb-4 leading-tight">
                   {article.title}
                 </h3>
-                <p className="text-gray-400 text-sm md:text-base font-medium leading-relaxed line-clamp-3 mb-8">
+                <p className="text-gray-400 text-sm md:text-base font-medium leading-relaxed line-clamp-3 mb-10 group-hover:text-gray-600 transition-colors">
                   {article.excerpt}
                 </p>
-                <div className="mt-auto pt-6 border-t border-gray-50 flex items-center justify-between">
-                    <span className="text-[9px] font-black uppercase tracking-widest text-gray-300">{t.logLabel}</span>
-                    <svg className={`w-5 h-5 text-[#0037f3] opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all ${language === 'ar' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                
+                <div className="mt-auto pt-8 border-t border-gray-50 flex items-center justify-between">
+                    <span className="text-[9px] font-black uppercase tracking-[0.3em] text-gray-300 group-hover:text-[#0037f3]/50 transition-colors">{t.logLabel}</span>
+                    <div className="w-10 h-10 rounded-xl bg-gray-50 text-gray-300 flex items-center justify-center group-hover:bg-[#0037f3] group-hover:text-white transition-all duration-500">
+                        <svg className={`w-5 h-5 transition-transform duration-500 group-hover:translate-x-1 ${language === 'ar' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+      
+      <style>{`
+        @keyframes subtle-zoom {
+          0% { transform: scale(1); }
+          100% { transform: scale(1.1); }
+        }
+        .shadow-4xl {
+          box-shadow: 0 40px 100px -20px rgba(0, 55, 243, 0.1);
+        }
+      `}</style>
     </div>
   );
 };
