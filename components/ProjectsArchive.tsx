@@ -37,16 +37,16 @@ const ProjectsArchive: React.FC<ProjectsArchiveProps> = ({ onArticleClick, onBac
           alt="Technical Archive Hero" 
           className="w-full h-full object-cover scale-105 animate-[subtle-zoom_30s_infinite_alternate] opacity-70 md:opacity-90 transition-opacity duration-1000"
         />
-        {/* Gradient Overlay: Transition from technical dark to clean white grid */}
-        <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-transparent to-black/60"></div>
+        {/* Adjusted Gradient: High contrast for white text, transitioning to white content */}
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-[#0a0b0d]/90 to-[#0a0b0d]/60"></div>
         
         {/* Hero Content Overlay */}
-        <div className="absolute inset-0 flex flex-col justify-end pb-12 md:pb-24 px-6 md:px-12">
+        <div className="absolute inset-0 flex flex-col justify-end pb-16 md:pb-32 px-6 md:px-12">
             <div className="max-w-[1440px] mx-auto w-full">
                 
                 <button 
                   onClick={onBack}
-                  className="group inline-flex items-center gap-3 px-4 py-2 bg-white/20 backdrop-blur-md border border-white/30 text-[10px] font-black uppercase tracking-widest text-white hover:bg-white hover:text-[#0a0b0d] transition-all mb-8 md:mb-12 rounded-lg"
+                  className="group inline-flex items-center gap-3 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 text-[10px] font-black uppercase tracking-widest text-white hover:bg-white hover:text-[#0a0b0d] transition-all mb-8 md:mb-12 rounded-lg"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className={`w-3.5 h-3.5 transition-transform ${language === 'ar' ? 'rotate-180' : 'group-hover:-translate-x-1'}`}>
                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
@@ -64,7 +64,7 @@ const ProjectsArchive: React.FC<ProjectsArchiveProps> = ({ onArticleClick, onBac
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0037f3] to-[#4e79ff]">{t.archiveAccent}</span>
                 </h1>
                 
-                <p className="text-lg md:text-2xl text-white/60 font-medium max-w-2xl leading-relaxed drop-shadow-md">
+                <p className="text-lg md:text-2xl text-white/70 font-medium max-w-2xl leading-relaxed drop-shadow-md">
                   {t.archiveSub}
                 </p>
             </div>

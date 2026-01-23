@@ -36,19 +36,20 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onAddToB
           alt={service.name} 
           className="w-full h-full object-cover transition-all duration-1000 scale-105 animate-[subtle-zoom_20s_infinite_alternate]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-black/10 to-black/60"></div>
+        {/* Adjusted Gradient: More contrast for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-[#0a0b0d]/80 to-[#0a0b0d]/60"></div>
         
         {/* Hero Content Overlay */}
-        <div className="absolute inset-0 flex flex-col justify-end pb-12 md:pb-24 px-6 md:px-12">
+        <div className="absolute inset-0 flex flex-col justify-end pb-16 md:pb-32 px-6 md:px-12">
             <div className="max-w-[1440px] mx-auto w-full">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-md border border-white/30 text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest mb-6 md:mb-8 rounded-full">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest mb-6 md:mb-8 rounded-full">
                     <span className="opacity-90">{t.spec}</span>
                     <span className="font-black">{service.category}</span>
                 </div>
                 <h1 className="text-4xl md:text-8xl font-heading font-extrabold text-white mb-4 md:mb-6 tracking-tighter leading-[0.9] md:leading-[0.85] drop-shadow-2xl">
                     {service.name}
                 </h1>
-                <p className="text-lg md:text-3xl font-medium text-white max-w-3xl leading-tight drop-shadow-lg">
+                <p className="text-lg md:text-3xl font-medium text-white/90 max-w-3xl leading-tight drop-shadow-lg">
                     {service.tagline}
                 </p>
             </div>

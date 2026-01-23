@@ -121,14 +121,14 @@ const Footer: React.FC<FooterProps> = ({ onLinkClick, language }) => {
                       </div>
                       <div className="group">
                           <span className="block text-[7px] font-black uppercase tracking-widest text-white/20 mb-0.5">Direct Correspondence</span>
-                          <a href={`mailto:${t.email}`} className="text-xs md:text-sm font-heading font-extrabold text-white/90 hover:text-[#0037f3] transition-colors block truncate" dir="ltr">
-                             {t.email}
+                          <a href={`mailto:${t.email}`} className="text-xs md:text-sm font-heading font-extrabold text-white/90 hover:text-[#0037f3] transition-colors block truncate text-start">
+                             <span dir="ltr">{t.email}</span>
                           </a>
                       </div>
                       <div className="group">
                           <span className="block text-[7px] font-black uppercase tracking-widest text-white/20 mb-0.5">Support Line</span>
-                          <a href={`tel:${t.phone.replace(/\s/g, '')}`} className="text-xs md:text-sm font-heading font-extrabold text-white/90 hover:text-[#0037f3] transition-colors block" dir="ltr">
-                            {t.phone}
+                          <a href={`tel:${t.phone.replace(/\s/g, '')}`} className="text-xs md:text-sm font-heading font-extrabold text-white/90 hover:text-[#0037f3] transition-colors block text-start">
+                             <span dir="ltr">{t.phone}</span>
                           </a>
                       </div>
                   </div>
