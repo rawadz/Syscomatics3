@@ -22,7 +22,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onAddToB
   const categoryLabel = t.categoryLabels?.[service.category] || service.category;
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   }, []);
 
   if (!service) return null;

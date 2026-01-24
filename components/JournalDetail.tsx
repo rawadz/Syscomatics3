@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: Apache-2.0
 */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { JournalArticle, Language } from '../types';
 import { TRANSLATIONS } from '../translations';
 
@@ -16,6 +16,10 @@ interface JournalDetailProps {
 
 const JournalDetail: React.FC<JournalDetailProps> = ({ article, onBack, language }) => {
   const t = TRANSLATIONS[language].journal;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#F5F2EB] animate-fade-in-up text-start">

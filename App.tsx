@@ -132,7 +132,6 @@ function App() {
             <div id="services">
                 <ServiceGrid 
                   onServiceClick={(s) => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
                       setView({ type: 'service', serviceId: s.id });
                   }} 
                   language={language}
@@ -141,7 +140,6 @@ function App() {
             <About language={language} />
             <Journal 
                 onArticleClick={(a) => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
                     setView({ type: 'journal', articleId: a.id, from: 'home' });
                 }} 
                 onExploreAll={() => setView({ type: 'projects-archive' })}
@@ -153,7 +151,6 @@ function App() {
         {view.type === 'projects-archive' && (
           <ProjectsArchive 
             onArticleClick={(a) => {
-              window.scrollTo({ top: 0, behavior: 'smooth' });
               setView({ type: 'journal', articleId: a.id, from: 'projects-archive' });
             }}
             onBack={() => setView({ type: 'home' })}

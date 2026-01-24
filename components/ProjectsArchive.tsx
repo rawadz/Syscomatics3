@@ -24,7 +24,7 @@ const ProjectsArchive: React.FC<ProjectsArchiveProps> = ({ onArticleClick, onBac
   const HERO_IMAGE = "https://images.unsplash.com/photo-1609889054074-89bff8afb8ae?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   }, []);
 
   return (
