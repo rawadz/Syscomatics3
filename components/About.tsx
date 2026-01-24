@@ -15,6 +15,8 @@ interface AboutProps {
 const About: React.FC<AboutProps> = ({ language }) => {
   // Safe translation access with fallback
   const t = (TRANSLATIONS[language]?.about) || TRANSLATIONS.en.about;
+  const tickerItems = t.ticker || [];
+  const isRtl = language === 'ar';
 
   return (
     <section id="about" className="bg-[#0a0b0d] py-24 md:py-56 relative overflow-hidden text-start">
@@ -42,7 +44,7 @@ const About: React.FC<AboutProps> = ({ language }) => {
         </div>
 
         {/* The 3-Step Journey Grid / Sticky Stacking Mobile */}
-        <div className="relative">
+        <div className="relative mb-12 md:mb-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-8 items-start">
             {t.steps?.map((step: any, idx: number) => (
               <div 
@@ -61,7 +63,7 @@ const About: React.FC<AboutProps> = ({ language }) => {
                        <img 
                           src={step.img} 
                           alt={step.title} 
-                          className="w-full h-full object-cover grayscale brightness-[0.6] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000 ease-out"
+                          className="w-full h-full object-cover brightness-[0.85] group-hover:brightness-100 group-hover:scale-105 transition-all duration-1000 ease-out"
                        />
                        <div className="absolute inset-0 bg-gradient-to-t from-[#111215] via-[#111215]/20 to-transparent"></div>
                     </div>
@@ -86,36 +88,61 @@ const About: React.FC<AboutProps> = ({ language }) => {
             ))}
           </div>
         </div>
+      </div>
 
-        {/* Trust/Uptime Banner */}
-        <div className="mt-24 md:mt-48 p-8 md:p-16 bg-[#111215] rounded-[2.5rem] md:rounded-[4rem] border border-white/5 flex flex-col lg:flex-row items-center justify-between gap-10 md:gap-16 group hover:bg-white/[0.04] transition-all duration-700">
-           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-10 text-center md:text-start">
-              <div className="w-20 h-20 md:w-28 md:h-28 bg-gradient-to-br from-[#0037f3] to-[#4e79ff] rounded-3xl flex items-center justify-center shadow-[0_0_50px_rgba(0,55,243,0.3)] rotate-3 group-hover:rotate-0 transition-all duration-500 shrink-0">
-                 <svg className="w-10 h-10 md:w-12 md:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                 </svg>
+      {/* Tighter, perfectly slanted technical news ticker with translated sentences */}
+      <div className="relative w-full overflow-visible py-4 md:py-8 group">
+        <div className="bg-[#0037f3] transform -skew-y-2 md:-skew-y-1 transition-all duration-1000 ease-in-out group-hover:skew-y-0 shadow-[0_20px_80px_rgba(0,55,243,0.3)] py-1.5 md:py-3 border-y border-white/20">
+            
+            {/* Forced LTR container for consistent animation logic across all languages */}
+            <div className="relative z-10 flex overflow-hidden py-1.5 md:py-2 select-none border-y border-white/10" dir="ltr">
+              <div className={`flex ${isRtl ? 'animate-marquee-rtl' : 'animate-marquee-ltr'} whitespace-nowrap items-center`}>
+                {[...tickerItems, ...tickerItems, ...tickerItems].map((item, idx) => (
+                  <div key={idx} className="flex items-center mx-6 md:mx-12">
+                    {/* Individual sentences maintain their specific language direction */}
+                    <span className="text-white text-base md:text-2xl font-heading font-extrabold tracking-tight" dir={isRtl ? 'rtl' : 'ltr'}>
+                      {item}
+                    </span>
+                    {/* Minimalist Visual Separator */}
+                    <div className="mx-8 md:mx-16 flex items-center gap-1.5 md:gap-2">
+                        <div className="w-1 md:w-1.5 h-1 md:h-1.5 bg-white rounded-full"></div>
+                        <div className="w-6 md:w-12 h-px bg-white/30"></div>
+                        <div className="w-1 md:w-1.5 h-1 md:h-1.5 bg-white rounded-full"></div>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div>
-                 <div className="text-2xl md:text-5xl font-heading font-black text-white mb-2 tracking-tight">
-                    {t.uptimeLabel}
-                 </div>
-                 <div className="text-[10px] md:text-xs font-black text-[#0037f3] uppercase tracking-[0.4em]">
-                    {t.uptime}
-                 </div>
-              </div> 
-           </div>
-           <p className="text-white/30 text-lg md:text-xl font-medium max-w-sm text-center lg:text-start leading-relaxed">
-              {t.uptimed}
-           </p>
+            </div>
+            
+            {/* Added "Circuit" overlay for technical feel */}
+            <div className="absolute inset-0 pointer-events-none opacity-20 mix-blend-overlay bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
         </div>
-
       </div>
       
       <style>{`
+        /* Standard Right-to-Left movement for LTR languages */
+        @keyframes marquee-ltr {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-33.33%); }
+        }
+        
+        /* Left-to-Right movement for Arabic as specifically requested */
+        @keyframes marquee-rtl {
+          0% { transform: translateX(-33.33%); }
+          100% { transform: translateX(0); }
+        }
+
+        .animate-marquee-ltr {
+          animation: marquee-ltr 60s linear infinite;
+        }
+
+        .animate-marquee-rtl {
+          animation: marquee-rtl 60s linear infinite;
+        }
+
         @media (max-width: 768px) {
-          /* Add some bottom margin to the last card to allow scrolling past the stack */
           #about .grid > div:last-child {
-            margin-bottom: 80px;
+            margin-bottom: 20px;
           }
         }
       `}</style>

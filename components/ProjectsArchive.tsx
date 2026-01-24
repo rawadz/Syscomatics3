@@ -21,7 +21,7 @@ const ProjectsArchive: React.FC<ProjectsArchiveProps> = ({ onArticleClick, onBac
   const articles = JOURNAL_ARTICLES[language] || JOURNAL_ARTICLES.en;
   
   // Updated image as per user request
-  const HERO_IMAGE = "https://images.unsplash.com/photo-1526666923127-b2970f64b422?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+  const HERO_IMAGE = "https://images.unsplash.com/photo-1609889054074-89bff8afb8ae?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -31,7 +31,7 @@ const ProjectsArchive: React.FC<ProjectsArchiveProps> = ({ onArticleClick, onBac
     <div className="min-h-screen bg-white animate-fade-in-up text-start selection:bg-[#0037f3] selection:text-white">
       
       {/* Cinematic Hero Section - Matches Service Detail Style */}
-      <div className="relative w-full h-[60vh] md:h-[75vh] min-h-[500px] overflow-hidden bg-[#0a0b0d]">
+      <div className="relative w-full h-[65vh] md:h-[85vh] min-h-[550px] overflow-hidden bg-[#0a0b0d]">
         <img 
           src={HERO_IMAGE} 
           alt="Technical Archive Hero" 
@@ -40,8 +40,8 @@ const ProjectsArchive: React.FC<ProjectsArchiveProps> = ({ onArticleClick, onBac
         {/* Adjusted Gradient: High contrast for white text, transitioning to white content */}
         <div className="absolute inset-0 bg-gradient-to-t from-white via-[#0a0b0d]/90 to-[#0a0b0d]/60"></div>
         
-        {/* Hero Content Overlay */}
-        <div className="absolute inset-0 flex flex-col justify-end pb-16 md:pb-32 px-6 md:px-12">
+        {/* Hero Content Overlay - Added pt-24/pt-32 to account for fixed navbar */}
+        <div className="absolute inset-0 flex flex-col justify-end pb-16 md:pb-32 pt-24 md:pt-32 px-6 md:px-12">
             <div className="max-w-[1440px] mx-auto w-full">
                 
                 <button 

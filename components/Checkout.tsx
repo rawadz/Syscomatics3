@@ -30,6 +30,7 @@ const Checkout: React.FC<CheckoutProps> = ({ items, onBack, language, onSuccess 
   const SUBMISSION_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyfqG8zbjwwgY3uuvDRyGB_HwhFkXIRtqElDvWmpQNGhgWi-amhKjgBT2o8hntml-lh/exec'; 
 
   const t = (TRANSLATIONS[language]?.inquiry) || TRANSLATIONS.en.inquiry;
+  const st = (TRANSLATIONS[language]?.services) || TRANSLATIONS.en.services;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -170,17 +171,20 @@ const Checkout: React.FC<CheckoutProps> = ({ items, onBack, language, onSuccess 
             <div className="bg-white border border-gray-100 rounded-[2.5rem] p-8 shadow-sm flex flex-col h-full sticky top-24">
                 <h2 className="text-xl font-heading font-extrabold text-[#0a0b0d] mb-6 tracking-tight">{t.scopes}</h2>
                 <div className="space-y-4 flex-1 overflow-y-auto max-h-[400px] pr-2 custom-scrollbar">
-                   {items.map((item, idx) => (
-                     <div key={idx} className="flex gap-4 p-3.5 bg-gray-50/50 rounded-2xl border border-transparent hover:border-[#0037f3]/20 transition-all">
-                        <div className="w-12 h-12 bg-gray-100 rounded-xl overflow-hidden shrink-0">
-                           <img src={item.imageUrl} alt={item.name} className="w-full h-full object-cover grayscale opacity-70" />
-                        </div>
-                        <div className="flex flex-col justify-center">
-                           <h3 className="font-heading font-bold text-[#0a0b0d] text-[12px] leading-tight">{item.name}</h3>
-                           <p className="text-[8px] text-[#0037f3] font-black uppercase tracking-widest mt-1">{item.category}</p>
-                        </div>
-                     </div>
-                   ))}
+                   {items.map((item, idx) => {
+                     const categoryLabel = st.categoryLabels?.[item.category] || item.category;
+                     return (
+                       <div key={idx} className="flex gap-4 p-3.5 bg-gray-50/50 rounded-2xl border border-transparent hover:border-[#0037f3]/20 transition-all">
+                          <div className="w-12 h-12 bg-gray-100 rounded-xl overflow-hidden shrink-0">
+                             <img src={item.imageUrl} alt={item.name} className="w-full h-full object-cover grayscale opacity-70" />
+                          </div>
+                          <div className="flex flex-col justify-center">
+                             <h3 className="font-heading font-bold text-[#0a0b0d] text-[12px] leading-tight">{item.name}</h3>
+                             <p className="text-[8px] text-[#0037f3] font-black uppercase tracking-widest mt-1">{categoryLabel}</p>
+                          </div>
+                       </div>
+                     );
+                   })}
                    {items.length === 0 && <p className="text-gray-400 italic text-xs text-center py-10">{t.empty}</p>}
                 </div>
                 

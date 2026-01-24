@@ -20,6 +20,7 @@ interface InquiryDrawerProps {
 const InquiryDrawer: React.FC<InquiryDrawerProps> = ({ isOpen, onClose, items, onRemoveItem, onStartConsultation, language }) => {
   // Safe translation access with fallback
   const t = (TRANSLATIONS[language]?.inquiry) || TRANSLATIONS.en.inquiry;
+  const st = (TRANSLATIONS[language]?.services) || TRANSLATIONS.en.services;
 
   return (
     <>
@@ -53,25 +54,28 @@ const InquiryDrawer: React.FC<InquiryDrawerProps> = ({ isOpen, onClose, items, o
               <p className="font-medium text-gray-400">{t.empty}</p>
             </div>
           ) : (
-            items.map((item, idx) => (
-              <div key={`${item.id}-${idx}`} className="flex gap-6 animate-fade-in-up border-b border-gray-100 pb-8 last:border-0">
-                <div className="w-20 h-24 bg-gray-100 flex-shrink-0 relative overflow-hidden group">
-                  <img src={item.imageUrl} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
-                </div>
-                <div className="flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3 className="font-heading font-bold text-[#0a0b0d]">{item.name}</h3>
-                    <p className="text-[10px] font-black text-[#0037f3] uppercase tracking-widest mt-1">{item.category}</p>
+            items.map((item, idx) => {
+              const categoryLabel = st.categoryLabels?.[item.category] || item.category;
+              return (
+                <div key={`${item.id}-${idx}`} className="flex gap-6 animate-fade-in-up border-b border-gray-100 pb-8 last:border-0">
+                  <div className="w-20 h-24 bg-gray-100 flex-shrink-0 relative overflow-hidden group">
+                    <img src={item.imageUrl} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
                   </div>
-                  <button 
-                    onClick={() => onRemoveItem(idx)}
-                    className="text-[10px] font-black text-gray-300 hover:text-red-500 uppercase tracking-widest transition-colors self-start"
-                  >
-                    {t.remove}
-                  </button>
+                  <div className="flex-1 flex flex-col justify-between">
+                    <div>
+                      <h3 className="font-heading font-bold text-[#0a0b0d]">{item.name}</h3>
+                      <p className="text-[10px] font-black text-[#0037f3] uppercase tracking-widest mt-1">{categoryLabel}</p>
+                    </div>
+                    <button 
+                      onClick={() => onRemoveItem(idx)}
+                      className="text-[10px] font-black text-gray-300 hover:text-red-500 uppercase tracking-widest transition-colors self-start"
+                    >
+                      {t.remove}
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))
+              );
+            })
           )}
         </div>
 

@@ -80,9 +80,13 @@ export const TRANSLATIONS: Record<Language, any> = {
         { title: 'Build', desc: 'Our engineers create your custom digital architecture.', img: 'https://images.unsplash.com/photo-1759984782632-732eea46df77?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
         { title: 'Command', desc: 'You take control of a powerful, scaling system.', img: 'https://images.unsplash.com/photo-1748609339084-ea43ec1b8fbb?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
       ],
-      uptime: 'Always On', 
-      uptimed: 'High-speed systems ensuring continuous operations.',
-      uptimeLabel: '99.9% Uptime'
+      ticker: [
+        "Stability is not a goal; it is our starting point for every architecture.",
+        "Building the digital backbone for organizations that demand absolute scale.",
+        "Where sovereign security meets high-performance engineering excellence.",
+        "Engineering systems designed to outlast the technologies of today.",
+        "Transforming complex technical challenges into elegant, reliable infrastructure."
+      ]
     },
     services: { 
       header: 'Our Solutions', 
@@ -204,9 +208,13 @@ export const TRANSLATIONS: Record<Language, any> = {
         { title: 'نبني', desc: 'يقوم مهندسونا بابتكار معمارية رقمية مخصصة بالكامل لاحتياجاتك.', img: 'https://images.unsplash.com/photo-1759984782632-732eea46df77?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
         { title: 'تقود', desc: 'تتولى السيطرة الكاملة على نظام قوي، آمن، وقابل للتوسع اللامتناهي.', img: 'https://images.unsplash.com/photo-1748609339084-ea43ec1b8fbb?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
       ],
-      uptime: 'جاهزية دائمة', 
-      uptimed: 'أنظمة عالية السرعة تضمن استمرارية أعمالك دون أي انقطاع تقني.',
-      uptimeLabel: '٩٩.٩٪ توفر النظام'
+      ticker: [
+        "الاستقرار ليس مجرد هدف، بل هو نقطة البداية لكل معمارية نبنيها.",
+        "نبني العمود الفقري الرقمي للمؤسسات التي تتطلب توسعاً مطلقاً.",
+        "حيث يلتقي الأمن السيادي مع التميز الهندسي عالي الأداء.",
+        "نصمم أنظمة هندسية تدوم طويلاً وتتجاوز تقنيات اليوم.",
+        "تحويل التحديات التقنية المعقدة إلى بنية تحتية أنيقة وموثوقة."
+      ]
     },
     services: { 
       header: 'حلولنا التقنية', 
@@ -328,9 +336,13 @@ export const TRANSLATIONS: Record<Language, any> = {
         { title: 'Avakirin', desc: 'Endezyarên me mîmariya dîjîtal a taybet ji we re ava dikin.', img: 'https://images.unsplash.com/photo-1759984782632-732eea46df77?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' },
         { title: 'Fermandekirin', desc: 'Hûn kontrola pergalek bi hêz û mezin dibin.', img: 'https://images.unsplash.com/photo-1748609339084-ea43ec1b8fbb?q=80&w=1744&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }
       ],
-      uptime: 'Her Dem Vekirî', 
-      uptimed: 'Pergalên leza bilind ku operasyonên berdewam garantî dikin.',
-      uptimeLabel: '99.9% Dema Serhêl'
+      ticker: [
+        "Îstîqrar ne tenê armanc e; ji bo her mîmariyê xala me ya destpêkê ye.",
+        "Em pişta dîjîtal ji bo rêxistinên ku pîvana mutleq dixwazin ava dikin.",
+        "Li ku derê ewlehiya serwer û jêhatiya endezyariyê ya performansa-bilind digihîjin hev.",
+        "Pergalên endezyariyê yên ku ji teknolojiyên îro zêdetir dijîn têne sêwirandin.",
+        "Veguherandina kêşeyên teknîkî yên tevlihev bo binesaziyek nazik û pêbawer."
+      ]
     },
     services: { 
       header: 'Çareseriyên Me', 
@@ -417,7 +429,7 @@ export const TRANSLATIONS: Record<Language, any> = {
         badge: 'Laboratuvarên Înteraktîf',
         title: 'Mîmarî',
         accent: 'Sîmulasîyon.',
-        sub: 'Hêza mantiqê me bi navgîniya amûrên dîtbarî yên teknîkî biceribînin.',
+        sub: 'Hêza mantiqê me bi navgîniya amûrên dîtbarî yen teknîkî biceribînin.',
         arch: 'Mîmarî',
         archVal: 'SYS_CORE_V4',
         latency: 'Derengî',
