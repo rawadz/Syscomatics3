@@ -21,6 +21,7 @@ import CookieBanner from './components/CookieBanner';
 import { Service, ViewState, Language, JournalArticle } from './types';
 import { getServices } from './servicesData';
 import { JOURNAL_ARTICLES } from './journalArticles';
+import { logVisitorPing } from './services/analyticsService';
 
 function App() {
   // PERSISTENCE INIT
@@ -67,6 +68,16 @@ function App() {
   useEffect(() => {
     localStorage.setItem('sys_inquiry_list', JSON.stringify(inquiryList));
   }, [inquiryList]);
+
+  // Analytics Tracking Effect
+  useEffect(() => {
+    // Explicitly type viewPath as string to allow concatenating IDs for analytics
+    let viewPath: string = view.type;
+    if (view.type === 'service') viewPath = `service/${view.serviceId}`;
+    if (view.type === 'journal') viewPath = `journal/${view.articleId}`;
+    
+    logVisitorPing(viewPath, language);
+  }, [view, language]);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();

@@ -249,7 +249,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Custom AI models that analyze patterns and automate complex decision-making.',
       longDescription: 'Our Neural Intelligence systems move beyond simple automation. We build proprietary AI models that live on your infrastructure, ensuring data sovereignty while providing predictive insights on inventory, customer churn, and market shifts.',
       category: 'AI',
-      imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop',
+      imageUrl: 'https://images.unsplash.com/photo-1660165458059-57cfb6cc87e5?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       features: ['Predictive Demand Forecasting', 'Automated Lead Qualification', 'Natural Language Document Processing', 'Sovereign On-Premise AI Hosting'],
       domains: [{ name: 'Strategy', description: 'Data-driven decision making.' }, { name: 'Automation', description: 'Reducing cognitive load.' }, { name: 'Intelligence', description: 'Market foresight.' }],
       pillars: [
@@ -301,7 +301,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Advanced engineering to ensure your operations survive any physical or digital crisis.',
       longDescription: 'Disaster recovery is more than just backups. We engineer "Anti-Fragile" systems that can detect failures instantly and switch to redundant infrastructure without users noticing. We protect your business from hardware failure and cyber attacks.',
       category: 'Security',
-      imageUrl: 'https://images.unsplash.com/photo-1454165833767-02a698d1316d?q=80&w=2070&auto=format&fit=crop',
+      imageUrl: 'https://images.unsplash.com/photo-1580090918915-b2678c8a3d5a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       features: ['Real-time Data Replication', 'Instant Automated Failover', 'Offline Operational Modes', 'Redundant Power & Network Mesh'],
       domains: [{ name: 'Continuity', description: 'Operations that never stop.' }, { name: 'Safety', description: 'Protecting the company core.' }, { name: 'Resilience', description: 'Bouncing back stronger.' }],
       pillars: [
@@ -357,7 +357,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         category: 'Enterprise',
         imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000',
         features: ['إدارة المخزون في الوقت الفعلي', 'محاسبة آلية متعددة العملات', 'بوابات خدمة ذاتية للموظفين', 'تقارير تشغيلية وتحليلية متقدمة'],
-        domains: [{ name: 'العمليات', description: 'تسهيل سير العمل اليومي.' }, { name: 'المالية', description: 'ضمان الاستقرار المالي.' }, { name: 'الموارد البشرية', description: 'إدارة الكوادر بكفاءة.' }, { name: 'ذكاء الأعمال', description: 'رؤى تحليلية دقيقة.' }],
+        domains: [{ name: 'العمليات', description: 'تسهيل سير العمل اليومي.' }, { name: 'المالية', description: 'ضمان الاستقرار المالي.' }, { name: 'المالحة البشرية', description: 'إدارة الكوادر بكفاءة.' }, { name: 'ذكاء الأعمال', description: 'رؤى تحليلية دقيقة.' }],
         pillars: [
           { title: 'مصدر موحد للحقيقة', description: 'كافة الأقسام تعتمد على بيانات موحدة ومحدثة لحظياً.' },
           { title: 'الكفاءة التشغيلية القصوى', description: 'إلغاء العمليات اليدوية والنسخ المكرر للبيانات.' },
@@ -589,7 +589,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'نماذج ذكاء اصطناعي مخصصة لتحليل الأنماط وأتمتة اتخاذ القرارات المعقدة.',
         longDescription: 'تتجاوز أنظمة الذكاء العصبي لدينا مفهوم الأتمتة البسيطة؛ فنحن نبني نماذج ذكاء اصطناعي مملوكة لك تعمل ضمن بنيتك التحتية الخاصة، مما يضمن سيادة البيانات مع توفير رؤى تنبؤية حول المخزون والعملاء وتغيرات السوق.',
         category: 'AI',
-        imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1660165458059-57cfb6cc87e5?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         features: ['توقع الطلب', 'تأهيل العملاء', 'معالجة اللغات', 'استضافة AI محلية'],
         domains: [{ name: 'الاستراتيجية', description: 'صناعة القرار المبني على البيانات.' }, { name: 'الأتمتة', description: 'تقليل العبء الذهني.' }, { name: 'الذكاء', description: 'استشراف السوق.' }],
         pillars: [
@@ -641,7 +641,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'هندسة متقدمة لضمان بقاء عملياتك تحت أي ظرف أو أزمة.',
         longDescription: 'التعافي من الكوارث أكثر من مجرد نسخ احتياطية. نحن نهندس أنظمة "مضادة للهشاشة" يمكنها كشف الأعطال لحظياً والانتقال إلى بنية تحتية بديلة دون أن يشعر المستخدمون، مما يحمي عملك من فشل العتاد والهجمات السيبرانية.',
         category: 'Security',
-        imageUrl: 'https://images.unsplash.com/photo-1454165833767-02a698d1316d?q=80&w=2070&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1580090918915-b2678c8a3d5a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         features: ['مزامنة لحظية', 'انتقال فوري', 'عمل أوفلاين', 'شبكة طاقة مكررة'],
         domains: [{ name: 'الاستمرارية', description: 'عمليات لا تتوقف أبداً.' }, { name: 'الأمان', description: 'حماية جوهر الشركة.' }, { name: 'المرونة', description: 'العودة بشكل أقوى.' }],
         pillars: [
@@ -701,11 +701,11 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         pillars: [
           { title: 'Çavkaniya Rastiyê ya Yekane', description: 'Her beş li heman daneyên hevdengkirî dinêre.' },
           { title: 'Kêrhatina Operasyonel', description: 'Rakirina kopîkirina manuwel a di navbera pelên cihê de.' },
-          { title: 'Lihevhatina Yasayî', description: 'Kontrolên navxweyî yên ji bo standardên herêmî û navneteweyî.' },
+          { title: 'Lihevhatina Yasayî', description: 'Kontrolên navxweyî yn ji bo standardên herêmî û navneteweyî.' },
           { title: 'Mîmariya Mezinbûyî', description: 'Pergalên ku bi tevliheviya karsaziya we re mezin bovin.' }
         ],
         roadmap: [
-          { label: 'Audita Tespîtê', duration: 'Hefte 1-2', detail: 'Nexşekirina hemî pêvajoyên karsaziyê û tespîtkirina kêşeyan.' },
+          { label: 'Audita Tespîtê', duration: 'Hefte 1-2', detail: 'Nexşekirina hemî pêvajoyên karsaziye û tespîtkirina kêşeyan.' },
           { label: 'Nexşeya Mîmarî', duration: 'Hefte 3-4', detail: 'Sêwirana ERP-ya xwerû ji bo sektora weya taybet.' },
           { label: 'Veguhestina Daneyan', duration: 'Hefte 5-8', detail: 'Barkirina tomarkirinên kevn bo pergalê bi awayekî ewle.' },
           { label: 'Fermandariya Operasyonel', duration: 'Hefte 9+', detail: 'Perwerdehiya dawî ya karmendan û destpêkirina tam.' }
@@ -929,7 +929,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'Modelên AI-yê yên taybet ku piranîya biryarên tevlihev otomatîk dikin.',
         longDescription: 'Pergalên me yên Zîrekiya Neural ji otomasyona hêsan derbas dibin. Em modelên AI-yê yên xwerû ava dikin ku li ser binesaziya we dimînin, serweriya daneyan garantî dikin.',
         category: 'AI',
-        imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1660165458059-57cfb6cc87e5?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         features: ['Pêşbîniya Daxwazê', 'Lead Qualification-a Otomatîk', 'AI Hosting li ser Erdê', 'NLP Document Processing'],
         domains: [{ name: 'Strategî', description: 'Biryardana bi daneyan.' }, { name: 'Otomasyon', description: 'Kêmkirina barê hişî.' }, { name: 'Zîrekî', description: 'Pêşdîtina bazarê.' }],
         pillars: [
@@ -981,7 +981,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'Endezyariya pêşkeftî ji bo operasyonên saxlem di her krîza fîzîkî an dîjîtal de.',
         longDescription: 'Recovery-a ji felaketan ji yedekgirtinê zêdetir e. Em pergalên "Anti-Fragile" endezyar dikin ku dikarin têkçûnan di cih de tespît bikin û bêyî ku bikarhêner pê bihesin derbasî binesaziya yedek bibin.',
         category: 'Security',
-        imageUrl: 'https://images.unsplash.com/photo-1454165833767-02a698d1316d?q=80&w=2070&auto=format&fit=crop',
+        imageUrl: 'https://images.unsplash.com/photo-1580090918915-b2678c8a3d5a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         features: ['Replîkasyona Daneyan a Rastî', 'Failover-a Otomatîk', 'Mode-ên Operasyona Offline', 'Redundant Power Mesh'],
         domains: [{ name: 'Berdewamî', description: 'Operasyonên bê rawest.' }, { name: 'Ewlehî', description: 'Parastina bingeha pargîdaniyê.' }, { name: 'Berxwedan', description: 'Vegera bi hêztir.' }],
         pillars: [
