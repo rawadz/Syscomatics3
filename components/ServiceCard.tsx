@@ -16,6 +16,7 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, onClick, language }) => {
   const t = TRANSLATIONS[language].services;
+  const categoryLabel = t.categoryLabels?.[service.category] || service.category;
 
   return (
     <div 
@@ -30,7 +31,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, onClick, language })
       
       <div className="mb-12 flex justify-between items-start">
         <div className="px-3 py-1.5 bg-gray-50 border border-gray-100 text-[#0037f3] rounded-lg">
-          <span className="text-[9px] font-black uppercase tracking-[0.2em]">{service.category}</span>
+          <span className="text-[9px] font-black uppercase tracking-[0.2em]">{categoryLabel}</span>
         </div>
         <div className="w-10 h-10 rounded-xl bg-[#0037f3]/5 text-[#0037f3] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

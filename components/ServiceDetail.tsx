@@ -19,6 +19,7 @@ interface ServiceDetailProps {
 const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onAddToBrief, language }) => {
   // Safe access to translations with fallback to English
   const t = (TRANSLATIONS[language]?.services) || TRANSLATIONS.en.services;
+  const categoryLabel = t.categoryLabels?.[service.category] || service.category;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -44,7 +45,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onAddToB
             <div className="max-w-[1440px] mx-auto w-full">
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest mb-6 md:mb-8 rounded-full">
                     <span className="opacity-90">{t.spec}</span>
-                    <span className="font-black">{service.category}</span>
+                    <span className="font-black">{categoryLabel}</span>
                 </div>
                 <h1 className="text-4xl md:text-8xl font-heading font-extrabold text-white mb-4 md:mb-6 tracking-tighter leading-[0.9] md:leading-[0.85] drop-shadow-2xl">
                     {service.name}
