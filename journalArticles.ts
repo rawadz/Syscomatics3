@@ -1,146 +1,109 @@
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
- */
+*/
 
 import { Language, JournalArticle } from './types';
-import { MEDIA_ASSETS } from './mediaAssets';
 
 export const JOURNAL_ARTICLES: Record<Language, JournalArticle[]> = {
   en: [
     {
       id: 5,
-      title: 'E-Commerce Platform for Online Businesses',
-      date: '2025',
-      sector: 'E-Commerce',
-      location: 'Damascus, Syria',
-      outcome: 'Automated catalog, order handling, and standardized brand imagery',
-      excerpt: 'A ready-to-launch automated sales platform tailored for Syrian businesses and Instagram-based sellers moving beyond manual DMs.',
-      image: MEDIA_ASSETS.digitalWorkspaceCase,
-      content: 'Developed a ready-to-launch e-commerce website tailored for Syrian online businesses, especially Instagram-based sellers seeking a more professional and automated sales process. The platform supports product management, automated order handling, and structured customer data, reducing manual work and improving order accuracy. AI tools were used to enhance and standardize product images for web presentation, helping businesses maintain a consistent and professional brand identity.',
+      title: 'E-Commerce Platform for Online Businesses (Syria)',
+      date: '',
+      excerpt: 'A ready-to-launch automated sales platform tailored for Syrian businesses and Instagram sellers.',
+      image: 'https://images.unsplash.com/photo-1665686310429-ee43624978fa?q=80&w=2070&auto=format&fit=crop',
+      content: 'Developed a ready-to-launch e-commerce website tailored for Syrian online businesses, especially Instagram-based sellers seeking a more professional and automated sales process. The platform supports product management, automated order handling, and structured customer data, reducing manual work and improving order accuracy. AI tools were used to enhance and standardize product images for web presentation, helping businesses maintain a consistent and professional brand identity.'
     },
     {
       id: 6,
       title: 'Unified Clinical Operating System',
-      date: '2025',
-      sector: 'Healthcare',
-      location: 'Regional Multi-Specialty',
-      outcome: 'Single system for records, conflict-free scheduling, and flexible billing',
-      excerpt: 'Comprehensive clinic management centralizing medical records, scheduling, and billing for multi-specialty medical practices.',
-      image: MEDIA_ASSETS.engineeringStudioHall,
-      content: 'Designed a comprehensive clinic management system suitable for medical clinics of all specialties. The platform centralizes patient management, appointment scheduling, medical records, procedures, billing, and reporting in a single, easy-to-use system. It supports detailed patient profiles, smart scheduling to avoid overlaps, procedure tracking with notes and images, flexible billing with partial or full payments, and real-time operational reports. The system includes multi-user role management for doctors, nurses, receptionists, and accountants, and is fully mobile-friendly, enabling clinics to reduce paperwork, minimize errors, and deliver a more professional patient experience.',
+      date: '',
+      excerpt: 'Comprehensive clinic management centralizing medical records, scheduling, and billing for multi-specialty practices.',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop',
+      content: 'Designed a comprehensive clinic management system suitable for medical clinics of all specialties. The platform centralizes patient management, appointment scheduling, medical records, procedures, billing, and reporting in a single, easy-to-use system. It supports detailed patient profiles, smart scheduling to avoid overlaps, procedure tracking with notes and images, flexible billing with partial or full payments, and real-time operational reports. The system includes multi-user role management for doctors, nurses, receptionists, and accountants, and is fully mobile-friendly, enabling clinics to reduce paperwork, minimize errors, and deliver a more professional patient experience.'
     },
     {
       id: 1,
       title: 'Goldsmith Management System',
-      date: '2024',
-      sector: 'ERP & Manufacturing',
-      location: 'Syria',
-      outcome: 'Unified Frappe ERP tracking workshop balances and daily transactions',
-      excerpt: 'Comprehensive Frappe-based ERP designed for jewelry workshops to manage daily transactions, weight balances, and workflows.',
-      image: MEDIA_ASSETS.enterpriseInfrastructure,
-      content: 'Designed and deployed a comprehensive Frappe-based ERP system for jewelry workshops to manage transactions, balances, daily operations, and business workflows. Implemented mobile-friendly interfaces, structured data handling, and system reliability features, contributing to improved operational efficiency and better decision-making.',
+      date: '',
+      excerpt: 'Comprehensive Frappe-based ERP designed for jewelry workshops to manage daily transactions and business workflows.',
+      image: 'https://images.unsplash.com/photo-1609619741907-dcc81add10f7?q=80&w=2072&auto=format&fit=crop',
+      content: 'Designed and deployed a comprehensive Frappe-based ERP system for jewelry workshops to manage transactions, balances, daily operations, and business workflows. Implemented mobile-friendly interfaces, structured data handling, and system reliability features, contributing to improved operational efficiency and better decision-making.'
     },
     {
       id: 2,
-      title: 'ERPNext Implementation for Cheese Manufacturing',
-      date: '2024',
-      sector: 'ERP & Manufacturing',
-      location: 'Lebanon',
-      outcome: 'End-to-end production digitalization and full staff adoption',
-      excerpt: 'Digitalizing operations for a major cheese producer in Lebanon, improving workflow visibility and reliable system adoption.',
-      image: MEDIA_ASSETS.enterpriseInfrastructure,
-      content: 'Implemented and customized ERPNext for a cheese manufacturing company in Lebanon, digitalizing operations and improving workflow efficiency. Configured key modules, managed data migration, set user roles and permissions, and trained staff to ensure smooth adoption and reliable system use.',
+      title: 'ERPNext Implementation – Cheese Manufacturing (Lebanon)',
+      date: '',
+      excerpt: 'Digitalizing operations for a major cheese producer in Lebanon, improving workflow efficiency and reliable system adoption.',
+      image: 'https://images.unsplash.com/photo-1610037275499-00c6b17c8ddd?q=80&w=2070&auto=format&fit=crop',
+      content: 'Implemented and customized ERPNext for a cheese manufacturing company in Lebanon, digitalizing operations and improving workflow efficiency. Configured key modules, managed data migration, set user roles and permissions, and trained staff to ensure smooth adoption and reliable system use.'
     },
     {
       id: 3,
-      title: 'Blockchain Degree Verification Network',
-      date: '2024',
-      sector: 'Blockchain & Security',
-      location: 'Regional Institutions',
-      outcome: 'Tamper-proof QR certificate verification on private Ethereum nodes',
-      excerpt: 'Developed a private Ethereum verification system with Solidity smart contracts and instant QR-code certificate scanning.',
-      image: MEDIA_ASSETS.sovereignSecurityVault,
-      content: 'Developed a blockchain-based verification system using a private Ethereum network with multiple nodes. Implemented Solidity smart contracts and a web interface enabling institutions and users to verify educational certificates via secure QR-code scanning, enhancing credibility and preventing document fraud.',
+      title: 'Blockchain Degree Verification',
+      date: '',
+      excerpt: 'Developed a private Ethereum verification system with Solidity smart contracts and secure QR-code scanning.',
+      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000',
+      content: 'Developed a blockchain-based verification system using a private Ethereum network with multiple nodes. Implemented Solidity smart contracts and a web interface enabling institutions and users to verify educational certificates via secure QR-code scanning, enhancing credibility and preventing document fraud.'
     },
     {
       id: 4,
-      title: 'CRM Transformation for AVIS Car Rental',
-      date: '2024',
-      sector: 'CRM & Mobility',
-      location: 'Erbil, Iraq',
-      outcome: 'Replaced manual Excel trackers with structured reservations & reporting',
-      excerpt: 'Transitioning manual spreadsheet processes to a structured CRM system for AVIS Erbil, improving reservation handling and reporting accuracy.',
-      image: MEDIA_ASSETS.heroArchitecture,
-      content: 'Supported the transition from manual processes and Excel files to a structured CRM system for AVIS Erbil. Enhanced customer management, reservations handling, and reporting accuracy. Improved workflow efficiency and provided guidance to staff to ensure effective system utilization and continuity of operations.',
-    },
+      title: 'CRM System for AVIS Car Rental Erbil',
+      date: '',
+      excerpt: 'Transitioning manual Excel processes to a structured CRM system for AVIS Erbil, enhancing reporting accuracy.',
+      image: 'https://images.unsplash.com/photo-1765446925577-59a34c05f778?q=80&w=2070&auto=format&fit=crop',
+      content: 'Supported the transition from manual processes and Excel files to a structured CRM system for AVIS Erbil. Enhanced customer management, reservations handling, and reporting accuracy. Improved workflow efficiency and provided guidance to staff to ensure effective system utilization and continuity of operations.'
+    }
   ],
   ar: [
     {
       id: 5,
       title: 'منصة التجارة الإلكترونية للأعمال السورية',
-      date: '٢٠٢٥',
-      sector: 'التجارة الإلكترونية',
-      location: 'دمشق، سوريا',
-      outcome: 'أتمتة إدارة الطلبات والكتالوج وتوحيد الهوية البصرية للمنتجات',
-      excerpt: 'منصة مبيعات مؤتمتة وجاهزة للإطلاق، مخصصة للشركات السورية وبائعي منصة إنستغرام للانتقال من العمل اليدوي.',
-      image: MEDIA_ASSETS.digitalWorkspaceCase,
-      content: 'تم تطوير موقع تجارة إلكترونية متكامل مخصص للأعمال السورية الناشئة، خاصةً بائعي الإنستغرام الراغبين في أتمتة عمليات البيع بشكل احترافي. تدعم المنصة إدارة المنتجات، الطلبات المؤتمتة، وقواعد بيانات العملاء المنظمة، مما يقلل الجهد اليدوي ويرفع دقة العمليات. كما تم دمج أدوات الذكاء الاصطناعي لتحسين صور المنتجات وضمان هوية بصرية متسقة.',
+      date: '٢٠٢٤',
+      excerpt: 'منصة مبيعات مؤتمتة وجاهزة للإطلاق، مخصصة للشركات السورية وبائعي منصة إنستغرام.',
+      image: 'https://images.unsplash.com/photo-1665686310429-ee43624978fa?q=80&w=2070&auto=format&fit=crop',
+      content: 'تم تطوير موقع تجارة إلكترونية متكامل مخصص للأعمال السورية الناشئة، خاصةً بائعي الإنستغرام الراغبين في أتمتة عمليات البيع بشكل احترافي. تدعم المنصة إدارة المنتجات، الطلبات المؤتمتة، وقواعد بيانات العملاء المنظمة، مما يقلل الجهد اليدوي ويرفع دقة العمليات. كما تم دمج أدوات الذكاء الاصطناعي لتحسين صور المنتجات وضمان هوية بصرية متسقة.'
     },
     {
       id: 6,
       title: 'نظام التشغيل العيادي الموحد',
-      date: '٢٠٢٥',
-      sector: 'الرعاية الصحية',
-      location: 'عيادات متعددة التخصصات',
-      outcome: 'منصة موحدة للسجلات الطبية وجدولة المواعيد دون تضارب والفوترة المرنة',
+      date: '٢٠٢٤',
       excerpt: 'إدارة شاملة للعيادات تدمج السجلات الطبية والجدولة والفوترة للمراكز متعددة التخصصات.',
-      image: MEDIA_ASSETS.engineeringStudioHall,
-      content: 'تصميم نظام متكامل لإدارة العيادات الطبية بمختلف تخصصاتها. يرتكز النظام على مركزية إدارة المرضى، جدولة المواعيد الذكية، السجلات الطبية الإلكترونية، والفوترة، كل ذلك في منصة واحدة سهلة الاستخدام. يدعم النظام ملفات المرضى المفصلة وتتبع الإجراءات الطبية بالصور والملاحظات، مع نظام تقارير تشغيلية لحظية. النظام متوافق تماماً مع الهواتف المحمولة لتقليل المعاملات الورقية ورفع كفاءة التجربة العلاجية.',
+      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop',
+      content: 'تصميم نظام متكامل لإدارة العيادات الطبية بمختلف تخصصاتها. يرتكز النظام على مركزية إدارة المرضى، جدولة المواعيد الذكية، السجلات الطبية الإلكترونية، والفوترة، كل ذلك في منصة واحدة سهلة الاستخدام. يدعم النظام ملفات المرضى المفصلة وتتبع الإجراءات الطبية بالصور والملاحظات، مع نظام تقارير تشغيلية لحظية. النظام متوافق تماماً مع الهواتف المحمولة لتقليل المعاملات الورقية ورفع كفاءة التجربة العلاجية.'
     },
     {
       id: 1,
       title: 'نظام إدارة ورش صياغة الذهب',
       date: '٢٠٢٤',
-      sector: 'أنظمة ERP والتصنيع',
-      location: 'سوريا',
-      outcome: 'نظام ERP متكامل على Frappe لضبط الأرصدة والمعاملات اليومية بدقة',
       excerpt: 'نظام ERP شامل مبني على إطار عمل Frappe لإدارة المعاملات اليومية وسير العمل في ورش المجوهرات.',
-      image: MEDIA_ASSETS.enterpriseInfrastructure,
-      content: 'تصميم ونشر نظام ERP متكامل لورش الصياغة لضبط الأرصدة، المعاملات، والعمليات التشغيلية اليومية. تم التركيز على واجهات سهلة الاستخدام متوافقة مع الموبايل وهيكلية بيانات منظمة تضمن موثوقية عالية للأنظمة، مما ساهم في تحسين الكفاءة التشغيلية بنسبة كبيرة واتخاذ قرارات مبنية على بيانات دقيقة.',
+      image: 'https://images.unsplash.com/photo-1609619741907-dcc81add10f7?q=80&w=2072&auto=format&fit=crop',
+      content: 'تصميم ونشر نظام ERP متكامل لورش الصياغة لضبط الأرصدة، المعاملات، والعمليات التشغيلية اليومية. تم التركيز على واجهات سهلة الاستخدام متوافقة مع الموبايل وهيكلية بيانات منظمة تضمن موثوقية عالية للأنظمة، مما ساهم في تحسين الكفاءة التشغيلية بنسبة كبيرة واتخاذ قرارات مبنية على بيانات دقيقة.'
     },
     {
       id: 2,
-      title: 'تنفيذ ERPNext – صناعة الأجبان',
+      title: 'تنفيذ ERPNext – صناعة الأجبان (لبنان)',
       date: '٢٠٢٤',
-      sector: 'أنظمة ERP والتصنيع',
-      location: 'لبنان',
-      outcome: 'رقمنة عمليات التصنيع بالكامل وترحيل البيانات وتدريب الكادر',
       excerpt: 'رقمنة العمليات لمنتج رئيسي للأجبان في لبنان، لتحسين كفاءة سير العمل واعتماد نظام تقني موثوق.',
-      image: MEDIA_ASSETS.enterpriseInfrastructure,
-      content: 'تنفيذ وتخصيص نظام ERPNext لشركة رائدة في صناعة الأجبان في لبنان. تضمن المشروع رقمنة كافة العمليات، تهيئة الوحدات الرئيسية، ترحيل البيانات التاريخية، وتدريب الكادر لضمان الانتقال السلس والمستدام نحو الإدارة الرقمية المتكاملة.',
+      image: 'https://images.unsplash.com/photo-1610037275499-00c6b17c8ddd?q=80&w=2070&auto=format&fit=crop',
+      content: 'تنفيذ وتخصيص نظام ERPNext لشركة رائدة في صناعة الأجبان في لبنان. تضمن المشروع رقمنة كافة العمليات، تهيئة الوحدات الرئيسية، ترحيل البيانات التاريخية، وتدريب الكادر لضمان الانتقال السلس والمستدام نحو الإدارة الرقمية المتكاملة.'
     },
     {
       id: 3,
       title: 'التحقق من الشهادات عبر البلوكشين',
       date: '٢٠٢٤',
-      sector: 'بلوكشين وأمن المعلومات',
-      location: 'مؤسسات إقليمية',
-      outcome: 'تحقق فوري مقاوم للتزوير عبر رمز QR وعقود Solidity الذكية',
       excerpt: 'تطوير نظام تحقق قائم على شبكة إيثيريوم خاصة باستخدام عقود Solidity الذكية ومسح كود QR.',
-      image: MEDIA_ASSETS.sovereignSecurityVault,
-      content: 'تطوير نظام تحقق متطور يعتمد على تقنيات البلوكشين عبر شبكة إيثيريوم خاصة. تم بناء عقود ذكية بلغة Solidity وواجهة ويب تمكن المؤسسات والطلاب من التحقق من صحة الشهادات العلمية عبر مسح كود QR آمن، مما يمنع التزوير ويعزز الموثوقية الأكاديمية.',
+      image: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000',
+      content: 'تطوير نظام تحقق متطور يعتمد على تقنيات البلوكشين عبر شبكة إيثيريوم خاصة. تم بناء عقود ذكية بلغة Solidity وواجهة ويب تمكن المؤسسات والطلاب من التحقق من صحة الشهادات العلمية عبر مسح كود QR آمن، مما يمنع التزوير ويعزز الموثوقية الأكاديمية.'
     },
     {
       id: 4,
-      title: 'نظام CRM لشركة AVIS لتأجير السيارات',
+      title: 'نظام CRM لشركة AVIS لتأجير السيارات (أربيل)',
       date: '٢٠٢٤',
-      sector: 'أنظمة CRM والتنقل',
-      location: 'أربيل، العراق',
-      outcome: 'استبدال جداول Excel اليدوية بنظام حجوزات وتقارير تشغيلية دقيقة',
       excerpt: 'تحويل العمليات اليدوية إلى نظام CRM منظم لفرع AVIS أربيل، مما عزز دقة التقارير التشغيلية.',
-      image: MEDIA_ASSETS.heroArchitecture,
-      content: 'دعم التحول الرقمي الكامل من العمليات اليدوية وجداول Excel إلى نظام CRM متكامل لشركة AVIS في أربيل. ساهم المشروع في تحسين إدارة العملاء والطلبات ورفع دقة التقارير التحليلية، مما ضمن استمرارية الأعمال بكفاءة عالية تحت ضغوط التشغيل المرتفعة.',
-    },
-  ],
+      image: 'https://images.unsplash.com/photo-1765446925577-59a34c05f778?q=80&w=2070&auto=format&fit=crop',
+      content: 'دعم التحول الرقمي الكامل من العمليات اليدوية وجداول Excel إلى نظام CRM متكامل لشركة AVIS في أربيل. ساهم المشروع في تحسين إدارة العملاء والطلبات ورفع دقة التقارير التحليلية، مما ضمن استمرارية الأعمال بكفاءة عالية تحت ضغوط التشغيل المرتفعة.'
+    }
+  ]
 };

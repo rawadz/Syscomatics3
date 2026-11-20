@@ -1,13 +1,13 @@
+
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
- */
+*/
 
 import React from 'react';
 import { TRANSLATIONS } from '../translations';
 import { JOURNAL_ARTICLES } from '../journalArticles';
 import { JournalArticle, Language } from '../types';
-import SafeImage from './SafeImage';
 
 interface JournalProps {
   onArticleClick: (article: JournalArticle) => void;
@@ -16,166 +16,87 @@ interface JournalProps {
 }
 
 const Journal: React.FC<JournalProps> = ({ onArticleClick, onExploreAll, language }) => {
-  const t = TRANSLATIONS[language]?.journal || TRANSLATIONS.en.journal;
+  // Safe translation access with fallback
+  const t = (TRANSLATIONS[language]?.journal) || TRANSLATIONS.en.journal;
   const allArticles = JOURNAL_ARTICLES[language] || JOURNAL_ARTICLES.en;
-  const isRtl = language === 'ar';
-
+  
   if (allArticles.length === 0) return null;
 
+  // Show only top 3 on home page
   const displayed = allArticles.slice(0, 3);
   const featured = displayed[0];
   const others = displayed.slice(1);
 
   return (
-    <section id="journal" className="bg-[#F7F8FA] py-20 md:py-28 px-6 md:px-12 text-start border-t border-slate-200/80">
+    <section id="journal" className="bg-white py-20 md:py-48 px-6 md:px-12 text-start">
       <div className="max-w-[1440px] mx-auto">
-        {/* Header Row */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 mb-14">
-          <div className="max-w-2xl">
-            <p className="text-sm font-medium text-[#0037F3] mb-3">{t.kicker}</p>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-[#0A0B0D] tracking-tight leading-[1.1] mb-4">
-              {t.header}
-            </h2>
-            <p className="text-base md:text-lg text-[#525866] leading-relaxed">
-              {t.sub}
-            </p>
-          </div>
-
-          <button
-            type="button"
-            onClick={onExploreAll}
-            className="inline-flex items-center gap-2.5 px-5 py-3 bg-white border border-slate-200 hover:border-[#0037F3] text-sm font-medium text-[#0A0B0D] hover:text-[#0037F3] rounded-lg transition-colors duration-150 whitespace-nowrap shrink-0"
-          >
-            <span>{t.exploreAll}</span>
-            <span className="font-mono tabular-nums text-xs text-slate-400">
-              ({allArticles.length})
-            </span>
-          </button>
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 md:gap-12 mb-16 md:mb-24">
+            <div className="max-w-2xl">
+                <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
+                    <span className="w-10 md:w-12 h-px bg-[#0037f3]"></span>
+                    <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] text-gray-300">{t.sub}</span>
+                </div>
+                <h2 className="text-3xl md:text-7xl font-heading font-extrabold text-[#0a0b0d] tracking-tighter leading-[1] md:leading-[0.9]">
+                    {t.header}
+                </h2>
+            </div>
+            <div className="text-gray-400 font-mono text-[9px] md:text-[10px] uppercase tracking-widest hidden lg:block">
+                // CORE_ARCHIVE // V.2025
+            </div>
         </div>
 
-        {/* Asymmetric 12-Column Case Study Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
-          {/* Featured Case Study */}
-          <article
-            onClick={() => onArticleClick(featured)}
-            className="lg:col-span-7 group bg-white border border-slate-200/90 hover:border-slate-300 rounded-xl overflow-hidden cursor-pointer transition-colors duration-200 flex flex-col"
-          >
-            <div className="aspect-[16/9] bg-[#0F131C] overflow-hidden relative">
-              <SafeImage
-                src={featured.image}
-                alt={featured.title}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-              />
-            </div>
-
-            <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
-              <div>
-                <div className="flex flex-wrap items-center gap-2 text-xs text-[#525866] mb-3">
-                  <span className="font-medium text-[#0037F3]">{t.featured}</span>
-                  {featured.sector && (
-                    <>
-                      <span aria-hidden="true" className="text-slate-300">·</span>
-                      <span>{featured.sector}</span>
-                    </>
-                  )}
-                  {featured.location && (
-                    <>
-                      <span aria-hidden="true" className="text-slate-300">·</span>
-                      <span>{featured.location}</span>
-                    </>
-                  )}
-                </div>
-
-                <h3 className="text-2xl md:text-3xl font-heading font-bold text-[#0A0B0D] group-hover:text-[#0037F3] transition-colors tracking-tight leading-snug mb-3">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-24">
+          <div className="lg:col-span-7">
+            <div className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] text-[#0037f3] mb-6 md:mb-8">{t.featured}</div>
+            <div className="group cursor-pointer" onClick={() => onArticleClick(featured)}>
+              <div className="relative aspect-[16/9] bg-gray-100 overflow-hidden mb-8 md:mb-12 rounded-[2rem] md:rounded-[3rem] shadow-2xl">
+                <img src={featured.image} alt={featured.title} className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              </div>
+              <div className="max-w-2xl">
+                <h3 className="text-2xl md:text-5xl font-heading font-extrabold text-[#0a0b0d] group-hover:text-[#0037f3] transition-colors tracking-tighter mb-4 md:mb-6">
                   {featured.title}
                 </h3>
-
-                <p className="text-sm md:text-base text-[#525866] leading-relaxed mb-6">
+                <p className="text-gray-500 text-base md:text-lg font-medium leading-relaxed line-clamp-3">
                   {featured.excerpt}
                 </p>
               </div>
-
-              <div className="pt-5 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                {featured.outcome && (
-                  <p className="text-xs md:text-sm font-medium text-[#0A0B0D]">
-                    {featured.outcome}
-                  </p>
-                )}
-                <span className="inline-flex items-center gap-2 text-sm font-medium text-[#0037F3] whitespace-nowrap shrink-0">
-                  <span>{t.readCase}</span>
-                  <svg
-                    className={`w-4 h-4 ${isRtl ? 'rotate-180' : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                  </svg>
-                </span>
-              </div>
             </div>
-          </article>
+          </div>
 
-          {/* Secondary Case Studies Stack */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
-            {others.map((article) => (
-              <article
-                key={article.id}
-                onClick={() => onArticleClick(article)}
-                className="group flex-1 bg-white border border-slate-200/90 hover:border-slate-300 rounded-xl p-6 cursor-pointer transition-colors duration-200 flex flex-col justify-between gap-5"
-              >
-                <div className="flex gap-5 items-start">
-                  <div className="flex-1 min-w-0">
-                    <div className="flex flex-wrap items-center gap-2 text-xs text-[#525866] mb-2">
-                      {article.sector && (
-                        <span className="font-medium text-[#0A0B0D]">{article.sector}</span>
-                      )}
-                      {article.location && (
-                        <>
-                          <span aria-hidden="true" className="text-slate-300">·</span>
-                          <span>{article.location}</span>
-                        </>
-                      )}
-                    </div>
-
-                    <h3 className="text-lg md:text-xl font-heading font-bold text-[#0A0B0D] group-hover:text-[#0037F3] transition-colors leading-snug mb-2">
+          <div className="lg:col-span-5">
+            <div className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] text-[#0037f3] mb-8 md:mb-12">{t.tactical}</div>
+            <div className="space-y-12 md:space-y-16 mb-12">
+              {others.map((article) => (
+                <div key={article.id} className="group cursor-pointer flex gap-6 md:gap-8 items-start pb-10 md:pb-12 border-b border-gray-100 last:border-0" onClick={() => onArticleClick(article)}>
+                  <div className="flex-1">
+                    <h4 className="text-lg md:text-2xl font-heading font-extrabold text-[#0a0b0d] group-hover:text-[#0037f3] transition-colors leading-tight mb-2 md:mb-4">
                       {article.title}
-                    </h3>
-
-                    <p className="text-sm text-[#525866] leading-relaxed line-clamp-2">
-                      {article.excerpt}
-                    </p>
+                    </h4>
+                    <p className="text-gray-500 text-xs md:text-sm font-medium line-clamp-2">{article.excerpt}</p>
                   </div>
-
-                  <div className="w-24 h-24 rounded-lg overflow-hidden bg-[#0F131C] shrink-0 border border-slate-100">
-                    <SafeImage
-                      src={article.image}
-                      alt={article.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
+                  <div className="w-20 h-20 md:w-28 md:h-28 bg-gray-50 flex-shrink-0 overflow-hidden rounded-[1.5rem] md:rounded-[2rem] border border-gray-100">
+                    <img src={article.image} alt={article.title} className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" />
                   </div>
                 </div>
+              ))}
+            </div>
 
-                <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
-                  <span className="text-xs text-[#525866] truncate">
-                    {article.outcome || article.date}
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[#0037F3] whitespace-nowrap shrink-0">
-                    <span>{t.readCase}</span>
-                    <svg
-                      className={`w-3.5 h-3.5 ${isRtl ? 'rotate-180' : ''}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                    </svg>
-                  </span>
-                </div>
-              </article>
-            ))}
+            {/* Navigation to Full Archive */}
+            <div className="pt-8">
+                <button 
+                    onClick={onExploreAll}
+                    className="w-full group flex items-center justify-between p-8 bg-gray-50 border border-gray-100 rounded-[2.5rem] hover:bg-[#0a0b0d] hover:text-white transition-all duration-500"
+                >
+                    <div className="text-start">
+                        <div className="text-[10px] font-black uppercase tracking-[0.3em] text-[#0037f3] mb-2">{t.fullArchive}</div>
+                        <h4 className="text-xl md:text-2xl font-heading font-extrabold tracking-tight">{t.exploreAll}</h4>
+                    </div>
+                    <div className="w-12 h-12 rounded-full bg-[#0037f3] text-white flex items-center justify-center group-hover:translate-x-2 transition-transform">
+                        <svg className={`w-5 h-5 ${language === 'ar' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                    </div>
+                </button>
+            </div>
           </div>
         </div>
       </div>

@@ -5,7 +5,6 @@
 */
 
 import { Language, Service } from './types';
-import { MEDIA_ASSETS } from './mediaAssets';
 
 export const SERVICES_DATA: Record<Language, Service[]> = {
   en: [
@@ -16,7 +15,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'A shared system where money, stock, and staff info work together.',
       longDescription: 'An ERP is like a central nervous system for your business. Instead of having separate files for sales and accounting, everything is in one place. Everyone sees the same facts, leading to fewer mistakes and faster decisions.',
       category: 'Enterprise',
-      imageUrl: MEDIA_ASSETS.enterpriseInfrastructure,
+      imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000',
       features: ['Real-time Inventory Management', 'Automated Multi-currency Accounting', 'Self-service Employee Portals', 'Advanced Operational Reporting'],
       domains: [{ name: 'Operations', description: 'Smoothing daily workflows.' }, { name: 'Finance', description: 'Monetary stability.' }, { name: 'Human Resources', description: 'People management.' }, { name: 'Data Intelligence', description: 'Analytic insights.' }],
       pillars: [
@@ -42,7 +41,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'A powerful website that handles payments and tracks deliveries globally.',
       longDescription: 'Ecommerce is more than a website; it is a selling machine. It connects your products to customers anywhere in the world, processes their payments securely, and helps you manage shipping without the headache of manual tracking.',
       category: 'Development',
-      imageUrl: MEDIA_ASSETS.digitalWorkspaceCase,
+      imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1000',
       features: ['Secure Global Payment Processing', 'Mobile-Responsive Shopping UX', 'Automated Logistics & Shipping Sync', 'Integrated Marketing & SEO Tools'],
       domains: [{ name: 'Retail', description: 'Scaling digital sales.' }, { name: 'Logistics', description: 'Delivery tracking.' }, { name: 'Marketing', description: 'Customer reach.' }, { name: 'Customer Service', description: 'Post-purchase support.' }],
       pillars: [
@@ -68,7 +67,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'A system to track every lead and conversation for your sales team.',
       longDescription: 'A CRM is like a professional memory. It stores every email, phone call, and meeting you have with a client. This helps your sales team know exactly when to call someone back and what they need, turning "maybe" into "yes."',
       category: 'Enterprise',
-      imageUrl: MEDIA_ASSETS.engineeringStudioHall,
+      imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000',
       features: ['Dynamic Sales Pipeline Tracking', 'Centralized Communication History', 'Automated Follow-up Reminders', 'AI-Driven Lead Scoring'],
       domains: [{ name: 'Sales', description: 'Optimizing the funnel.' }, { name: 'Marketing', description: 'Campaign targeting.' }, { name: 'Support', description: 'Relationship health.' }, { name: 'Analytics', description: 'Revenue forecasting.' }],
       pillars: [
@@ -94,7 +93,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Strategic design that guides users to take the right action.',
       longDescription: 'UI/UX is the difference between a tool that is frustrating and one that is a joy to use. We design the "look" (UI) and the "feel" (UX) so that your users never get confused and always find what they are looking for quickly.',
       category: 'Design',
-      imageUrl: MEDIA_ASSETS.digitalWorkspaceCase,
+      imageUrl: 'https://images.unsplash.com/photo-1576595580361-90a855b84b20?q=80&w=1974&auto=format&fit=crop',
       features: ['In-depth User Research & Testing', 'Modern Visual Identity Design', 'Interactive High-Fidelity Prototypes', 'Full Design System Documentation'],
       domains: [{ name: 'Identity', description: 'Premium digital presence.' }, { name: 'Product', description: 'Software usability.' }, { name: 'Brand', description: 'Visual storytelling.' }, { name: 'Accessibility', description: 'Inclusive design.' }],
       pillars: [
@@ -120,7 +119,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Technical and content work to put your brand at the top of search.',
       longDescription: 'SEO is like making sure your shop is on the busiest street in the world. We optimize your website code and content so that when people search for what you do, your name appears first. It is the best way to get free, high-quality traffic.',
       category: 'Consulting',
-      imageUrl: MEDIA_ASSETS.engineeringStudioHall,
+      imageUrl: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?q=80&w=1932&auto=format&fit=crop',
       features: ['Content & Keyword Strategy', 'Technical Speed Optimization', 'Authority Backlink Building', 'Local Search Dominance'],
       domains: [{ name: 'Growth', description: 'Increasing organic reach.' }, { name: 'Technical', description: 'Core web vitals.' }, { name: 'Content', description: 'Relevant authority.' }, { name: 'Local', description: 'Regional visibility.' }],
       pillars: [
@@ -146,7 +145,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Modern security to protect your company\'s secrets and money.',
       longDescription: 'Cybersecurity is the wall around your digital business. We set up systems that monitor for "intruders" and encrypt your sensitive data. It ensures that your private company info stays private and your systems never get locked by ransoms.',
       category: 'Security',
-      imageUrl: MEDIA_ASSETS.sovereignSecurityVault,
+      imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
       features: ['Proactive Threat Monitoring', 'Military-Grade Data Encryption', 'Zero-Trust Access Architecture', 'Incident Response Planning'],
       domains: [{ name: 'Defense', description: 'Proactive protection.' }, { name: 'Privacy', description: 'Data protection.' }, { name: 'Compliance', description: 'Legal safety.' }, { name: 'Recovery', description: 'Resilience.' }],
       pillars: [
@@ -172,7 +171,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Connect different software so data flows automatically.',
       longDescription: 'APIs are like bridges between islands of software. If you have an ERP and a website, we build the bridge so that when someone buys a product, your stock level updates automatically. No more manual copying and pasting between apps.',
       category: 'Development',
-      imageUrl: MEDIA_ASSETS.enterpriseInfrastructure,
+      imageUrl: 'https://images.unsplash.com/photo-1763568258208-a5af30d5a31b?q=80&w=2070&auto=format&fit=crop',
       features: ['Real-time Data Synchronization', 'Multi-app Integration Hubs', 'Encrypted Data Transfer', 'High-Performance API Gateways'],
       domains: [{ name: 'Connectivity', description: 'Eliminating manual sync.' }, { name: 'Automation', description: 'Seamless flows.' }, { name: 'Systems', description: 'Interoperability.' }, { name: 'Scalability', description: 'Message queuing.' }],
       pillars: [
@@ -198,7 +197,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'A check-up for your IT setup to find waste and risks.',
       longDescription: 'Just like a physical exam, a system audit looks for hidden problems. We check your servers and software to find what is slow, what is insecure, and what you are paying for but not using. We give you a plan to fix it all.',
       category: 'Consulting',
-      imageUrl: MEDIA_ASSETS.engineeringStudioHall,
+      imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000',
       features: ['Deep Cost-Benefit Analysis', 'Comprehensive Safety Checks', 'Performance & Load Testing', 'IT Resource Lifecycle Review'],
       domains: [{ name: 'Efficiency', description: 'IT resource optimization.' }, { name: 'Budget', description: 'Cost reduction.' }, { name: 'Security', description: 'Risk mitigation.' }, { name: 'Future', description: 'Upgrade roadmap.' }],
       pillars: [
@@ -224,7 +223,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'High-performance private and hybrid cloud setups designed for regional data residency.',
       longDescription: 'Generic cloud solutions put your data in hands you don’t control. Our Sovereign Cloud infrastructure provides the same performance as global providers but on your territory, under your laws, and protected by your encryption keys.',
       category: 'Cloud',
-      imageUrl: MEDIA_ASSETS.heroArchitecture,
+      imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop',
       features: ['Zero-Knowledge Private Clusters', 'Hybrid Sync Architecture', 'Automated Scaling Protocols', 'Localized Hardware Deployment'],
       domains: [{ name: 'Infrastructure', description: 'Rock-solid stability.' }, { name: 'Security', description: 'Absolute privacy.' }, { name: 'Performance', description: 'Global speed, local control.' }],
       pillars: [
@@ -250,7 +249,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Custom AI models that analyze patterns and automate complex decision-making.',
       longDescription: 'Our Neural Intelligence systems move beyond simple automation. We build proprietary AI models that live on your infrastructure, ensuring data sovereignty while providing predictive insights on inventory, customer churn, and market shifts.',
       category: 'AI',
-      imageUrl: MEDIA_ASSETS.enterpriseInfrastructure,
+      imageUrl: 'https://images.unsplash.com/photo-1660165458059-57cfb6cc87e5?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       features: ['Predictive Demand Forecasting', 'Automated Lead Qualification', 'Natural Language Document Processing', 'Sovereign On-Premise AI Hosting'],
       domains: [{ name: 'Strategy', description: 'Data-driven decision making.' }, { name: 'Automation', description: 'Reducing cognitive load.' }, { name: 'Intelligence', description: 'Market foresight.' }],
       pillars: [
@@ -276,7 +275,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Transparent, immutable auditing systems for high-stakes enterprise transactions.',
       longDescription: 'Blockchain is the ultimate auditing tool. We build private, high-speed ledger systems that make it impossible to fake records, ensuring absolute transparency in supply chains, finance, and legal documentation.',
       category: 'Blockchain',
-      imageUrl: MEDIA_ASSETS.sovereignSecurityVault,
+      imageUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000',
       features: ['Immutable Audit Trails', 'Smart Contract Automation', 'Multi-Node Verification', 'Encrypted Document Hashing'],
       domains: [{ name: 'Trust', description: 'Verifiable integrity.' }, { name: 'Finance', description: 'Fraud-proof transactions.' }, { name: 'Audit', description: 'Automated transparency.' }],
       pillars: [
@@ -302,7 +301,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Advanced engineering to ensure your operations survive any physical or digital crisis.',
       longDescription: 'Disaster recovery is more than just backups. We engineer "Anti-Fragile" systems that can detect failures instantly and switch to redundant infrastructure without users noticing. We protect your business from hardware failure and cyber attacks.',
       category: 'Security',
-      imageUrl: MEDIA_ASSETS.sovereignSecurityVault,
+      imageUrl: 'https://images.unsplash.com/photo-1580090918915-b2678c8a3d5a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       features: ['Real-time Data Replication', 'Instant Automated Failover', 'Offline Operational Modes', 'Redundant Power & Network Mesh'],
       domains: [{ name: 'Continuity', description: 'Operations that never stop.' }, { name: 'Safety', description: 'Protecting the company core.' }, { name: 'Resilience', description: 'Bouncing back stronger.' }],
       pillars: [
@@ -328,7 +327,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
       description: 'Hardware and software integration for real-time factory, warehouse, and fleet monitoring.',
       longDescription: 'Industrial IoT bridges the gap between your physical assets and your ERP. We install sensors and edge-computing devices that monitor machines, track vehicles, and manage energy usage, feeding all that data directly into your decision-making systems.',
       category: 'Development',
-      imageUrl: MEDIA_ASSETS.enterpriseInfrastructure,
+      imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop',
       features: ['Real-time Sensor Networks', 'Predictive Maintenance Alerts', 'Fleet Tracking & Telematics', 'Energy Efficiency Monitoring'],
       domains: [{ name: 'Manufacturing', description: 'Smart factory floors.' }, { name: 'Logistics', description: 'Total asset visibility.' }, { name: 'Efficiency', description: 'Reducing physical waste.' }],
       pillars: [
@@ -356,7 +355,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'نظام تقني موحد يربط العمليات المالية والمخزون والموظفين في بيئة واحدة متكاملة.',
         longDescription: 'نظام ERP هو بمثابة الجهاز العصبي المركزي لأعمالك. بدلاً من تشتت البيانات في ملفات منفصلة، يجمع النظام كل شيء في مكان واحد، مما يضمن دقة المعلومات لحظياً ويسرّع عملية اتخاذ القرار الاستراتيجي.',
         category: 'Enterprise',
-        imageUrl: MEDIA_ASSETS.enterpriseInfrastructure,
+        imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000',
         features: ['إدارة المخزون في الوقت الفعلي', 'محاسبة آلية متعددة العملات', 'بوابات خدمة ذاتية للموظفين', 'تقارير تشغيلية وتحليلية متقدمة'],
         domains: [{ name: 'العمليات', description: 'تسهيل سير العمل اليومي.' }, { name: 'المالية', description: 'ضمان الاستقرار المالي.' }, { name: 'المالحة البشرية', description: 'إدارة الكوادر بكفاءة.' }, { name: 'ذكاء الأعمال', description: 'رؤى تحليلية دقيقة.' }],
         pillars: [
@@ -382,7 +381,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'واجهة رقمية قوية تُدير المدفوعات وتتتبع الشحن والخدمات اللوجستية عالمياً.',
         longDescription: 'التجارة الإلكترونية لدينا تتجاوز مجرد موقع ويب؛ إنها محرك مبيعات متكامل يربط منتجاتك بالعملاء حول العالم، ويُعالج المدفوعات بأعلى معايير الأمان.',
         category: 'Development',
-        imageUrl: MEDIA_ASSETS.digitalWorkspaceCase,
+        imageUrl: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1000',
         features: ['معالجة مدفوعات عالمية آمنة', 'تجربة تسوق متوافقة مع الهواتف', 'أتمتة اللوجستيات وتتبع الشحن', 'أدوات تسويق وتحسين محركات بحث مدمجة'],
         domains: [{ name: 'التجزئة', description: 'توسيع المبيعات الرقمية.' }, { name: 'اللوجستيات', description: 'تتبع الشحن والتوصيل.' }, { name: 'التسويق', description: 'الوصول للعملاء المستهدفين.' }, { name: 'خدمة العملاء', description: 'دعم ما بعد البيع.' }],
         pillars: [
@@ -408,7 +407,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'نظام ذكي لتتبع كافة التفاعلات والمحادثات لتعزيز كفاءة فريق المبيعات.',
         longDescription: 'نظام CRM هو الذاكرة الاحترافية لمؤسستك، حيث يجمع كافة المراسلات والاجتماعات في مكان واحد، مما يساعد فريقك على المتابعة الدقيقة وتحويل الفرص إلى صفقات ناجحة.',
         category: 'Enterprise',
-        imageUrl: MEDIA_ASSETS.engineeringStudioHall,
+        imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1000',
         features: ['تتبع ديناميكي لمراحل المبيعات', 'أرشفة موحدة لتاريخ التواصل', 'تنبيهات متابعة آلية وذكية', 'تقييم العملاء المحتمين بالذكاء الاصطناعي'],
         domains: [{ name: 'المبيعات', description: 'تحسين قمع المبيعات.' }, { name: 'التسويق', description: 'استهداف الحملات بدقة.' }, { name: 'الدعم', description: 'رفع مستوى رضا العملاء.' }, { name: 'التحليلات', description: 'توقع الإيرادات المستقبلية.' }],
         pillars: [
@@ -434,7 +433,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'تصميم استراتيجي يوجه المستخدم نحو الإجراء الصحيح بسلاسة تامة.',
         longDescription: 'تجربة المستخدم هي الفارق الجوهري بين النظام المُربك والنظام الممتع. نحن نصمم "الشكل" و"الإحساس" بحيث يجد المستخدمون ما يبحثون عنه بسرعة وسهولة.',
         category: 'Design',
-        imageUrl: MEDIA_ASSETS.digitalWorkspaceCase,
+        imageUrl: 'https://images.unsplash.com/photo-1576595580361-90a855b84b20?q=80&w=1974&auto=format&fit=crop',
         features: ['أبحاث واختبارات معمقة للمستخدمين', 'هوية بصرية عصرية ومتكاملة', 'نماذج أولية تفاعلية عالية الدقة', 'توثيق شامل لأنظمة التصميم'],
         domains: [{ name: 'الهوية الرقمية', description: 'حضور رقمي متميز.' }, { name: 'تطوير المنتجات', description: 'تحسين سهولة الاستخدام.' }, { name: 'العلامة التجارية', description: 'السرد البصري للقصة.' }, { name: 'سهولة الوصول', description: 'تصميم شامل للجميع.' }],
         pillars: [
@@ -460,7 +459,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'عمل تقني واستراتيجي لرفع تصنيف علامتك التجارية في نتائج البحث.',
         longDescription: 'خدمات SEO لدينا تضمن تواجد مشروعك في صدارة "الشوارع الرقمية" الأكثر ازدحاماً. نحن نحسن الأكواد والمحتوى لضمان ظهورك أمام العملاء المستهدفين بفعالية.',
         category: 'Consulting',
-        imageUrl: MEDIA_ASSETS.engineeringStudioHall,
+        imageUrl: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?q=80&w=1932&auto=format&fit=crop',
         features: ['استراتيجية المحتوى والكلمات المفتاحية', 'تحسين السرعة التقنية للموقع', 'بناء الروابط الخلفية القوية', 'التصدر في نتائج البحث المحلية'],
         domains: [{ name: 'النمو', description: 'زيادة الوصول المجاني.' }, { name: 'الجانب التقني', description: 'تحسين أساسيات الويب.' }, { name: 'المحتوى', description: 'ترسيخ المرجعية المعرفية.' }, { name: 'التواجد المحلي', description: 'الظهور في المنطقة المستهدفة.' }],
         pillars: [
@@ -486,7 +485,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'حلول أمنية حديثة لحماية أسرار الشركة وبياناتها المالية من الاختراق.',
         longDescription: 'الأمن السيبراني هو الجدار الدفاعي لمشروعك الرقمي. نحن نبني أنظمة مراقبة وتشفير متقدمة تضمن خصوصية بياناتك وحمايتها من هجمات الفدية والاختراقات.',
         category: 'Security',
-        imageUrl: MEDIA_ASSETS.sovereignSecurityVault,
+        imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000',
         features: ['مراقبة استباقية للتهديدات', 'تشفير بيانات بمعايير عسكرية', 'معمارية الوصول "صفر ثقة"', 'خطط استجابة سريعة للحوادث'],
         domains: [{ name: 'الدفاع', description: 'حماية استباقية وشاملة.' }, { name: 'الخصوصية', description: 'حماية بيانات العملاء.' }, { name: 'الامتثال', description: 'التوافق مع القوانين الأمنية.' }, { name: 'التعافي', description: 'ضمان استمرارية الأعمال.' }],
         pillars: [
@@ -512,7 +511,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'ربط البرمجيات المختلفة لضمان تدفق البيانات آلياً ودون تدخل بشري.',
         longDescription: 'واجهات البرمجة (APIs) هي الجسور بين جزر البرمجيات. نحن نبني هذه الجسور لضمان مزامنة البيانات بين متجرك ونظام المخازن والمحاسبة تلقائياً.',
         category: 'Development',
-        imageUrl: MEDIA_ASSETS.enterpriseInfrastructure,
+        imageUrl: 'https://images.unsplash.com/photo-1763568258208-a5af30d5a31b?q=80&w=2070&auto=format&fit=crop',
         features: ['مزامنة البيانات لحظياً', 'مراكز ربط التطبيقات المتعددة', 'نقل بيانات مشفر وآمن', 'بوابات API عالية الأداء'],
         domains: [{ name: 'الربط التقني', description: 'إلغاء المزامنة اليدوية.' }, { name: 'الأتمتة', description: 'تدفقات عمل سلسة.' }, { name: 'الأنظمة', description: 'توافقية تشغيلية عالية.' }, { name: 'التوسع', description: 'إدارة الرسائل والبيانات.' }],
         pillars: [
@@ -538,7 +537,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'تحليل دقيق لكافة موارد تكنولوجيا المعلومات لكشف الهدر والمخاطر.',
         longDescription: 'تماماً مثل الفحص الطبي، يبحث تدقيق النظام عن المشاكل المخفية. نحن نفحص الخوادم والبرمجيات لتحديد مواطن البطء والثغرات الأمنية والتكاليف غير المبررة.',
         category: 'Consulting',
-        imageUrl: MEDIA_ASSETS.engineeringStudioHall,
+        imageUrl: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000',
         features: ['تحليل التكلفة والفائدة بعمق', 'فحوصات سلامة شاملة', 'اختبارات الأداء والجهد', 'مراجعة دورة حياة الموارد'],
         domains: [{ name: 'الكفاءة', description: 'تحسين استغلال الموارد.' }, { name: 'الميزانية', description: 'تقليل التكاليف غير الضرورية.' }, { name: 'الأمن', description: 'تخفيف المخاطر التقنية.' }, { name: 'المستقبل', description: 'خارطة طريق للتحديث.' }],
         pillars: [
@@ -564,7 +563,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'إعدادات سحابية خاصة وهجينة عالية الأداء مصممة لضمان إقامة البيانات محلياً.',
         longDescription: 'توفر بنيتنا التحتية السحابية السيادية نفس أداء المزودين العالميين ولكن على أرضك، وتحت قوانينك، ومحمية بمفاتيح التشفير الخاصة بك فقط.',
         category: 'Cloud',
-        imageUrl: MEDIA_ASSETS.heroArchitecture,
+        imageUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop',
         features: ['عناقيد خاصة', 'معمارية هجينة', 'توسع آلي', 'أجهزة محلية'],
         domains: [{ name: 'البنية التحتية', description: 'استقرار تقني صلب.' }, { name: 'الأمن', description: 'خصوصية مطلقة.' }, { name: 'الأداء', description: 'سرعة عالمية، تحكم محلي.' }],
         pillars: [
@@ -590,7 +589,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'نماذج ذكاء اصطناعي مخصصة لتحليل الأنماط وأتمتة اتخاذ القرارات المعقدة.',
         longDescription: 'تتجاوز أنظمة الذكاء العصبي لدينا مفهوم الأتمتة البسيطة؛ فنحن نبني نماذج ذكاء اصطناعي مملوكة لك تعمل ضمن بنيتك التحتية الخاصة، مما يضمن سيادة البيانات مع توفير رؤى تنبؤية حول المخزون والعملاء وتغيرات السوق.',
         category: 'AI',
-        imageUrl: MEDIA_ASSETS.enterpriseInfrastructure,
+        imageUrl: 'https://images.unsplash.com/photo-1660165458059-57cfb6cc87e5?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         features: ['توقع الطلب', 'تأهيل العملاء', 'معالجة اللغات', 'استضافة AI محلية'],
         domains: [{ name: 'الاستراتيجية', description: 'صناعة القرار المبني على البيانات.' }, { name: 'الأتمتة', description: 'تقليل العبء الذهني.' }, { name: 'الذكاء', description: 'استشراف السوق.' }],
         pillars: [
@@ -616,7 +615,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'أنظمة تدقيق شفافة وغير قابلة للتلاعب للمعاملات عالية الأهمية.',
         longDescription: 'البلوكشين هو أداة التدقيق النهائية. نحن نبني أنظمة سجلات خاصة وعالية السرعة تجعل من المستحيل تزيير السجلات، مما يضمن الشفافية المطلقة في سلاسل التوريد والتمويل والوثائق القانونية.',
         category: 'Blockchain',
-        imageUrl: MEDIA_ASSETS.sovereignSecurityVault,
+        imageUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1000',
         features: ['مسارات تدقيق', 'عقود ذكية', 'تشفير المستندات', 'تحقق متعدد العقد'],
         domains: [{ name: 'الثقة', description: 'نزاهة قابلة للتحقق.' }, { name: 'المالية', description: 'معاملات مقاومة للاحتيال.' }, { name: 'التدقيق', description: 'شفافية مؤتمتة.' }],
         pillars: [
@@ -642,7 +641,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'هندسة متقدمة لضمان بقاء عملياتك تحت أي ظرف أو أزمة.',
         longDescription: 'التعافي من الكوارث أكثر من مجرد نسخ احتياطية. نحن نهندس أنظمة "مضادة للهشاشة" يمكنها كشف الأعطال لحظياً والانتقال إلى بنية تحتية بديلة دون أن يشعر المستخدمون، مما يحمي عملك من فشل العتاد والهجمات السيبرانية.',
         category: 'Security',
-        imageUrl: MEDIA_ASSETS.sovereignSecurityVault,
+        imageUrl: 'https://images.unsplash.com/photo-1580090918915-b2678c8a3d5a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         features: ['مزامنة لحظية', 'انتقال فوري', 'عمل أوفلاين', 'شبكة طاقة مكررة'],
         domains: [{ name: 'الاستمرارية', description: 'عمليات لا تتوقف أبداً.' }, { name: 'الأمان', description: 'حماية جوهر الشركة.' }, { name: 'المرونة', description: 'العودة بشكل أقوى.' }],
         pillars: [
@@ -668,7 +667,7 @@ export const SERVICES_DATA: Record<Language, Service[]> = {
         description: 'تكامل العتاد والبرمجيات للمراقبة اللحظية للمصانع والمستودعات والأساطيل.',
         longDescription: 'يسد إنترنت الأشياء الصناعي الفجوة بين أصولك المادية ونظام ERP الخاص بك. نحن نركب حساسات وأجهزة حوسبة الحافة التي تراقب الآلات، وتتبع المركبات، وتدير استهلاك الطاقة، مما يغذي أنظمة اتخاذ القرار بالبيانات المباشرة.',
         category: 'Development',
-        imageUrl: MEDIA_ASSETS.enterpriseInfrastructure,
+        imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop',
         features: ['حساسات لحظية', 'صيانة تنبؤية', 'تتبع الأساطيل', 'مراقبة الطاقة'],
         domains: [{ name: 'التصنيع', description: 'أرضيات مصانع ذكية.' }, { name: 'اللوجستيات', description: 'وضوح كامل للأصول.' }, { name: 'الكفاءة', description: 'تقليل الهدر المادي.' }],
         pillars: [

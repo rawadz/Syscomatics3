@@ -62,9 +62,6 @@ export interface JournalArticle {
   id: number;
   title: string;
   date: string;
-  sector?: string;
-  location?: string;
-  outcome?: string;
   excerpt: string;
   image: string;
   content: React.ReactNode;

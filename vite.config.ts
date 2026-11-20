@@ -10,13 +10,9 @@ export default defineConfig(() => {
       },
       plugins: [react()],
       resolve: {
-        dedupe: ['react', 'react-dom'],
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
-      },
-      optimizeDeps: {
-        include: ['react', 'react-dom', 'react-dom/client', '@google/genai'],
       }
     };
 });
