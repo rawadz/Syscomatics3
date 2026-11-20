@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/careers",
+      "destination": "https://docs.google.com/forms/d/e/1FAIpQLSeiRKSBupPoSoC0XybKUXTg9xvw8T4Vu2saCdEoCrUE0Lb9Wg/viewform",
+      "permanent": false
+    },
+    {
+      "source": "/careers/",
+      "destination": "https://docs.google.com/forms/d/e/1FAIpQLSeiRKSBupPoSoC0XybKUXTg9xvw8T4Vu2saCdEoCrUE0Lb9Wg/viewform",
+      "permanent": false
+    }
+  ]
+}

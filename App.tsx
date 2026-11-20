@@ -23,7 +23,14 @@ import { getServices } from './servicesData';
 import { JOURNAL_ARTICLES } from './journalArticles';
 import { logVisitorPing } from './services/analyticsService';
 
+const CAREERS_FORM_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSeiRKSBupPoSoC0XybKUXTg9xvw8T4Vu2saCdEoCrUE0Lb9Wg/viewform';
+
 function App() {
+  const isCareersRoute =
+    typeof window !== 'undefined' &&
+    window.location.pathname.replace(/\/+$/, '').toLowerCase() === '/careers';
+
   // PERSISTENCE INIT
   const storedLang = localStorage.getItem('sys_lang');
   const initialLang: Language = storedLang === 'en' || storedLang === 'ar' ? storedLang : 'en';
@@ -123,6 +130,29 @@ function App() {
     setInquiryList([]);
     localStorage.removeItem('sys_inquiry_list');
   };
+
+  // Redirect /careers to the Google Form if served via SPA fallback
+  useEffect(() => {
+    if (isCareersRoute) {
+      window.location.replace(CAREERS_FORM_URL);
+    }
+  }, [isCareersRoute]);
+
+  if (isCareersRoute) {
+    return (
+      <div className="min-h-screen bg-white font-sans text-[#0a0b0d] flex items-center justify-center p-6 text-center">
+        <div className="max-w-md space-y-4">
+          <p className="text-lg font-medium">Redirecting to Syscomatics Careers...</p>
+          <a
+            href={CAREERS_FORM_URL}
+            className="inline-block text-sm font-semibold text-[#0037f3] underline hover:opacity-80"
+          >
+            Continue to application form
+          </a>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={`min-h-screen bg-white font-sans text-[#0a0b0d] selection:bg-[#0037f3] selection:text-white ${language === 'ar' ? 'font-arabic' : ''}`}>
