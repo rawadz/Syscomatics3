@@ -1,12 +1,12 @@
-
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
-*/
+ */
 
 import React, { useState, useEffect } from 'react';
 import { TRANSLATIONS } from '../translations';
 import { Language } from '../types';
+import BrandLogo from './BrandLogo';
 
 interface NavbarProps {
   onNavClick: (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => void;
@@ -14,21 +14,26 @@ interface NavbarProps {
   onOpenInquiry: () => void;
   language: Language;
   onLanguageChange: (lang: Language) => void;
+  forceLightSurface?: boolean;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ onNavClick, inquiryCount, onOpenInquiry, language, onLanguageChange }) => {
+const Navbar: React.FC<NavbarProps> = ({
+  onNavClick,
+  inquiryCount,
+  onOpenInquiry,
+  language,
+  onLanguageChange,
+  forceLightSurface = false,
+}) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [langMenuOpen, setLangMenuOpen] = useState(false);
 
-  // Safe translation access with fallback
-  const t = (TRANSLATIONS[language]?.nav) || TRANSLATIONS.en.nav;
+  const t = TRANSLATIONS[language]?.nav || TRANSLATIONS.en.nav;
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => setScrolled(window.scrollY > 24);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -37,127 +42,148 @@ const Navbar: React.FC<NavbarProps> = ({ onNavClick, inquiryCount, onOpenInquiry
     onNavClick(e, targetId);
   };
 
-  const isLightMode = scrolled || mobileMenuOpen;
-  
-  const navThemeClass = isLightMode 
-    ? 'bg-white/95 text-[#0a0b0d] shadow-lg py-3' 
-    : 'bg-transparent text-white py-6';
-
-  // Specific logo URLs provided by the user
-  const LOGO_BLACK = "https://images.unsplash.com/vector-1768853907539-e980f0fde018?q=80&w=400&auto=format&fit=crop";
-  const LOGO_WHITE = "https://images.unsplash.com/vector-1768853907602-d0fb4587ae8d?q=80&w=400&auto=format&fit=crop";
-
-  const LOGO_SRC = isLightMode ? LOGO_BLACK : LOGO_WHITE;
-
-  const languages = [
-    { id: 'en', label: 'EN' },
-    { id: 'ar', label: 'AR' },
-    { id: 'ku', label: 'KU' }
-  ];
+  const isLightMode = scrolled || mobileMenuOpen || forceLightSurface;
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out backdrop-blur-sm ${navThemeClass}`}>
-        <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between">
-          <a 
-            href="#" 
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-200 ${
+          isLightMode
+            ? 'bg-white/95 backdrop-blur-md text-[#0A0B0D] border-b border-slate-200/80'
+            : 'bg-[#090B10]/70 backdrop-blur-md text-white border-b border-white/10'
+        }`}
+      >
+        <div className="max-w-[1440px] mx-auto px-6 md:px-12 h-16 md:h-[72px] flex items-center justify-between gap-8">
+          {/* Zone 1: Single-element Brand Wordmark */}
+          <a
+            href="#"
             onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                onNavClick(e, '');
+              e.preventDefault();
+              setMobileMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              onNavClick(e, '');
             }}
-            className="group flex items-center gap-1 z-50 relative"
+            className="whitespace-nowrap shrink-0 focus-visible:outline-2 rounded-sm"
+            aria-label="Syscomatics Home"
           >
-            <div className="flex items-center h-8 md:h-10">
-               <img 
-                 src={LOGO_SRC} 
-                 alt="Syscomatics Logo" 
-                 className="h-full w-auto object-contain transition-all duration-500"
-               />
-            </div>
+            <BrandLogo variant={isLightMode ? 'dark' : 'light'} />
           </a>
-          
-          <div className="hidden lg:flex items-center gap-10 text-[13px] font-bold uppercase tracking-[0.15em]">
-            <a href="#services" onClick={(e) => handleLinkClick(e, 'services')} className="hover:text-[#0037f3] transition-colors">{t.solutions}</a>
-            <a href="#about" onClick={(e) => handleLinkClick(e, 'about')} className="hover:text-[#0037f3] transition-colors">{t.strategy}</a>
-            <a href="#journal" onClick={(e) => handleLinkClick(e, 'journal')} className="hover:text-[#0037f3] transition-colors">{t.insights}</a>
-          </div>
 
-          <div className="flex items-center gap-4 md:gap-6 z-50 relative">
-            <div className="relative">
-                <button 
-                  onClick={() => setLangMenuOpen(!langMenuOpen)}
-                  className={`text-[11px] font-black tracking-widest px-3 py-1.5 rounded-lg border transition-all ${
-                    (scrolled || mobileMenuOpen) ? 'border-gray-200 text-gray-500 hover:border-[#0037f3]' : 'border-white/20 text-white/70 hover:border-white'
-                  }`}
-                >
-                  {language.toUpperCase()}
-                </button>
-                {langMenuOpen && (
-                  <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-white rounded-xl shadow-2xl border border-gray-100 p-2 min-w-[80px] animate-fade-in-up">
-                    {languages.map(lang => (
-                      <button
-                        key={lang.id}
-                        onClick={() => {
-                          onLanguageChange(lang.id as Language);
-                          setLangMenuOpen(false);
-                        }}
-                        className={`w-full text-left px-4 py-2 rounded-lg text-[10px] font-black tracking-widest transition-colors ${
-                          language === lang.id ? 'bg-[#0037f3] text-white' : 'text-gray-500 hover:bg-gray-50'
-                        }`}
-                      >
-                        {lang.label}
-                      </button>
-                    ))}
-                  </div>
-                )}
-            </div>
+          {/* Zone 2: Clean Single-Line Navigation Links */}
+          <nav
+            aria-label="Primary"
+            className="hidden lg:flex items-center gap-8 text-sm font-medium"
+          >
+            {[
+              { id: 'services', label: t.solutions },
+              { id: 'about', label: t.strategy },
+              { id: 'journal', label: t.insights },
+              { id: 'contact', label: t.contact },
+            ].map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                onClick={(e) => handleLinkClick(e, item.id)}
+                className={`whitespace-nowrap shrink-0 py-1 border-b-2 border-transparent transition-colors duration-150 ${
+                  isLightMode
+                    ? 'text-slate-600 hover:text-[#0A0B0D] hover:border-[#0037F3]'
+                    : 'text-slate-300 hover:text-white hover:border-[#0037F3]'
+                }`}
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
 
-            <button 
-              onClick={onOpenInquiry}
-              className={`text-[12px] font-bold uppercase tracking-widest px-5 py-2.5 rounded-full border-2 transition-all duration-300 hidden sm:flex items-center gap-2 ${
-                (scrolled || mobileMenuOpen) 
-                  ? 'border-[#0037f3] text-[#0037f3] hover:bg-[#0037f3] hover:text-white' 
-                  : 'border-white/30 text-white hover:border-white hover:bg-white/10'
+          {/* Zone 3: Language Switch & Primary Action */}
+          <div className="flex items-center gap-4 shrink-0">
+            <button
+              type="button"
+              onClick={() => onLanguageChange(language === 'en' ? 'ar' : 'en')}
+              className={`h-9 px-2.5 text-xs font-medium tracking-wide rounded-md transition-colors duration-150 whitespace-nowrap shrink-0 ${
+                isLightMode
+                  ? 'text-slate-600 hover:text-[#0A0B0D] hover:bg-slate-100'
+                  : 'text-slate-300 hover:text-white hover:bg-white/10'
               }`}
+              aria-label={language === 'en' ? 'Switch to Arabic' : 'Switch to English'}
             >
-              {t.brief} 
-              <span className={`flex items-center justify-center w-5 h-5 rounded-full text-[10px] ${
-                (scrolled || mobileMenuOpen) ? 'bg-[#0037f3] text-white' : 'bg-white text-[#0037f3]'
-              }`}>
-                {inquiryCount}
-              </span>
+              {language === 'en' ? 'العربية' : 'EN'}
             </button>
-            
-            <button 
-              className="lg:hidden focus:outline-none"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+
+            <button
+              type="button"
+              onClick={onOpenInquiry}
+              className="hidden sm:inline-flex items-center gap-2.5 h-10 px-4 bg-[#0037F3] hover:bg-[#002BC4] text-white text-sm font-medium rounded-lg transition-colors duration-150 whitespace-nowrap shrink-0"
             >
-               <div className="w-6 flex flex-col gap-1.5">
-                  <span className={`h-0.5 w-full bg-current transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                  <span className={`h-0.5 w-full bg-current transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
-                  <span className={`h-0.5 w-full bg-current transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
-               </div>
+              <span>{t.brief}</span>
+              {inquiryCount > 0 && (
+                <span className="font-mono tabular-nums text-xs bg-white/20 px-1.5 py-0.5 rounded">
+                  {inquiryCount}
+                </span>
+              )}
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className={`lg:hidden w-10 h-10 flex items-center justify-center rounded-lg transition-colors ${
+                isLightMode ? 'text-[#0A0B0D] hover:bg-slate-100' : 'text-white hover:bg-white/10'
+              }`}
+              aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={mobileMenuOpen}
+            >
+              {mobileMenuOpen ? (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7h16M4 12h16M4 17h16" />
+                </svg>
+              )}
             </button>
           </div>
         </div>
-      </nav>
+      </header>
 
-      <div className={`fixed inset-0 bg-[#0a0b0d] z-40 flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${
-          mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
-      }`}>
-          <div className="flex flex-col items-center space-y-10 text-3xl font-heading font-bold text-white tracking-tight">
-            <a href="#services" onClick={(e) => handleLinkClick(e, 'services')} className="hover:text-[#0037f3] transition-colors">{t.solutions}</a>
-            <a href="#about" onClick={(e) => handleLinkClick(e, 'about')} className="hover:text-[#0037f3] transition-colors">{t.strategy}</a>
-            <a href="#journal" onClick={(e) => handleLinkClick(e, 'journal')} className="hover:text-[#0037f3] transition-colors">{t.insights}</a>
-            <button 
-                onClick={onOpenInquiry} 
-                className="text-lg uppercase tracking-[0.2em] font-sans px-8 py-4 bg-[#0037f3] rounded-none hover:bg-white hover:text-[#0037f3] transition-all"
+      {/* Mobile Navigation Sheet */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 top-16 z-40 bg-white lg:hidden flex flex-col justify-between p-6 border-t border-slate-200 animate-fade-in-up">
+          <nav aria-label="Mobile" className="flex flex-col divide-y divide-slate-100">
+            {[
+              { id: 'services', label: t.solutions },
+              { id: 'about', label: t.strategy },
+              { id: 'journal', label: t.insights },
+              { id: 'contact', label: t.contact },
+            ].map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                onClick={(e) => handleLinkClick(e, item.id)}
+                className="py-4 text-lg font-heading font-semibold text-[#0A0B0D] hover:text-[#0037F3] transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="pt-6 border-t border-slate-200">
+            <button
+              type="button"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                onOpenInquiry();
+              }}
+              className="w-full py-3.5 px-5 bg-[#0037F3] hover:bg-[#002BC4] text-white text-sm font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
             >
-                {t.brief} ({inquiryCount})
+              <span>{t.brief}</span>
+              <span className="font-mono tabular-nums text-xs bg-white/20 px-1.5 py-0.5 rounded">
+                {inquiryCount}
+              </span>
             </button>
           </div>
-      </div>
+        </div>
+      )}
     </>
   );
 };

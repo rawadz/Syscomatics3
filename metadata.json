@@ -1,5 +1,6 @@
 {
   "name": "Syscomatics Co.",
   "description": "Empowering global organizations with high-performance systems designed for absolute stability and limitless scale.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "majorCapabilities": []
 }

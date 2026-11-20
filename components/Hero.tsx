@@ -1,73 +1,118 @@
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
-*/
+ */
 
 import React from 'react';
 import { TRANSLATIONS } from '../translations';
 import { Language } from '../types';
+import { MEDIA_ASSETS } from '../mediaAssets';
+import SafeImage from './SafeImage';
 
 interface HeroProps {
   language: Language;
 }
 
 const Hero: React.FC<HeroProps> = ({ language }) => {
-  // Safe translation access with fallback
-  const t = (TRANSLATIONS[language]?.hero) || TRANSLATIONS.en.hero;
+  const t = TRANSLATIONS[language]?.hero || TRANSLATIONS.en.hero;
+  const isRtl = language === 'ar';
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     const element = document.getElementById(targetId);
     if (element) {
-      const headerOffset = 85;
+      const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - headerOffset;
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     }
   };
 
   return (
-    <section className="relative w-full h-[85vh] md:h-[95vh] min-h-[600px] md:min-h-[700px] overflow-hidden bg-[#0a0b0d] flex items-center">
-      {/* Background Graphic Element */}
-      <div className="absolute top-0 right-0 w-2/3 h-full overflow-hidden pointer-events-none opacity-40">
-        <div className="absolute top-[-20%] right-[-10%] w-[100%] h-[140%] border-[1px] border-[#0037f3]/30 rounded-full animate-[spin_60s_linear_infinite]"></div>
-        <div className="absolute top-[-10%] right-[-5%] w-[100%] h-[120%] border-[1px] border-[#0037f3]/20 rounded-full animate-[spin_40s_linear_infinite_reverse]"></div>
-      </div>
+    <section className="relative w-full bg-[#090B10] text-white pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden bg-arch-grid">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12">
+        {/* Two-Column Stretched Architectural Split */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch pb-14 md:pb-20 border-b border-white/10">
+          {/* Left Column: Core Proposition */}
+          <div className="lg:col-span-6 flex flex-col justify-center text-start">
+            <p className="text-xs md:text-sm font-medium text-slate-400 tracking-wide mb-5">
+              {t.kicker}
+            </p>
 
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12">
-        <div className="max-w-4xl animate-fade-in-up">
-          <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8 text-start">
-            <span className="h-0.5 w-8 md:w-12 bg-[#0037f3]"></span>
-            <span className="text-[10px] md:text-sm font-bold uppercase tracking-[0.3em] md:tracking-[0.4em] text-[#0037f3]">
-              {t.tagline}
-            </span>
-          </div>
-          
-          <h1 className="text-4xl md:text-8xl lg:text-9xl font-heading font-extrabold text-white leading-[1.1] md:leading-[1] tracking-tighter mb-8 md:mb-10 text-start">
-            {t.title} <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0037f3] to-[#4e79ff]">{t.accent}</span>
-          </h1>
-          
-          <p className="max-w-xl text-base md:text-xl text-white/60 font-medium leading-relaxed mb-10 md:mb-12 text-start">
-            {t.sub}
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-5">
-            <a 
-              href="#services" 
-              onClick={(e) => handleNavClick(e, 'services')}
-              className="px-8 py-4 md:px-12 md:py-5 bg-[#0037f3] text-white text-xs md:text-sm font-extrabold uppercase tracking-widest hover:bg-white hover:text-[#0a0b0d] transition-all duration-300 text-center"
+            <h1
+              className="font-heading font-bold text-white tracking-tight leading-[1.08] mb-6"
+              style={{ fontSize: 'clamp(2.35rem, 4.2vw, 4rem)' }}
             >
-              {t.cta1}
-            </a>
-            <a 
-              href="#about" 
-              onClick={(e) => handleNavClick(e, 'about')}
-              className="px-8 py-4 md:px-12 md:py-5 border border-white/20 text-white text-xs md:text-sm font-extrabold uppercase tracking-widest hover:border-white transition-all duration-300 text-center"
-            >
-              {t.cta2}
-            </a>
+              {t.title}{' '}
+              <span className="text-[#4F7BFF]">{t.accent}</span>
+            </h1>
+
+            <p className="text-base md:text-lg text-slate-300 leading-relaxed max-w-xl mb-10">
+              {t.sub}
+            </p>
+
+            <div className="flex flex-wrap items-center gap-4">
+              <a
+                href="#services"
+                onClick={(e) => handleNavClick(e, 'services')}
+                className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-[#0037F3] hover:bg-[#002BC4] text-white text-sm font-medium rounded-lg transition-colors duration-150 whitespace-nowrap shrink-0"
+              >
+                <span>{t.cta1}</span>
+                <svg
+                  className={`w-4 h-4 ${isRtl ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+
+              <a
+                href="#contact"
+                onClick={(e) => handleNavClick(e, 'contact')}
+                className="inline-flex items-center justify-center px-5 py-3.5 text-sm font-medium text-slate-200 hover:text-white border border-white/15 hover:border-white/35 rounded-lg transition-colors duration-150 whitespace-nowrap shrink-0"
+              >
+                {t.cta2}
+              </a>
+            </div>
           </div>
+
+          {/* Right Column: Bespoke Architectural Focal Visual */}
+          <div className="lg:col-span-6 flex">
+            <div className="relative w-full min-h-[300px] lg:min-h-[460px] lg:h-full rounded-2xl overflow-hidden border border-white/10 bg-[#11141D]">
+              <SafeImage
+                src={MEDIA_ASSETS.heroArchitecture}
+                alt="Syscomatics architectural systems engineering headquarters"
+                loading="eager"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#090B10]/85 via-[#090B10]/20 to-transparent pointer-events-none" />
+              <div className="absolute bottom-0 inset-x-0 p-6 md:p-8 text-start">
+                <p className="text-xs md:text-sm text-slate-200 max-w-md leading-relaxed">
+                  {t.imageCaption}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Full-Width 4-Column Engineering Proof Strip */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-6 pt-10 md:pt-12 text-start">
+          {t.metrics?.map((metric: { value: string; label: string }, index: number) => (
+            <div
+              key={index}
+              className="lg:border-s lg:first:border-s-0 lg:border-white/10 lg:ps-8 lg:first:ps-0"
+            >
+              <div className="font-mono tabular-nums text-2xl md:text-3xl font-semibold text-white tracking-tight mb-1.5">
+                {metric.value}
+              </div>
+              <div className="text-xs md:text-sm text-slate-400 leading-snug">
+                {metric.label}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

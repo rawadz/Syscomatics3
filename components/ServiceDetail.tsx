@@ -1,173 +1,241 @@
-
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
-*/
+ */
 
 import React, { useEffect } from 'react';
 import { Service, Language } from '../types';
-// Fix: Import TRANSLATIONS from the correct translations file instead of constants
 import { TRANSLATIONS } from '../translations';
+import SafeImage from './SafeImage';
 
 interface ServiceDetailProps {
   service: Service;
+  isInBrief: boolean;
   onBack: () => void;
   onAddToBrief: (service: Service) => void;
   language: Language;
 }
 
-const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onAddToBrief, language }) => {
-  // Safe access to translations with fallback to English
-  const t = (TRANSLATIONS[language]?.services) || TRANSLATIONS.en.services;
+const ServiceDetail: React.FC<ServiceDetailProps> = ({
+  service,
+  isInBrief,
+  onBack,
+  onAddToBrief,
+  language,
+}) => {
+  const t = TRANSLATIONS[language]?.services || TRANSLATIONS.en.services;
   const categoryLabel = t.categoryLabels?.[service.category] || service.category;
+  const isRtl = language === 'ar';
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [service.id]);
 
   if (!service) return null;
 
   return (
-    <div className="min-h-screen bg-white animate-fade-in-up selection:bg-[#0037f3] selection:text-white text-start">
-      
-      {/* Cinematic Hero Section - COLORED IMAGE */}
-      <div className="relative w-full h-[60vh] md:h-[70vh] min-h-[450px] md:min-h-[550px] overflow-hidden bg-[#0a0b0d]">
-        <img 
-          src={service.imageUrl} 
-          alt={service.name} 
-          className="w-full h-full object-cover transition-all duration-1000 scale-105 animate-[subtle-zoom_20s_infinite_alternate]"
-        />
-        {/* Adjusted Gradient: More contrast for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-[#0a0b0d]/80 to-[#0a0b0d]/60"></div>
-        
-        {/* Hero Content Overlay */}
-        <div className="absolute inset-0 flex flex-col justify-end pb-16 md:pb-32 px-6 md:px-12">
-            <div className="max-w-[1440px] mx-auto w-full">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/10 backdrop-blur-md border border-white/20 text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest mb-6 md:mb-8 rounded-full">
-                    <span className="opacity-90">{t.spec}</span>
-                    <span className="font-black">{categoryLabel}</span>
+    <div className="min-h-screen bg-white pt-16 md:pt-[72px] animate-fade-in-up text-start">
+      {/* Architectural Hero Split */}
+      <section className="bg-[#090B10] text-white border-b border-white/10">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-12 md:py-16">
+          <button
+            type="button"
+            onClick={onBack}
+            className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors mb-8"
+          >
+            <svg
+              className={`w-4 h-4 ${isRtl ? 'rotate-180' : ''}`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+            <span>{t.back}</span>
+          </button>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
+            <div className="lg:col-span-7 flex flex-col justify-center">
+              <div className="flex flex-wrap items-center gap-2 text-xs md:text-sm text-slate-400 mb-4">
+                <span className="text-[#4F7BFF] font-medium">{t.spec}</span>
+                <span aria-hidden="true" className="text-slate-600">·</span>
+                <span className="text-white font-medium">{categoryLabel}</span>
+                {service.roadmap?.[service.roadmap.length - 1]?.duration && (
+                  <>
+                    <span aria-hidden="true" className="text-slate-600">·</span>
+                    <span className="font-mono tabular-nums">
+                      {service.roadmap[service.roadmap.length - 1].duration}
+                    </span>
+                  </>
+                )}
+              </div>
+
+              <h1
+                className="font-heading font-bold text-white tracking-tight leading-[1.08] mb-5"
+                style={{ fontSize: 'clamp(2rem, 3.8vw, 3.5rem)' }}
+              >
+                {service.name}
+              </h1>
+
+              <p className="text-base md:text-xl text-slate-300 leading-relaxed max-w-2xl mb-8">
+                {service.tagline}
+              </p>
+
+              <div className="flex flex-wrap items-center gap-4">
+                <button
+                  type="button"
+                  onClick={() => onAddToBrief(service)}
+                  className="px-6 py-3.5 bg-[#0037F3] hover:bg-[#002BC4] text-white text-sm font-medium rounded-lg transition-colors duration-150 whitespace-nowrap shrink-0"
+                >
+                  {isInBrief ? t.briefAdded : t.briefAdd}
+                </button>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 flex">
+              <div className="w-full min-h-[260px] lg:h-full rounded-xl overflow-hidden border border-white/10 bg-[#11141D]">
+                <SafeImage
+                  src={service.imageUrl}
+                  alt={service.name}
+                  loading="eager"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Technical Specification Content */}
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-24 space-y-20 md:space-y-24">
+        {/* Section 1: Architectural Overview & Included Capabilities */}
+        <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          <div className="lg:col-span-7">
+            <p className="text-sm font-medium text-[#0037F3] mb-3">{t.thesis}</p>
+            <p className="text-xl md:text-2xl font-heading font-semibold text-[#0A0B0D] leading-relaxed mb-8">
+              {service.longDescription}
+            </p>
+
+            {service.techStack?.length > 0 && (
+              <div className="pt-6 border-t border-slate-200">
+                <div className="text-xs font-medium text-[#525866] mb-2">{t.techStackLabel}</div>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm font-mono text-[#0A0B0D]">
+                  {service.techStack.map((tech, idx) => (
+                    <React.Fragment key={tech}>
+                      <span>{tech}</span>
+                      {idx < service.techStack.length - 1 && (
+                        <span aria-hidden="true" className="text-slate-300">·</span>
+                      )}
+                    </React.Fragment>
+                  ))}
                 </div>
-                <h1 className="text-4xl md:text-8xl font-heading font-extrabold text-white mb-4 md:mb-6 tracking-tighter leading-[0.9] md:leading-[0.85] drop-shadow-2xl">
-                    {service.name}
-                </h1>
-                <p className="text-lg md:text-3xl font-medium text-white/90 max-w-3xl leading-tight drop-shadow-lg">
-                    {service.tagline}
+              </div>
+            )}
+          </div>
+
+          <div className="lg:col-span-5 bg-[#F8F9FB] border border-slate-200 rounded-xl p-6 md:p-8">
+            <h2 className="text-sm font-medium text-[#0A0B0D] mb-5">{t.featuresLabel}</h2>
+            <ul className="space-y-3.5">
+              {service.features?.map((feature, idx) => (
+                <li key={idx} className="flex items-start gap-3 text-sm md:text-[15px] text-[#374151]">
+                  <span className="font-mono tabular-nums text-xs text-[#0037F3] mt-1">
+                    0{idx + 1}
+                  </span>
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Section 2: Architectural Pillars */}
+        <section className="pt-16 border-t border-slate-200">
+          <div className="max-w-2xl mb-10">
+            <h2 className="text-2xl md:text-4xl font-heading font-bold text-[#0A0B0D] tracking-tight mb-3">
+              {t.pillars}
+            </h2>
+            <p className="text-base text-[#525866] leading-relaxed">{t.pillarsSub}</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {service.pillars?.map((pillar, idx) => (
+              <div
+                key={idx}
+                className="p-6 md:p-8 bg-[#F8F9FB] border border-slate-200/90 rounded-xl"
+              >
+                <div className="font-mono tabular-nums text-xs font-medium text-[#0037F3] mb-3">
+                  0{idx + 1}.
+                </div>
+                <h3 className="text-lg md:text-xl font-heading font-bold text-[#0A0B0D] mb-2">
+                  {pillar.title}
+                </h3>
+                <p className="text-sm md:text-base text-[#525866] leading-relaxed">
+                  {pillar.description}
                 </p>
-            </div>
-        </div>
-      </div>
-
-      {/* Sticky Action Bar */}
-      <div className="sticky top-0 z-[40] bg-white/80 backdrop-blur-2xl border-b border-gray-100 shadow-sm">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-20">
-            <button onClick={onBack} className="group flex items-center gap-2 md:gap-3 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-[#0037f3] transition-colors">
-               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className={`w-3.5 h-3.5 transition-transform ${language === 'ar' ? 'rotate-180' : 'group-hover:-translate-x-1'}`}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-               </svg>
-               {t.back}
-            </button>
-            
-            <button 
-                onClick={() => onAddToBrief(service)} 
-                className="px-6 py-3 md:px-8 md:py-4 bg-[#0037f3] text-white text-[9px] md:text-[10px] font-black uppercase tracking-widest hover:bg-[#0a0b0d] transition-all rounded-lg md:rounded-xl shadow-xl shadow-[#0037f3]/20 hover:-translate-y-0.5"
-            >
-                {t.briefAdd}
-            </button>
-        </div>
-      </div>
-
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-32">
-        
-        {/* SECTION 1: Strategic Brief */}
-        <section className="flex justify-center mb-24 md:mb-48">
-            <div className="max-w-4xl w-full">
-                <div className="p-8 md:p-20 bg-gray-50 rounded-[2.5rem] md:rounded-[4rem] border-l-4 md:border-l-8 border-[#0037f3] shadow-inner">
-                    <div className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] text-[#0037f3] mb-6 md:mb-10">{t.thesis}</div>
-                    <p className="text-lg md:text-3xl text-gray-800 font-medium leading-relaxed font-heading">
-                        {service.longDescription}
-                    </p>
-                </div>
-            </div>
+              </div>
+            ))}
+          </div>
         </section>
 
-        {/* SECTION 2: Pillars Grid */}
-        <section className="mb-24 md:mb-48">
-            <div className="max-w-2xl mb-12 md:mb-24">
-                <div className="h-1 w-12 md:w-16 bg-[#0037f3] mb-6 md:mb-8"></div>
-                <h2 className="text-3xl md:text-6xl font-heading font-extrabold text-[#0a0b0d] tracking-tighter mb-4 md:mb-8">{t.pillars}</h2>
-                <p className="text-gray-400 text-base md:text-lg font-medium">{t.pillarsSub}</p>
+        {/* Section 3: Business Outcome & Implementation Roadmap */}
+        <section className="p-8 md:p-14 bg-[#090B10] text-white rounded-2xl border border-white/10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-5 flex flex-col justify-between">
+              <div>
+                <p className="text-sm font-medium text-[#4F7BFF] mb-3">{t.roiBadge}</p>
+                <h2 className="text-2xl md:text-4xl font-heading font-bold tracking-tight mb-5">
+                  {t.value}
+                </h2>
+                <p className="text-base md:text-lg text-slate-300 leading-relaxed">
+                  {service.businessValue}
+                </p>
+              </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                {service.pillars?.map((pillar, idx) => (
-                    <div key={idx} className="p-8 md:p-12 bg-white border border-gray-100 rounded-[2rem] md:rounded-[3rem] hover:shadow-4xl hover:border-[#0037f3]/40 transition-all group relative overflow-hidden">
-                        <div className={`absolute top-0 ${language === 'ar' ? 'left-0' : 'right-0'} p-6 md:p-8 text-3xl md:text-4xl font-heading font-black text-gray-50 group-hover:text-[#0037f3]/10 transition-colors`}>0{idx + 1}</div>
-                        <h3 className="text-xl md:text-3xl font-heading font-extrabold text-[#0a0b0d] mb-4 md:mb-6 tracking-tight group-hover:text-[#0037f3] transition-colors">{pillar.title}</h3>
-                        <p className="text-base md:text-lg text-gray-500 font-medium leading-relaxed">{pillar.description}</p>
+
+            <div className="lg:col-span-7">
+              <h3 className="text-sm font-medium text-slate-400 mb-6">{t.roadmap}</h3>
+              <div className="divide-y divide-white/10 border-t border-white/10">
+                {service.roadmap?.map((step, idx) => (
+                  <div key={idx} className="py-5 flex flex-col sm:flex-row sm:items-start gap-4">
+                    <div className="flex items-center gap-3 sm:w-44 shrink-0">
+                      <span className="font-mono tabular-nums text-xs font-semibold text-[#4F7BFF]">
+                        0{idx + 1}
+                      </span>
+                      <span className="font-mono tabular-nums text-xs text-slate-400">
+                        {step.duration}
+                      </span>
                     </div>
+                    <div className="flex-1">
+                      <h4 className="text-base font-heading font-semibold text-white mb-1">
+                        {step.label}
+                      </h4>
+                      <p className="text-sm text-slate-400 leading-relaxed">{step.detail}</p>
+                    </div>
+                  </div>
                 ))}
+              </div>
             </div>
+          </div>
         </section>
 
-        {/* SECTION 3: Business Value & Roadmap */}
-        <section className="mb-24 md:mb-48 p-8 md:p-24 bg-[#0a0b0d] rounded-[3rem] md:rounded-[5rem] text-white relative overflow-hidden group shadow-3xl">
-            <div className="absolute top-0 right-0 w-full h-full opacity-40">
-                <img src={service.imageUrl} className="w-full h-full object-cover blur-sm" alt="Background" />
-            </div>
-            <div className="absolute inset-0 bg-[#0a0b0d]/90"></div>
-            
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20">
-                <div>
-                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#0037f3]/20 border border-[#0037f3]/30 text-[#0037f3] text-[8px] md:text-[9px] font-black uppercase tracking-widest mb-6 md:mb-10 rounded-full">
-                        {t.roiBadge}
-                    </div>
-                    <h2 className="text-3xl md:text-7xl font-heading font-extrabold tracking-tighter mb-8 md:mb-12">{t.value}</h2>
-                    <p className="text-lg md:text-2xl text-white/70 font-medium leading-relaxed">
-                        {service.businessValue}
-                    </p>
-                </div>
-                <div className="space-y-10 md:space-y-16">
-                    <h3 className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.4em] text-[#0037f3]">{t.roadmap}</h3>
-                    <div className="space-y-8 md:space-y-10">
-                        {service.roadmap?.map((step, idx) => (
-                            <div key={idx} className="flex gap-4 md:gap-8 items-start group/step">
-                                <div className="w-10 h-10 md:w-12 md:h-12 shrink-0 rounded-xl md:rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-lg md:text-xl font-mono text-[#0037f3] font-bold group-hover/step:bg-[#0037f3] group-hover/step:text-white transition-all">
-                                    {idx + 1}
-                                </div>
-                                <div>
-                                    <div className="flex items-center gap-3 mb-1 md:mb-2">
-                                        <h4 className="text-lg md:text-xl font-heading font-extrabold group-hover/step:text-[#0037f3] transition-colors">{step.label}</h4>
-                                    </div>
-                                    <p className="text-xs md:text-sm text-white/50 font-medium leading-relaxed">{step.detail}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
+        {/* Final Decision Block */}
+        <section className="pt-12 border-t border-slate-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="max-w-xl">
+            <h3 className="text-2xl md:text-3xl font-heading font-bold text-[#0A0B0D] mb-2">
+              {t.ctaHeader}
+            </h3>
+            <p className="text-sm md:text-base text-[#525866] leading-relaxed">{t.ctaSub}</p>
+          </div>
+          <button
+            type="button"
+            onClick={() => onAddToBrief(service)}
+            className="px-7 py-4 bg-[#0037F3] hover:bg-[#002BC4] text-white text-sm font-medium rounded-lg transition-colors duration-150 whitespace-nowrap shrink-0"
+          >
+            {isInBrief ? t.briefAdded : t.briefAdd}
+          </button>
         </section>
-
-        {/* Final CTA */}
-        <section className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 pt-16 md:pt-24 border-t border-gray-100">
-            <div className="text-center md:text-start max-w-md">
-                <h3 className="text-2xl md:text-3xl font-heading font-extrabold text-[#0a0b0d] mb-3 md:mb-4">{t.ctaHeader}</h3>
-                <p className="text-sm md:text-base text-gray-400 font-medium">{t.ctaSub}</p>
-            </div>
-            <button 
-                onClick={() => onAddToBrief(service)}
-                className="w-full md:w-auto px-10 py-6 md:px-16 md:py-8 bg-[#0037f3] text-white text-[11px] md:text-sm font-black uppercase tracking-widest rounded-2xl md:rounded-[2.5rem] hover:bg-[#0a0b0d] hover:-translate-y-2 transition-all shadow-3xl shadow-[#0037f3]/40"
-            >
-                {t.briefAdd}
-            </button>
-        </section>
-
       </div>
-
-      <style>{`
-        @keyframes subtle-zoom {
-          0% { transform: scale(1.05); }
-          100% { transform: scale(1.15); }
-        }
-      `}</style>
     </div>
   );
 };

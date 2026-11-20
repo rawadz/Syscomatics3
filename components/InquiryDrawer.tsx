@@ -1,12 +1,12 @@
-
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
-*/
+ */
 
 import React from 'react';
 import { Service, Language } from '../types';
 import { TRANSLATIONS } from '../translations';
+import SafeImage from './SafeImage';
 
 interface InquiryDrawerProps {
   isOpen: boolean;
@@ -17,79 +17,112 @@ interface InquiryDrawerProps {
   language: Language;
 }
 
-const InquiryDrawer: React.FC<InquiryDrawerProps> = ({ isOpen, onClose, items, onRemoveItem, onStartConsultation, language }) => {
-  // Safe translation access with fallback
-  const t = (TRANSLATIONS[language]?.inquiry) || TRANSLATIONS.en.inquiry;
-  const st = (TRANSLATIONS[language]?.services) || TRANSLATIONS.en.services;
+const InquiryDrawer: React.FC<InquiryDrawerProps> = ({
+  isOpen,
+  onClose,
+  items,
+  onRemoveItem,
+  onStartConsultation,
+  language,
+}) => {
+  const t = TRANSLATIONS[language]?.inquiry || TRANSLATIONS.en.inquiry;
+  const st = TRANSLATIONS[language]?.services || TRANSLATIONS.en.services;
+  const isRtl = language === 'ar';
 
   return (
     <>
-      <div 
-        className={`fixed inset-0 bg-[#0a0b0d]/60 backdrop-blur-sm z-[60] transition-opacity duration-500 ${
+      <div
+        className={`fixed inset-0 bg-[#090B10]/55 backdrop-blur-xs z-[60] transition-opacity duration-200 ${
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         onClick={onClose}
+        aria-hidden="true"
       />
 
-      <div 
-        className={`fixed inset-y-0 ${language === 'ar' ? 'left-0' : 'right-0'} w-full md:w-[480px] bg-white z-[70] shadow-2xl transform transition-transform duration-500 ease-in-out flex flex-col ${
-          isOpen ? 'translate-x-0' : (language === 'ar' ? '-translate-x-full' : 'translate-x-full')
+      <aside
+        aria-label={t.title}
+        className={`fixed inset-y-0 ${isRtl ? 'left-0' : 'right-0'} w-full sm:w-[440px] bg-white z-[70] border-s border-slate-200 shadow-2xl transform transition-transform duration-200 ease-out flex flex-col ${
+          isOpen ? 'translate-x-0' : isRtl ? '-translate-x-full' : 'translate-x-full'
         }`}
       >
-        <div className="bg-[#0a0b0d] p-8 text-white flex items-center justify-between text-start">
-            <div>
-                <h2 className="text-2xl font-heading font-extrabold tracking-tight">{t.title}</h2>
-                <p className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40 mt-1">{t.sub}</p>
-            </div>
-            <button onClick={onClose} className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#0037f3] transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
+        <div className="px-6 py-5 border-b border-slate-200 flex items-center justify-between text-start">
+          <div>
+            <h2 className="text-lg font-heading font-bold text-[#0A0B0D] tracking-tight">
+              {t.title}
+            </h2>
+            <p className="text-xs text-[#525866] mt-0.5">{t.sub}</p>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="w-9 h-9 rounded-lg border border-slate-200 text-slate-600 hover:text-[#0A0B0D] hover:bg-slate-50 flex items-center justify-center transition-colors"
+            aria-label="Close project brief"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-8 space-y-8 text-start">
+        <div className="flex-1 overflow-y-auto p-6 text-start">
           {items.length === 0 ? (
-            <div className="h-full flex flex-col items-center justify-center text-center p-10">
-              <p className="font-medium text-gray-400">{t.empty}</p>
+            <div className="h-full flex flex-col items-center justify-center text-center px-6">
+              <p className="text-sm text-[#525866] leading-relaxed mb-5">{t.empty}</p>
+              <button
+                type="button"
+                onClick={onClose}
+                className="px-4 py-2.5 text-sm font-medium text-[#0037F3] border border-slate-200 hover:border-[#0037F3] rounded-lg transition-colors"
+              >
+                {t.browseCta}
+              </button>
             </div>
           ) : (
-            items.map((item, idx) => {
-              const categoryLabel = st.categoryLabels?.[item.category] || item.category;
-              return (
-                <div key={`${item.id}-${idx}`} className="flex gap-6 animate-fade-in-up border-b border-gray-100 pb-8 last:border-0">
-                  <div className="w-20 h-24 bg-gray-100 flex-shrink-0 relative overflow-hidden group">
-                    <img src={item.imageUrl} alt={item.name} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
-                  </div>
-                  <div className="flex-1 flex flex-col justify-between">
-                    <div>
-                      <h3 className="font-heading font-bold text-[#0a0b0d]">{item.name}</h3>
-                      <p className="text-[10px] font-black text-[#0037f3] uppercase tracking-widest mt-1">{categoryLabel}</p>
+            <div className="divide-y divide-slate-100">
+              {items.map((item, idx) => {
+                const categoryLabel = st.categoryLabels?.[item.category] || item.category;
+                return (
+                  <div key={`${item.id}-${idx}`} className="flex gap-4 py-4 first:pt-0">
+                    <div className="w-16 h-16 rounded-lg bg-[#0F131C] overflow-hidden shrink-0 border border-slate-200">
+                      <SafeImage
+                        src={item.imageUrl}
+                        alt={item.name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                    <button 
-                      onClick={() => onRemoveItem(idx)}
-                      className="text-[10px] font-black text-gray-300 hover:text-red-500 uppercase tracking-widest transition-colors self-start"
-                    >
-                      {t.remove}
-                    </button>
+                    <div className="flex-1 min-w-0 flex flex-col justify-between">
+                      <div>
+                        <h3 className="text-sm font-heading font-semibold text-[#0A0B0D] leading-snug">
+                          {item.name}
+                        </h3>
+                        <p className="text-xs text-[#525866] mt-0.5">{categoryLabel}</p>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => onRemoveItem(idx)}
+                        className="text-xs font-medium text-slate-500 hover:text-red-600 transition-colors self-start mt-2"
+                      >
+                        {t.remove}
+                      </button>
+                    </div>
                   </div>
-                </div>
-              );
-            })
+                );
+              })}
+            </div>
           )}
         </div>
 
-        <div className="p-8 bg-gray-50 border-t border-gray-100">
-          <button 
+        <div className="p-6 bg-[#F8F9FB] border-t border-slate-200">
+          <button
+            type="button"
             onClick={onStartConsultation}
             disabled={items.length === 0}
-            className="w-full py-5 bg-[#0037f3] text-white uppercase tracking-[0.2em] text-xs font-black hover:bg-[#0a0b0d] transition-all disabled:opacity-30"
+            className="w-full py-3.5 px-5 bg-[#0037F3] hover:bg-[#002BC4] disabled:opacity-40 text-white text-sm font-medium rounded-lg transition-colors duration-150"
           >
             {t.initiate}
           </button>
-          <p className="text-[10px] text-center text-gray-400 mt-4 font-bold tracking-widest uppercase">{t.assessment}</p>
+          <p className="text-xs text-center text-[#525866] mt-3">{t.assessment}</p>
         </div>
-      </div>
+      </aside>
     </>
   );
 };

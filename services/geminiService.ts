@@ -20,10 +20,9 @@ const getSystemInstruction = (language: Language) => {
   const faqContext = kb.faq?.map((f: any) => `Q: ${f.q}\nA: ${f.a}`).join('\n\n');
   const guardrailContext = kb.guardrails?.join('\n');
 
-  const languageNote = {
+  const languageNote: Record<Language, string> = {
     en: 'Respond in English.',
-    ar: 'أجب باللغة العربية بلهجة مهنية محترمة (RTL).',
-    ku: 'Bersivê bi Kurdiya Kurmancî (bi tîpên Latînî) bide. (LTR).'
+    ar: 'أجب باللغة العربية بلهجة مهنية محترمة (RTL).'
   };
 
   return `You are the Lead Solutions Architect for "Syscomatics", a high-end IT consulting firm in Damascus, Syria.
